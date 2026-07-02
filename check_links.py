@@ -26,17 +26,29 @@ STRIKES_TO_ARCHIVE = 3
 REVIVAL_CHECK_DAYS = 7
 TIMEOUT_SECONDS = 10
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; AllAIDuniaLinkChecker/1.0; "
-                  "+https://www.allaidunia.com)"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
 }
 
 today = date.today()
 today_str = today.isoformat()
 
 
-def check_url(url: str) -> tuple[bool, str]:
-    """Returns (is_alive, reason). Tries HEAD first, falls back to GET
-    (some servers block HEAD requests but allow GET), with one retry."""
+# Status codes that mean "a bot got blocked", NOT "the site is dead".
+# Cloudflare/WAF-protected sites (Claude, Midjourney, Meta, etc.) routinely
+# return these to datacenter IPs like GitHub Actions runners, even though
+# the site is perfectly alive for real visitors. We must NOT strike on these.
+INCONCLUSIVE_CODES = {403, 429, 503}
+
+
+def check_url(url: str) -> tuple[str, str]:
+    """Returns (result, reason) where result is one of:
+       'alive'        - confirmed working
+       'dead'         - confirmed broken (404, DNS failure, connection refused)
+       'inconclusive' - blocked/rate-limited, can't tell if real (403/429/503, timeout)
+    Tries HEAD first, falls back to GET, with one retry."""
     for attempt in range(2):
         try:
             resp = requests.head(
@@ -50,21 +62,23 @@ def check_url(url: str) -> tuple[bool, str]:
                     allow_redirects=True, stream=True
                 )
             if resp.status_code < 400:
-                return True, f"OK ({resp.status_code})"
-            return False, f"HTTP {resp.status_code}"
+                return "alive", f"OK ({resp.status_code})"
+            if resp.status_code in INCONCLUSIVE_CODES:
+                return "inconclusive", f"HTTP {resp.status_code} (likely bot-blocked, not dead)"
+            return "dead", f"HTTP {resp.status_code}"
         except requests.exceptions.Timeout:
             if attempt == 0:
                 continue
-            return False, "Timeout"
+            return "inconclusive", "Timeout"
         except requests.exceptions.SSLError:
-            return False, "SSL error"
+            return "dead", "SSL error"
         except requests.exceptions.ConnectionError:
             if attempt == 0:
                 continue
-            return False, "Connection failed"
+            return "dead", "Connection failed"
         except requests.exceptions.RequestException as e:
-            return False, f"Error: {e}"
-    return False, "Failed after retry"
+            return "inconclusive", f"Error: {e}"
+    return "inconclusive", "Failed after retry"
 
 
 def days_since(date_str: str) -> int:
@@ -80,7 +94,8 @@ def main():
         tools = json.load(f)
 
     summary = {"checked": 0, "skipped": 0, "revived": 0,
-               "newly_flagged": 0, "newly_archived": 0, "still_broken": 0}
+               "newly_flagged": 0, "newly_archived": 0, "still_broken": 0,
+               "inconclusive": 0}
 
     for t in tools:
         status = t.get("status", "active")
@@ -91,13 +106,12 @@ def main():
                 summary["skipped"] += 1
                 continue
 
-        alive, reason = check_url(t["url"])
+        result, reason = check_url(t["url"])
         summary["checked"] += 1
         t["last_checked"] = today_str
 
-        if alive:
+        if result == "alive":
             t["last_working"] = today_str
-            was_broken = t.get("consecutive_failures", 0) > 0 or status != "active"
             t["consecutive_failures"] = 0
             if status == "archived":
                 t["status"] = "active"
@@ -109,7 +123,14 @@ def main():
                 print(f"RECOVERED: {t['name']} ({t['url']})")
             # else: was already active and stayed active — no log needed
 
-        else:
+        elif result == "inconclusive":
+            # Bot-blocked or timed out — don't touch strikes or status at all.
+            # We genuinely don't know if the site is up; guessing wrong in
+            # either direction is worse than just waiting for a clearer signal.
+            summary["inconclusive"] += 1
+            print(f"UNCLEAR  : {t['name']} ({t['url']}) — {reason}, no action taken")
+
+        else:  # result == "dead"
             t["consecutive_failures"] = t.get("consecutive_failures", 0) + 1
             if t["consecutive_failures"] >= STRIKES_TO_ARCHIVE:
                 if status != "archived":
