@@ -11,11 +11,21 @@ Nothing gets published without an explicit `true` from you.
 """
 import json
 from datetime import date
+from urllib.parse import urlparse
 
 TOOLS_PATH = "tools.json"
 PENDING_PATH = "pending.json"
+REJECTED_PATH = "rejected.json"
 
 today_str = date.today().isoformat()
+
+
+def clean_domain(url: str) -> str:
+    try:
+        netloc = urlparse(url).netloc.lower()
+        return netloc[4:] if netloc.startswith("www.") else netloc
+    except Exception:
+        return url.lower()
 
 
 def main():
@@ -28,6 +38,12 @@ def main():
     except FileNotFoundError:
         print("No pending.json found — nothing to do.")
         return
+
+    try:
+        with open(REJECTED_PATH, "r", encoding="utf-8") as f:
+            rejected_domains = set(json.load(f))
+    except FileNotFoundError:
+        rejected_domains = set()
 
     still_pending = []
     approved_count = 0
@@ -60,7 +76,8 @@ def main():
 
         elif decision is False:
             rejected_count += 1
-            print(f"REJECTED : {candidate['name']} -> discarded")
+            rejected_domains.add(clean_domain(candidate["url"]))
+            print(f"REJECTED : {candidate['name']} -> discarded, blocklisted")
 
         else:
             still_pending.append(candidate)
@@ -70,6 +87,9 @@ def main():
 
     with open(PENDING_PATH, "w", encoding="utf-8") as f:
         json.dump(still_pending, f, indent=2, ensure_ascii=False)
+
+    with open(REJECTED_PATH, "w", encoding="utf-8") as f:
+        json.dump(sorted(rejected_domains), f, indent=2, ensure_ascii=False)
 
     print("\n── Summary ──")
     print(f"  approved (now live in tools.json): {approved_count}")
