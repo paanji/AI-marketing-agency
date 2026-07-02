@@ -9,6 +9,13 @@ on:
 permissions:
   contents: write   # needed so the workflow can commit tools.json changes back
 
+# Prevents two runs from racing each other (e.g. a scheduled run overlapping
+# with a manual "Run workflow" click). Extra runs wait in line instead of
+# both trying to push at once.
+concurrency:
+  group: check-links
+  cancel-in-progress: false
+
 jobs:
   check-links:
     runs-on: ubuntu-latest
@@ -32,5 +39,17 @@ jobs:
           git config user.name "Directory Freshness Bot"
           git config user.email "actions@github.com"
           git add tools.json
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Auto: link check $(date -u +%Y-%m-%d)"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto: link check $(date -u +%Y-%m-%d)"
+            # If main moved since we checked out, rebase our commit on top
+            # of the latest and retry the push, instead of failing outright.
+            for i in 1 2 3; do
+              if git push; then
+                break
+              fi
+              echo "Push rejected, pulling latest and retrying ($i/3)..."
+              git pull --rebase
+            done
+          fi
