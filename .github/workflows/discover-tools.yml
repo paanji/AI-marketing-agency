@@ -1,0 +1,50 @@
+name: Discover New Tools
+
+on:
+  schedule:
+    # Weekly, Monday 04:00 UTC (~9:30 AM IST) — after the daily link check
+    - cron: '0 4 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discover-tools
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run discovery
+        run: python3 discover_tools.py
+
+      - name: Commit updated pending.json (if changed)
+        run: |
+          git config user.name "Directory Freshness Bot"
+          git config user.email "actions@github.com"
+          git add pending.json
+          if git diff --cached --quiet; then
+            echo "No new candidates"
+          else
+            git commit -m "Auto: discovery run $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              if git push; then
+                break
+              fi
+              echo "Push rejected, pulling latest and retrying ($i/3)..."
+              git pull --rebase
+            done
+          fi
