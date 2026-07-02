@@ -18,6 +18,7 @@ from urllib.parse import urlparse
 
 TOOLS_PATH = "tools.json"
 PENDING_PATH = "pending.json"
+REJECTED_PATH = "rejected.json"
 
 HN_SEARCH_URL = "https://hn.algolia.com/api/v1/search_by_date"
 LOOKBACK_DAYS = 8          # slightly over a week so a weekly run doesn't miss any
@@ -97,6 +98,12 @@ def main():
         pending = []
     pending_domains = {clean_domain(p["url"]) for p in pending}
 
+    try:
+        with open(REJECTED_PATH, "r", encoding="utf-8") as f:
+            rejected_domains = set(json.load(f))
+    except FileNotFoundError:
+        rejected_domains = set()
+
     since_timestamp = int((datetime.utcnow() - timedelta(days=LOOKBACK_DAYS)).timestamp())
 
     params = {
@@ -127,6 +134,9 @@ def main():
 
         domain = clean_domain(url)
         if domain in existing_domains or domain in pending_domains:
+            skipped_duplicate += 1
+            continue
+        if domain in rejected_domains:
             skipped_duplicate += 1
             continue
 
