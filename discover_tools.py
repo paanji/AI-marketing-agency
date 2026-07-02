@@ -34,9 +34,19 @@ HEADERS = {
 TIMEOUT_SECONDS = 10
 
 
+import re as _re
+_AI_KEYWORD_PATTERNS = []
+for _kw in AI_KEYWORDS:
+    if _kw == "ai":
+        # Kept strict — no plural, this is the one prone to false substring matches
+        _pattern = r"\bai\b"
+    else:
+        _pattern = r"\b" + _re.escape(_kw) + r"s?\b"  # allow simple plurals
+    _AI_KEYWORD_PATTERNS.append(_re.compile(_pattern, _re.IGNORECASE))
+
+
 def is_ai_related(title: str) -> bool:
-    title_lower = title.lower()
-    return any(kw in title_lower for kw in AI_KEYWORDS)
+    return any(pattern.search(title) for pattern in _AI_KEYWORD_PATTERNS)
 
 
 def clean_domain(url: str) -> str:
