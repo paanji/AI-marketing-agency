@@ -1,0 +1,51 @@
+name: Apply Tool Approvals
+
+# Runs automatically whenever you edit pending.json (e.g. after marking
+# entries approved: true/false) and commit the change. You never need to
+# trigger this manually — just save your review and it takes effect.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pending.json'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-approvals
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Apply approvals
+        run: python3 apply_approvals.py
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "Directory Freshness Bot"
+          git config user.email "actions@github.com"
+          git add tools.json pending.json
+          if git diff --cached --quiet; then
+            echo "No approvals to apply"
+          else
+            git commit -m "Auto: applied tool approvals $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              if git push; then
+                break
+              fi
+              echo "Push rejected, pulling latest and retrying ($i/3)..."
+              git pull --rebase
+            done
+          fi
