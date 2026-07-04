@@ -12,10 +12,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "claude",
@@ -30,10 +31,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "gemini",
@@ -48,10 +50,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "COMPLETELY FREE"
   },
   {
     "id": "grok",
@@ -66,10 +69,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "mistral",
@@ -84,10 +88,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "meta-ai",
@@ -102,10 +107,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "copilot",
@@ -120,10 +126,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "deepseek",
@@ -138,10 +145,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "COMPLETELY FREE"
   },
   {
     "id": "le-chat",
@@ -156,10 +164,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "pi-ai",
@@ -174,10 +183,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "perplexity",
@@ -192,10 +202,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "COMPLETELY FREE"
   },
   {
     "id": "you-com",
@@ -210,10 +221,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "phind",
@@ -226,12 +238,13 @@
     "desc": "AI search engine built for developers",
     "isNew": false,
     "featured": false,
-    "status": "archived",
-    "consecutive_failures": 3,
-    "last_checked": "2026-07-04",
+    "status": "active",
+    "consecutive_failures": 0,
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
-    "archived_date": "2026-07-04",
-    "source": "manual"
+    "archived_date": null,
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "exa-ai",
@@ -246,10 +259,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "midjourney",
@@ -264,10 +278,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "PAID only $10/mo"
   },
   {
     "id": "dall-e-3",
@@ -280,12 +295,13 @@
     "desc": "OpenAI's text-to-image model",
     "isNew": false,
     "featured": false,
-    "status": "archived",
-    "consecutive_failures": 3,
-    "last_checked": "2026-07-04",
+    "status": "active",
+    "consecutive_failures": 0,
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
-    "archived_date": "2026-07-04",
-    "source": "manual"
+    "archived_date": null,
+    "source": "manual",
+    "pricing": "FREE via ChatGPT"
   },
   {
     "id": "stable-diff",
@@ -300,10 +316,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "adobe-firefly",
@@ -318,10 +335,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE credits monthly"
   },
   {
     "id": "krea",
@@ -336,10 +354,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "ideogram",
@@ -354,10 +373,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "leonardo-ai",
@@ -372,10 +392,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE daily credits"
   },
   {
     "id": "flux",
@@ -390,10 +411,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "canva-ai",
@@ -408,10 +430,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE with Canva account"
   },
   {
     "id": "runway",
@@ -426,10 +449,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE trial credits"
   },
   {
     "id": "sora",
@@ -444,10 +468,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "to-video generation - REQUIRES ChatGPT Plus"
   },
   {
     "id": "kling-ai",
@@ -462,10 +487,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "pika",
@@ -480,10 +506,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "heygen",
@@ -498,10 +525,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "1 FREE video/month"
   },
   {
     "id": "synthesia",
@@ -516,10 +544,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "elevenlabs",
@@ -534,10 +563,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE limited minutes"
   },
   {
     "id": "suno",
@@ -552,10 +582,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "udio",
@@ -570,10 +601,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "murf-ai",
@@ -588,10 +620,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE trial"
   },
   {
     "id": "descript",
@@ -606,10 +639,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "github-copilot",
@@ -624,10 +658,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE for individuals"
   },
   {
     "id": "cursor",
@@ -642,10 +677,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "v0",
@@ -660,10 +696,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "bolt",
@@ -678,10 +715,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "stack app building - FREE tier available"
   },
   {
     "id": "lovable",
@@ -696,10 +734,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "replit-ai",
@@ -714,10 +753,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "windsurf",
@@ -732,10 +772,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "tabnine",
@@ -750,10 +791,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "jasper",
@@ -768,10 +810,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "PAID only"
   },
   {
     "id": "copy-ai",
@@ -786,10 +829,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "grammarly",
@@ -804,10 +848,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE basic version"
   },
   {
     "id": "quillbot",
@@ -822,10 +867,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE tier available"
   },
   {
     "id": "writesonic",
@@ -840,10 +886,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "notion-ai",
@@ -858,10 +905,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "REQUIRES Notion paid plan"
   },
   {
     "id": "otter-ai",
@@ -876,10 +924,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE 300 min/month"
   },
   {
     "id": "mem-ai",
@@ -894,10 +943,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "reclaim-ai",
@@ -912,10 +962,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "motion",
@@ -930,10 +981,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "huggingface",
@@ -948,10 +1000,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "replicate",
@@ -966,10 +1019,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "together-ai",
@@ -984,10 +1038,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "arxiv-ai",
@@ -1002,10 +1057,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   },
   {
     "id": "figma-ai",
@@ -1020,10 +1076,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "FREE for small teams"
   },
   {
     "id": "framer-ai",
@@ -1038,10 +1095,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "code websites - FREE tier available"
   },
   {
     "id": "looka",
@@ -1056,10 +1114,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
+    "last_checked": "2026-07-01",
     "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "PAID only"
   },
   {
     "id": "adcreative",
@@ -1074,10 +1133,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "PAID only"
   },
   {
     "id": "surfer-seo",
@@ -1092,10 +1152,11 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": "PAID only"
   },
   {
     "id": "lately-ai",
@@ -1110,9 +1171,10 @@
     "featured": false,
     "status": "active",
     "consecutive_failures": 0,
-    "last_checked": "2026-07-04",
-    "last_working": "2026-07-04",
+    "last_checked": "2026-07-01",
+    "last_working": "2026-07-01",
     "archived_date": null,
-    "source": "manual"
+    "source": "manual",
+    "pricing": ""
   }
 ]
