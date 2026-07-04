@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AllAIDunia — Find the Right AI Tool for Any Task | 60+ Free AI Tools</title>
+  <meta name="description" content="Looking for an AI tool? AllAIDunia organizes 60+ AI tools by category — document writing, video editing, image generation, coding, and more. Free, searchable, updated regularly." />
+  <link rel="canonical" href="https://www.allaidunia.com/" />
+  <meta name="author" content="Pavan Kumar" />
+  <meta name="keywords" content="AI tools, artificial intelligence tools, best AI tools, free AI tools, AI directory, ChatGPT alternatives, AI image generator, AI video tools, AI writing tools, AI coding tools" />
+  <meta property="og:title" content="AllAIDunia — Find the Right AI Tool for Any Task" />
+  <meta property="og:description" content="60+ AI tools organized by category — document writing, video editing, image generation, coding and more. Free, searchable, updated regularly." />
+  <meta property="og:url" content="https://www.allaidunia.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AllAIDunia" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AllAIDunia — Find the Right AI Tool for Any Task" />
+  <meta name="twitter:description" content="60+ AI tools organized by category — free to browse, updated regularly." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39JW5S0605"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-39JW5S0605');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── THEME VARIABLES ── */
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --bg3: #18181f;
+      --border: rgba(255,255,255,0.08);
+      --border2: rgba(255,255,255,0.14);
+      --text: #f0eff5;
+      --muted: #8b8a96;
+      --card-bg: #111118;
+      --nav-bg: rgba(10,10,15,0.85);
+      --input-bg: #18181f;
+      --modal-bg: #111118;
+      --shadow: rgba(0,0,0,0.5);
+    }
+    [data-theme="light"] {
+      --bg: #f5f5fa;
+      --bg2: #ffffff;
+      --bg3: #eeeef5;
+      --border: rgba(0,0,0,0.08);
+      --border2: rgba(0,0,0,0.14);
+      --text: #0a0a0f;
+      --muted: #666680;
+      --card-bg: #ffffff;
+      --nav-bg: rgba(245,245,250,0.9);
+      --input-bg: #eeeef5;
+      --modal-bg: #ffffff;
+      --shadow: rgba(0,0,0,0.1);
+    }
+
+    :root {
+      --accent: #7c6cfa;
+      --accent2: #fa6c9f;
+      --accent3: #6cf0c2;
+      --gold: #f0c060;
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* ── GLOW ORBS (dark only) ── */
+    .glow-orb {
+      position: fixed; border-radius: 50%; filter: blur(120px);
+      pointer-events: none; z-index: 0;
+      animation: drift 12s ease-in-out infinite alternate;
+      transition: opacity 0.3s;
+    }
+    .glow-orb.a { width: 600px; height: 600px; background: rgba(124,108,250,0.12); top: -200px; left: -100px; }
+    .glow-orb.b { width: 500px; height: 500px; background: rgba(250,108,159,0.08); top: 100px; right: -150px; animation-delay: -6s; }
+    [data-theme="light"] .glow-orb { opacity: 0; }
+    @keyframes drift { from { transform: translate(0,0); } to { transform: translate(30px,40px); } }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 24px; max-width: 1200px; margin: 0 auto; gap: 12px;
+    }
+
+    /* ── SVG LOGO ── */
+    .logo-svg { height: 42px; width: auto; cursor: pointer; }
+    .logo-text-main { fill: var(--accent); font-family: 'Syne', system-ui, sans-serif; font-weight: 800; }
+    .logo-text-dunia { fill: var(--gold); font-family: 'Syne', system-ui, sans-serif; font-weight: 800; }
+    [data-theme="light"] .logo-node-teal { opacity: 0.7; }
+
+    .nav-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .nav-badge {
+      font-size: 11px; padding: 4px 12px; border-radius: 20px;
+      background: rgba(124,108,250,0.15); border: 1px solid rgba(124,108,250,0.3);
+      color: var(--accent); font-weight: 500;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border2); background: var(--bg3);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 18px; transition: all 0.2s; color: var(--text);
+    }
+    .theme-toggle:hover { border-color: var(--accent); }
+
+    /* ── SUBMIT BTN ── */
+    .submit-nav-btn {
+      font-size: 12px; padding: 7px 16px; border-radius: 20px;
+      background: var(--accent); color: #fff; border: none;
+      cursor: pointer; font-weight: 500; font-family: var(--font-body);
+      transition: opacity 0.2s;
+    }
+    .submit-nav-btn:hover { opacity: 0.85; }
+
+    /* ── HERO ── */
+    .hero { padding: 80px 24px 24px; text-align: center; position: relative; z-index: 1; }
+    .hero-eyebrow {
+      display: inline-block; font-size: 12px; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 20px; font-weight: 500;
+    }
+    .hero h1 {
+      font-family: var(--font-head); font-size: clamp(36px, 7vw, 76px);
+      font-weight: 800; line-height: 1.05; letter-spacing: -2px; margin-bottom: 18px;
+    }
+    .hero h1 .line2 {
+      background: linear-gradient(135deg, var(--accent), var(--accent2) 50%, var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; margin: 0 auto 40px; line-height: 1.6; font-weight: 300; }
+
+    .hero-stats { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: var(--font-head); font-size: 30px; font-weight: 800;
+      color: var(--text);
+    }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ── SEARCH ── */
+    .search-wrap { max-width: 560px; margin: 0 auto 8px; position: relative; }
+    .search-wrap input {
+      width: 100%; background: var(--input-bg); border: 1px solid var(--border2);
+      border-radius: 50px; padding: 15px 24px 15px 52px;
+      font-family: var(--font-body); font-size: 15px; color: var(--text);
+      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-wrap input::placeholder { color: var(--muted); }
+    .search-wrap input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,108,250,0.15); }
+    .search-icon { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 18px; pointer-events: none; }
+
+    /* ── SEO INTRO TEXT ── */
+    .seo-intro {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+      padding: 0 24px;
+    }
+
+    /* ── FILTERS ── */
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; padding: 0 24px; position: relative; z-index: 1; }
+    .filter-btn {
+      font-family: var(--font-body); font-size: 13px; font-weight: 500;
+      padding: 7px 18px; border-radius: 50px; border: 1px solid var(--border);
+      background: var(--bg2); color: var(--muted); cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn:hover { border-color: var(--border2); color: var(--text); }
+    .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    /* ── GRID ── */
+    .grid-section { position: relative; z-index: 1; }
+    .count-bar { font-size: 13px; color: var(--muted); padding: 0 24px; margin-bottom: 16px; }
+    .count-bar span { color: var(--text); font-weight: 500; }
+    .tools-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px; padding: 0 24px; margin-bottom: 60px;
+    }
+
+    /* ── TOOL CARD ── */
+    .tool-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px;
+      text-decoration: none; display: flex; flex-direction: column; gap: 12px;
+      transition: all 0.2s ease; cursor: pointer; position: relative; overflow: hidden;
+    }
+    .tool-card:hover { border-color: var(--border2); transform: translateY(-2px); box-shadow: 0 8px 32px var(--shadow); }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; }
+    .tool-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-size: 20px; font-weight: 800; flex-shrink: 0;
+    }
+    .new-pill {
+      font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 20px;
+      background: rgba(108,240,194,0.15); border: 1px solid rgba(108,240,194,0.3);
+      color: var(--accent3); letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .featured-pill {
+      font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 20px;
+      background: rgba(240,192,96,0.15); border: 1px solid rgba(240,192,96,0.3);
+      color: var(--gold); letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .tool-name { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--text); }
+    .tool-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .tool-cat {
+      display: inline-block; font-size: 11px; padding: 3px 10px;
+      border-radius: 20px; border: 1px solid var(--border); color: var(--muted); margin-top: auto;
+    }
+    .no-results { text-align: center; color: var(--muted); padding: 60px 24px; font-size: 15px; width: 100%; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .tool-card { animation: fadeUp 0.35s ease both; }
+
+    /* ── SUBMIT MODAL ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--modal-bg); border: 1px solid var(--border2);
+      border-radius: 20px; padding: 2rem; width: 100%; max-width: 480px;
+      position: relative; animation: fadeUp 0.3s ease;
+    }
+    .modal-title { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .modal-sub { font-size: 13px; color: var(--muted); margin-bottom: 1.5rem; }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+      border-radius: 50%; border: 1px solid var(--border); background: var(--bg3);
+      color: var(--muted); font-size: 16px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: var(--input-bg); border: 1px solid var(--border2);
+      border-radius: var(--radius-sm); padding: 10px 14px;
+      font-family: var(--font-body); font-size: 14px; color: var(--text);
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group select option { background: var(--bg2); }
+    .submit-form-btn {
+      width: 100%; padding: 12px; border-radius: var(--radius-sm);
+      background: var(--accent); color: #fff; border: none;
+      font-family: var(--font-body); font-size: 15px; font-weight: 500;
+      cursor: pointer; transition: opacity 0.2s; margin-top: 0.5rem;
+    }
+    .submit-form-btn:hover { opacity: 0.85; }
+    .success-msg {
+      display: none; text-align: center; padding: 1.5rem;
+      color: var(--accent3); font-size: 15px; font-weight: 500;
+    }
+
+    /* ── LINK SECTIONS (category pages + blog) ── */
+    .link-section-title {
+      font-family: var(--font-head); font-size: 18px; font-weight: 700;
+      margin-bottom: 14px; color: var(--text);
+    }
+    .link-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+    .link-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px;
+      text-decoration: none; display: block; transition: all 0.2s ease;
+    }
+    .link-card:hover { border-color: var(--border2); transform: translateY(-2px); box-shadow: 0 8px 32px var(--shadow); }
+    .link-card-name { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .link-card-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* ── AI CHATBOT ── */
+    .chat-fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 300;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none; cursor: pointer; display: flex; align-items: center;
+      justify-content: center; font-size: 26px;
+      box-shadow: 0 4px 24px rgba(124,108,250,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .chat-fab:hover { transform: scale(1.08); box-shadow: 0 6px 32px rgba(124,108,250,0.5); }
+    .chat-fab-label {
+      position: fixed; bottom: 34px; right: 96px; z-index: 300;
+      background: var(--bg2); border: 1px solid var(--border2);
+      border-radius: 20px; padding: 7px 14px; font-size: 12px;
+      font-weight: 500; color: var(--text); white-space: nowrap;
+      box-shadow: 0 4px 16px var(--shadow);
+      animation: labelPulse 3s ease-in-out infinite;
+    }
+    @keyframes labelPulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+    .chat-popup {
+      position: fixed; bottom: 100px; right: 28px; z-index: 299;
+      width: 360px; height: 520px; background: var(--bg2);
+      border: 1px solid var(--border2); border-radius: 20px;
+      display: none; flex-direction: column;
+      box-shadow: 0 16px 48px var(--shadow);
+      overflow: hidden; animation: popupIn 0.25s ease;
+    }
+    .chat-popup.open { display: flex; }
+    @keyframes popupIn { from{opacity:0;transform:translateY(16px) scale(0.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+    .popup-header {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      padding: 14px 16px; display: flex; align-items: center;
+      justify-content: space-between; flex-shrink: 0;
+    }
+    .popup-header-left { display: flex; align-items: center; gap: 10px; }
+    .popup-avatar { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .popup-title { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: #fff; }
+    .popup-subtitle { font-size: 10px; color: rgba(255,255,255,0.8); }
+    .popup-close { background: none; border: none; color: #fff; font-size: 18px; cursor: pointer; opacity: 0.8; padding: 4px; }
+    .popup-close:hover { opacity: 1; }
+    .popup-messages { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+    .popup-messages::-webkit-scrollbar { width: 3px; }
+    .popup-messages::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+    .pmsg { display: flex; gap: 8px; align-items: flex-end; }
+    .pmsg.user { flex-direction: row-reverse; }
+    .pmsg-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; font-family: var(--font-head); }
+    .pmsg-avatar.user { background: var(--bg3); border: 1px solid var(--border2); font-size: 12px; }
+    .pbubble { max-width: 82%; padding: 9px 12px; border-radius: 14px; font-size: 13px; line-height: 1.55; }
+    .pbubble.bot { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text); border-bottom-left-radius: 4px; }
+    .pbubble.user { background: var(--accent); color: #fff; border-bottom-right-radius: 4px; }
+    .prec-cards { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+    .prec-card { background: var(--bg2); border: 0.5px solid var(--border2); border-radius: 8px; padding: 8px 10px; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: border-color 0.15s; }
+    .prec-card:hover { border-color: var(--accent); }
+    .prec-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 12px; font-weight: 800; color: #fff; flex-shrink: 0; }
+    .prec-name { font-size: 12px; font-weight: 600; color: var(--text); }
+    .prec-why { font-size: 10px; color: var(--muted); line-height: 1.3; }
+    .psuggestions { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 12px 8px; flex-shrink: 0; }
+    .psugg-btn { font-size: 11px; padding: 5px 10px; border-radius: 14px; border: 0.5px solid var(--border2); background: var(--bg3); color: var(--muted); cursor: pointer; font-family: var(--font-body); transition: all 0.15s; white-space: nowrap; }
+    .psugg-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .popup-input-area { padding: 10px 12px; border-top: 0.5px solid var(--border); flex-shrink: 0; }
+    .popup-input-wrap { display: flex; gap: 8px; align-items: center; background: var(--bg3); border: 0.5px solid var(--border2); border-radius: 12px; padding: 8px 8px 8px 12px; }
+    .popup-input-wrap:focus-within { border-color: var(--accent); }
+    .popup-input-wrap input { flex: 1; background: none; border: none; outline: none; font-family: var(--font-body); font-size: 13px; color: var(--text); }
+    .popup-input-wrap input::placeholder { color: var(--muted); }
+    .psend-btn { width: 30px; height: 30px; border-radius: 8px; background: var(--accent); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; flex-shrink: 0; transition: opacity 0.2s; }
+    .psend-btn:disabled { opacity: 0.4; }
+    .ptyping { display: flex; align-items: center; gap: 3px; padding: 2px 0; }
+    .ptyping span { width: 5px; height: 5px; background: var(--muted); border-radius: 50%; animation: bounce 1.2s infinite; }
+    .ptyping span:nth-child(2) { animation-delay: 0.2s; }
+    .ptyping span:nth-child(3) { animation-delay: 0.4s; }
+
+    @media (max-width: 600px) {
+      .chat-popup { width: calc(100vw - 32px); right: 16px; bottom: 90px; height: 460px; }
+      .chat-fab { bottom: 20px; right: 16px; }
+      .chat-fab-label { right: 84px; bottom: 26px; }
+    }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; position: relative; z-index: 1; }
+    .footer-logo { font-family: var(--font-head); font-size: 20px; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
+    .footer-text { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; justify-content: center; margin-top: 12px; }
+    .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 50px 16px 36px; }
+      .hero h1 { letter-spacing: -1px; }
+      .tools-grid { grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; padding: 0 16px; }
+      .hero-stats { gap: 20px; }
+      .nav-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="glow-orb a"></div>
+<div class="glow-orb b"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <!-- SVG LOGO -->
+    <svg class="logo-svg" viewBox="0 0 270 44" xmlns="http://www.w3.org/2000/svg" aria-label="AllAIDunia home">
+      <!-- Mini globe -->
+      <circle cx="22" cy="22" r="18" fill="none" stroke="#7c6cfa" stroke-width="1"/>
+      <ellipse cx="22" cy="22" rx="18" ry="6" fill="none" stroke="#7c6cfa" stroke-width="0.6" opacity="0.4"/>
+      <ellipse cx="22" cy="22" rx="7" ry="18" fill="none" stroke="#7c6cfa" stroke-width="0.6" opacity="0.4"/>
+      <!-- Nodes -->
+      <circle cx="22" cy="4" r="2.5" fill="#6cf0c2" class="logo-node-teal"/>
+      <circle cx="38" cy="14" r="2" fill="#6cf0c2" class="logo-node-teal"/>
+      <circle cx="38" cy="30" r="2" fill="#fa6c9f"/>
+      <circle cx="22" cy="40" r="2.5" fill="#fa6c9f"/>
+      <circle cx="6" cy="30" r="2" fill="#6cf0c2" class="logo-node-teal"/>
+      <circle cx="6" cy="14" r="2" fill="#6cf0c2" class="logo-node-teal"/>
+      <!-- Lines -->
+      <line x1="22" y1="6" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
+      <line x1="36" y1="15" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
+      <line x1="36" y1="29" x2="22" y2="22" stroke="#fa6c9f" stroke-width="0.6" opacity="0.5"/>
+      <line x1="22" y1="38" x2="22" y2="22" stroke="#fa6c9f" stroke-width="0.6" opacity="0.5"/>
+      <line x1="8" y1="29" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
+      <line x1="8" y1="15" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
+      <!-- Center -->
+      <circle cx="22" cy="22" r="3.5" fill="#7c6cfa"/>
+      <circle cx="22" cy="22" r="1.5" fill="#fff"/>
+      <!-- Brand text — single text element with tspans, wider viewBox so full name shows -->
+      <text x="50" y="30" font-size="21"><tspan class="logo-text-main">AllAI</tspan><tspan class="logo-text-dunia">Dunia</tspan></text>
+    </svg>
+
+    <div class="nav-right">
+      <div class="nav-badge">🌍 Every AI Tool, One World</div>
+      <button class="submit-nav-btn" onclick="openModal()">+ Submit Tool</button>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Your AI Universe Starts Here</div>
+    <h1>All the AI Tools<br><span class="line2">in One World</span></h1>
+    <p class="hero-sub">Discover, explore, and launch the best AI tools across every category — updated as new ones arrive.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num" id="total-count">60+</div><div class="stat-label">AI Tools</div></div>
+      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Categories</div></div>
+      <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Search AI tools..." autocomplete="off" />
+    </div>
+  </div>
+</div>
+
+<!-- SEO INTRO TEXT -->
+<div class="container">
+  <p class="seo-intro">
+    New AI tools launch every week, and it's easy to lose track of what's actually useful.
+    AllAIDunia organizes 60+ AI tools by what people actually need to do — whether that's
+    document writing, video editing, image generation, coding, voice and audio, or research.
+    Instead of searching "best AI tool for X" every time, browse by category below and find
+    the right tool in seconds. Every listing is free to explore, and the directory is updated
+    as new AI tools launch.
+  </p>
+</div>
+
+<!-- FILTERS -->
+<div class="filters" id="filter-bar"></div>
+
+<!-- GRID -->
+<div class="container grid-section">
+  <div class="count-bar" id="count-bar"></div>
+  <div class="tools-grid" id="tools-grid"></div>
+</div>
+
+<!-- CATEGORY PAGES + BLOG LINKS -->
+<div class="container" style="margin-bottom: 60px;">
+  <div class="link-section">
+    <h2 class="link-section-title">Browse by category</h2>
+    <div class="link-cards">
+      <a href="video-ai-tools.html" class="link-card">
+        <div class="link-card-name">AI Video Tools</div>
+        <div class="link-card-desc">Runway, Sora, Kling AI, Pika, HeyGen and more — compared side by side.</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="link-section" style="margin-top: 32px;">
+    <h2 class="link-section-title">From the blog</h2>
+    <div class="link-cards">
+      <a href="best-free-ai-video-editing-tools.html" class="link-card">
+        <div class="link-card-name">Best Free AI Tools for Video Editing in 2026</div>
+        <div class="link-card-desc">An honest breakdown of which AI video tool to use for which task.</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMIT TOOL MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">Submit a Tool 🛠️</div>
+    <div class="modal-sub">Know an AI tool we're missing? Tell us about it!</div>
+    <div id="form-area">
+      <div class="form-group">
+        <label>Tool Name *</label>
+        <input type="text" id="f-name" placeholder="e.g. Midjourney" />
+      </div>
+      <div class="form-group">
+        <label>Website URL *</label>
+        <input type="url" id="f-url" placeholder="e.g. https://midjourney.com" />
+      </div>
+      <div class="form-group">
+        <label>Category *</label>
+        <select id="f-cat">
+          <option value="">Select a category</option>
+          <option>Chat</option><option>Search</option><option>Image</option>
+          <option>Video</option><option>Audio</option><option>Code</option>
+          <option>Writing</option><option>Productivity</option><option>Research</option>
+          <option>Design</option><option>Marketing</option><option>Education</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Short Description *</label>
+        <textarea id="f-desc" placeholder="What does this tool do? (1-2 sentences)"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Your Email (optional)</label>
+        <input type="email" id="f-email" placeholder="We'll notify you when it's added" />
+      </div>
+      <button class="submit-form-btn" onclick="submitTool()">Submit Tool →</button>
+    </div>
+    <div class="success-msg" id="success-msg">
+      🎉 Thank you! We've received your submission and will review it shortly.
+    </div>
+  </div>
+</div>
+
+<!-- AI CHATBOT FLOATING BUTTON -->
+<div class="chat-fab-label" id="fab-label">Not sure which tool? Ask AI 👋</div>
+<button class="chat-fab" onclick="toggleChat()" id="chat-fab" aria-label="Open AI tool recommender">🤖</button>
+
+<!-- CHAT POPUP -->
+<div class="chat-popup" id="chat-popup">
+  <div class="popup-header">
+    <div class="popup-header-left">
+      <div class="popup-avatar">🤖</div>
+      <div>
+        <div class="popup-title">AllAIDunia Assistant</div>
+        <div class="popup-subtitle">Tell me your task — I'll find the right tool</div>
+      </div>
+    </div>
+    <button class="popup-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="popup-messages" id="popup-messages">
+    <div class="pmsg bot">
+      <div class="pmsg-avatar">A</div>
+      <div class="pbubble bot">👋 Hi! Tell me what you want to do — write a resume, edit a video, build a website — and I'll find the best AI tool for you!</div>
+    </div>
+  </div>
+  <div class="psuggestions" id="psuggestions">
+    <button class="psugg-btn" onclick="pSendSugg(this)">Write a resume</button>
+    <button class="psugg-btn" onclick="pSendSugg(this)">Edit a video</button>
+    <button class="psugg-btn" onclick="pSendSugg(this)">Generate an image</button>
+    <button class="psugg-btn" onclick="pSendSugg(this)">Build a website</button>
+    <button class="psugg-btn" onclick="pSendSugg(this)">Make music</button>
+  </div>
+  <div class="popup-input-area">
+    <div class="popup-input-wrap">
+      <input type="text" id="popup-input" placeholder="What do you want to do?" onkeydown="if(event.key==='Enter')pSendMessage()" />
+      <button class="psend-btn" id="psend-btn" onclick="pSendMessage()">➤</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">AllAIDunia</div>
+  <div class="footer-text">Curating the world of AI, one tool at a time · Updated regularly</div>
+  <div class="footer-links">
+    <a href="#" onclick="openModal()">Submit a Tool</a>
+    <a href="https://allaidunia.substack.com" target="_blank">Newsletter</a>
+    <a href="mailto:hello@allaidunia.com">hello@allaidunia.com</a>
+  </div>
+</footer>
+
+<script>
+// ── TOOLS DATA ──
+const tools = [
+  // Chat
+  { name:"ChatGPT", cat:"Chat", url:"https://chat.openai.com", color:"#10a37f", text:"#fff", letter:"C", desc:"OpenAI's flagship AI assistant for everything", isNew:false, featured:false },
+  { name:"Claude", cat:"Chat", url:"https://claude.ai", color:"#d97706", text:"#fff", letter:"A", desc:"Anthropic's thoughtful and safe AI assistant", isNew:false, featured:false },
+  { name:"Gemini", cat:"Chat", url:"https://gemini.google.com", color:"#4285f4", text:"#fff", letter:"G", desc:"Google's powerful multimodal AI model", isNew:false, featured:false },
+  { name:"Grok", cat:"Chat", url:"https://grok.com", color:"#1a1a1a", text:"#fff", letter:"G", desc:"xAI's witty real-time AI by Elon Musk", isNew:false, featured:false },
+  { name:"Mistral", cat:"Chat", url:"https://chat.mistral.ai", color:"#f97316", text:"#fff", letter:"M", desc:"Open-weight European AI models", isNew:false, featured:false },
+  { name:"Meta AI", cat:"Chat", url:"https://meta.ai", color:"#0668E1", text:"#fff", letter:"M", desc:"Meta's AI across apps and the web", isNew:false, featured:false },
+  { name:"Copilot", cat:"Chat", url:"https://copilot.microsoft.com", color:"#0078d4", text:"#fff", letter:"C", desc:"Microsoft's AI assistant powered by GPT-4", isNew:false, featured:false },
+  { name:"DeepSeek", cat:"Chat", url:"https://chat.deepseek.com", color:"#4f46e5", text:"#fff", letter:"D", desc:"Powerful open-source reasoning model", isNew:true, featured:false },
+  { name:"Le Chat", cat:"Chat", url:"https://chat.mistral.ai", color:"#ff6b35", text:"#fff", letter:"L", desc:"Mistral's fast conversational AI", isNew:true, featured:false },
+  { name:"Pi AI", cat:"Chat", url:"https://pi.ai", color:"#6d28d9", text:"#fff", letter:"P", desc:"Your personal AI that listens and learns", isNew:false, featured:false },
+
+  // Search
+  { name:"Perplexity", cat:"Search", url:"https://perplexity.ai", color:"#7c3aed", text:"#fff", letter:"P", desc:"AI-powered answer engine with citations", isNew:false, featured:false },
+  { name:"You.com", cat:"Search", url:"https://you.com", color:"#2563eb", text:"#fff", letter:"Y", desc:"AI search with cited answers", isNew:false, featured:false },
+  { name:"Phind", cat:"Search", url:"https://phind.com", color:"#0f172a", text:"#fff", letter:"P", desc:"AI search engine built for developers", isNew:false, featured:false },
+  { name:"Exa AI", cat:"Search", url:"https://exa.ai", color:"#111827", text:"#fff", letter:"E", desc:"Neural search for developers and researchers", isNew:true, featured:false },
+
+  // Image
+  { name:"Midjourney", cat:"Image", url:"https://midjourney.com", color:"#1a1a2e", text:"#fff", letter:"M", desc:"Stunning AI image generation", isNew:false, featured:false },
+  { name:"DALL·E 3", cat:"Image", url:"https://labs.openai.com", color:"#10a37f", text:"#fff", letter:"D", desc:"OpenAI's text-to-image model", isNew:false, featured:false },
+  { name:"Stable Diff.", cat:"Image", url:"https://stability.ai", color:"#7f1d1d", text:"#fff", letter:"S", desc:"Open-source image generation model", isNew:false, featured:false },
+  { name:"Adobe Firefly", cat:"Image", url:"https://firefly.adobe.com", color:"#ff0000", text:"#fff", letter:"F", desc:"Adobe's generative AI for creatives", isNew:false, featured:false },
+  { name:"Krea", cat:"Image", url:"https://krea.ai", color:"#6d28d9", text:"#fff", letter:"K", desc:"Real-time AI image creation tool", isNew:true, featured:false },
+  { name:"Ideogram", cat:"Image", url:"https://ideogram.ai", color:"#0f172a", text:"#fff", letter:"I", desc:"AI image gen with great text typography", isNew:true, featured:false },
+  { name:"Leonardo AI", cat:"Image", url:"https://leonardo.ai", color:"#b45309", text:"#fff", letter:"L", desc:"AI images for games and creative work", isNew:false, featured:false },
+  { name:"Flux", cat:"Image", url:"https://blackforestlabs.ai", color:"#1e1b4b", text:"#fff", letter:"F", desc:"State of the art image generation model", isNew:true, featured:false },
+  { name:"Canva AI", cat:"Image", url:"https://canva.com/ai-image-generator", color:"#00c4cc", text:"#fff", letter:"C", desc:"AI image generation inside Canva", isNew:false, featured:false },
+
+  // Video
+  { name:"Runway", cat:"Video", url:"https://runwayml.com", color:"#0f172a", text:"#fff", letter:"R", desc:"AI video generation and editing suite", isNew:true, featured:false },
+  { name:"Sora", cat:"Video", url:"https://sora.com", color:"#10a37f", text:"#fff", letter:"S", desc:"OpenAI's text-to-video model", isNew:true, featured:false },
+  { name:"Kling AI", cat:"Video", url:"https://klingai.com", color:"#1e1b4b", text:"#fff", letter:"K", desc:"Realistic AI video generation", isNew:true, featured:false },
+  { name:"Pika", cat:"Video", url:"https://pika.art", color:"#7c3aed", text:"#fff", letter:"P", desc:"AI video from text or images", isNew:true, featured:false },
+  { name:"HeyGen", cat:"Video", url:"https://heygen.com", color:"#0ea5e9", text:"#fff", letter:"H", desc:"AI avatar video creator for business", isNew:true, featured:false },
+  { name:"Synthesia", cat:"Video", url:"https://synthesia.io", color:"#6d28d9", text:"#fff", letter:"S", desc:"AI video with realistic avatars", isNew:false, featured:false },
+
+  // Audio
+  { name:"ElevenLabs", cat:"Audio", url:"https://elevenlabs.io", color:"#111827", text:"#fff", letter:"E", desc:"Ultra-realistic AI voice cloning", isNew:false, featured:false },
+  { name:"Suno", cat:"Audio", url:"https://suno.com", color:"#7c3aed", text:"#fff", letter:"S", desc:"Generate full songs with AI", isNew:false, featured:false },
+  { name:"Udio", cat:"Audio", url:"https://udio.com", color:"#0f172a", text:"#fff", letter:"U", desc:"AI music creation and generation", isNew:true, featured:false },
+  { name:"Murf AI", cat:"Audio", url:"https://murf.ai", color:"#0369a1", text:"#fff", letter:"M", desc:"AI voiceover and text-to-speech", isNew:false, featured:false },
+  { name:"Descript", cat:"Audio", url:"https://descript.com", color:"#111827", text:"#fff", letter:"D", desc:"Edit audio and video like a document", isNew:false, featured:false },
+
+  // Code
+  { name:"GitHub Copilot", cat:"Code", url:"https://github.com/features/copilot", color:"#24292e", text:"#fff", letter:"G", desc:"AI pair programmer inside your IDE", isNew:false, featured:false },
+  { name:"Cursor", cat:"Code", url:"https://cursor.sh", color:"#1d4ed8", text:"#fff", letter:"C", desc:"The AI-first code editor", isNew:false, featured:false },
+  { name:"v0", cat:"Code", url:"https://v0.dev", color:"#000", text:"#fff", letter:"v", desc:"Generate UI components with AI by Vercel", isNew:true, featured:false },
+  { name:"Bolt", cat:"Code", url:"https://bolt.new", color:"#c2410c", text:"#fff", letter:"B", desc:"Full-stack AI app builder in browser", isNew:true, featured:false },
+  { name:"Lovable", cat:"Code", url:"https://lovable.dev", color:"#db2777", text:"#fff", letter:"L", desc:"AI that builds full web apps from prompts", isNew:true, featured:false },
+  { name:"Replit AI", cat:"Code", url:"https://replit.com", color:"#f97316", text:"#fff", letter:"R", desc:"AI-powered coding in the browser", isNew:false, featured:false },
+  { name:"Windsurf", cat:"Code", url:"https://codeium.com/windsurf", color:"#0ea5e9", text:"#fff", letter:"W", desc:"AI code editor by Codeium", isNew:true, featured:false },
+  { name:"Tabnine", cat:"Code", url:"https://tabnine.com", color:"#6d28d9", text:"#fff", letter:"T", desc:"AI code completion for all IDEs", isNew:false, featured:false },
+
+  // Writing
+  { name:"Jasper", cat:"Writing", url:"https://jasper.ai", color:"#f97316", text:"#fff", letter:"J", desc:"AI for marketing content and copywriting", isNew:false, featured:false },
+  { name:"Copy.ai", cat:"Writing", url:"https://copy.ai", color:"#7c3aed", text:"#fff", letter:"C", desc:"AI writing and workflow automation", isNew:false, featured:false },
+  { name:"Grammarly", cat:"Writing", url:"https://grammarly.com", color:"#15c369", text:"#fff", letter:"G", desc:"AI grammar and writing assistant", isNew:false, featured:false },
+  { name:"Quillbot", cat:"Writing", url:"https://quillbot.com", color:"#2da44e", text:"#fff", letter:"Q", desc:"AI paraphrasing and summarisation", isNew:false, featured:false },
+  { name:"Writesonic", cat:"Writing", url:"https://writesonic.com", color:"#6d28d9", text:"#fff", letter:"W", desc:"AI writing platform for marketers", isNew:false, featured:false },
+
+  // Productivity
+  { name:"Notion AI", cat:"Productivity", url:"https://notion.so/ai", color:"#000", text:"#fff", letter:"N", desc:"AI inside your notes and documents", isNew:false, featured:false },
+  { name:"Otter.ai", cat:"Productivity", url:"https://otter.ai", color:"#1d4ed8", text:"#fff", letter:"O", desc:"AI meeting notes and transcription", isNew:false, featured:false },
+  { name:"Mem.ai", cat:"Productivity", url:"https://mem.ai", color:"#0f172a", text:"#fff", letter:"M", desc:"AI-powered notes that self-organise", isNew:false, featured:false },
+  { name:"Reclaim AI", cat:"Productivity", url:"https://reclaim.ai", color:"#0ea5e9", text:"#fff", letter:"R", desc:"AI calendar and time management", isNew:true, featured:false },
+  { name:"Motion", cat:"Productivity", url:"https://usemotion.com", color:"#7c3aed", text:"#fff", letter:"M", desc:"AI task and project scheduling", isNew:false, featured:false },
+
+  // Research
+  { name:"HuggingFace", cat:"Research", url:"https://huggingface.co", color:"#f7c948", text:"#1a1a1a", letter:"H", desc:"The GitHub of AI models and datasets", isNew:false, featured:false },
+  { name:"Replicate", cat:"Research", url:"https://replicate.com", color:"#111827", text:"#fff", letter:"R", desc:"Run open-source AI models via API", isNew:false, featured:false },
+  { name:"Together AI", cat:"Research", url:"https://together.ai", color:"#4f46e5", text:"#fff", letter:"T", desc:"Fast inference for open-source models", isNew:false, featured:false },
+  { name:"Arxiv + AI", cat:"Research", url:"https://arxiv.org", color:"#b45309", text:"#fff", letter:"A", desc:"Latest AI research papers", isNew:false, featured:false },
+
+  // Design
+  { name:"Figma AI", cat:"Design", url:"https://figma.com", color:"#f24e1e", text:"#fff", letter:"F", desc:"AI-powered design features in Figma", isNew:true, featured:false },
+  { name:"Framer AI", cat:"Design", url:"https://framer.com", color:"#0055ff", text:"#fff", letter:"F", desc:"AI website builder with animations", isNew:true, featured:false },
+  { name:"Looka", cat:"Design", url:"https://looka.com", color:"#7c3aed", text:"#fff", letter:"L", desc:"AI logo and brand design maker", isNew:false, featured:false },
+
+  // Marketing
+  { name:"AdCreative", cat:"Marketing", url:"https://adcreative.ai", color:"#2563eb", text:"#fff", letter:"A", desc:"AI-generated ad creatives that convert", isNew:false, featured:false },
+  { name:"Surfer SEO", cat:"Marketing", url:"https://surferseo.com", color:"#0ea5e9", text:"#fff", letter:"S", desc:"AI SEO writing and optimisation", isNew:false, featured:false },
+  { name:"Lately AI", cat:"Marketing", url:"https://lately.ai", color:"#f97316", text:"#fff", letter:"L", desc:"AI social media content repurposing", isNew:false, featured:false },
+];
+
+const cats = ["All", ...new Set(tools.map(t => t.cat))];
+let active = "All";
+
+// Build filters
+const filterBar = document.getElementById("filter-bar");
+cats.forEach(c => {
+  const btn = document.createElement("button");
+  btn.className = "filter-btn" + (c === "All" ? " active" : "");
+  btn.textContent = c;
+  btn.onclick = () => {
+    active = c;
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    render();
+  };
+  filterBar.appendChild(btn);
+});
+
+document.getElementById("search-input").addEventListener("input", render);
+
+function render() {
+  const q = document.getElementById("search-input").value.toLowerCase().trim();
+  const filtered = tools.filter(t =>
+    (active === "All" || t.cat === active) &&
+    (!q || t.name.toLowerCase().includes(q) || t.cat.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q))
+  );
+  document.getElementById("count-bar").innerHTML = `Showing <span>${filtered.length}</span> of <span>${tools.length}</span> tools`;
+  document.getElementById("total-count").textContent = tools.length + "+";
+  const grid = document.getElementById("tools-grid");
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="no-results">No tools found for "<strong>${q}</strong>" 🤔<br><small>Submit it using the button above!</small></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map((t, i) => `
+    <a class="tool-card" href="${t.url}" target="_blank" rel="noopener noreferrer" style="animation-delay:${i * 0.025}s">
+      <div class="card-top">
+        <div class="tool-icon" style="background:${t.color}; color:${t.text}">${t.letter}</div>
+        ${t.featured ? '<span class="featured-pill">Featured</span>' : t.isNew ? '<span class="new-pill">New</span>' : ''}
+      </div>
+      <div>
+        <div class="tool-name">${t.name}</div>
+        <div class="tool-desc">${t.desc}</div>
+      </div>
+      <div class="tool-cat">${t.cat}</div>
+    </a>
+  `).join("");
+}
+render();
+
+// ── THEME TOGGLE ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute("data-theme") === "dark";
+  html.setAttribute("data-theme", isDark ? "light" : "dark");
+  document.getElementById("themeBtn").textContent = isDark ? "🌙" : "☀️";
+  localStorage.setItem("theme", isDark ? "light" : "dark");
+}
+// Load saved theme
+const saved = localStorage.getItem("theme");
+if (saved) {
+  document.documentElement.setAttribute("data-theme", saved);
+  document.getElementById("themeBtn").textContent = saved === "dark" ? "🌙" : "☀️";
+}
+
+// ── MODAL ──
+function openModal() {
+  document.getElementById("modal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeModal() {
+  document.getElementById("modal").classList.remove("open");
+  document.body.style.overflow = "";
+  document.getElementById("success-msg").style.display = "none";
+  document.getElementById("form-area").style.display = "block";
+}
+document.getElementById("modal").addEventListener("click", function(e) {
+  if (e.target === this) closeModal();
+});
+
+async function submitTool() {
+  const name = document.getElementById("f-name").value.trim();
+  const url = document.getElementById("f-url").value.trim();
+  const cat = document.getElementById("f-cat").value;
+  const desc = document.getElementById("f-desc").value.trim();
+  const email = document.getElementById("f-email").value.trim();
+  if (!name || !url || !cat || !desc) {
+    alert("Please fill in all required fields!");
+    return;
+  }
+  const btn = document.querySelector(".submit-form-btn");
+  btn.textContent = "Sending...";
+  btn.disabled = true;
+  try {
+    const response = await fetch("https://formspree.io/f/xlgkbgwo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        "Tool Name": name,
+        "Website URL": url,
+        "Category": cat,
+        "Description": desc,
+        "Submitter Email": email || "Not provided",
+        "_subject": "New AI Tool Submission — " + name
+      })
+    });
+    if (response.ok) {
+      document.getElementById("form-area").style.display = "none";
+      document.getElementById("success-msg").style.display = "block";
+    } else {
+      alert("Something went wrong. Please try again!");
+      btn.textContent = "Submit Tool →";
+      btn.disabled = false;
+    }
+  } catch(err) {
+    alert("Network error. Please check your connection and try again!");
+    btn.textContent = "Submit Tool →";
+    btn.disabled = false;
+  }
+}
+
+// ── AI CHATBOT ──
+const toolsDB = [
+  { name:"ChatGPT", url:"https://chat.openai.com", color:"#10a37f", letter:"C" },
+  { name:"Claude", url:"https://claude.ai", color:"#d97706", letter:"A" },
+  { name:"Gemini", url:"https://gemini.google.com", color:"#4285f4", letter:"G" },
+  { name:"Grammarly", url:"https://grammarly.com", color:"#15c369", letter:"G" },
+  { name:"Jasper", url:"https://jasper.ai", color:"#f97316", letter:"J" },
+  { name:"Copy.ai", url:"https://copy.ai", color:"#7c3aed", letter:"C" },
+  { name:"Quillbot", url:"https://quillbot.com", color:"#2da44e", letter:"Q" },
+  { name:"Runway", url:"https://runwayml.com", color:"#0f172a", letter:"R" },
+  { name:"Sora", url:"https://sora.com", color:"#10a37f", letter:"S" },
+  { name:"Kling AI", url:"https://klingai.com", color:"#1e1b4b", letter:"K" },
+  { name:"Pika", url:"https://pika.art", color:"#7c3aed", letter:"P" },
+  { name:"HeyGen", url:"https://heygen.com", color:"#0ea5e9", letter:"H" },
+  { name:"Synthesia", url:"https://synthesia.io", color:"#6d28d9", letter:"S" },
+  { name:"Midjourney", url:"https://midjourney.com", color:"#1a1a2e", letter:"M" },
+  { name:"DALL·E 3", url:"https://labs.openai.com", color:"#10a37f", letter:"D" },
+  { name:"Adobe Firefly", url:"https://firefly.adobe.com", color:"#ff0000", letter:"F" },
+  { name:"Ideogram", url:"https://ideogram.ai", color:"#0f172a", letter:"I" },
+  { name:"Leonardo AI", url:"https://leonardo.ai", color:"#b45309", letter:"L" },
+  { name:"Canva AI", url:"https://canva.com", color:"#00c4cc", letter:"C" },
+  { name:"Figma AI", url:"https://figma.com", color:"#f24e1e", letter:"F" },
+  { name:"Framer AI", url:"https://framer.com", color:"#0055ff", letter:"F" },
+  { name:"Bolt", url:"https://bolt.new", color:"#c2410c", letter:"B" },
+  { name:"Lovable", url:"https://lovable.dev", color:"#db2777", letter:"L" },
+  { name:"v0", url:"https://v0.dev", color:"#000", letter:"v" },
+  { name:"Cursor", url:"https://cursor.sh", color:"#1d4ed8", letter:"C" },
+  { name:"GitHub Copilot", url:"https://github.com/features/copilot", color:"#24292e", letter:"G" },
+  { name:"Replit AI", url:"https://replit.com", color:"#f97316", letter:"R" },
+  { name:"ElevenLabs", url:"https://elevenlabs.io", color:"#111827", letter:"E" },
+  { name:"Suno", url:"https://suno.com", color:"#7c3aed", letter:"S" },
+  { name:"Murf AI", url:"https://murf.ai", color:"#0369a1", letter:"M" },
+  { name:"Perplexity", url:"https://perplexity.ai", color:"#7c3aed", letter:"P" },
+  { name:"Notion AI", url:"https://notion.so/ai", color:"#000", letter:"N" },
+  { name:"Otter.ai", url:"https://otter.ai", color:"#1d4ed8", letter:"O" },
+  { name:"Looka", url:"https://looka.com", color:"#7c3aed", letter:"L" },
+  { name:"Surfer SEO", url:"https://surferseo.com", color:"#0ea5e9", letter:"S" },
+];
+
+let pChatHistory = [];
+let pIsLoading = false;
+let chatOpen = false;
+let fabLabelHidden = false;
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  document.getElementById('chat-popup').classList.toggle('open', chatOpen);
+  document.getElementById('chat-fab').textContent = chatOpen ? '✕' : '🤖';
+  if (chatOpen) {
+    if (!fabLabelHidden) {
+      document.getElementById('fab-label').style.display = 'none';
+      fabLabelHidden = true;
+    }
+    setTimeout(() => document.getElementById('popup-input').focus(), 100);
+  }
+}
+
+function pAddMessage(role, content, cards = []) {
+  const msgs = document.getElementById('popup-messages');
+  const div = document.createElement('div');
+  div.className = `pmsg ${role}`;
+  if (role === 'bot') {
+    div.innerHTML = `
+      <div class="pmsg-avatar">A</div>
+      <div class="pbubble bot">
+        <div>${content}</div>
+        ${cards.length ? `<div class="prec-cards">${cards.map(c => `
+          <a href="${c.url}" target="_blank" rel="noopener noreferrer" class="prec-card">
+            <div class="prec-icon" style="background:${c.color}">${c.letter}</div>
+            <div><div class="prec-name">${c.name}</div><div class="prec-why">${c.why}</div></div>
+          </a>`).join('')}</div>` : ''}
+      </div>`;
+  } else {
+    div.innerHTML = `<div class="pbubble user">${content}</div><div class="pmsg-avatar user">👤</div>`;
+  }
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function pShowTyping() {
+  const msgs = document.getElementById('popup-messages');
+  const div = document.createElement('div');
+  div.className = 'pmsg bot'; div.id = 'p-typing';
+  div.innerHTML = `<div class="pmsg-avatar">A</div><div class="pbubble bot"><div class="ptyping"><span></span><span></span><span></span></div></div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function pRemoveTyping() {
+  const el = document.getElementById('p-typing');
+  if (el) el.remove();
+}
+
+function pSendSugg(btn) {
+  document.getElementById('popup-input').value = btn.textContent;
+  document.getElementById('psuggestions').style.display = 'none';
+  pSendMessage();
+}
+
+async function pSendMessage() {
+  const input = document.getElementById('popup-input');
+  const text = input.value.trim();
+  if (!text || pIsLoading) return;
+  pIsLoading = true;
+  document.getElementById('psend-btn').disabled = true;
+  document.getElementById('psuggestions').style.display = 'none';
+  input.value = '';
+  pAddMessage('user', text);
+  pShowTyping();
+  pChatHistory.push({ role: 'user', content: text });
+
+  const systemPrompt = `You are the AllAIDunia AI Tool Recommender on allaidunia.com — a free directory of 60+ AI tools.
+
+Your ONLY job: recommend the best 2-3 AI tools from AllAIDunia based on what the user wants to do.
+
+Available tools and their free status:
+ChatGPT (chat.openai.com) - writing, emails, resume, brainstorm - FREE tier available
+Claude (claude.ai) - documents, analysis, coding, research - FREE tier available
+Gemini (gemini.google.com) - research, multimodal, Google - COMPLETELY FREE
+Grammarly (grammarly.com) - grammar, proofreading, resume - FREE basic version
+Jasper (jasper.ai) - marketing copy, blog posts, ads - PAID only
+Copy.ai (copy.ai) - copywriting, social media, emails - FREE tier available
+Quillbot (quillbot.com) - paraphrasing, rewriting, summarizing - FREE tier available
+Runway (runwayml.com) - video editing, AI video - FREE trial credits
+Sora (sora.com) - text-to-video generation - REQUIRES ChatGPT Plus
+Kling AI (klingai.com) - cinematic video - FREE tier available
+Pika (pika.art) - short social media videos - FREE tier available
+HeyGen (heygen.com) - AI avatar presenter videos - 1 FREE video/month
+Midjourney (midjourney.com) - artistic image generation - PAID only $10/mo
+DALL-E 3 (labs.openai.com) - image from text - FREE via ChatGPT
+Adobe Firefly (firefly.adobe.com) - creative design - FREE credits monthly
+Ideogram (ideogram.ai) - images with text, thumbnails - FREE tier available
+Leonardo AI (leonardo.ai) - game art, illustration - FREE daily credits
+Canva AI (canva.com) - design, presentations - FREE with Canva account
+Figma AI (figma.com) - UI/UX design - FREE for small teams
+Framer AI (framer.com) - no-code websites - FREE tier available
+Bolt (bolt.new) - full-stack app building - FREE tier available
+Lovable (lovable.dev) - app from prompts - FREE tier available
+v0 (v0.dev) - UI components - FREE tier available
+Cursor (cursor.sh) - AI code editor - FREE tier available
+GitHub Copilot (github.com/features/copilot) - code autocomplete - FREE for individuals
+Replit AI (replit.com) - beginner coding - FREE tier available
+ElevenLabs (elevenlabs.io) - voice cloning, TTS - FREE limited minutes
+Suno (suno.com) - AI music generation - FREE tier available
+Udio (udio.com) - music creation - FREE tier available
+Murf AI (murf.ai) - voiceover, narration - FREE trial
+Perplexity (perplexity.ai) - AI research search - COMPLETELY FREE
+Notion AI (notion.so/ai) - notes, documents - REQUIRES Notion paid plan
+Otter.ai (otter.ai) - meeting transcription - FREE 300 min/month
+Looka (looka.com) - logo design - PAID only
+Surfer SEO (surferseo.com) - SEO writing - PAID only
+DeepSeek (chat.deepseek.com) - reasoning, coding - COMPLETELY FREE
+AdCreative (adcreative.ai) - ad creatives - PAID only
+
+RULES:
+- Recommend 2-3 tools MAXIMUM
+- If user mentions "free", "no cost", "without paying" — only recommend tools with free tiers
+- Be warm and conversational, like a helpful friend
+- For each tool give ONE short sentence why it fits their task
+- If they want free tools, mention the free tier in the why
+- Keep total response under 80 words
+- End with "Find them all at allaidunia.com!"
+
+Respond ONLY in this exact JSON format (no markdown, no extra text):
+{"message":"your short friendly response","tools":[{"name":"ToolName","why":"one sentence why it fits"}]}`;
+
+  try {
+    const res = await fetch('https://allaidunia-proxy.pavankotla10.workers.dev/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        max_tokens: 500,
+        messages: [
+          { role: 'system', content: systemPrompt },
+          ...pChatHistory
+        ]
+      })
+    });
+    const data = await res.json();
+    if (data.error) {
+      pRemoveTyping();
+      pAddMessage('bot', "Error: " + (data.error.message || JSON.stringify(data.error)));
+      pIsLoading = false;
+      document.getElementById('psend-btn').disabled = false;
+      return;
+    }
+    const raw = data.choices[0].message.content;
+    let parsed;
+    try { parsed = JSON.parse(raw.replace(/```json|```/g,'').trim()); }
+    catch(e) { parsed = { message: raw, tools: [] }; }
+    const cards = (parsed.tools||[]).map(t => {
+      const found = toolsDB.find(d => d.name.toLowerCase() === t.name.toLowerCase());
+      return found ? {...found, why: t.why} : null;
+    }).filter(Boolean);
+    pRemoveTyping();
+    pAddMessage('bot', parsed.message || "Here are my picks!", cards);
+    pChatHistory.push({ role: 'assistant', content: raw });
+  } catch(e) {
+    pRemoveTyping();
+    pAddMessage('bot', "Error: " + e.message);
+  }
+  pIsLoading = false;
+  document.getElementById('psend-btn').disabled = false;
+}
+
+
+</script>
+</body>
+</html>
