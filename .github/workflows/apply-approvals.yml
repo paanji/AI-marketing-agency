@@ -32,11 +32,14 @@ jobs:
       - name: Apply approvals
         run: python3 apply_approvals.py
 
+      - name: Regenerate index.html from tools.json
+        run: python3 regenerate_html.py
+
       - name: Commit changes (if any)
         run: |
           git config user.name "Directory Freshness Bot"
           git config user.email "actions@github.com"
-          git add tools.json pending.json
+          git add tools.json pending.json rejected.json index.html
           if git diff --cached --quiet; then
             echo "No approvals to apply"
           else
