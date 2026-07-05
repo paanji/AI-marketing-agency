@@ -1,0 +1,96 @@
+{
+  "agent_meta": {
+    "agent_name": "seo_agent",
+    "run_date": "2026-07-05",
+    "status": "success",
+    "summary": "5 action items found (0 high priority)"
+  },
+  "business_name": "AllAIDunia",
+  "site_url": "https://www.allaidunia.com/",
+  "generated_date": "2026-07-05",
+  "window": {
+    "start": "2026-06-04",
+    "end": "2026-07-02"
+  },
+  "overview": {
+    "total_queries": 1,
+    "total_clicks": 0,
+    "total_impressions": 2,
+    "avg_position": 8.5,
+    "overall_ctr": 0.0
+  },
+  "top_queries": [
+    {
+      "query": "ai dunia",
+      "position": 8.5,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0
+    }
+  ],
+  "quick_wins": [],
+  "low_ctr_queries": [],
+  "declining_pages": [],
+  "page_audits": [
+    {
+      "url": "https://www.allaidunia.com/",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "AllAIDunia â Find the Right AI Tool for Any Task | 60+ Free AI Tools",
+      "title_length": 70,
+      "has_meta_description": true,
+      "meta_description_length": 179,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 335,
+      "schema_types": [],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 48.5,
+        "subheading_count": 2
+      }
+    }
+  ],
+  "geo_checks": {
+    "blocked_ai_crawlers": [],
+    "has_llms_txt": false
+  },
+  "action_items": [
+    {
+      "description": "No llms.txt file — an emerging standard giving AI systems a clean, structured summary of your site. Not yet universal, but cheap to add and forward-looking.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": null
+    },
+    {
+      "description": "Title is 70 characters — Google truncates over ~60.",
+      "priority": "medium",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/"
+    },
+    {
+      "description": "Meta description is 179 characters — will get truncated.",
+      "priority": "low",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/"
+    },
+    {
+      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
+      "priority": "medium",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/"
+    },
+    {
+      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/"
+    }
+  ]
+}
