@@ -21,7 +21,7 @@ import json
 import requests
 from datetime import date, datetime, timedelta
 
-TOOLS_PATH = "tools.json"
+TOOLS_PATH = "agents/directory-freshness/tools.json"
 STRIKES_TO_ARCHIVE = 3
 REVIVAL_CHECK_DAYS = 7
 TIMEOUT_SECONDS = 10
