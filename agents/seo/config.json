@@ -1,0 +1,33 @@
+{
+  "business_name": "AllAIDunia",
+  "site_url": "https://www.allaidunia.com/",
+  "sitemap_url": "https://www.allaidunia.com/sitemap.xml",
+  "max_pages_to_crawl": 25,
+
+  "quick_win_min_position": 5,
+  "quick_win_max_position": 15,
+  "quick_win_min_impressions": 20,
+
+  "decline_threshold_pct": 25,
+
+  "low_ctr_min_impressions": 15,
+  "low_ctr_threshold_pct": 2.0,
+
+  "top_queries_count": 20,
+
+  "title_min_length": 30,
+  "title_max_length": 60,
+  "meta_description_min_length": 70,
+  "meta_description_max_length": 160,
+
+  "ai_crawlers_to_check": [
+    "GPTBot", "ChatGPT-User", "OAI-SearchBot",
+    "ClaudeBot", "anthropic-ai",
+    "PerplexityBot",
+    "Google-Extended",
+    "CCBot",
+    "Applebot-Extended"
+  ],
+  "ideal_schema_types": ["ItemList", "SoftwareApplication", "Organization", "WebSite"],
+  "check_llms_txt": true
+}
