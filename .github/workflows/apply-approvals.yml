@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'pending.json'
+      - 'agents/directory-freshness/pending.json'
   workflow_dispatch: {}
 
 permissions:
@@ -30,10 +30,10 @@ jobs:
           python-version: '3.11'
 
       - name: Apply approvals
-        run: python3 apply_approvals.py
+        run: python3 agents/directory-freshness/apply_approvals.py
 
       - name: Regenerate index.html from tools.json
-        run: python3 regenerate_html.py
+        run: python3 agents/directory-freshness/regenerate_html.py
 
       - name: Deploy index.html to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "Directory Freshness Bot"
           git config user.email "actions@github.com"
-          git add tools.json pending.json rejected.json index.html
+          git add agents/directory-freshness/tools.json agents/directory-freshness/pending.json agents/directory-freshness/rejected.json index.html
           if git diff --cached --quiet; then
             echo "No approvals to apply"
           else
