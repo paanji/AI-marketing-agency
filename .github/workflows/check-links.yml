@@ -32,10 +32,10 @@ jobs:
         run: pip install requests
 
       - name: Run link checker
-        run: python3 check_links.py
+        run: python3 agents/directory-freshness/check_links.py
 
       - name: Regenerate index.html from tools.json
-        run: python3 regenerate_html.py
+        run: python3 agents/directory-freshness/regenerate_html.py
 
       - name: Deploy index.html to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -53,7 +53,7 @@ jobs:
         run: |
           git config user.name "Directory Freshness Bot"
           git config user.email "actions@github.com"
-          git add tools.json index.html
+          git add agents/directory-freshness/tools.json index.html
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
