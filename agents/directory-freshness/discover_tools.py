@@ -16,9 +16,9 @@ import requests
 from datetime import date, datetime, timedelta
 from urllib.parse import urlparse
 
-TOOLS_PATH = "tools.json"
-PENDING_PATH = "pending.json"
-REJECTED_PATH = "rejected.json"
+TOOLS_PATH = "agents/directory-freshness/tools.json"
+PENDING_PATH = "agents/directory-freshness/pending.json"
+REJECTED_PATH = "agents/directory-freshness/rejected.json"
 
 HN_SEARCH_URL = "https://hn.algolia.com/api/v1/search_by_date"
 LOOKBACK_DAYS = 8          # slightly over a week so a weekly run doesn't miss any
