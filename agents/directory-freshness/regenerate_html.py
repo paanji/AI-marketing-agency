@@ -20,7 +20,7 @@ import re
 from urllib.parse import urlparse
 
 HTML_PATH = "index.html"
-TOOLS_PATH = "tools.json"
+TOOLS_PATH = "agents/directory-freshness/tools.json"
 
 
 def js_string(s: str) -> str:
