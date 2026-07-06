@@ -66,6 +66,28 @@ def query_search_analytics(service, site_url, start_date, end_date, dimensions, 
     return response.get("rows", [])
 
 
+def check_indexing_status(service, site_url, page_url):
+    """Uses Search Console's URL Inspection API to check whether Google has
+    actually indexed this specific page — a different question from ranking
+    performance. A perfectly optimized page that isn't indexed gets zero
+    search traffic regardless of title/meta/schema quality."""
+    try:
+        body = {"inspectionUrl": page_url, "siteUrl": site_url}
+        result = service.urlInspection().index().inspect(body=body).execute()
+        index_result = result.get("inspectionResult", {}).get("indexStatusResult", {})
+        return {
+            "verdict": index_result.get("verdict"),  # PASS, FAIL, NEUTRAL, PARTIAL, VERDICT_UNSPECIFIED
+            "coverage_state": index_result.get("coverageState"),
+            "robots_txt_state": index_result.get("robotsTxtState"),
+            "indexing_state": index_result.get("indexingState"),
+            "page_fetch_state": index_result.get("pageFetchState"),
+            "last_crawl_time": index_result.get("lastCrawlTime"),
+        }
+    except Exception as e:
+        print(f"WARNING: could not check indexing status for {page_url} ({e})")
+        return None
+
+
 def find_quick_wins(query_rows, cfg):
     wins = []
     for row in query_rows:
@@ -229,6 +251,75 @@ def check_js_rendering_blindspot(soup, cfg):
     }
 
 
+def check_pagespeed(url, cfg):
+    """Uses Google's free PageSpeed Insights API to check Core Web Vitals —
+    a confirmed ranking factor. Works without an API key at low volume;
+    set pagespeed_api_key in config if you hit rate limits at scale."""
+    params = {"url": url, "strategy": "mobile", "category": "performance"}
+    if cfg.get("pagespeed_api_key"):
+        params["key"] = cfg["pagespeed_api_key"]
+    try:
+        resp = requests.get(
+            "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
+            params=params, timeout=30
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        lighthouse = data.get("lighthouseResult", {})
+        perf_score = lighthouse.get("categories", {}).get("performance", {}).get("score")
+        audits = lighthouse.get("audits", {})
+        return {
+            "performance_score": perf_score,  # 0.0-1.0, or None if unavailable
+            "lcp_display": audits.get("largest-contentful-paint", {}).get("displayValue"),
+            "cls_display": audits.get("cumulative-layout-shift", {}).get("displayValue"),
+            "tbt_display": audits.get("total-blocking-time", {}).get("displayValue"),
+        }
+    except requests.exceptions.RequestException as e:
+        print(f"WARNING: PageSpeed check failed for {url} ({e})")
+        return None
+
+
+def check_meta_robots_noindex(soup):
+    """A page can be technically live and well-optimized but explicitly tell
+    Google not to index it via a meta tag — independent of anything else
+    checked so far. Returns True if noindex is present."""
+    tag = soup.find("meta", attrs={"name": "robots"})
+    if tag is None:
+        return False
+    content = tag.get("content", "").lower()
+    return "noindex" in content
+
+
+def check_canonical_tag(soup, expected_domain):
+    """Checks for a canonical tag and whether it points to the expected
+    domain. Directly relevant given the www/non-www redirect issue this
+    site already had — a proper canonical tag makes that class of problem
+    self-diagnosing instead of requiring manual investigation."""
+    tag = soup.find("link", attrs={"rel": "canonical"})
+    if tag is None or not tag.get("href"):
+        return {"has_canonical": False, "canonical_url": None, "domain_mismatch": False}
+    canonical_url = tag["href"].strip()
+    canonical_domain = urlparse(canonical_url).netloc
+    return {
+        "has_canonical": True,
+        "canonical_url": canonical_url,
+        "domain_mismatch": bool(canonical_domain) and canonical_domain != expected_domain,
+    }
+
+
+def check_open_graph_tags(soup):
+    """Affects how links look when shared on social media/Slack/WhatsApp.
+    Low priority compared to indexing/speed issues, but cheap to check."""
+    og_title = soup.find("meta", attrs={"property": "og:title"})
+    og_desc = soup.find("meta", attrs={"property": "og:description"})
+    og_image = soup.find("meta", attrs={"property": "og:image"})
+    return {
+        "has_og_title": og_title is not None,
+        "has_og_description": og_desc is not None,
+        "has_og_image": og_image is not None,
+    }
+
+
 def get_sitemap_urls(sitemap_url, max_pages):
     try:
         resp = requests.get(sitemap_url, headers=HEADERS, timeout=TIMEOUT_SECONDS)
@@ -241,7 +332,7 @@ def get_sitemap_urls(sitemap_url, max_pages):
         return []
 
 
-def audit_page(url, cfg):
+def audit_page(url, cfg, service=None, page_index=0):
     """Checks one page for common on-page SEO basics. Returns a dict with
     fetch_error=True if the page couldn't be fetched at all."""
     try:
@@ -269,6 +360,17 @@ def audit_page(url, cfg):
     schema_types = extract_schema_types(soup)
     extractability = check_content_extractability(soup)
     js_blindspot = check_js_rendering_blindspot(soup, cfg)
+    indexing = check_indexing_status(service, cfg["site_url"], url) if service else None
+    noindex = check_meta_robots_noindex(soup)
+    canonical = check_canonical_tag(soup, urlparse(cfg["site_url"]).netloc)
+    open_graph = check_open_graph_tags(soup)
+
+    # Page speed calls are slow (~10-20s each) and rate-limited without an API
+    # key, so only check the first N pages (config-controlled) rather than
+    # every page on a larger site.
+    pagespeed = None
+    if page_index < cfg.get("max_pages_for_pagespeed", 5):
+        pagespeed = check_pagespeed(url, cfg)
 
     return {
         "url": url,
@@ -285,15 +387,20 @@ def audit_page(url, cfg):
         "schema_types": schema_types,
         "extractability": extractability,
         "js_blindspot": js_blindspot,
+        "indexing": indexing,
+        "noindex": noindex,
+        "canonical": canonical,
+        "open_graph": open_graph,
+        "pagespeed": pagespeed,
     }
 
 
-def audit_site(cfg):
+def audit_site(cfg, service=None):
     urls = get_sitemap_urls(cfg["sitemap_url"], cfg["max_pages_to_crawl"])
     if not urls:
         urls = [cfg["site_url"]]
     print(f"Auditing {len(urls)} page(s) from sitemap...")
-    page_audits = [audit_page(url, cfg) for url in urls]
+    page_audits = [audit_page(url, cfg, service, i) for i, url in enumerate(urls)]
 
     blocked_ai_crawlers = check_ai_crawler_access(cfg["site_url"], cfg["ai_crawlers_to_check"])
     has_llms_txt = check_llms_txt(cfg["site_url"]) if cfg.get("check_llms_txt") else None
@@ -409,6 +516,51 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
                 f"JavaScript for interactive features.",
                 "high", "technical", "manual", url)
 
+        indexing = page.get("indexing")
+        if indexing and indexing.get("verdict") not in ("PASS", None):
+            coverage = indexing.get("coverage_state", "unknown reason")
+            add(f"Not indexed by Google: verdict is '{indexing.get('verdict')}' — {coverage}. "
+                f"A page that isn't indexed gets zero search traffic no matter how well it's optimized "
+                f"otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+                "high", "technical", "manual", url)
+
+        if page.get("noindex"):
+            add("This page has a `noindex` meta tag — explicitly telling Google not to index it, "
+                "regardless of anything else. If this wasn't intentional, it fully explains poor "
+                "search visibility on its own.",
+                "high", "technical", "manual", url)
+
+        canonical = page.get("canonical", {})
+        if not canonical.get("has_canonical"):
+            add("No canonical tag — recommended so search engines know the definitive URL for this "
+                "page, especially relevant given this site previously had a www/non-www duplication issue.",
+                "medium", "technical", "manual", url)
+        elif canonical.get("domain_mismatch"):
+            add(f"Canonical tag points to a different domain ({canonical.get('canonical_url')}) than "
+                f"expected — this can accidentally tell Google to credit a different host for this page's "
+                f"content, similar to the earlier www/non-www redirect issue.",
+                "high", "technical", "manual", url)
+
+        og = page.get("open_graph", {})
+        missing_og = [k.replace("has_og_", "og:") for k, v in og.items() if not v]
+        if missing_og:
+            add(f"Missing Open Graph tags ({', '.join(missing_og)}) — affects how this page's links "
+                f"look when shared on social media, Slack, or WhatsApp.",
+                "low", "on_page_seo", "content_agent", url)
+
+        pagespeed = page.get("pagespeed")
+        if pagespeed and pagespeed.get("performance_score") is not None:
+            score = pagespeed["performance_score"]
+            if score < cfg.get("performance_score_poor_threshold", 0.5):
+                add(f"Poor page speed (Lighthouse performance score: {round(score * 100)}/100, mobile). "
+                    f"LCP: {pagespeed.get('lcp_display', 'n/a')}, CLS: {pagespeed.get('cls_display', 'n/a')}. "
+                    f"Core Web Vitals are a confirmed Google ranking factor.",
+                    "high", "technical", "manual", url)
+            elif score < cfg.get("performance_score_good_threshold", 0.9):
+                add(f"Page speed could be better (Lighthouse performance score: {round(score * 100)}/100, mobile). "
+                    f"LCP: {pagespeed.get('lcp_display', 'n/a')}, CLS: {pagespeed.get('cls_display', 'n/a')}.",
+                    "medium", "technical", "manual", url)
+
         extractability = page.get("extractability", {})
         if extractability.get("lists_and_tables_count", 0) == 0 and page["word_count"] > 150:
             add("No lists or tables — AI answer engines strongly prefer content structured for easy "
@@ -465,7 +617,7 @@ def main():
     overview = compute_overview(query_rows)
     top_queries = top_queries_by_impressions(query_rows, cfg["top_queries_count"])
 
-    page_audits, geo_checks = audit_site(cfg)
+    page_audits, geo_checks = audit_site(cfg, service)
 
     suggestions = generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audits, geo_checks)
 
@@ -521,13 +673,20 @@ def main():
         lines.append("- Schema types found across site: **none**")
 
     lines += ["", "## On-Page Audit", f"{len(page_audits)} page(s) checked from the sitemap.", "",
-              "| Page | Title Length | Meta Desc | H1s | Images Missing Alt | Word Count |",
-              "|---|---|---|---|---|---|"]
+              "| Page | Indexed | Title Length | Meta Desc | H1s | Images Missing Alt | Word Count |",
+              "|---|---|---|---|---|---|---|"]
     for p in page_audits:
         if p.get("fetch_error"):
-            lines.append(f"| {p['url']} | — | — | — | — | **COULD NOT LOAD** |")
+            lines.append(f"| {p['url']} | — | — | — | — | — | **COULD NOT LOAD** |")
         else:
-            lines.append(f"| {p['url']} | {p['title_length']} | {'Yes' if p['has_meta_description'] else 'MISSING'} | "
+            indexing = p.get("indexing")
+            if indexing is None:
+                index_display = "unknown"
+            elif indexing.get("verdict") == "PASS":
+                index_display = "Yes"
+            else:
+                index_display = f"**NO** ({indexing.get('verdict')})"
+            lines.append(f"| {p['url']} | {index_display} | {p['title_length']} | {'Yes' if p['has_meta_description'] else 'MISSING'} | "
                           f"{p['h1_count']} | {p['images_missing_alt']} | {p['word_count']} |")
 
     lines += ["", "## Top Queries by Visibility", "", "| Query | Position | Impressions | Clicks | CTR |", "|---|---|---|---|---|"]
