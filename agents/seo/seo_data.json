@@ -4,7 +4,7 @@
     "schema_version": "1.0",
     "run_date": "2026-07-06",
     "status": "success",
-    "summary": "13 action items found (2 high priority)"
+    "summary": "18 action items found (4 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
@@ -56,7 +56,27 @@
         "children_found": 0,
         "expected_min": 10,
         "likely_invisible_to_crawlers": true
-      }
+      },
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-06T15:05:47Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": false
+      },
+      "pagespeed": null
     },
     {
       "url": "https://www.allaidunia.com/video-ai-tools.html",
@@ -81,7 +101,27 @@
         "children_found": 0,
         "expected_min": 10,
         "likely_invisible_to_crawlers": true
-      }
+      },
+      "indexing": {
+        "verdict": "NEUTRAL",
+        "coverage_state": "URL is unknown to Google",
+        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "last_crawl_time": null
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/video-ai-tools.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": false
+      },
+      "pagespeed": null
     },
     {
       "url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
@@ -101,7 +141,27 @@
         "avg_paragraph_words": 35.9,
         "subheading_count": 7
       },
-      "js_blindspot": null
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "NEUTRAL",
+        "coverage_state": "URL is unknown to Google",
+        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "last_crawl_time": null
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": false
+      },
+      "pagespeed": null
     }
   ],
   "geo_checks": {
@@ -150,6 +210,14 @@
       "page": "https://www.allaidunia.com/"
     },
     {
+      "id": "c42bb59205",
+      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
+      "priority": "low",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/"
+    },
+    {
       "id": "37b84329a5",
       "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
       "priority": "low",
@@ -182,6 +250,22 @@
       "page": "https://www.allaidunia.com/video-ai-tools.html"
     },
     {
+      "id": "8cf90269f8",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "priority": "high",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/video-ai-tools.html"
+    },
+    {
+      "id": "02f7041e73",
+      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
+      "priority": "low",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/video-ai-tools.html"
+    },
+    {
       "id": "330664a728",
       "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
       "priority": "low",
@@ -202,6 +286,22 @@
       "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
       "priority": "medium",
       "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
+    },
+    {
+      "id": "79e3dbdcfa",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "priority": "high",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
+    },
+    {
+      "id": "1e67e76a54",
+      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
+      "priority": "low",
+      "category": "on_page_seo",
       "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
     },
