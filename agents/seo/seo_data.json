@@ -1,16 +1,17 @@
 {
   "agent_meta": {
     "agent_name": "seo_agent",
-    "run_date": "2026-07-05",
+    "schema_version": "1.0",
+    "run_date": "2026-07-06",
     "status": "success",
-    "summary": "5 action items found (0 high priority)"
+    "summary": "13 action items found (2 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-07-05",
+  "generated_date": "2026-07-06",
   "window": {
-    "start": "2026-06-04",
-    "end": "2026-07-02"
+    "start": "2026-06-05",
+    "end": "2026-07-03"
   },
   "overview": {
     "total_queries": 1,
@@ -49,7 +50,58 @@
         "lists_and_tables_count": 0,
         "avg_paragraph_words": 48.5,
         "subheading_count": 2
+      },
+      "js_blindspot": {
+        "selector": "#tools-grid",
+        "children_found": 0,
+        "expected_min": 10,
+        "likely_invisible_to_crawlers": true
       }
+    },
+    {
+      "url": "https://www.allaidunia.com/video-ai-tools.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Best AI Video Tools 2026 â Free & Paid Video AI | AllAIDunia",
+      "title_length": 62,
+      "has_meta_description": true,
+      "meta_description_length": 147,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 246,
+      "schema_types": [],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 33.4,
+        "subheading_count": 1
+      },
+      "js_blindspot": {
+        "selector": "#tools-grid",
+        "children_found": 0,
+        "expected_min": 10,
+        "likely_invisible_to_crawlers": true
+      }
+    },
+    {
+      "url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Best Free AI Tools for Video Editing in 2026 | AllAIDunia",
+      "title_length": 57,
+      "has_meta_description": true,
+      "meta_description_length": 164,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 571,
+      "schema_types": [],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 35.9,
+        "subheading_count": 7
+      },
+      "js_blindspot": null
     }
   ],
   "geo_checks": {
@@ -58,6 +110,7 @@
   },
   "action_items": [
     {
+      "id": "f41d6d992f",
       "description": "No llms.txt file — an emerging standard giving AI systems a clean, structured summary of your site. Not yet universal, but cheap to add and forward-looking.",
       "priority": "low",
       "category": "ai_search_geo",
@@ -65,6 +118,7 @@
       "page": null
     },
     {
+      "id": "851b57f223",
       "description": "Title is 70 characters — Google truncates over ~60.",
       "priority": "medium",
       "category": "on_page_seo",
@@ -72,6 +126,7 @@
       "page": "https://www.allaidunia.com/"
     },
     {
+      "id": "702bfda2bb",
       "description": "Meta description is 179 characters — will get truncated.",
       "priority": "low",
       "category": "on_page_seo",
@@ -79,6 +134,7 @@
       "page": "https://www.allaidunia.com/"
     },
     {
+      "id": "43c9528852",
       "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
       "priority": "medium",
       "category": "ai_search_geo",
@@ -86,11 +142,76 @@
       "page": "https://www.allaidunia.com/"
     },
     {
+      "id": "739697243b",
+      "description": "Critical content may be invisible to crawlers: the container `#tools-grid` has only 0 item(s) in the raw HTML (expected at least 10). This strongly suggests this page's main content is filled in by JavaScript after load. Many AI crawlers (GPTBot, ClaudeBot, PerplexityBot) and Googlebot under some conditions do not execute JavaScript, meaning they may see an empty page here even though a human visitor sees full content. This is a likely explanation for unusually low search visibility despite otherwise reasonable on-page SEO — the fix is to render this content directly into the HTML at build time, in addition to keeping the JavaScript for interactive features.",
+      "priority": "high",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/"
+    },
+    {
+      "id": "37b84329a5",
       "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
       "priority": "low",
       "category": "ai_search_geo",
       "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/"
+    },
+    {
+      "id": "49138b38d6",
+      "description": "Title is 62 characters — Google truncates over ~60.",
+      "priority": "medium",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/video-ai-tools.html"
+    },
+    {
+      "id": "3ee3682690",
+      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
+      "priority": "medium",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/video-ai-tools.html"
+    },
+    {
+      "id": "e66b4617d4",
+      "description": "Critical content may be invisible to crawlers: the container `#tools-grid` has only 0 item(s) in the raw HTML (expected at least 10). This strongly suggests this page's main content is filled in by JavaScript after load. Many AI crawlers (GPTBot, ClaudeBot, PerplexityBot) and Googlebot under some conditions do not execute JavaScript, meaning they may see an empty page here even though a human visitor sees full content. This is a likely explanation for unusually low search visibility despite otherwise reasonable on-page SEO — the fix is to render this content directly into the HTML at build time, in addition to keeping the JavaScript for interactive features.",
+      "priority": "high",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/video-ai-tools.html"
+    },
+    {
+      "id": "330664a728",
+      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/video-ai-tools.html"
+    },
+    {
+      "id": "1eff241a0a",
+      "description": "Meta description is 164 characters — will get truncated.",
+      "priority": "low",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
+    },
+    {
+      "id": "ee4a9e8413",
+      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
+      "priority": "medium",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
+    },
+    {
+      "id": "06dcf2442e",
+      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
     }
   ]
 }
