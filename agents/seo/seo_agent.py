@@ -43,7 +43,13 @@ TIMEOUT_SECONDS = 10
 
 def load_config():
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+        cfg = json.load(f)
+    # API keys should never be committed to the repo — allow an environment
+    # variable to override whatever placeholder is in config.json.
+    env_key = os.environ.get("PAGESPEED_API_KEY")
+    if env_key:
+        cfg["pagespeed_api_key"] = env_key
+    return cfg
 
 
 # ── Search Console data ──────────────────────────────────────────────
