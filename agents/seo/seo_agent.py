@@ -260,29 +260,36 @@ def check_js_rendering_blindspot(soup, cfg):
 def check_pagespeed(url, cfg):
     """Uses Google's free PageSpeed Insights API to check Core Web Vitals —
     a confirmed ranking factor. Works without an API key at low volume;
-    set pagespeed_api_key in config if you hit rate limits at scale."""
+    set pagespeed_api_key in config if you hit rate limits at scale.
+    Real Lighthouse audits can take 30-60+ seconds, so this uses a longer
+    timeout than other checks, plus one retry for transient failures."""
     params = {"url": url, "strategy": "mobile", "category": "performance"}
     if cfg.get("pagespeed_api_key"):
         params["key"] = cfg["pagespeed_api_key"]
-    try:
-        resp = requests.get(
-            "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
-            params=params, timeout=30
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        lighthouse = data.get("lighthouseResult", {})
-        perf_score = lighthouse.get("categories", {}).get("performance", {}).get("score")
-        audits = lighthouse.get("audits", {})
-        return {
-            "performance_score": perf_score,  # 0.0-1.0, or None if unavailable
-            "lcp_display": audits.get("largest-contentful-paint", {}).get("displayValue"),
-            "cls_display": audits.get("cumulative-layout-shift", {}).get("displayValue"),
-            "tbt_display": audits.get("total-blocking-time", {}).get("displayValue"),
-        }
-    except requests.exceptions.RequestException as e:
-        print(f"WARNING: PageSpeed check failed for {url} ({e})")
-        return None
+
+    for attempt in range(2):
+        try:
+            resp = requests.get(
+                "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
+                params=params, timeout=60
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            lighthouse = data.get("lighthouseResult", {})
+            perf_score = lighthouse.get("categories", {}).get("performance", {}).get("score")
+            audits = lighthouse.get("audits", {})
+            return {
+                "performance_score": perf_score,  # 0.0-1.0, or None if unavailable
+                "lcp_display": audits.get("largest-contentful-paint", {}).get("displayValue"),
+                "cls_display": audits.get("cumulative-layout-shift", {}).get("displayValue"),
+                "tbt_display": audits.get("total-blocking-time", {}).get("displayValue"),
+            }
+        except requests.exceptions.RequestException as e:
+            if attempt == 0:
+                print(f"PageSpeed check failed for {url}, retrying once ({e})")
+                continue
+            print(f"WARNING: PageSpeed check failed for {url} after retry ({e})")
+            return None
 
 
 def check_meta_robots_noindex(soup):
