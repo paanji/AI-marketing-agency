@@ -4,7 +4,7 @@
     "schema_version": "1.0",
     "run_date": "2026-07-06",
     "status": "success",
-    "summary": "18 action items found (4 high priority)"
+    "summary": "21 action items found (4 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
@@ -76,7 +76,12 @@
         "has_og_description": true,
         "has_og_image": false
       },
-      "pagespeed": null
+      "pagespeed": {
+        "performance_score": 0.55,
+        "lcp_display": "4.0 s",
+        "cls_display": "0.07",
+        "tbt_display": "1,400 ms"
+      }
     },
     {
       "url": "https://www.allaidunia.com/video-ai-tools.html",
@@ -121,7 +126,12 @@
         "has_og_description": true,
         "has_og_image": false
       },
-      "pagespeed": null
+      "pagespeed": {
+        "performance_score": 0.7,
+        "lcp_display": "4.7 s",
+        "cls_display": "0",
+        "tbt_display": "230 ms"
+      }
     },
     {
       "url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
@@ -161,7 +171,12 @@
         "has_og_description": true,
         "has_og_image": false
       },
-      "pagespeed": null
+      "pagespeed": {
+        "performance_score": 0.88,
+        "lcp_display": "3.2 s",
+        "cls_display": "0.07",
+        "tbt_display": "0 ms"
+      }
     }
   ],
   "geo_checks": {
@@ -218,6 +233,14 @@
       "page": "https://www.allaidunia.com/"
     },
     {
+      "id": "168cb47cd5",
+      "description": "Page speed could be better (Lighthouse performance score: 55/100, mobile). LCP: 4.0 s, CLS: 0.07.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/"
+    },
+    {
       "id": "37b84329a5",
       "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
       "priority": "low",
@@ -266,6 +289,14 @@
       "page": "https://www.allaidunia.com/video-ai-tools.html"
     },
     {
+      "id": "5faaefb0fe",
+      "description": "Page speed could be better (Lighthouse performance score: 70/100, mobile). LCP: 4.7 s, CLS: 0.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/video-ai-tools.html"
+    },
+    {
       "id": "330664a728",
       "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
       "priority": "low",
@@ -303,6 +334,14 @@
       "priority": "low",
       "category": "on_page_seo",
       "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
+    },
+    {
+      "id": "c1a3bbaf4f",
+      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.07.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
     },
     {

@@ -15,9 +15,12 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 ### Medium Priority
 - [on_page_seo] Title is 70 characters — Google truncates over ~60. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
+- [technical] Page speed could be better (Lighthouse performance score: 55/100, mobile). LCP: 4.0 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 - [on_page_seo] Title is 62 characters — Google truncates over ~60. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
+- [technical] Page speed could be better (Lighthouse performance score: 70/100, mobile). LCP: 4.7 s, CLS: 0. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
+- [technical] Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.07. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
 
 ### Low Priority
 - [ai_search_geo] No llms.txt file — an emerging standard giving AI systems a clean, structured summary of your site. Not yet universal, but cheap to add and forward-looking. — *suggested owner: content_agent*
