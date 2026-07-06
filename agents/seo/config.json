@@ -32,5 +32,10 @@
   "check_llms_txt": true,
 
   "critical_content_selector": "#tools-grid",
-  "min_expected_child_elements": 10
+  "min_expected_child_elements": 10,
+
+  "pagespeed_api_key": "",
+  "max_pages_for_pagespeed": 5,
+  "performance_score_good_threshold": 0.9,
+  "performance_score_poor_threshold": 0.5
 }
