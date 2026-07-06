@@ -29,5 +29,8 @@
     "Applebot-Extended"
   ],
   "ideal_schema_types": ["ItemList", "SoftwareApplication", "Organization", "WebSite"],
-  "check_llms_txt": true
+  "check_llms_txt": true,
+
+  "critical_content_selector": "#tools-grid",
+  "min_expected_child_elements": 10
 }
