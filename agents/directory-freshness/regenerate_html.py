@@ -17,6 +17,7 @@ apply_approvals.py change tools.json.
 """
 import json
 import re
+import html as html_lib
 from urllib.parse import urlparse
 
 HTML_PATH = "index.html"
@@ -34,6 +35,49 @@ def domain_of(url: str) -> str:
         return netloc[4:] if netloc.startswith("www.") else netloc
     except Exception:
         return url
+
+
+def build_static_grid_html(tools: list) -> str:
+    """Server-side rendering of the same tool cards the page's JS render()
+    function produces client-side. This is the actual fix for the
+    JS-rendering blindspot the SEO agent identified: crawlers that don't
+    execute JavaScript (many AI bots, and Googlebot under some conditions)
+    now see the full tool grid immediately in the raw HTML, instead of an
+    empty container. The JS render() function still runs for real visitors
+    and still powers interactive search/filtering — this just ensures
+    there's real content present before any JavaScript runs at all."""
+    if not tools:
+        return '<div class="no-results">No tools found 🤔</div>'
+    cards = []
+    for i, t in enumerate(tools):
+        if t.get("featured"):
+            badge = '<span class="featured-pill">Featured</span>'
+        elif t.get("isNew"):
+            badge = '<span class="new-pill">New</span>'
+        else:
+            badge = ""
+        name = html_lib.escape(t["name"])
+        desc = html_lib.escape(t.get("desc", ""))
+        cat = html_lib.escape(t["cat"])
+        letter = html_lib.escape(t.get("letter", "?"))
+        url = html_lib.escape(t["url"], quote=True)
+        color = html_lib.escape(t.get("color", "#333"), quote=True)
+        text_color = html_lib.escape(t.get("text", "#fff"), quote=True)
+        cards.append(
+            f'<a class="tool-card" href="{url}" target="_blank" rel="noopener noreferrer" '
+            f'style="animation-delay:{i * 0.025}s">'
+            f'<div class="card-top">'
+            f'<div class="tool-icon" style="background:{color}; color:{text_color}">{letter}</div>'
+            f'{badge}'
+            f'</div>'
+            f'<div>'
+            f'<div class="tool-name">{name}</div>'
+            f'<div class="tool-desc">{desc}</div>'
+            f'</div>'
+            f'<div class="tool-cat">{cat}</div>'
+            f'</a>'
+        )
+    return "\n".join(cards)
 
 
 def build_tools_array(tools: list) -> str:
@@ -109,10 +153,30 @@ def main():
         html, count=1, flags=re.DOTALL
     )
 
-    if not (n1 and n2 and n3):
+    # 4. Replace the grid section (count-bar + tools-grid) with real, static
+    #    HTML cards baked in at build time — fixes the JS-rendering blindspot.
+    #    Uses a non-greedy match anchored to a unique fixed comment further
+    #    down the page, rather than trying to match the closing </div> of
+    #    the grid itself — the cards contain their own nested </div> tags,
+    #    which would make naive regex matching stop at the wrong place.
+    static_cards = build_static_grid_html(live_tools)
+    count_text = f"Showing <span>{len(live_tools)}</span> of <span>{len(live_tools)}</span> tools"
+    new_grid_section = (
+        '<div class="container grid-section">\n'
+        f'  <div class="count-bar" id="count-bar">{count_text}</div>\n'
+        f'  <div class="tools-grid" id="tools-grid">\n{static_cards}\n  </div>\n'
+        '</div>'
+    )
+    html, n4 = re.subn(
+        r'<div class="container grid-section">.*?(?=\n<!-- CATEGORY PAGES \+ BLOG LINKS -->)',
+        lambda m: new_grid_section,
+        html, count=1, flags=re.DOTALL
+    )
+
+    if not (n1 and n2 and n3 and n4):
         raise SystemExit(
-            f"ERROR: expected to replace all 3 blocks, but got "
-            f"tools={n1} toolsDB={n2} systemPrompt={n3}. "
+            f"ERROR: expected to replace all 4 blocks, but got "
+            f"tools={n1} toolsDB={n2} systemPrompt={n3} grid={n4}. "
             f"Aborting without writing — check index.html structure hasn't changed."
         )
 
