@@ -32,6 +32,8 @@ jobs:
         run: echo '${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}' > gsc_credentials.json
 
       - name: Run SEO agent
+        env:
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
         run: python3 agents/seo/seo_agent.py
 
       - name: Remove credentials file (never commit this)
