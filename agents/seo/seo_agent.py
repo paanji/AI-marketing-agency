@@ -18,6 +18,7 @@ Outputs:
 """
 import json
 import os
+import hashlib
 import requests
 from datetime import date, timedelta
 from urllib.parse import urlparse
@@ -205,6 +206,29 @@ def check_content_extractability(soup):
     }
 
 
+def check_js_rendering_blindspot(soup, cfg):
+    """Checks whether a critical content container (e.g. the tools grid) is
+    empty in the raw HTML — meaning it's only populated by JavaScript after
+    load. Crawlers that don't execute JS (many AI bots, and Googlebot under
+    some conditions) would see an empty page here, even though a human
+    visitor sees full content. This is often the real explanation behind
+    sparse Search Console data on an otherwise well-built site."""
+    selector = cfg.get("critical_content_selector")
+    if not selector:
+        return None  # not configured for this site — skip
+    container = soup.select_one(selector)
+    if container is None:
+        return None  # this page doesn't have that container — not applicable
+    real_children = [c for c in container.find_all(recursive=False)]
+    expected_min = cfg.get("min_expected_child_elements", 1)
+    return {
+        "selector": selector,
+        "children_found": len(real_children),
+        "expected_min": expected_min,
+        "likely_invisible_to_crawlers": len(real_children) < expected_min,
+    }
+
+
 def get_sitemap_urls(sitemap_url, max_pages):
     try:
         resp = requests.get(sitemap_url, headers=HEADERS, timeout=TIMEOUT_SECONDS)
@@ -217,7 +241,7 @@ def get_sitemap_urls(sitemap_url, max_pages):
         return []
 
 
-def audit_page(url):
+def audit_page(url, cfg):
     """Checks one page for common on-page SEO basics. Returns a dict with
     fetch_error=True if the page couldn't be fetched at all."""
     try:
@@ -244,6 +268,7 @@ def audit_page(url):
 
     schema_types = extract_schema_types(soup)
     extractability = check_content_extractability(soup)
+    js_blindspot = check_js_rendering_blindspot(soup, cfg)
 
     return {
         "url": url,
@@ -259,6 +284,7 @@ def audit_page(url):
         "word_count": word_count,
         "schema_types": schema_types,
         "extractability": extractability,
+        "js_blindspot": js_blindspot,
     }
 
 
@@ -267,7 +293,7 @@ def audit_site(cfg):
     if not urls:
         urls = [cfg["site_url"]]
     print(f"Auditing {len(urls)} page(s) from sitemap...")
-    page_audits = [audit_page(url) for url in urls]
+    page_audits = [audit_page(url, cfg) for url in urls]
 
     blocked_ai_crawlers = check_ai_crawler_access(cfg["site_url"], cfg["ai_crawlers_to_check"])
     has_llms_txt = check_llms_txt(cfg["site_url"]) if cfg.get("check_llms_txt") else None
@@ -294,7 +320,14 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
     items = []
 
     def add(description, priority, category, suggested_agent, page=None):
+        # Deterministic ID from the content itself — same issue on the same
+        # page always gets the same ID across runs, so a consuming agent
+        # (or a human) can track "have I already handled this one?" without
+        # needing a database. Changes only if the underlying issue changes.
+        id_source = f"{category}|{page or ''}|{description}"
+        item_id = hashlib.sha1(id_source.encode("utf-8")).hexdigest()[:10]
         items.append({
+            "id": item_id,
             "description": description, "priority": priority, "category": category,
             "suggested_agent": suggested_agent, "page": page,
         })
@@ -362,6 +395,19 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
             add(f"No schema.org markup — adding {'/'.join(cfg['ideal_schema_types'][:2])} schema helps "
                 f"AI systems understand and cite this page correctly.",
                 "medium", "ai_search_geo", "content_agent", url)
+
+        js_blindspot = page.get("js_blindspot")
+        if js_blindspot and js_blindspot["likely_invisible_to_crawlers"]:
+            add(f"Critical content may be invisible to crawlers: the container `{js_blindspot['selector']}` "
+                f"has only {js_blindspot['children_found']} item(s) in the raw HTML (expected at least "
+                f"{js_blindspot['expected_min']}). This strongly suggests this page's main content is filled "
+                f"in by JavaScript after load. Many AI crawlers (GPTBot, ClaudeBot, PerplexityBot) and "
+                f"Googlebot under some conditions do not execute JavaScript, meaning they may see an empty "
+                f"page here even though a human visitor sees full content. This is a likely explanation for "
+                f"unusually low search visibility despite otherwise reasonable on-page SEO — the fix is to "
+                f"render this content directly into the HTML at build time, in addition to keeping the "
+                f"JavaScript for interactive features.",
+                "high", "technical", "manual", url)
 
         extractability = page.get("extractability", {})
         if extractability.get("lists_and_tables_count", 0) == 0 and page["word_count"] > 150:
@@ -499,6 +545,7 @@ def main():
     structured_data = {
         "agent_meta": {
             "agent_name": "seo_agent",
+            "schema_version": "1.0",
             "run_date": today.isoformat(),
             "status": "success",
             "summary": f"{len(suggestions)} action items found ({high_priority_count} high priority)",
@@ -529,6 +576,7 @@ if __name__ == "__main__":
         failure_record = {
             "agent_meta": {
                 "agent_name": "seo_agent",
+                "schema_version": "1.0",
                 "run_date": date.today().isoformat(),
                 "status": "failed",
                 "summary": f"Run failed: {e}",
