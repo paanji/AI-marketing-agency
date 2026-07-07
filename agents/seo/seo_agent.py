@@ -44,11 +44,14 @@ TIMEOUT_SECONDS = 10
 def load_config():
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         cfg = json.load(f)
-    # API keys should never be committed to the repo — allow an environment
-    # variable to override whatever placeholder is in config.json.
-    env_key = os.environ.get("PAGESPEED_API_KEY")
-    if env_key:
-        cfg["pagespeed_api_key"] = env_key
+    # API keys should never be committed to the repo — allow environment
+    # variables to override whatever placeholder is in config.json.
+    pagespeed_key = os.environ.get("PAGESPEED_API_KEY")
+    if pagespeed_key:
+        cfg["pagespeed_api_key"] = pagespeed_key
+    openai_key = os.environ.get("OPENAI_API_KEY")
+    if openai_key:
+        cfg["openai_api_key"] = openai_key
     return cfg
 
 
@@ -70,6 +73,72 @@ def query_search_analytics(service, site_url, start_date, end_date, dimensions, 
     }
     response = service.searchanalytics().query(siteUrl=site_url, body=body).execute()
     return response.get("rows", [])
+
+
+def draft_with_llm(cfg, prompt, max_length, max_attempts=3):
+    """Calls OpenAI to draft text that must fit within max_length characters.
+    This is a bounded agentic loop, not an open-ended one: generate, check
+    the hard constraint, and if it fails, regenerate with specific feedback
+    about exactly how much to cut. Stops after max_attempts either way —
+    never loops indefinitely. Returns None if it never succeeds, so callers
+    can fall back gracefully rather than publish something broken."""
+    api_key = cfg.get("openai_api_key")
+    if not api_key:
+        return None
+
+    current_prompt = prompt
+    for attempt in range(max_attempts):
+        try:
+            resp = requests.post(
+                "https://api.openai.com/v1/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}"},
+                json={
+                    "model": cfg.get("openai_model", "gpt-4o-mini"),
+                    "messages": [{"role": "user", "content": current_prompt}],
+                    "max_tokens": 150,
+                    "temperature": 0.7,
+                },
+                timeout=30,
+            )
+            resp.raise_for_status()
+            text = resp.json()["choices"][0]["message"]["content"].strip().strip('"')
+
+            if len(text) <= max_length:
+                return text
+
+            # Failed the constraint — regenerate with specific, actionable feedback
+            over_by = len(text) - max_length
+            current_prompt = (
+                f"{prompt}\n\nYour previous attempt was {len(text)} characters, "
+                f"which is {over_by} characters too long. Try again, strictly under "
+                f"{max_length} characters this time. Previous attempt: \"{text}\""
+            )
+        except requests.exceptions.RequestException as e:
+            print(f"WARNING: LLM draft call failed (attempt {attempt + 1}): {e}")
+            return None
+
+    print(f"WARNING: LLM draft never fit within {max_length} chars after {max_attempts} attempts")
+    return None
+
+
+def draft_title(cfg, page_title, page_desc, keywords, max_length):
+    keyword_hint = f" Naturally include this keyword if it fits well: \"{keywords[0]['query']}\"." if keywords else ""
+    prompt = (
+        f"Write an SEO-friendly page title for a page currently titled \"{page_title}\" "
+        f"(about: {page_desc}).{keyword_hint} Strictly under {max_length} characters. "
+        f"Return ONLY the title text, nothing else."
+    )
+    return draft_with_llm(cfg, prompt, max_length)
+
+
+def draft_meta_description(cfg, page_title, page_desc, keywords, max_length):
+    keyword_hint = f" Naturally include this keyword if it fits well: \"{keywords[0]['query']}\"." if keywords else ""
+    prompt = (
+        f"Write an SEO meta description for a page titled \"{page_title}\" (about: {page_desc})."
+        f"{keyword_hint} Make it compelling enough to encourage clicks from search results. "
+        f"Strictly under {max_length} characters. Return ONLY the meta description text, nothing else."
+    )
+    return draft_with_llm(cfg, prompt, max_length)
 
 
 def check_indexing_status(service, site_url, page_url):
@@ -333,6 +402,102 @@ def check_open_graph_tags(soup):
     }
 
 
+def truncate_at_word_boundary(text: str, max_length: int) -> str:
+    """Truncates text to fit within max_length without cutting mid-word."""
+    if len(text) <= max_length:
+        return text
+    truncated = text[:max_length].rsplit(" ", 1)[0]
+    return truncated.rstrip(" -–—,.")
+
+
+def suggest_title_fix(current_title: str, cfg: dict, page_queries: list, business_name: str):
+    """Proposes an actual replacement title, not just a diagnosis.
+    - Too long: truncate cleanly at a word boundary.
+    - Too short: only proposed if we have real keyword data to build from —
+      otherwise returns None rather than guessing at content we can't verify."""
+    max_len = cfg["title_max_length"]
+    min_len = cfg["title_min_length"]
+
+    if len(current_title) > max_len:
+        return truncate_at_word_boundary(current_title, max_len)
+
+    if len(current_title) < min_len:
+        if page_queries:
+            top_query = page_queries[0]["query"]
+            candidate = f"{top_query.title()} | {business_name}"
+            if min_len <= len(candidate) <= max_len:
+                return candidate
+        return None  # no real data to build a confident suggestion from
+
+    return None  # already within bounds, nothing to suggest
+
+
+def suggest_meta_description_fix(current_desc: str, cfg: dict, page_queries: list, page_title: str):
+    """Proposes an actual replacement meta description.
+    - Too long: truncate cleanly at a word boundary.
+    - Too short/missing: only proposed if we have keyword data to incorporate."""
+    max_len = cfg["meta_description_max_length"]
+    min_len = cfg["meta_description_min_length"]
+
+    if current_desc and len(current_desc) > max_len:
+        return truncate_at_word_boundary(current_desc, max_len - 1) + "…"
+
+    if not current_desc or len(current_desc) < min_len:
+        if page_queries:
+            top_queries = ", ".join(q["query"] for q in page_queries[:3])
+            candidate = f"{page_title} — covering {top_queries} and more. Free to browse, updated regularly."
+            if len(candidate) > max_len:
+                candidate = truncate_at_word_boundary(candidate, max_len - 1) + "…"
+            if len(candidate) >= min_len:
+                return candidate
+        return None
+
+    return None
+
+
+def generate_homepage_schema(tools: list, business_name: str, site_url: str) -> str:
+    """Generates real, ready-to-insert ItemList JSON-LD from tools.json data
+    — deterministic, not AI-generated, so there's no hallucination risk in
+    something as structurally important as schema markup."""
+    items = []
+    for i, t in enumerate(tools[:100], 1):  # ItemList practical cap
+        items.append({
+            "@type": "ListItem",
+            "position": i,
+            "item": {
+                "@type": "SoftwareApplication",
+                "name": t["name"],
+                "url": t["url"],
+                "description": t.get("desc", ""),
+                "applicationCategory": t.get("cat", ""),
+            }
+        })
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": f"{business_name} — AI Tools Directory",
+        "url": site_url,
+        "numberOfItems": len(tools),
+        "itemListElement": items,
+    }
+    return json.dumps(schema, indent=2, ensure_ascii=False)
+
+
+def generate_llms_txt_content(tools: list, business_name: str, site_url: str) -> str:
+    """Generates real, complete llms.txt content from tools.json — not a
+    suggestion to add one, the actual file ready to publish."""
+    lines = [f"# {business_name}", "", f"> A free directory of {len(tools)}+ AI tools, organized by category.", ""]
+    by_cat = {}
+    for t in tools:
+        by_cat.setdefault(t["cat"], []).append(t)
+    for cat, cat_tools in sorted(by_cat.items()):
+        lines.append(f"## {cat}")
+        for t in cat_tools:
+            lines.append(f"- [{t['name']}]({t['url']}): {t.get('desc', '')}")
+        lines.append("")
+    return "\n".join(lines)
+
+
 def get_sitemap_urls(sitemap_url, max_pages):
     try:
         resp = requests.get(sitemap_url, headers=HEADERS, timeout=TIMEOUT_SECONDS)
@@ -392,6 +557,7 @@ def audit_page(url, cfg, service=None, page_index=0):
         "title": title_text,
         "title_length": len(title_text),
         "has_meta_description": bool(meta_desc),
+        "meta_description": meta_desc,
         "meta_description_length": len(meta_desc),
         "h1_count": len(h1_tags),
         "images_total": len(images),
@@ -426,20 +592,28 @@ def audit_site(cfg, service=None):
 
 # ── Suggestions engine — combines GSC + on-page data into plain English ──
 
-def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audits, geo_checks):
+def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audits, geo_checks,
+                          page_query_map=None, all_tools=None):
     """Returns a list of structured action items, not plain strings, so future
     agents (e.g. Content Agent) can filter and act on them programmatically
     rather than needing to parse English sentences.
 
-    Each item: {description, priority, category, suggested_agent, page}
+    Each item: {description, priority, category, suggested_agent, page, proposed_fix}
       priority: 'high' | 'medium' | 'low'
       category: 'technical' | 'on_page_seo' | 'ai_search_geo' | 'content_opportunity' | 'accessibility'
       suggested_agent: 'content_agent' | 'manual' — which agent should pick this up.
         'manual' means no agent exists yet to handle it; you do it by hand for now.
+      proposed_fix: the ACTUAL drafted replacement content where possible
+        (a new title, a new meta description, real schema JSON, real llms.txt
+        content) — not just a description of the problem. None if no concrete
+        fix could be drafted (e.g. LLM call failed, or the fix genuinely
+        needs human judgment like adding an image).
     """
+    page_query_map = page_query_map or {}
+    all_tools = all_tools or []
     items = []
 
-    def add(description, priority, category, suggested_agent, page=None):
+    def add(description, priority, category, suggested_agent, page=None, proposed_fix=None):
         # Deterministic ID from the content itself — same issue on the same
         # page always gets the same ID across runs, so a consuming agent
         # (or a human) can track "have I already handled this one?" without
@@ -450,6 +624,7 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
             "id": item_id,
             "description": description, "priority": priority, "category": category,
             "suggested_agent": suggested_agent, "page": page,
+            "proposed_fix": proposed_fix,
         })
 
     # ── GEO/AEO: AI Search Readiness (site-wide) ──
@@ -461,9 +636,10 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
             "high", "ai_search_geo", "manual")
 
     if geo_checks.get("has_llms_txt") is False:
+        proposed_llms_txt = generate_llms_txt_content(all_tools, cfg.get("business_name", ""), cfg.get("site_url", "")) if all_tools else None
         add("No llms.txt file — an emerging standard giving AI systems a clean, structured summary of "
             "your site. Not yet universal, but cheap to add and forward-looking.",
-            "low", "ai_search_geo", "content_agent")
+            "low", "ai_search_geo", "content_agent", proposed_fix=proposed_llms_txt)
 
     # ── Per-page checks ──
     for page in page_audits:
@@ -474,27 +650,44 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
                 "high", "technical", "manual", url)
             continue
 
-        if not page["title"]:
-            add("No `<title>` tag at all — one of the most important on-page SEO elements.",
-                "high", "on_page_seo", "content_agent", url)
-        elif page["title_length"] < cfg["title_min_length"]:
-            add(f"Title (\"{page['title']}\") is only {page['title_length']} characters — aim for "
-                f"{cfg['title_min_length']}-{cfg['title_max_length']}.",
-                "medium", "on_page_seo", "content_agent", url)
-        elif page["title_length"] > cfg["title_max_length"]:
-            add(f"Title is {page['title_length']} characters — Google truncates over ~{cfg['title_max_length']}.",
-                "medium", "on_page_seo", "content_agent", url)
+        page_keywords = page_query_map.get(url, [])
+        business_name = cfg.get("business_name", "")
 
+        if not page["title"]:
+            proposed = draft_title(cfg, "(no title)", url, page_keywords, cfg["title_max_length"])
+            add("No `<title>` tag at all — one of the most important on-page SEO elements.",
+                "high", "on_page_seo", "content_agent", url, proposed_fix=proposed)
+        elif page["title_length"] < cfg["title_min_length"] or page["title_length"] > cfg["title_max_length"]:
+            # Deterministic first (free, instant, reliable for truncation and
+            # clear keyword-template cases); only call the LLM if that can't
+            # confidently produce a fix (e.g. too short with no keyword data).
+            proposed = suggest_title_fix(page["title"], cfg, page_keywords, business_name)
+            if proposed is None:
+                proposed = draft_title(cfg, page["title"], url, page_keywords, cfg["title_max_length"])
+            direction = "aim for" if page["title_length"] < cfg["title_min_length"] else "Google truncates over ~"
+            add(f"Title (\"{page['title']}\") is {page['title_length']} characters — "
+                f"{direction} {cfg['title_min_length']}-{cfg['title_max_length']}.",
+                "medium", "on_page_seo", "content_agent", url, proposed_fix=proposed)
+
+        current_meta = page.get("meta_description", "")
         if not page["has_meta_description"]:
+            proposed = draft_meta_description(cfg, page["title"], url, page_keywords,
+                                               cfg["meta_description_max_length"])
             add("No meta description — directly affects click-through rate from search results.",
-                "medium", "on_page_seo", "content_agent", url)
-        elif page["meta_description_length"] < cfg["meta_description_min_length"]:
-            add(f"Meta description is only {page['meta_description_length']} characters — aim for "
-                f"{cfg['meta_description_min_length']}-{cfg['meta_description_max_length']}.",
-                "medium", "on_page_seo", "content_agent", url)
-        elif page["meta_description_length"] > cfg["meta_description_max_length"]:
-            add(f"Meta description is {page['meta_description_length']} characters — will get truncated.",
-                "low", "on_page_seo", "content_agent", url)
+                "medium", "on_page_seo", "content_agent", url, proposed_fix=proposed)
+        elif (page["meta_description_length"] < cfg["meta_description_min_length"]
+              or page["meta_description_length"] > cfg["meta_description_max_length"]):
+            proposed = suggest_meta_description_fix(current_meta, cfg, page_keywords, page["title"])
+            if proposed is None:
+                proposed = draft_meta_description(cfg, page["title"], url, page_keywords,
+                                                   cfg["meta_description_max_length"])
+            too_short = page["meta_description_length"] < cfg["meta_description_min_length"]
+            note = (f"only {page['meta_description_length']} characters — aim for "
+                    f"{cfg['meta_description_min_length']}-{cfg['meta_description_max_length']}"
+                    if too_short else
+                    f"{page['meta_description_length']} characters — will get truncated")
+            add(f"Meta description is {note}.",
+                "medium" if too_short else "low", "on_page_seo", "content_agent", url, proposed_fix=proposed)
 
         if page["h1_count"] == 0:
             add("No H1 tag — helps both users and search engines understand the page's main topic.",
@@ -512,9 +705,10 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
                 "medium", "content_opportunity", "content_agent", url)
 
         if not page.get("schema_types"):
+            proposed_schema = generate_homepage_schema(all_tools, cfg.get("business_name", ""), cfg.get("site_url", "")) if all_tools else None
             add(f"No schema.org markup — adding {'/'.join(cfg['ideal_schema_types'][:2])} schema helps "
                 f"AI systems understand and cite this page correctly.",
-                "medium", "ai_search_geo", "content_agent", url)
+                "medium", "ai_search_geo", "content_agent", url, proposed_fix=proposed_schema)
 
         js_blindspot = page.get("js_blindspot")
         if js_blindspot and js_blindspot["likely_invisible_to_crawlers"]:
@@ -621,8 +815,21 @@ def main():
     prior_end = recent_start - timedelta(days=1)
 
     query_rows = query_search_analytics(service, site_url, recent_start, end_date, ["query"])
+    page_query_rows = query_search_analytics(service, site_url, recent_start, end_date, ["page", "query"])
     recent_page_rows = query_search_analytics(service, site_url, recent_start, end_date, ["page"])
     prior_page_rows = query_search_analytics(service, site_url, prior_start, prior_end, ["page"])
+
+    # Group real query performance by the specific page it belongs to —
+    # this is what lets us suggest actual keyword-backed titles, not guesses.
+    page_queries_map = {}
+    for row in page_query_rows:
+        page_url, query = row["keys"]
+        page_queries_map.setdefault(page_url, []).append({
+            "query": query, "impressions": row["impressions"],
+            "clicks": row["clicks"], "position": row["position"],
+        })
+    for page_url in page_queries_map:
+        page_queries_map[page_url].sort(key=lambda q: q["impressions"], reverse=True)
 
     quick_wins = find_quick_wins(query_rows, cfg)
     declines = find_declining_pages(recent_page_rows, prior_page_rows, cfg)
@@ -632,7 +839,20 @@ def main():
 
     page_audits, geo_checks = audit_site(cfg, service)
 
-    suggestions = generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audits, geo_checks)
+    # Load the Directory Freshness Agent's tools.json — used for deterministic
+    # schema.org and llms.txt generation (structured data we already have
+    # accurately, no LLM/hallucination risk needed for these two).
+    all_tools = []
+    tools_json_path = cfg.get("tools_json_path", "agents/directory-freshness/tools.json")
+    try:
+        with open(tools_json_path, "r", encoding="utf-8") as f:
+            all_tools_raw = json.load(f)
+        all_tools = [t for t in all_tools_raw if t.get("status") != "archived"]
+    except FileNotFoundError:
+        print(f"WARNING: could not find {tools_json_path} — schema/llms.txt suggestions will be skipped")
+
+    suggestions = generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audits, geo_checks,
+                                        page_query_map=page_queries_map, all_tools=all_tools)
 
     # ── Build the human-readable report ──
     lines = [
@@ -656,6 +876,12 @@ def main():
             page_note = f" _(page: {item['page']})_" if item.get("page") else ""
             lines.append(f"- [{item['category']}] {item['description']}{page_note} "
                          f"— *suggested owner: {item['suggested_agent']}*")
+            if item.get("proposed_fix"):
+                fix_display = item["proposed_fix"]
+                if len(fix_display) > 300:  # collapse long content (schema JSON, llms.txt) into a code block
+                    lines.append(f"  ```\n  {fix_display}\n  ```")
+                else:
+                    lines.append(f"  **Proposed fix:** \"{fix_display}\"")
         lines.append("")
 
     lines += ["", "## Overview", "| Metric | Value |", "|---|---|",
