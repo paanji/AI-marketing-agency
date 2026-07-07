@@ -4,7 +4,7 @@
     "schema_version": "1.0",
     "run_date": "2026-07-07",
     "status": "success",
-    "summary": "19 action items found (3 high priority)"
+    "summary": "18 action items found (3 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
@@ -78,10 +78,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.84,
-        "lcp_display": "3.5 s",
+        "performance_score": 0.86,
+        "lcp_display": "3.4 s",
         "cls_display": "0.07",
-        "tbt_display": "120 ms"
+        "tbt_display": "0 ms"
       }
     },
     {
@@ -96,7 +96,7 @@
       "h1_count": 1,
       "images_total": 0,
       "images_missing_alt": 0,
-      "word_count": 246,
+      "word_count": 385,
       "schema_types": [],
       "extractability": {
         "lists_and_tables_count": 0,
@@ -105,7 +105,7 @@
       },
       "js_blindspot": {
         "selector": "#tools-grid",
-        "children_found": 0,
+        "children_found": 6,
         "expected_min": 10,
         "likely_invisible_to_crawlers": true
       },
@@ -129,10 +129,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.71,
-        "lcp_display": "3.3 s",
+        "performance_score": 0.68,
+        "lcp_display": "3.4 s",
         "cls_display": "0.38",
-        "tbt_display": "20 ms"
+        "tbt_display": "160 ms"
       }
     },
     {
@@ -175,10 +175,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.87,
-        "lcp_display": "3.3 s",
+        "performance_score": 0.91,
+        "lcp_display": "2.6 s",
         "cls_display": "0.07",
-        "tbt_display": "70 ms"
+        "tbt_display": "90 ms"
       }
     }
   ],
@@ -248,8 +248,8 @@
       "target_range": null
     },
     {
-      "id": "4178563cad",
-      "description": "Page speed could be better (Lighthouse performance score: 84/100, mobile). LCP: 3.5 s, CLS: 0.07.",
+      "id": "9a9a692607",
+      "description": "Page speed could be better (Lighthouse performance score: 86/100, mobile). LCP: 3.4 s, CLS: 0.07.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -284,8 +284,8 @@
       "target_range": null
     },
     {
-      "id": "e66b4617d4",
-      "description": "Critical content may be invisible to crawlers: the container `#tools-grid` has only 0 item(s) in the raw HTML (expected at least 10). This strongly suggests this page's main content is filled in by JavaScript after load. Many AI crawlers (GPTBot, ClaudeBot, PerplexityBot) and Googlebot under some conditions do not execute JavaScript, meaning they may see an empty page here even though a human visitor sees full content. This is a likely explanation for unusually low search visibility despite otherwise reasonable on-page SEO — the fix is to render this content directly into the HTML at build time, in addition to keeping the JavaScript for interactive features.",
+      "id": "637f87d350",
+      "description": "Critical content may be invisible to crawlers: the container `#tools-grid` has only 6 item(s) in the raw HTML (expected at least 10). This strongly suggests this page's main content is filled in by JavaScript after load. Many AI crawlers (GPTBot, ClaudeBot, PerplexityBot) and Googlebot under some conditions do not execute JavaScript, meaning they may see an empty page here even though a human visitor sees full content. This is a likely explanation for unusually low search visibility despite otherwise reasonable on-page SEO — the fix is to render this content directly into the HTML at build time, in addition to keeping the JavaScript for interactive features.",
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
@@ -320,8 +320,8 @@
       "target_range": null
     },
     {
-      "id": "54b5339831",
-      "description": "Page speed could be better (Lighthouse performance score: 71/100, mobile). LCP: 3.3 s, CLS: 0.38.",
+      "id": "380de08948",
+      "description": "Page speed could be better (Lighthouse performance score: 68/100, mobile). LCP: 3.4 s, CLS: 0.38.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -385,18 +385,6 @@
       "priority": "low",
       "category": "on_page_seo",
       "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "deffca8773",
-      "description": "Page speed could be better (Lighthouse performance score: 87/100, mobile). LCP: 3.3 s, CLS: 0.07.",
-      "priority": "medium",
-      "category": "technical",
-      "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
       "proposed_fix": null,
       "field_type": null,
