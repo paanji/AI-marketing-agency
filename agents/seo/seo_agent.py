@@ -32,6 +32,7 @@ CONFIG_PATH = os.environ.get("SEO_CONFIG_PATH", os.path.join(SCRIPT_DIR, "config
 CREDENTIALS_PATH = os.environ.get("GSC_CREDENTIALS_PATH", "gsc_credentials.json")
 REPORT_PATH = os.path.join(SCRIPT_DIR, "seo_report.md")
 DATA_PATH = os.path.join(SCRIPT_DIR, "seo_data.json")
+HISTORY_PATH = os.path.join(SCRIPT_DIR, "seo_history.json")
 
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 HEADERS = {
@@ -39,6 +40,96 @@ HEADERS = {
                   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 TIMEOUT_SECONDS = 10
+
+
+def record_history_snapshot(overview, action_items, page_audits):
+    """Appends a lightweight snapshot of key metrics to a running history
+    log, rather than overwriting like the main report does. This is what
+    lets us eventually show 'traffic grew X% over 3 months' — exactly the
+    kind of proof needed to sell freelance SEO work, and something we had
+    no way to show until now since every prior run discarded the last one."""
+    today_str = date.today().isoformat()
+    priority_counts = {"high": 0, "medium": 0, "low": 0}
+    for item in action_items:
+        priority_counts[item["priority"]] += 1
+
+    indexed_count = sum(1 for p in page_audits if p.get("indexing", {}).get("verdict") == "PASS")
+    pagespeed_scores = [p["pagespeed"]["performance_score"] for p in page_audits
+                        if p.get("pagespeed") and p["pagespeed"].get("performance_score") is not None]
+    avg_pagespeed = round(sum(pagespeed_scores) / len(pagespeed_scores) * 100) if pagespeed_scores else None
+
+    snapshot = {
+        "date": today_str,
+        "total_clicks": overview["total_clicks"],
+        "total_impressions": overview["total_impressions"],
+        "avg_position": overview["avg_position"],
+        "overall_ctr": overview["overall_ctr"],
+        "pages_checked": len(page_audits),
+        "pages_indexed": indexed_count,
+        "action_items_total": len(action_items),
+        "action_items_high": priority_counts["high"],
+        "avg_pagespeed_score": avg_pagespeed,
+    }
+
+    try:
+        with open(HISTORY_PATH, "r", encoding="utf-8") as f:
+            history = json.load(f)
+    except FileNotFoundError:
+        history = []
+
+    # Idempotent: if this already ran today (e.g. manual + scheduled same
+    # day), replace that day's entry rather than creating a duplicate.
+    history = [h for h in history if h["date"] != today_str]
+    history.append(snapshot)
+    history.sort(key=lambda h: h["date"])
+
+    with open(HISTORY_PATH, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2, ensure_ascii=False)
+
+    return history
+
+
+def build_trend_section(history):
+    """Builds a plain-English trend comparison for the report. Needs at
+    least 2 snapshots to say anything meaningful — with just one, it's
+    honest about that rather than fabricating a trend from nothing."""
+    if len(history) < 2:
+        return [
+            "## Historical Trend",
+            "This is the first recorded snapshot — trend comparisons will appear here "
+            "once more weekly history accumulates.",
+            "",
+        ]
+
+    latest = history[-1]
+    earliest = history[0]
+    weeks_span = max(1, (date.fromisoformat(latest["date"]) - date.fromisoformat(earliest["date"])).days // 7)
+
+    def delta(key, higher_is_better=True):
+        change = round(latest[key] - earliest[key], 2)
+        if change == 0:
+            return "no change"
+        arrow = "📈" if (change > 0) == higher_is_better else "📉"
+        sign = "+" if change > 0 else ""
+        return f"{arrow} {sign}{change}"
+
+    lines = [
+        "## Historical Trend",
+        f"Comparing this run ({latest['date']}) to the earliest recorded snapshot "
+        f"({earliest['date']}, ~{weeks_span} week(s) ago):",
+        "",
+        "| Metric | Then | Now | Change |",
+        "|---|---|---|---|",
+        f"| Total clicks | {earliest['total_clicks']} | {latest['total_clicks']} | {delta('total_clicks')} |",
+        f"| Total impressions | {earliest['total_impressions']} | {latest['total_impressions']} | {delta('total_impressions')} |",
+        f"| Avg. position | {earliest['avg_position']} | {latest['avg_position']} | {delta('avg_position', higher_is_better=False)} |",
+        f"| Pages indexed | {earliest['pages_indexed']}/{earliest['pages_checked']} | "
+        f"{latest['pages_indexed']}/{latest['pages_checked']} | {delta('pages_indexed')} |",
+        f"| High-priority issues | {earliest['action_items_high']} | {latest['action_items_high']} | "
+        f"{delta('action_items_high', higher_is_better=False)} |",
+        "",
+    ]
+    return lines
 
 
 def load_config():
@@ -908,6 +999,9 @@ def main():
                 elif fix:
                     lines.append(f"  **Proposed fix:** \"{fix}\"")
         lines.append("")
+
+    history = record_history_snapshot(overview, suggestions, page_audits)
+    lines += [""] + build_trend_section(history)
 
     lines += ["", "## Overview", "| Metric | Value |", "|---|---|",
               f"| Total queries seen | {overview['total_queries']} |",
