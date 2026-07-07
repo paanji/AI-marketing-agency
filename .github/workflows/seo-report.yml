@@ -34,6 +34,7 @@ jobs:
       - name: Run SEO agent
         env:
           PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python3 agents/seo/seo_agent.py
 
       - name: Remove credentials file (never commit this)
