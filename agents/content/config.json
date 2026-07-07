@@ -1,0 +1,11 @@
+{
+  "site_url": "https://www.allaidunia.com/",
+  "site_root_dir": ".",
+
+  "seo_data_path": "agents/seo/seo_data.json",
+  "content_pending_path": "agents/content/content_pending.json",
+  "content_rejected_path": "agents/content/content_rejected.json",
+  "content_applied_log_path": "agents/content/content_applied_log.json",
+
+  "schema_marker_prefix": "CONTENT-AGENT:SCHEMA"
+}
