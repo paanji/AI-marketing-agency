@@ -2,29 +2,29 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-07-06",
+    "run_date": "2026-07-07",
     "status": "success",
-    "summary": "21 action items found (4 high priority)"
+    "summary": "20 action items found (3 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-07-06",
+  "generated_date": "2026-07-07",
   "window": {
-    "start": "2026-06-05",
-    "end": "2026-07-03"
+    "start": "2026-06-06",
+    "end": "2026-07-04"
   },
   "overview": {
     "total_queries": 1,
     "total_clicks": 0,
-    "total_impressions": 2,
-    "avg_position": 8.5,
+    "total_impressions": 4,
+    "avg_position": 8.8,
     "overall_ctr": 0.0
   },
   "top_queries": [
     {
       "query": "ai dunia",
-      "position": 8.5,
-      "impressions": 2,
+      "position": 8.8,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0
     }
@@ -44,7 +44,7 @@
       "h1_count": 1,
       "images_total": 0,
       "images_missing_alt": 0,
-      "word_count": 335,
+      "word_count": 881,
       "schema_types": [],
       "extractability": {
         "lists_and_tables_count": 0,
@@ -53,9 +53,9 @@
       },
       "js_blindspot": {
         "selector": "#tools-grid",
-        "children_found": 0,
+        "children_found": 60,
         "expected_min": 10,
-        "likely_invisible_to_crawlers": true
+        "likely_invisible_to_crawlers": false
       },
       "indexing": {
         "verdict": "PASS",
@@ -63,7 +63,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-07-06T15:05:47Z"
+        "last_crawl_time": "2026-07-06T20:14:55Z"
       },
       "noindex": false,
       "canonical": {
@@ -77,10 +77,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.55,
-        "lcp_display": "4.0 s",
+        "performance_score": 0.83,
+        "lcp_display": "3.5 s",
         "cls_display": "0.07",
-        "tbt_display": "1,400 ms"
+        "tbt_display": "170 ms"
       }
     },
     {
@@ -127,10 +127,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.7,
-        "lcp_display": "4.7 s",
-        "cls_display": "0",
-        "tbt_display": "230 ms"
+        "performance_score": 0.58,
+        "lcp_display": "3.5 s",
+        "cls_display": "0.38",
+        "tbt_display": "400 ms"
       }
     },
     {
@@ -173,9 +173,9 @@
       },
       "pagespeed": {
         "performance_score": 0.88,
-        "lcp_display": "3.2 s",
+        "lcp_display": "3.3 s",
         "cls_display": "0.07",
-        "tbt_display": "0 ms"
+        "tbt_display": "30 ms"
       }
     }
   ],
@@ -217,14 +217,6 @@
       "page": "https://www.allaidunia.com/"
     },
     {
-      "id": "739697243b",
-      "description": "Critical content may be invisible to crawlers: the container `#tools-grid` has only 0 item(s) in the raw HTML (expected at least 10). This strongly suggests this page's main content is filled in by JavaScript after load. Many AI crawlers (GPTBot, ClaudeBot, PerplexityBot) and Googlebot under some conditions do not execute JavaScript, meaning they may see an empty page here even though a human visitor sees full content. This is a likely explanation for unusually low search visibility despite otherwise reasonable on-page SEO — the fix is to render this content directly into the HTML at build time, in addition to keeping the JavaScript for interactive features.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/"
-    },
-    {
       "id": "c42bb59205",
       "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
       "priority": "low",
@@ -233,8 +225,8 @@
       "page": "https://www.allaidunia.com/"
     },
     {
-      "id": "168cb47cd5",
-      "description": "Page speed could be better (Lighthouse performance score: 55/100, mobile). LCP: 4.0 s, CLS: 0.07.",
+      "id": "97831bd659",
+      "description": "Page speed could be better (Lighthouse performance score: 83/100, mobile). LCP: 3.5 s, CLS: 0.07.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -289,8 +281,8 @@
       "page": "https://www.allaidunia.com/video-ai-tools.html"
     },
     {
-      "id": "5faaefb0fe",
-      "description": "Page speed could be better (Lighthouse performance score: 70/100, mobile). LCP: 4.7 s, CLS: 0.",
+      "id": "b023916712",
+      "description": "Page speed could be better (Lighthouse performance score: 58/100, mobile). LCP: 3.5 s, CLS: 0.38.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -337,8 +329,8 @@
       "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html"
     },
     {
-      "id": "c1a3bbaf4f",
-      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.07.",
+      "id": "5b9fcb69f3",
+      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.3 s, CLS: 0.07.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
