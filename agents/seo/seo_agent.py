@@ -518,7 +518,7 @@ def audit_page(url, cfg, service=None, page_index=0):
         status = resp.status_code
         if status >= 400:
             return {"url": url, "status_code": status, "fetch_error": True}
-        soup = BeautifulSoup(resp.text, "html.parser")
+        soup = BeautifulSoup(resp.content, "html.parser")
     except requests.exceptions.RequestException as e:
         return {"url": url, "status_code": None, "fetch_error": True, "error": str(e)}
 
@@ -613,7 +613,8 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
     all_tools = all_tools or []
     items = []
 
-    def add(description, priority, category, suggested_agent, page=None, proposed_fix=None):
+    def add(description, priority, category, suggested_agent, page=None, proposed_fix=None,
+            field_type=None, current_value=None, target_range=None):
         # Deterministic ID from the content itself — same issue on the same
         # page always gets the same ID across runs, so a consuming agent
         # (or a human) can track "have I already handled this one?" without
@@ -625,6 +626,10 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
             "description": description, "priority": priority, "category": category,
             "suggested_agent": suggested_agent, "page": page,
             "proposed_fix": proposed_fix,
+            # These three are only populated for title/meta fixes, where a
+            # clear current/target/suggested layout is meaningful. None for
+            # everything else (schema, llms.txt, structural issues, etc.)
+            "field_type": field_type, "current_value": current_value, "target_range": target_range,
         })
 
     # ── GEO/AEO: AI Search Readiness (site-wide) ──
@@ -656,7 +661,9 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
         if not page["title"]:
             proposed = draft_title(cfg, "(no title)", url, page_keywords, cfg["title_max_length"])
             add("No `<title>` tag at all — one of the most important on-page SEO elements.",
-                "high", "on_page_seo", "content_agent", url, proposed_fix=proposed)
+                "high", "on_page_seo", "content_agent", url, proposed_fix=proposed,
+                field_type="title", current_value="(none)",
+                target_range=f"{cfg['title_min_length']}-{cfg['title_max_length']} characters")
         elif page["title_length"] < cfg["title_min_length"] or page["title_length"] > cfg["title_max_length"]:
             # Deterministic first (free, instant, reliable for truncation and
             # clear keyword-template cases); only call the LLM if that can't
@@ -664,17 +671,22 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
             proposed = suggest_title_fix(page["title"], cfg, page_keywords, business_name)
             if proposed is None:
                 proposed = draft_title(cfg, page["title"], url, page_keywords, cfg["title_max_length"])
-            direction = "aim for" if page["title_length"] < cfg["title_min_length"] else "Google truncates over ~"
-            add(f"Title (\"{page['title']}\") is {page['title_length']} characters — "
-                f"{direction} {cfg['title_min_length']}-{cfg['title_max_length']}.",
-                "medium", "on_page_seo", "content_agent", url, proposed_fix=proposed)
+            too_short_title = page["title_length"] < cfg["title_min_length"]
+            note = (f"aim for {cfg['title_min_length']}-{cfg['title_max_length']}" if too_short_title
+                    else f"Google truncates over ~{cfg['title_max_length']}")
+            add(f"Title is {page['title_length']} characters — {note}.",
+                "medium", "on_page_seo", "content_agent", url, proposed_fix=proposed,
+                field_type="title", current_value=page["title"],
+                target_range=f"{cfg['title_min_length']}-{cfg['title_max_length']} characters")
 
         current_meta = page.get("meta_description", "")
         if not page["has_meta_description"]:
             proposed = draft_meta_description(cfg, page["title"], url, page_keywords,
                                                cfg["meta_description_max_length"])
             add("No meta description — directly affects click-through rate from search results.",
-                "medium", "on_page_seo", "content_agent", url, proposed_fix=proposed)
+                "medium", "on_page_seo", "content_agent", url, proposed_fix=proposed,
+                field_type="meta description", current_value="(none)",
+                target_range=f"{cfg['meta_description_min_length']}-{cfg['meta_description_max_length']} characters")
         elif (page["meta_description_length"] < cfg["meta_description_min_length"]
               or page["meta_description_length"] > cfg["meta_description_max_length"]):
             proposed = suggest_meta_description_fix(current_meta, cfg, page_keywords, page["title"])
@@ -682,12 +694,12 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
                 proposed = draft_meta_description(cfg, page["title"], url, page_keywords,
                                                    cfg["meta_description_max_length"])
             too_short = page["meta_description_length"] < cfg["meta_description_min_length"]
-            note = (f"only {page['meta_description_length']} characters — aim for "
-                    f"{cfg['meta_description_min_length']}-{cfg['meta_description_max_length']}"
-                    if too_short else
-                    f"{page['meta_description_length']} characters — will get truncated")
-            add(f"Meta description is {note}.",
-                "medium" if too_short else "low", "on_page_seo", "content_agent", url, proposed_fix=proposed)
+            note = (f"aim for {cfg['meta_description_min_length']}-{cfg['meta_description_max_length']}"
+                    if too_short else "will get truncated")
+            add(f"Meta description is {page['meta_description_length']} characters — {note}.",
+                "medium" if too_short else "low", "on_page_seo", "content_agent", url, proposed_fix=proposed,
+                field_type="meta description", current_value=current_meta,
+                target_range=f"{cfg['meta_description_min_length']}-{cfg['meta_description_max_length']} characters")
 
         if page["h1_count"] == 0:
             add("No H1 tag — helps both users and search engines understand the page's main topic.",
@@ -874,14 +886,27 @@ def main():
         lines.append(f"### {priority.title()} Priority")
         for item in tier_items:
             page_note = f" _(page: {item['page']})_" if item.get("page") else ""
-            lines.append(f"- [{item['category']}] {item['description']}{page_note} "
-                         f"— *suggested owner: {item['suggested_agent']}*")
-            if item.get("proposed_fix"):
-                fix_display = item["proposed_fix"]
-                if len(fix_display) > 300:  # collapse long content (schema JSON, llms.txt) into a code block
-                    lines.append(f"  ```\n  {fix_display}\n  ```")
-                else:
-                    lines.append(f"  **Proposed fix:** \"{fix_display}\"")
+
+            if item.get("field_type") and item.get("proposed_fix"):
+                # Clean current/target/suggested layout — all three numbers
+                # grouped together instead of buried in a sentence.
+                field = item["field_type"].title()
+                lines.append(f"**{field}**{page_note} — *suggested owner: {item['suggested_agent']}*")
+                lines.append(f"- Current ({len(item['current_value'])} chars): \"{item['current_value']}\"")
+                lines.append(f"- Target: {item['target_range']}")
+                lines.append(f"- Suggested ({len(item['proposed_fix'])} chars): \"{item['proposed_fix']}\"")
+            else:
+                lines.append(f"- [{item['category']}] {item['description']}{page_note} "
+                             f"— *suggested owner: {item['suggested_agent']}*")
+                fix = item.get("proposed_fix")
+                if fix and len(fix) > 300:
+                    # Long content (schema JSON, llms.txt) stays OUT of the human
+                    # report entirely — it's meant for the Content Agent to read
+                    # from seo_data.json directly, not to scroll through here.
+                    lines.append(f"  ✅ **Fix ready** — full content generated, see `seo_data.json` "
+                                 f"(action item `{item['id']}`) for the Content Agent to apply.")
+                elif fix:
+                    lines.append(f"  **Proposed fix:** \"{fix}\"")
         lines.append("")
 
     lines += ["", "## Overview", "| Metric | Value |", "|---|---|",
