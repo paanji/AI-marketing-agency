@@ -37,5 +37,9 @@
   "pagespeed_api_key": "",
   "max_pages_for_pagespeed": 5,
   "performance_score_good_threshold": 0.9,
-  "performance_score_poor_threshold": 0.5
+  "performance_score_poor_threshold": 0.5,
+
+  "openai_api_key": "",
+  "openai_model": "gpt-4o-mini",
+  "tools_json_path": "agents/directory-freshness/tools.json"
 }
