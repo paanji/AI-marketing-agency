@@ -13,6 +13,7 @@
 | `config.json` | Every threshold and setting, parameterized so this agent can be reused for a different site/client by editing this file alone — no code changes needed |
 | `seo_report.md` | Human-readable output — **this is the one you actually read** |
 | `seo_data.json` | Machine-readable output — for future agents (e.g. Content Agent) to consume programmatically |
+| `seo_history.json` | Running log of key metrics per run — one entry per day, never overwritten. Powers the "Historical Trend" section once 2+ snapshots exist. |
 | `.github/workflows/seo-report.yml` | Schedules the agent to run weekly (Tuesdays) and can be triggered manually |
 
 ---
@@ -54,12 +55,20 @@ Total runtime: roughly 1-3 minutes, depending on how many pages need PageSpeed c
 - **`llms.txt`** — flags if this emerging AI-focused standard file is missing
 
 ### Technical / crawlability
-- **JS-rendering blindspot** — checks whether a critical content container (e.g. `#tools-grid`) actually has content in the *raw* HTML, or is empty and only filled in by JavaScript afterward. This was the single biggest real finding so far — crawlers that don't execute JavaScript were seeing an empty page. **This has since been fixed** in `regenerate_html.py`, which now bakes real content into the HTML at build time.
+- **JS-rendering blindspot** — checks whether a critical content container (e.g. `#tools-grid`) actually has content in the *raw* HTML, or is empty and only filled in by JavaScript afterward. This was the single biggest real finding so far — crawlers that don't execute JavaScript were seeing an empty page. **Fixed** in `regenerate_html.py` for the homepage (bakes real content in at build time, keeps the JS for interactivity), and via a one-off manual fix for `video-ai-tools.html` (which has its own separate embedded tool data, not yet part of the automated pipeline).
 - **Google indexing status** — uses the URL Inspection API to check whether a page is *actually indexed*, not just how it ranks. A page can be perfectly optimized and still get zero traffic if it isn't indexed at all.
 - **`noindex` meta tag** — checks if the page is explicitly telling Google not to index it
-- **Canonical tag** — checks it exists and points to the correct domain (this specifically catches the kind of www/non-www mismatch this site actually had)
-- **Page speed / Core Web Vitals** — via Google's PageSpeed Insights API (mobile), checks the Lighthouse performance score, LCP, and CLS. Limited to the first few pages (`max_pages_for_pagespeed` in config) since each check takes 10-30+ seconds.
+- **Canonical tag** — checks it exists and points to the correct domain (this specifically caught the www/non-www mismatch this site actually had)
+- **Page speed / Core Web Vitals** — via Google's PageSpeed Insights API (mobile), checks the Lighthouse performance score, LCP, and CLS. Limited to the first few pages (`max_pages_for_pagespeed` in config) since each check takes 10-30+ seconds. Uses a 60s timeout with one retry, since real Lighthouse audits often exceed 30 seconds.
 - **Open Graph tags** — checks `og:title`, `og:description`, `og:image` are present, affecting how links look when shared on social/messaging apps
+
+### Actually drafting fixes, not just diagnosing (the biggest capability upgrade)
+For title and meta description issues, the agent now produces a real, ready-to-use replacement — not just a description of the problem:
+- **Deterministic first** — word-boundary truncation for overlong text, or a keyword-template fix when real Search Console query data exists for that page (via a page+query correlated Search Console call). Free, instant, no hallucination risk.
+- **LLM fallback only when needed** — if deterministic logic can't confidently produce a fix (e.g. a title is completely missing, or too short with no keyword data available), it calls OpenAI (`gpt-4o-mini` by default) with a bounded generate-check-retry loop: draft, check it actually fits the character limit, and if not, regenerate with specific feedback about exactly how much to cut. Stops after a fixed number of attempts either way — never loops indefinitely, and returns nothing rather than publishing something broken if it never fits.
+- **Schema.org markup and `llms.txt` are always deterministic** — generated directly from `tools.json`'s real data, never via LLM, since there's no reason to risk hallucination on structured data we already have accurately.
+
+The actual fix content is stored in each action item's `proposed_fix` field (see `AGENT_CONTRACT.md`). Long content (full schema JSON, full `llms.txt`) is kept out of the human-readable `seo_report.md` — it only shows a short pointer to `seo_data.json`, where the future Content Agent will read it from directly.
 
 ---
 
@@ -93,18 +102,20 @@ Each recommendation includes a **suggested owner**:
 |---|---|
 | `GSC_SERVICE_ACCOUNT_JSON` | Authenticates with Search Console (analytics + URL Inspection) |
 | `PAGESPEED_API_KEY` | Gives page speed checks their own quota instead of sharing Google's tiny anonymous rate limit |
+| `OPENAI_API_KEY` | Powers title/meta description drafting when deterministic logic can't confidently produce a fix. Reuses the same key as the site's chatbot, added separately here since Cloudflare and GitHub Actions secrets don't share storage. |
 
-Both are used only within the workflow run and never committed to the repo.
+Used only within the workflow run and never committed to the repo.
 
 ---
 
 ## 7. Known Limitations
 
-- **No historical tracking yet** — each run overwrites the last report. There's no way yet to chart "traffic grew X% over 3 months," which is exactly the kind of proof that sells a client on ongoing work. This is a planned future upgrade, not built yet.
 - **Thresholds are fixed defaults, not self-tuning** — e.g. "title should be 30-60 characters" is a reasonable industry convention, not something the agent learns and adjusts based on this specific site's actual results over time.
 - **No competitor analysis** — deliberately skipped; real competitor tools (Ahrefs, Moz) require paid APIs costing hundreds/month.
 - **No actual AI-citation testing** — the agent checks whether AI crawlers *can* access the site, but doesn't test whether ChatGPT/Perplexity actually mention AllAIDunia in real answers (that would need separate paid API calls per test query).
 - **PageSpeed checks are capped** — only the first few pages (config-controlled) get checked per run, to keep runtime reasonable as the site grows.
+- **`video-ai-tools.html` is outside the automated pipeline** — it has its own separate embedded tool array, fixed manually once for the JS-rendering issue. If its tool list changes, it won't update automatically the way the homepage does.
+- **Deterministic title/meta fixes can read awkwardly** — word-boundary truncation guarantees the length fits, but doesn't understand when a cut lands mid-thought (e.g. "...60+ Free" instead of finishing "AI Tools"). Still valid and under the limit, just occasionally less polished than an LLM rewrite would be.
 
 ---
 
