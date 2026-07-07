@@ -1,11 +1,15 @@
 name: Apply Content Agent Fixes
-
 on:
   push:
     branches: [main]
     paths:
       - "agents/content/content_pending.json"
-
+permissions:
+  contents: write   # needed so the workflow can commit applied file changes back
+# Prevents two Content Agent runs from racing each other and pushing at once.
+concurrency:
+  group: apply-content-fixes
+  cancel-in-progress: false
 jobs:
   apply-and-deploy:
     runs-on: ubuntu-latest
@@ -16,23 +20,16 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.11'
 
       - name: Apply approved fixes
-        run: python agents/content/apply_content_fixes.py
+        run: python3 agents/content/apply_content_fixes.py
 
-      - name: Commit updated files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --staged --quiet || git commit -m "Content Agent: apply approved fixes"
-          git push
-
-      # NOTE: match this step to whatever FTP-Deploy-Action config check-links.yml
-      # already uses (same FTP_SERVER / FTP_USERNAME / FTP_PASSWORD secrets) so
-      # this doesn't drift from the existing deploy pattern.
-      - name: Deploy to Hostinger via FTPS
+      # NOTE: this whitelist must list every file the Content Agent can touch.
+      # As of today that's the 3 known pages + llms.txt. If a new page is added
+      # to the sitemap and gets content_agent fixes, add it here too, or it
+      # will be applied locally/committed but never actually deployed.
+      - name: Deploy changed site files to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -41,3 +38,27 @@ jobs:
           protocol: ftps
           local-dir: ./
           server-dir: ./
+          exclude: |
+            **
+            !index.html
+            !video-ai-tools.html
+            !best-free-ai-video-editing-tools.html
+            !llms.txt
+
+      - name: Commit updated files (if changed)
+        run: |
+          git config user.name "Content Agent Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Content Agent: apply approved fixes $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              if git push; then
+                break
+              fi
+              echo "Push rejected, pulling latest and retrying ($i/3)..."
+              git pull --rebase
+            done
+          fi
