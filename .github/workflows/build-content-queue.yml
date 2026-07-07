@@ -1,0 +1,32 @@
+name: Build Content Agent Queue
+
+on:
+  workflow_run:
+    workflows: ["SEO Agent Weekly Report"]
+    types:
+      - completed
+  workflow_dispatch: {}
+
+jobs:
+  build-queue:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build content_pending.json from seo_data.json
+        run: python agents/content/build_content_queue.py
+
+      - name: Commit updated queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add agents/content/content_pending.json
+          git diff --staged --quiet || git commit -m "Content Agent: refresh review queue"
+          git push

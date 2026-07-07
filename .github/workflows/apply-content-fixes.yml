@@ -1,0 +1,43 @@
+name: Apply Content Agent Fixes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "agents/content/content_pending.json"
+
+jobs:
+  apply-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply approved fixes
+        run: python agents/content/apply_content_fixes.py
+
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Content Agent: apply approved fixes"
+          git push
+
+      # NOTE: match this step to whatever FTP-Deploy-Action config check-links.yml
+      # already uses (same FTP_SERVER / FTP_USERNAME / FTP_PASSWORD secrets) so
+      # this doesn't drift from the existing deploy pattern.
+      - name: Deploy to Hostinger via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: ./
