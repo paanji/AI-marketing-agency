@@ -14,7 +14,7 @@
     "discovery_source": "Show HN",
     "discovery_points": 28,
     "discovered_date": "2026-07-02",
-    "approved": null
+    "approved": false
   },
   {
     "id": "pmb",
@@ -31,7 +31,7 @@
     "discovery_source": "Show HN",
     "discovery_points": 25,
     "discovered_date": "2026-07-02",
-    "approved": null
+    "approved": true
   },
   {
     "id": "marmot-context-layer-for-agents-and-humans",
@@ -65,6 +65,6 @@
     "discovery_source": "Show HN",
     "discovery_points": 21,
     "discovered_date": "2026-07-02",
-    "approved": null
+    "approved": true
   }
 ]
