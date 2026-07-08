@@ -1,0 +1,89 @@
+# AllAIDunia
+
+> A free directory of 62+ AI tools, organized by category.
+
+## Audio
+- [ElevenLabs](https://elevenlabs.io): Ultra-realistic AI voice cloning
+- [Suno](https://suno.com): Generate full songs with AI
+- [Udio](https://udio.com): AI music creation and generation
+- [Murf AI](https://murf.ai): AI voiceover and text-to-speech
+- [Descript](https://descript.com): Edit audio and video like a document
+
+## Chat
+- [ChatGPT](https://chat.openai.com): OpenAI's flagship AI assistant for everything
+- [Claude](https://claude.ai): Anthropic's thoughtful and safe AI assistant
+- [Gemini](https://gemini.google.com): Google's powerful multimodal AI model
+- [Grok](https://grok.com): xAI's witty real-time AI by Elon Musk
+- [Mistral](https://chat.mistral.ai): Open-weight European AI models
+- [Meta AI](https://meta.ai): Meta's AI across apps and the web
+- [Copilot](https://copilot.microsoft.com): Microsoft's AI assistant powered by GPT-4
+- [DeepSeek](https://chat.deepseek.com): Powerful open-source reasoning model
+- [Le Chat](https://chat.mistral.ai): Mistral's fast conversational AI
+- [Pi AI](https://pi.ai): Your personal AI that listens and learns
+
+## Code
+- [GitHub Copilot](https://github.com/features/copilot): AI pair programmer inside your IDE
+- [Cursor](https://cursor.sh): The AI-first code editor
+- [v0](https://v0.dev): Generate UI components with AI by Vercel
+- [Bolt](https://bolt.new): Full-stack AI app builder in browser
+- [Lovable](https://lovable.dev): AI that builds full web apps from prompts
+- [Replit AI](https://replit.com): AI-powered coding in the browser
+- [Windsurf](https://codeium.com/windsurf): AI code editor by Codeium
+- [Tabnine](https://tabnine.com): AI code completion for all IDEs
+
+## Design
+- [Figma AI](https://figma.com): AI-powered design features in Figma
+- [Framer AI](https://framer.com): AI website builder with animations
+- [Looka](https://looka.com): AI logo and brand design maker
+
+## Image
+- [Midjourney](https://midjourney.com): Stunning AI image generation
+- [Stable Diff.](https://stability.ai): Open-source image generation model
+- [Adobe Firefly](https://firefly.adobe.com): Adobe's generative AI for creatives
+- [Krea](https://krea.ai): Real-time AI image creation tool
+- [Ideogram](https://ideogram.ai): AI image gen with great text typography
+- [Leonardo AI](https://leonardo.ai): AI images for games and creative work
+- [Flux](https://blackforestlabs.ai): State of the art image generation model
+- [Canva AI](https://canva.com/ai-image-generator): AI image generation inside Canva
+
+## Marketing
+- [AdCreative](https://adcreative.ai): AI-generated ad creatives that convert
+- [Surfer SEO](https://surferseo.com): AI SEO writing and optimisation
+- [Lately AI](https://lately.ai): AI social media content repurposing
+
+## Productivity
+- [Notion AI](https://notion.so/ai): AI inside your notes and documents
+- [Otter.ai](https://otter.ai): AI meeting notes and transcription
+- [Mem.ai](https://mem.ai): AI-powered notes that self-organise
+- [Reclaim AI](https://reclaim.ai): AI calendar and time management
+- [Motion](https://usemotion.com): AI task and project scheduling
+
+## Research
+- [HuggingFace](https://huggingface.co): The GitHub of AI models and datasets
+- [Replicate](https://replicate.com): Run open-source AI models via API
+- [Together AI](https://together.ai): Fast inference for open-source models
+- [Arxiv + AI](https://arxiv.org): Latest AI research papers
+
+## Search
+- [Perplexity](https://perplexity.ai): AI-powered answer engine with citations
+- [You.com](https://you.com): AI search with cited answers
+- [Exa AI](https://exa.ai): Neural search for developers and researchers
+
+## Uncategorized
+- [PMB](https://pmbai.dev): Show HN: PMB – local memory for coding agents that shows if it is used
+- [Appaca](https://www.appaca.ai/): Show HN: Appaca – AI Workspace for Operators
+
+## Video
+- [Runway](https://runwayml.com): AI video generation and editing suite
+- [Sora](https://sora.com): OpenAI's text-to-video model
+- [Kling AI](https://klingai.com): Realistic AI video generation
+- [Pika](https://pika.art): AI video from text or images
+- [HeyGen](https://heygen.com): AI avatar video creator for business
+- [Synthesia](https://synthesia.io): AI video with realistic avatars
+
+## Writing
+- [Jasper](https://jasper.ai): AI for marketing content and copywriting
+- [Copy.ai](https://copy.ai): AI writing and workflow automation
+- [Grammarly](https://grammarly.com): AI grammar and writing assistant
+- [Quillbot](https://quillbot.com): AI paraphrasing and summarisation
+- [Writesonic](https://writesonic.com): AI writing platform for marketers

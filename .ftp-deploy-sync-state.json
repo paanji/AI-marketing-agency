@@ -1,0 +1,31 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1783541886741,
+    "data": [
+        {
+            "type": "file",
+            "name": "best-free-ai-video-editing-tools.html",
+            "size": 16141,
+            "hash": "2f803de6378bb9e3122029ad65be3fcbb23ef92bc4c67be9f114c1295dbbcf69"
+        },
+        {
+            "type": "file",
+            "name": "index.html",
+            "size": 85034,
+            "hash": "9daa84491579adc31e79754ae7f74b633d587f98315f568bcee5a5f480e7b936"
+        },
+        {
+            "type": "file",
+            "name": "llms.txt",
+            "size": 4616,
+            "hash": "541dd18160cdff0a7914db9b0988e9dbc62d6684e12949f2bbea3a7070f16f2a"
+        },
+        {
+            "type": "file",
+            "name": "video-ai-tools.html",
+            "size": 21276,
+            "hash": "7c8dbd31705b0b3c751821f0eadea79d953578d7dff8a1d75e676bf7d82fc547"
+        }
+    ]
+}
