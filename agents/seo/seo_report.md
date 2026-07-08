@@ -11,23 +11,16 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 - [technical] Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
 
 ### Medium Priority
-**Title** _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
-- Current (68 chars): "AllAIDunia — Find the Right AI Tool for Any Task | 60+ Free AI Tools"
-- Target: 30-60 characters
-- Suggested (59 chars): "AllAIDunia — Find the Right AI Tool for Any Task | 60+ Free"
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `43c9528852`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 81/100, mobile). LCP: 3.7 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 85/100, mobile). LCP: 3.5 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `3ee3682690`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 69/100, mobile). LCP: 3.4 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 70/100, mobile). LCP: 3.3 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `ee4a9e8413`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.07. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
 
 ### Low Priority
-- [ai_search_geo] No llms.txt file — an emerging standard giving AI systems a clean, structured summary of your site. Not yet universal, but cheap to add and forward-looking. — *suggested owner: content_agent*
-  ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `f41d6d992f`) for the Content Agent to apply.
 **Meta Description** _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
 - Current (177 chars): "Looking for an AI tool? AllAIDunia organizes 60+ AI tools by category — document writing, video editing, image generation, coding, and more. Free, searchable, updated regularly."
 - Target: 70-160 characters
@@ -36,10 +29,6 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 - [ai_search_geo] No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
 - [on_page_seo] Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
 - [ai_search_geo] No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
-**Meta Description** _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
-- Current (162 chars): "Editing video the old way takes hours. Here are the best free AI tools for video editing in 2026 — from text-to-video generation to AI avatars, compared honestly."
-- Target: 70-160 characters
-- Suggested (153 chars): "Editing video the old way takes hours. Here are the best free AI tools for video editing in 2026 — from text-to-video generation to AI avatars, compared…"
 - [on_page_seo] Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
 - [ai_search_geo] No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
 
@@ -69,7 +58,7 @@ Comparing this run (2026-07-08) to the earliest recorded snapshot (2026-07-07, ~
 Whether AI answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) can find, understand, and cite this site.
 
 - AI crawler access: all checked crawlers allowed
-- llms.txt present: No
+- llms.txt present: Yes
 - Schema types found across site: **none**
 
 ## On-Page Audit
@@ -77,7 +66,7 @@ Whether AI answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) can
 
 | Page | Indexed | Title Length | Meta Desc | H1s | Images Missing Alt | Word Count |
 |---|---|---|---|---|---|---|
-| https://www.allaidunia.com/ | Yes | 68 | Yes | 1 | 0 | 911 |
+| https://www.allaidunia.com/ | Yes | 48 | Yes | 1 | 0 | 906 |
 | https://www.allaidunia.com/video-ai-tools.html | **NO** (NEUTRAL) | 60 | Yes | 1 | 0 | 385 |
 | https://www.allaidunia.com/best-free-ai-video-editing-tools.html | **NO** (NEUTRAL) | 57 | Yes | 1 | 0 | 571 |
 
