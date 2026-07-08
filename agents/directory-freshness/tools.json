@@ -1176,5 +1176,41 @@
     "archived_date": null,
     "source": "manual",
     "pricing": ""
+  },
+  {
+    "id": "pmb",
+    "name": "PMB",
+    "cat": "Uncategorized",
+    "url": "https://pmbai.dev",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "P",
+    "desc": "Show HN: PMB – local memory for coding agents that shows if it is used",
+    "isNew": true,
+    "featured": false,
+    "status": "active",
+    "consecutive_failures": 0,
+    "last_checked": "2026-07-08",
+    "last_working": "2026-07-08",
+    "archived_date": null,
+    "source": "discovered"
+  },
+  {
+    "id": "appaca",
+    "name": "Appaca",
+    "cat": "Uncategorized",
+    "url": "https://www.appaca.ai/",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "A",
+    "desc": "Show HN: Appaca – AI Workspace for Operators",
+    "isNew": true,
+    "featured": false,
+    "status": "active",
+    "consecutive_failures": 0,
+    "last_checked": "2026-07-08",
+    "last_working": "2026-07-08",
+    "archived_date": null,
+    "source": "discovered"
   }
 ]

@@ -473,7 +473,7 @@
 
 <!-- GRID -->
 <div class="container grid-section">
-  <div class="count-bar" id="count-bar">Showing <span>60</span> of <span>60</span> tools</div>
+  <div class="count-bar" id="count-bar">Showing <span>62</span> of <span>62</span> tools</div>
   <div class="tools-grid" id="tools-grid">
 <a class="tool-card" href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" style="animation-delay:0.0s"><div class="card-top"><div class="tool-icon" style="background:#10a37f; color:#fff">C</div></div><div><div class="tool-name">ChatGPT</div><div class="tool-desc">OpenAI&#x27;s flagship AI assistant for everything</div></div><div class="tool-cat">Chat</div></a>
 <a class="tool-card" href="https://claude.ai" target="_blank" rel="noopener noreferrer" style="animation-delay:0.025s"><div class="card-top"><div class="tool-icon" style="background:#d97706; color:#fff">A</div></div><div><div class="tool-name">Claude</div><div class="tool-desc">Anthropic&#x27;s thoughtful and safe AI assistant</div></div><div class="tool-cat">Chat</div></a>
@@ -535,6 +535,8 @@
 <a class="tool-card" href="https://adcreative.ai" target="_blank" rel="noopener noreferrer" style="animation-delay:1.425s"><div class="card-top"><div class="tool-icon" style="background:#2563eb; color:#fff">A</div></div><div><div class="tool-name">AdCreative</div><div class="tool-desc">AI-generated ad creatives that convert</div></div><div class="tool-cat">Marketing</div></a>
 <a class="tool-card" href="https://surferseo.com" target="_blank" rel="noopener noreferrer" style="animation-delay:1.4500000000000002s"><div class="card-top"><div class="tool-icon" style="background:#0ea5e9; color:#fff">S</div></div><div><div class="tool-name">Surfer SEO</div><div class="tool-desc">AI SEO writing and optimisation</div></div><div class="tool-cat">Marketing</div></a>
 <a class="tool-card" href="https://lately.ai" target="_blank" rel="noopener noreferrer" style="animation-delay:1.475s"><div class="card-top"><div class="tool-icon" style="background:#f97316; color:#fff">L</div></div><div><div class="tool-name">Lately AI</div><div class="tool-desc">AI social media content repurposing</div></div><div class="tool-cat">Marketing</div></a>
+<a class="tool-card" href="https://pmbai.dev" target="_blank" rel="noopener noreferrer" style="animation-delay:1.5s"><div class="card-top"><div class="tool-icon" style="background:#7c6cfa; color:#fff">P</div><span class="new-pill">New</span></div><div><div class="tool-name">PMB</div><div class="tool-desc">Show HN: PMB – local memory for coding agents that shows if it is used</div></div><div class="tool-cat">Uncategorized</div></a>
+<a class="tool-card" href="https://www.appaca.ai/" target="_blank" rel="noopener noreferrer" style="animation-delay:1.5250000000000001s"><div class="card-top"><div class="tool-icon" style="background:#7c6cfa; color:#fff">A</div><span class="new-pill">New</span></div><div><div class="tool-name">Appaca</div><div class="tool-desc">Show HN: Appaca – AI Workspace for Operators</div></div><div class="tool-cat">Uncategorized</div></a>
   </div>
 </div>
 <!-- CATEGORY PAGES + BLOG LINKS -->
@@ -724,6 +726,9 @@ const tools = [
   { name:"AdCreative", cat:"Marketing", url:"https://adcreative.ai", color:"#2563eb", text:"#fff", letter:"A", desc:"AI-generated ad creatives that convert", isNew:false, featured:false },
   { name:"Surfer SEO", cat:"Marketing", url:"https://surferseo.com", color:"#0ea5e9", text:"#fff", letter:"S", desc:"AI SEO writing and optimisation", isNew:false, featured:false },
   { name:"Lately AI", cat:"Marketing", url:"https://lately.ai", color:"#f97316", text:"#fff", letter:"L", desc:"AI social media content repurposing", isNew:false, featured:false },
+  // Uncategorized
+  { name:"PMB", cat:"Uncategorized", url:"https://pmbai.dev", color:"#7c6cfa", text:"#fff", letter:"P", desc:"Show HN: PMB – local memory for coding agents that shows if it is used", isNew:true, featured:false },
+  { name:"Appaca", cat:"Uncategorized", url:"https://www.appaca.ai/", color:"#7c6cfa", text:"#fff", letter:"A", desc:"Show HN: Appaca – AI Workspace for Operators", isNew:true, featured:false },
 ];
 
 const cats = ["All", ...new Set(tools.map(t => t.cat))];
@@ -908,6 +913,8 @@ const toolsDB = [
   { name:"AdCreative", url:"https://adcreative.ai", color:"#2563eb", letter:"A" },
   { name:"Surfer SEO", url:"https://surferseo.com", color:"#0ea5e9", letter:"S" },
   { name:"Lately AI", url:"https://lately.ai", color:"#f97316", letter:"L" },
+  { name:"PMB", url:"https://pmbai.dev", color:"#7c6cfa", letter:"P" },
+  { name:"Appaca", url:"https://www.appaca.ai/", color:"#7c6cfa", letter:"A" },
 ];
 
 let pChatHistory = [];
@@ -1047,6 +1054,8 @@ Looka (looka.com) - AI logo and brand design maker - PAID only
 AdCreative (adcreative.ai) - AI-generated ad creatives that convert - PAID only
 Surfer SEO (surferseo.com) - AI SEO writing and optimisation - PAID only
 Lately AI (lately.ai) - AI social media content repurposing - see site for pricing
+PMB (pmbai.dev) - Show HN: PMB – local memory for coding agents that shows if it is used - see site for pricing
+Appaca (appaca.ai) - Show HN: Appaca – AI Workspace for Operators - see site for pricing
 
 RULES:
 - Recommend 2-3 tools MAXIMUM
