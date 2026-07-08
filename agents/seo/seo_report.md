@@ -17,10 +17,10 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 - Suggested (59 chars): "AllAIDunia — Find the Right AI Tool for Any Task | 60+ Free"
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `43c9528852`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 81/100, mobile). LCP: 2.8 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 81/100, mobile). LCP: 3.7 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `3ee3682690`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 64/100, mobile). LCP: 3.5 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 69/100, mobile). LCP: 3.4 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `ee4a9e8413`) for the Content Agent to apply.
 - [technical] Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.07. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
