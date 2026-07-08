@@ -1,7 +1,7 @@
 name: Build Content Agent Queue
 on:
   workflow_run:
-    workflows: ["SEO Agent Weekly Report"]
+    workflows: ["SEO Report"]
     types:
       - completed
   workflow_dispatch: {}
