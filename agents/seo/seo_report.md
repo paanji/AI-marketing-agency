@@ -1,7 +1,7 @@
 # SEO Report — AllAIDunia
-_2026-07-07_
+_2026-07-08_
 
-Data window: 2026-06-06 to 2026-07-04 (vs. prior 2026-05-09 to 2026-06-05)
+Data window: 2026-06-07 to 2026-07-05 (vs. prior 2026-05-10 to 2026-06-06)
 
 ## Recommended Actions
 Prioritized suggestions combining Search Console data and a live site audit. Items tagged for `content_agent` will be actioned automatically once that agent exists — items tagged `manual` need a person for now.
@@ -17,12 +17,13 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 - Suggested (59 chars): "AllAIDunia — Find the Right AI Tool for Any Task | 60+ Free"
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `43c9528852`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 84/100, mobile). LCP: 2.8 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 81/100, mobile). LCP: 2.8 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `3ee3682690`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 70/100, mobile). LCP: 3.3 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 64/100, mobile). LCP: 3.5 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `ee4a9e8413`) for the Content Agent to apply.
+- [technical] Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.07. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
 
 ### Low Priority
 - [ai_search_geo] No llms.txt file — an emerging standard giving AI systems a clean, structured summary of your site. Not yet universal, but cheap to add and forward-looking. — *suggested owner: content_agent*
@@ -44,15 +45,23 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 
 
 ## Historical Trend
-This is the first recorded snapshot — trend comparisons will appear here once more weekly history accumulates.
+Comparing this run (2026-07-08) to the earliest recorded snapshot (2026-07-07, ~1 week(s) ago):
+
+| Metric | Then | Now | Change |
+|---|---|---|---|
+| Total clicks | 0 | 0 | no change |
+| Total impressions | 4 | 5 | 📈 +1 |
+| Avg. position | 8.8 | 8.8 | no change |
+| Pages indexed | 1/3 | 1/3 | no change |
+| High-priority issues | 2 | 2 | no change |
 
 
 ## Overview
 | Metric | Value |
 |---|---|
-| Total queries seen | 1 |
+| Total queries seen | 2 |
 | Total clicks | 0 |
-| Total impressions | 4 |
+| Total impressions | 5 |
 | Average position | 8.8 |
 | Overall CTR | 0.0% |
 
@@ -68,7 +77,7 @@ Whether AI answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) can
 
 | Page | Indexed | Title Length | Meta Desc | H1s | Images Missing Alt | Word Count |
 |---|---|---|---|---|---|---|
-| https://www.allaidunia.com/ | Yes | 68 | Yes | 1 | 0 | 880 |
+| https://www.allaidunia.com/ | Yes | 68 | Yes | 1 | 0 | 911 |
 | https://www.allaidunia.com/video-ai-tools.html | **NO** (NEUTRAL) | 60 | Yes | 1 | 0 | 385 |
 | https://www.allaidunia.com/best-free-ai-video-editing-tools.html | **NO** (NEUTRAL) | 57 | Yes | 1 | 0 | 571 |
 
@@ -77,3 +86,4 @@ Whether AI answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) can
 | Query | Position | Impressions | Clicks | CTR |
 |---|---|---|---|---|
 | ai dunia | 8.8 | 4 | 0 | 0% |
+| dunia ai | 9 | 1 | 0 | 0% |
