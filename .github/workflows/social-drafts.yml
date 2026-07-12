@@ -1,0 +1,54 @@
+name: Generate Social Media Drafts
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Weekly, Monday 8 AM UTC — change to '0 8 * * *' for daily
+  workflow_dispatch: {}    # allows manual "Run workflow" from the Actions tab
+
+concurrency:
+  group: social-media-agent
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Ensure ffmpeg is available
+        run: |
+          if ! command -v ffmpeg &> /dev/null; then
+            sudo apt-get update && sudo apt-get install -y ffmpeg
+          fi
+
+      - name: Run Social Media Agent
+        working-directory: agents/social-media
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 social_media_agent.py
+
+      - name: Upload generated videos as an artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: social-media-videos-${{ github.run_number }}
+          path: agents/social-media/generated_media/
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Commit updated data files (not the videos themselves)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add agents/social-media/social_pending.json agents/social-media/social_data.json
+          git diff --staged --quiet || git commit -m "Social Media Agent: new drafts queued for review"
+          git pull --rebase
+          git push
