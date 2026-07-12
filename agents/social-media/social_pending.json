@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "id": "b33bd0b45b",
+      "source": "manual_announcement",
+      "announcement_text": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.",
+      "draft": {
+        "platform": "reddit",
+        "content_type": "text_post",
+        "body": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.\nhttps://www.allaidunia.com/"
+      },
+      "approved": null
+    },
+    {
+      "id": "a5772a069d",
+      "source": "manual_announcement",
+      "announcement_text": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.",
+      "draft": {
+        "platform": "linkedin",
+        "content_type": "text_post",
+        "body": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.\nhttps://www.allaidunia.com/",
+        "hashtags": [
+          "#SmallBusiness"
+        ]
+      },
+      "approved": null
+    },
+    {
+      "id": "a85dccff90",
+      "source": "manual_announcement",
+      "announcement_text": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.",
+      "draft": {
+        "platform": "twitter",
+        "content_type": "text_post",
+        "body": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.\nhttps://www.allaidunia.com/",
+        "hashtags": [
+          "#SmallBusiness"
+        ]
+      },
+      "approved": null
+    },
+    {
+      "id": "be0cfca02a",
+      "source": "manual_announcement",
+      "announcement_text": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.",
+      "draft": {
+        "platform": "instagram",
+        "content_type": "caption_plus_media_brief",
+        "body": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.\n\nLink in bio.",
+        "media_brief": "Need: a photo/clip that genuinely matches this announcement -- no stock imagery.",
+        "hashtags": [
+          "#SmallBusiness"
+        ]
+      },
+      "approved": null
+    },
+    {
+      "id": "5c280a35f8",
+      "source": "manual_announcement",
+      "announcement_text": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.",
+      "draft": {
+        "platform": "facebook",
+        "content_type": "caption_plus_media_brief",
+        "body": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.\n\nLink in bio.",
+        "media_brief": "Need: a photo/clip that genuinely matches this announcement -- no stock imagery."
+      },
+      "approved": null
+    },
+    {
+      "id": "064a338a2a",
+      "source": "manual_announcement",
+      "announcement_text": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.",
+      "draft": {
+        "platform": "youtube",
+        "content_type": "shorts_script",
+        "body": "[HOOK] \"AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.\"\n[BODY] Show relevant footage/photos while restating the key point.\n[CTA] \"Link in bio / description\"",
+        "title": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no s",
+        "description": "AllAIDunia just crossed 50 AI tools in the directory -- all free to browse, no signup needed.",
+        "hashtags": [
+          "#SmallBusiness"
+        ]
+      },
+      "approved": null
+    }
+  ]
+}
