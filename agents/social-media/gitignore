@@ -1,0 +1,3 @@
+agents/social-media/generated_media/
+agents/social-media/__pycache__/
+*.pyc
