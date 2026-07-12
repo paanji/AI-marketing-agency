@@ -1,0 +1,11 @@
+{
+  "announcements": [
+    {
+      "text": "Example: We're now offering same-day quote turnaround for all new jobs.",
+      "cta_url": "https://example.com/quote",
+      "date": "2026-07-08",
+      "media_folder": null,
+      "_note": "Delete this example entry and add your own. Only 'text' is required. media_folder is optional -- point it at a subfolder under media_assets/ containing real photos and this platform-appropriate video generates automatically. No other fields, no schema."
+    }
+  ]
+}

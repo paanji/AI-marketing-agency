@@ -1,0 +1,143 @@
+{
+  "client_name": "AllAIDunia",
+  "site_url": "https://www.allaidunia.com/",
+  "brand_voice": "Helpful, enthusiastic curator. No hype, no fake urgency. Speaks like a knowledgeable friend pointing something out, not an ad.",
+
+  "business_profile": {
+    "business_type": "AI tools directory",
+    "offering_singular": "tool",
+    "offering_plural": "tools",
+    "catalog_label": "the directory",
+    "_comment": "This block is what makes the agent reusable for a totally different business. Examples for other clients: e-commerce -> offering_singular: 'product', catalog_label: 'the shop'. Restaurant -> offering_singular: 'dish', catalog_label: 'the menu'. Service business (plumber, consultant, salon) -> offering_singular: 'service', catalog_label: 'our services', and likely content_sources.new_catalog_items disabled entirely in favor of manual_announcements below, since a service business often has no catalog file at all."
+  },
+
+  "content_sources": {
+    "new_catalog_items": {
+      "enabled": true,
+      "source_file": "agents/directory-freshness/tools.json",
+      "field_mapping": {
+        "list_key": "tools",
+        "name_field": "name",
+        "description_field": "desc",
+        "url_field": "url",
+        "status_field": "status",
+        "status_active_value": "active",
+        "date_added_field": "date_added",
+        "media_folder_field": null
+      },
+      "lookback_days": 7,
+      "description": "Announce new items in a programmatic catalog file. Requires a JSON file with a list of items -- field_mapping tells the agent which keys mean what, so it never assumes AllAIDunia's specific schema. If this client has no catalog file (e.g. a services business), disable this and use manual_announcements instead. media_folder_field is optional: if the client's catalog has a field pointing to a folder of real photos per item (e.g. product shots), name it here and video generation can use them automatically."
+    },
+    "catalog_milestones": {
+      "enabled": true,
+      "source_file": "agents/directory-freshness/tools.json",
+      "field_mapping": {
+        "list_key": "tools",
+        "status_field": "status",
+        "status_active_value": "active"
+      },
+      "milestone_intervals": [50, 100, 150, 200, 250, 300, 400, 500],
+      "milestone_label": "tools listed",
+      "description": "Celebrates the active-item count crossing a round number. Purely deterministic, no LLM. milestone_label is what gets said, e.g. '500 tools listed' or, for another client, '500 5-star reviews' -- see manual_announcements below if the number doesn't come from a catalog file."
+    },
+    "manual_announcements": {
+      "enabled": true,
+      "source_file": "agents/social-media/announcements.json",
+      "description": "The general-purpose source for ANY business. No schema, no catalog file needed. The business owner (or you, on their behalf) just adds a plain entry -- a new service launch, a seasonal promo, an award, a new location, a milestone that isn't catalog-derived ('500 happy customers', '10 years in business'). This is the source that makes the agent work for a plumber, a consultant, a salon -- any business without a programmatic product/tool list. Each entry can optionally include a media_folder pointing to real photos for that specific announcement -- e.g. a face wash launch pointing at photos of the actual bottle."
+    },
+    "seo_wins": {
+      "enabled": false,
+      "description": "Deliberately off in v1 -- a fixed meta tag isn't compelling content on its own. Revisit once an Analytics Agent can supply real traffic/growth numbers, which ARE compelling."
+    }
+  },
+
+  "platforms": {
+    "reddit": {
+      "enabled": true,
+      "content_type": "text_post",
+      "char_limit": null,
+      "style": "Casual, first-person, value-first. Never sounds like an ad. Discloses that you run the business if promoting it directly. Prefers a genuine observation or question over a pitch.",
+      "hashtags": false,
+      "target_subreddits": ["r/artificial", "r/SideProject", "r/InternetIsBeautiful"],
+      "requires_media": false,
+      "auto_publish_supported": false,
+      "auto_publish_notes": "Never recommend auto-publish here even in later phases -- ban risk is too asymmetric relative to upside."
+    },
+    "linkedin": {
+      "enabled": true,
+      "content_type": "text_post",
+      "char_limit": 3000,
+      "style": "Professional, insight-led. One clear takeaway, not a wall of text.",
+      "hashtags": true,
+      "hashtag_count": 3,
+      "requires_media": false,
+      "auto_publish_supported": false,
+      "auto_publish_notes": "Technically low-risk via API; candidate for opt-in auto-publish in a later phase once trust is established."
+    },
+    "twitter": {
+      "enabled": true,
+      "content_type": "text_post",
+      "char_limit": 280,
+      "style": "Punchy, single idea, thread-friendly if longer.",
+      "hashtags": true,
+      "hashtag_count": 2,
+      "requires_media": false,
+      "auto_publish_supported": false
+    },
+    "instagram": {
+      "enabled": true,
+      "content_type": "caption_plus_media_brief",
+      "char_limit": 2200,
+      "style": "Visual-first caption, short lines, ends with a clear call to action.",
+      "hashtags": true,
+      "hashtag_count": 8,
+      "requires_media": true,
+      "auto_publish_supported": false,
+      "auto_publish_notes": "Requires Meta Business verification + Graph API + an actual image asset this agent does not generate. Draft-only indefinitely unless an image-generation step is added upstream."
+    },
+    "facebook": {
+      "enabled": true,
+      "content_type": "caption_plus_media_brief",
+      "char_limit": 500,
+      "style": "Friendly, shareable, slightly more explanatory than Instagram.",
+      "hashtags": false,
+      "requires_media": true,
+      "auto_publish_supported": false,
+      "auto_publish_notes": "Same Meta Graph API + media constraint as Instagram."
+    },
+    "youtube": {
+      "enabled": true,
+      "content_type": "shorts_script",
+      "target_length_seconds": 30,
+      "style": "Hook in first 2 seconds, one item per short, on-screen text cues noted.",
+      "hashtags": true,
+      "hashtag_count": 3,
+      "requires_media": true,
+      "auto_publish_supported": false,
+      "auto_publish_notes": "Fundamentally cannot auto-publish -- there is no video file. Output is a script + title + description for a human to record/edit."
+    }
+  },
+
+  "llm": {
+    "model": "gpt-4o-mini",
+    "max_attempts": 3,
+    "use_for": "Tone/phrasing variation per platform so multiple platforms don't get identical robotic text. Never used for factual claims -- those come only from the catalog file or the owner's own announcement text."
+  },
+
+  "video": {
+    "provider": "slideshow",
+    "_provider_note": "The pluggability point for the future. 'slideshow' is implemented now (ffmpeg, the client's own photos, no new vendor account). Set to 'ai_generated' later once a text-to-video vendor (Runway/Pika/Kling/Sora/Veo) is chosen and video_generator.py's ai_generated provider is implemented -- no other code changes needed anywhere else.",
+    "resolution": [1080, 1920],
+    "_resolution_note": "1080x1920 (9:16 vertical) fits Reels/Shorts/Stories. Use [1080, 1080] for a square feed-first video, or [1920, 1080] for traditional YouTube.",
+    "seconds_per_image": 3,
+    "fps": 30,
+    "use_voiceover": true,
+    "background_music_path": null,
+    "_background_music_note": "Optional path to a royalty-free music file. Left null by default -- add one (e.g. from YouTube Audio Library or Pixabay Music) if you want background music mixed under the voiceover.",
+    "media_assets_dir": "agents/social-media/media_assets",
+    "_media_assets_note": "Where client-supplied photos live, organized in subfolders (one per item/announcement). If no media_folder is found for a given content idea, video generation is skipped for it and the platform falls back to its media_brief (a text description of what photo/video is needed) -- so a client with no photos yet never blocks the rest of the pipeline.",
+    "output_dir": "agents/social-media/generated_media"
+  },
+
+  "openai_api_key_env": "OPENAI_API_KEY"
+}
