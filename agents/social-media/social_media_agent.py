@@ -311,13 +311,14 @@ def run(config_path=None):
     action_items = []
     new_pending_items = []
     video_cfg = config.get("video", {})
+    source_errors = []
 
-    try:
-        enabled_platforms = {p: c for p, c in platforms_cfg.items() if c.get("enabled")}
+    enabled_platforms = {p: c for p, c in platforms_cfg.items() if c.get("enabled")}
 
-        # --- Source 1: new catalog items ---
-        nc_cfg = sources_cfg.get("new_catalog_items", {})
-        if nc_cfg.get("enabled"):
+    # --- Source 1: new catalog items ---
+    nc_cfg = sources_cfg.get("new_catalog_items", {})
+    if nc_cfg.get("enabled"):
+        try:
             for item in get_recent_catalog_items(nc_cfg):
                 for platform, platform_cfg in enabled_platforms.items():
                     item_id = deterministic_id("catalog_item", item["name"], platform)
@@ -345,10 +346,13 @@ def run(config_path=None):
                         "priority": "low", "category": "social_content",
                         "suggested_agent": "manual", "page": item["url"],
                     })
+        except Exception as e:
+            source_errors.append(f"new_catalog_items: {e}")
 
-        # --- Source 2: catalog milestones ---
-        cm_cfg = sources_cfg.get("catalog_milestones", {})
-        if cm_cfg.get("enabled"):
+    # --- Source 2: catalog milestones ---
+    cm_cfg = sources_cfg.get("catalog_milestones", {})
+    if cm_cfg.get("enabled"):
+        try:
             milestone = get_catalog_milestone(cm_cfg)
             if milestone:
                 label = cm_cfg.get("milestone_label", "items")
@@ -367,10 +371,13 @@ def run(config_path=None):
                         "priority": "low", "category": "social_content",
                         "suggested_agent": "manual", "page": None,
                     })
+        except Exception as e:
+            source_errors.append(f"catalog_milestones: {e}")
 
-        # --- Source 3: manual announcements (any business, no schema) ---
-        ma_cfg = sources_cfg.get("manual_announcements", {})
-        if ma_cfg.get("enabled"):
+    # --- Source 3: manual announcements (any business, no schema) ---
+    ma_cfg = sources_cfg.get("manual_announcements", {})
+    if ma_cfg.get("enabled"):
+        try:
             for entry in get_new_announcements(ma_cfg, already_seen_texts):
                 text = entry["text"].strip()
                 for platform, platform_cfg in enabled_platforms.items():
@@ -399,16 +406,24 @@ def run(config_path=None):
                         "priority": "low", "category": "social_content",
                         "suggested_agent": "manual", "page": entry.get("cta_url"),
                     })
+        except Exception as e:
+            source_errors.append(f"manual_announcements: {e}")
 
-        pending["items"] = pending.get("items", []) + new_pending_items
-        save_json(pending_path, pending)
+    # Always write the pending/data files, no matter what happened above --
+    # a broken source should never prevent the git commit step from having
+    # something to commit, and should never silently vanish either.
+    pending["items"] = pending.get("items", []) + new_pending_items
+    save_json(pending_path, pending)
 
+    if source_errors:
+        status = "success" if new_pending_items or pending.get("items") else "failed"
+        summary = (
+            f"{len(new_pending_items)} new draft(s) queued. "
+            f"{len(source_errors)} source(s) had errors and were skipped: {'; '.join(source_errors)}"
+        )
+    else:
         status = "success"
         summary = f"{len(new_pending_items)} new draft(s) queued for review across enabled platforms."
-
-    except Exception as e:
-        status = "failed"
-        summary = f"Agent run failed: {e}"
 
     output = {
         "agent_meta": {
