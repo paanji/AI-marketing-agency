@@ -2,36 +2,43 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-07-08",
+    "run_date": "2026-07-12",
     "status": "success",
-    "summary": "14 action items found (2 high priority)"
+    "summary": "15 action items found (2 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-07-08",
+  "generated_date": "2026-07-12",
   "window": {
-    "start": "2026-06-07",
-    "end": "2026-07-05"
+    "start": "2026-06-11",
+    "end": "2026-07-09"
   },
   "overview": {
-    "total_queries": 2,
+    "total_queries": 3,
     "total_clicks": 0,
-    "total_impressions": 5,
-    "avg_position": 8.8,
+    "total_impressions": 12,
+    "avg_position": 15.8,
     "overall_ctr": 0.0
   },
   "top_queries": [
     {
       "query": "ai dunia",
-      "position": 8.8,
-      "impressions": 4,
+      "position": 6.1,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "dunia ai",
-      "position": 9,
-      "impressions": 1,
+      "position": 7.3,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "keyword-aiynunvz",
+      "position": 62.5,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0
     }
@@ -85,10 +92,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.85,
-        "lcp_display": "3.5 s",
+        "performance_score": 0.86,
+        "lcp_display": "3.3 s",
         "cls_display": "0.07",
-        "tbt_display": "90 ms"
+        "tbt_display": "100 ms"
       }
     },
     {
@@ -136,10 +143,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.7,
+        "performance_score": 0.71,
         "lcp_display": "3.3 s",
         "cls_display": "0.38",
-        "tbt_display": "60 ms"
+        "tbt_display": "30 ms"
       }
     },
     {
@@ -182,10 +189,10 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.92,
-        "lcp_display": "2.6 s",
+        "performance_score": 0.88,
+        "lcp_display": "3.3 s",
         "cls_display": "0.07",
-        "tbt_display": "60 ms"
+        "tbt_display": "50 ms"
       }
     }
   ],
@@ -231,8 +238,8 @@
       "target_range": null
     },
     {
-      "id": "26b08fefb0",
-      "description": "Page speed could be better (Lighthouse performance score: 85/100, mobile). LCP: 3.5 s, CLS: 0.07.",
+      "id": "ef2397d228",
+      "description": "Page speed could be better (Lighthouse performance score: 86/100, mobile). LCP: 3.3 s, CLS: 0.07.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -291,8 +298,8 @@
       "target_range": null
     },
     {
-      "id": "50ac0b8645",
-      "description": "Page speed could be better (Lighthouse performance score: 70/100, mobile). LCP: 3.3 s, CLS: 0.38.",
+      "id": "54b5339831",
+      "description": "Page speed could be better (Lighthouse performance score: 71/100, mobile). LCP: 3.3 s, CLS: 0.38.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -344,6 +351,18 @@
       "priority": "low",
       "category": "on_page_seo",
       "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "5b9fcb69f3",
+      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.3 s, CLS: 0.07.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
       "proposed_fix": null,
       "field_type": null,

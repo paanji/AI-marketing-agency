@@ -1,7 +1,7 @@
 # SEO Report — AllAIDunia
-_2026-07-08_
+_2026-07-12_
 
-Data window: 2026-06-07 to 2026-07-05 (vs. prior 2026-05-10 to 2026-06-06)
+Data window: 2026-06-11 to 2026-07-09 (vs. prior 2026-05-14 to 2026-06-10)
 
 ## Recommended Actions
 Prioritized suggestions combining Search Console data and a live site audit. Items tagged for `content_agent` will be actioned automatically once that agent exists — items tagged `manual` need a person for now.
@@ -13,12 +13,13 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 ### Medium Priority
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `43c9528852`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 85/100, mobile). LCP: 3.5 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 86/100, mobile). LCP: 3.3 s, CLS: 0.07. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `3ee3682690`) for the Content Agent to apply.
-- [technical] Page speed could be better (Lighthouse performance score: 70/100, mobile). LCP: 3.3 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 71/100, mobile). LCP: 3.3 s, CLS: 0.38. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
 - [ai_search_geo] No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: content_agent*
   ✅ **Fix ready** — full content generated, see `seo_data.json` (action item `ee4a9e8413`) for the Content Agent to apply.
+- [technical] Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.3 s, CLS: 0.07. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
 
 ### Low Priority
 **Meta Description** _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
@@ -34,13 +35,13 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 
 
 ## Historical Trend
-Comparing this run (2026-07-08) to the earliest recorded snapshot (2026-07-07, ~1 week(s) ago):
+Comparing this run (2026-07-12) to the earliest recorded snapshot (2026-07-07, ~1 week(s) ago):
 
 | Metric | Then | Now | Change |
 |---|---|---|---|
 | Total clicks | 0 | 0 | no change |
-| Total impressions | 4 | 5 | 📈 +1 |
-| Avg. position | 8.8 | 8.8 | no change |
+| Total impressions | 4 | 12 | 📈 +8 |
+| Avg. position | 8.8 | 15.8 | 📉 +7.0 |
 | Pages indexed | 1/3 | 1/3 | no change |
 | High-priority issues | 2 | 2 | no change |
 
@@ -48,10 +49,10 @@ Comparing this run (2026-07-08) to the earliest recorded snapshot (2026-07-07, ~
 ## Overview
 | Metric | Value |
 |---|---|
-| Total queries seen | 2 |
+| Total queries seen | 3 |
 | Total clicks | 0 |
-| Total impressions | 5 |
-| Average position | 8.8 |
+| Total impressions | 12 |
+| Average position | 15.8 |
 | Overall CTR | 0.0% |
 
 ## AI Search Readiness (GEO/AEO)
@@ -74,5 +75,6 @@ Whether AI answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) can
 
 | Query | Position | Impressions | Clicks | CTR |
 |---|---|---|---|---|
-| ai dunia | 8.8 | 4 | 0 | 0% |
-| dunia ai | 9 | 1 | 0 | 0% |
+| ai dunia | 6.1 | 7 | 0 | 0% |
+| dunia ai | 7.3 | 3 | 0 | 0% |
+| keyword-aiynunvz | 62.5 | 2 | 0 | 0% |
