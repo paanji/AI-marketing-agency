@@ -2,58 +2,9 @@
   "agent_meta": {
     "agent_name": "social_media_agent",
     "schema_version": "1.1",
-    "run_date": "2026-07-12",
+    "run_date": "2026-07-13",
     "status": "success",
-    "summary": "6 new draft(s) queued. 2 source(s) had errors and were skipped: new_catalog_items: 'list' object has no attribute 'get'; catalog_milestones: 'list' object has no attribute 'get'"
+    "summary": "0 new draft(s) queued. 2 source(s) had errors and were skipped: new_catalog_items: 'list' object has no attribute 'get'; catalog_milestones: 'list' object has no attribute 'get'"
   },
-  "action_items": [
-    {
-      "id": "b33bd0b45b",
-      "description": "Draft reddit post for announcement: \"AllAIDunia just crossed 50 AI tools in the directory -- all \"",
-      "priority": "low",
-      "category": "social_content",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/"
-    },
-    {
-      "id": "a5772a069d",
-      "description": "Draft linkedin post for announcement: \"AllAIDunia just crossed 50 AI tools in the directory -- all \"",
-      "priority": "low",
-      "category": "social_content",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/"
-    },
-    {
-      "id": "a85dccff90",
-      "description": "Draft twitter post for announcement: \"AllAIDunia just crossed 50 AI tools in the directory -- all \"",
-      "priority": "low",
-      "category": "social_content",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/"
-    },
-    {
-      "id": "be0cfca02a",
-      "description": "Draft instagram post for announcement: \"AllAIDunia just crossed 50 AI tools in the directory -- all \"",
-      "priority": "low",
-      "category": "social_content",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/"
-    },
-    {
-      "id": "5c280a35f8",
-      "description": "Draft facebook post for announcement: \"AllAIDunia just crossed 50 AI tools in the directory -- all \"",
-      "priority": "low",
-      "category": "social_content",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/"
-    },
-    {
-      "id": "064a338a2a",
-      "description": "Draft youtube post for announcement: \"AllAIDunia just crossed 50 AI tools in the directory -- all \"",
-      "priority": "low",
-      "category": "social_content",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/"
-    }
-  ]
+  "action_items": []
 }
