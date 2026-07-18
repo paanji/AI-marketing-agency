@@ -24,6 +24,24 @@ HTML_PATH = "index.html"
 TOOLS_PATH = "agents/directory-freshness/tools.json"
 
 
+def classify_pricing_tier(pricing_text: str) -> str:
+    """Derives a simple badge category (free / freemium / paid / unknown) from
+    the existing free-text pricing field, computed fresh every time — not
+    stored separately, so it can never drift out of sync with tools.json."""
+    text = (pricing_text or "").lower()
+    if not text or "see site" in text:
+        return "unknown"
+    if "completely free" in text:
+        return "free"
+    if "paid only" in text or "requires" in text:
+        return "paid"
+    if "trial" in text and "credits" not in text and "tier" not in text:
+        return "paid"  # a time-limited trial means the underlying product is paid
+    if "free" in text:
+        return "freemium"
+    return "unknown"
+
+
 def js_string(s: str) -> str:
     """Escapes a string for safe embedding inside a JS template/string literal."""
     return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ")
@@ -48,6 +66,7 @@ def build_static_grid_html(tools: list) -> str:
     there's real content present before any JavaScript runs at all."""
     if not tools:
         return '<div class="no-results">No tools found 🤔</div>'
+    TIER_LABELS = {"free": "Free", "freemium": "Freemium", "paid": "Paid", "unknown": "Pricing varies"}
     cards = []
     for i, t in enumerate(tools):
         if t.get("featured"):
@@ -63,9 +82,11 @@ def build_static_grid_html(tools: list) -> str:
         url = html_lib.escape(t["url"], quote=True)
         color = html_lib.escape(t.get("color", "#333"), quote=True)
         text_color = html_lib.escape(t.get("text", "#fff"), quote=True)
+        tier = classify_pricing_tier(t.get("pricing", ""))
+        tier_label = TIER_LABELS[tier]
         cards.append(
             f'<a class="tool-card" href="{url}" target="_blank" rel="noopener noreferrer" '
-            f'style="animation-delay:{i * 0.025}s">'
+            f'data-pricing="{tier}" style="animation-delay:{i * 0.025}s">'
             f'<div class="card-top">'
             f'<div class="tool-icon" style="background:{color}; color:{text_color}">{letter}</div>'
             f'{badge}'
@@ -74,7 +95,10 @@ def build_static_grid_html(tools: list) -> str:
             f'<div class="tool-name">{name}</div>'
             f'<div class="tool-desc">{desc}</div>'
             f'</div>'
-            f'<div class="tool-cat">{cat}</div>'
+            f'<div class="card-foot">'
+            f'<span class="tool-cat">{cat}</span>'
+            f'<span class="tool-price tool-price-{tier}">{tier_label}</span>'
+            f'</div>'
             f'</a>'
         )
     return "\n".join(cards)
@@ -89,13 +113,14 @@ def build_tools_array(tools: list) -> str:
             lines.append(f"  // {current_cat}")
         lines.append(
             "  { name:\"%s\", cat:\"%s\", url:\"%s\", color:\"%s\", text:\"%s\", "
-            "letter:\"%s\", desc:\"%s\", isNew:%s, featured:%s },"
+            "letter:\"%s\", desc:\"%s\", isNew:%s, featured:%s, pricing:\"%s\" },"
             % (
                 js_string(t["name"]), js_string(t["cat"]), js_string(t["url"]),
                 t.get("color", "#333"), t.get("text", "#fff"), js_string(t.get("letter", "?")),
                 js_string(t.get("desc", "")),
                 "true" if t.get("isNew") else "false",
                 "true" if t.get("featured") else "false",
+                js_string(t.get("pricing", "")),
             )
         )
     lines.append("];")
