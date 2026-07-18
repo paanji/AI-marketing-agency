@@ -238,6 +238,65 @@
     }
     .no-results { text-align: center; color: var(--muted); padding: 60px 24px; font-size: 15px; width: 100%; }
 
+    /* ── PRICING BADGES ── */
+    .card-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: auto; }
+    .tool-price {
+      display: inline-block; font-size: 10.5px; font-weight: 600; padding: 3px 9px;
+      border-radius: 20px; white-space: nowrap;
+    }
+    .tool-price-free { background: rgba(108,240,194,0.15); border: 1px solid rgba(108,240,194,0.3); color: var(--accent3); }
+    .tool-price-freemium { background: rgba(240,192,96,0.15); border: 1px solid rgba(240,192,96,0.3); color: var(--gold); }
+    .tool-price-paid { background: rgba(250,108,159,0.12); border: 1px solid rgba(250,108,159,0.28); color: var(--accent2); }
+    .tool-price-unknown { background: rgba(139,138,150,0.12); border: 1px solid rgba(139,138,150,0.25); color: var(--muted); }
+    .filter-toggle.active { background: var(--accent3); color: #0a0a0f; border-color: var(--accent3); }
+
+    /* ── MATCHMAKER ── */
+    .matchmaker-section { padding: 60px 24px; max-width: 1100px; margin: 0 auto; }
+    .matchmaker-head { text-align: center; margin-bottom: 32px; }
+    .matchmaker-head h2 { font-family: var(--font-head); font-size: 28px; margin-bottom: 8px; }
+    .matchmaker-head p { color: var(--muted); font-size: 14px; }
+    .task-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-bottom: 30px; }
+    .task-btn {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+      padding: 18px 14px; text-align: center; cursor: pointer; transition: all 0.2s ease;
+      font-size: 14px; color: var(--text); font-weight: 500;
+    }
+    .task-btn:hover, .task-btn.active { border-color: var(--accent); background: rgba(124,108,250,0.08); }
+    .task-btn .icon { font-size: 24px; display: block; margin-bottom: 8px; }
+    .match-results { display: none; }
+    .match-results.show { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .match-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 20px; position: relative; }
+    .match-card.best { border-color: var(--gold); }
+    .match-tier { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; display: block; }
+    .match-tier.best { color: var(--gold); }
+    .match-tier.runner { color: var(--accent3); }
+    .match-tier.budget { color: var(--muted); }
+    .match-tool-name { font-family: var(--font-head); font-size: 19px; font-weight: 700; margin-bottom: 6px; }
+    .match-reason { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+    .match-link { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); }
+
+    /* ── COMPARE TOOLS ── */
+    .compare-section { padding: 60px 24px; max-width: 900px; margin: 0 auto; }
+    .compare-head { text-align: center; margin-bottom: 28px; }
+    .compare-head h2 { font-family: var(--font-head); font-size: 28px; margin-bottom: 8px; }
+    .compare-head p { color: var(--muted); font-size: 14px; }
+    .compare-presets { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+    .compare-preset-btn {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px;
+      padding: 8px 16px; font-size: 13px; cursor: pointer; color: var(--text);
+    }
+    .compare-preset-btn:hover, .compare-preset-btn.active { border-color: var(--accent); color: var(--accent); }
+    .compare-table-wrap { display: none; }
+    .compare-table-wrap.show { display: block; }
+    .compare-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .compare-table th, .compare-table td { padding: 14px 16px; text-align: center; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+    .compare-table th { font-family: var(--font-head); font-size: 15px; background: var(--bg3); }
+    .compare-table td:first-child, .compare-table th:first-child { text-align: left; color: var(--muted); font-size: 13px; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-verdict { margin-top: 18px; padding: 16px 18px; background: rgba(124,108,250,0.08); border: 1px solid var(--border); border-radius: 10px; font-size: 13.5px; line-height: 1.6; }
+    .stars { color: var(--gold); letter-spacing: 1px; }
+    .compare-note { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 14px; }
+
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     .tool-card { animation: fadeUp 0.35s ease both; }
 
@@ -405,27 +464,10 @@
   <div class="nav-inner">
     <!-- SVG LOGO -->
     <svg class="logo-svg" viewBox="0 0 270 44" xmlns="http://www.w3.org/2000/svg" aria-label="AllAIDunia home">
-      <!-- Mini globe -->
-      <circle cx="22" cy="22" r="18" fill="none" stroke="#7c6cfa" stroke-width="1"/>
-      <ellipse cx="22" cy="22" rx="18" ry="6" fill="none" stroke="#7c6cfa" stroke-width="0.6" opacity="0.4"/>
-      <ellipse cx="22" cy="22" rx="7" ry="18" fill="none" stroke="#7c6cfa" stroke-width="0.6" opacity="0.4"/>
-      <!-- Nodes -->
-      <circle cx="22" cy="4" r="2.5" fill="#6cf0c2" class="logo-node-teal"/>
-      <circle cx="38" cy="14" r="2" fill="#6cf0c2" class="logo-node-teal"/>
-      <circle cx="38" cy="30" r="2" fill="#fa6c9f"/>
-      <circle cx="22" cy="40" r="2.5" fill="#fa6c9f"/>
-      <circle cx="6" cy="30" r="2" fill="#6cf0c2" class="logo-node-teal"/>
-      <circle cx="6" cy="14" r="2" fill="#6cf0c2" class="logo-node-teal"/>
-      <!-- Lines -->
-      <line x1="22" y1="6" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
-      <line x1="36" y1="15" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
-      <line x1="36" y1="29" x2="22" y2="22" stroke="#fa6c9f" stroke-width="0.6" opacity="0.5"/>
-      <line x1="22" y1="38" x2="22" y2="22" stroke="#fa6c9f" stroke-width="0.6" opacity="0.5"/>
-      <line x1="8" y1="29" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
-      <line x1="8" y1="15" x2="22" y2="22" stroke="#7c6cfa" stroke-width="0.6" opacity="0.5"/>
-      <!-- Center -->
-      <circle cx="22" cy="22" r="3.5" fill="#7c6cfa"/>
-      <circle cx="22" cy="22" r="1.5" fill="#fff"/>
+      <!-- Orbit mark -->
+      <ellipse cx="22" cy="22" rx="18" ry="6.7" fill="none" stroke="#e8733f" stroke-width="1.7" stroke-linecap="round" transform="rotate(18 22 22)"/>
+      <ellipse cx="22" cy="22" rx="18" ry="6.7" fill="none" stroke="#e8733f" stroke-width="1.7" stroke-linecap="round" transform="rotate(-18 22 22)"/>
+      <ellipse cx="22" cy="22" rx="6.7" ry="18" fill="none" stroke="#e8733f" stroke-width="1.9" stroke-linecap="round"/>
       <!-- Brand text — single text element with tspans, wider viewBox so full name shows -->
       <text x="50" y="30" font-size="21"><tspan class="logo-text-main">AllAI</tspan><tspan class="logo-text-dunia">Dunia</tspan></text>
     </svg>
@@ -454,6 +496,16 @@
       <input type="text" id="search-input" placeholder="Search AI tools..." autocomplete="off" />
     </div>
   </div>
+</div>
+
+<!-- MATCHMAKER -->
+<div class="matchmaker-section">
+  <div class="matchmaker-head">
+    <h2>What do you want to do today?</h2>
+    <p>Skip the categories — tell us your task, we'll tell you the best tool for it.</p>
+  </div>
+  <div class="task-grid" id="task-grid"></div>
+  <div class="match-results" id="match-results"></div>
 </div>
 
 <!-- SEO INTRO TEXT -->
@@ -539,6 +591,7 @@
 <a class="tool-card" href="https://www.appaca.ai/" target="_blank" rel="noopener noreferrer" style="animation-delay:1.5250000000000001s"><div class="card-top"><div class="tool-icon" style="background:#7c6cfa; color:#fff">A</div><span class="new-pill">New</span></div><div><div class="tool-name">Appaca</div><div class="tool-desc">Show HN: Appaca – AI Workspace for Operators</div></div><div class="tool-cat">Uncategorized</div></a>
   </div>
 </div>
+
 <!-- CATEGORY PAGES + BLOG LINKS -->
 <div class="container" style="margin-bottom: 60px;">
   <div class="link-section">
@@ -560,6 +613,16 @@
       </a>
     </div>
   </div>
+</div>
+
+<!-- COMPARE TOOLS -->
+<div class="compare-section">
+  <div class="compare-head">
+    <h2>Compare AI Tools</h2>
+    <p>Popular head-to-head comparisons, at a glance.</p>
+  </div>
+  <div class="compare-presets" id="compare-presets"></div>
+  <div class="compare-table-wrap" id="compare-table-wrap"></div>
 </div>
 
 <!-- SUBMIT TOOL MODAL -->
@@ -656,79 +719,79 @@
 // ── TOOLS DATA ──
 const tools = [
   // Chat
-  { name:"ChatGPT", cat:"Chat", url:"https://chat.openai.com", color:"#10a37f", text:"#fff", letter:"C", desc:"OpenAI's flagship AI assistant for everything", isNew:false, featured:false },
-  { name:"Claude", cat:"Chat", url:"https://claude.ai", color:"#d97706", text:"#fff", letter:"A", desc:"Anthropic's thoughtful and safe AI assistant", isNew:false, featured:false },
-  { name:"Gemini", cat:"Chat", url:"https://gemini.google.com", color:"#4285f4", text:"#fff", letter:"G", desc:"Google's powerful multimodal AI model", isNew:false, featured:false },
-  { name:"Grok", cat:"Chat", url:"https://grok.com", color:"#1a1a1a", text:"#fff", letter:"G", desc:"xAI's witty real-time AI by Elon Musk", isNew:false, featured:false },
-  { name:"Mistral", cat:"Chat", url:"https://chat.mistral.ai", color:"#f97316", text:"#fff", letter:"M", desc:"Open-weight European AI models", isNew:false, featured:false },
-  { name:"Meta AI", cat:"Chat", url:"https://meta.ai", color:"#0668E1", text:"#fff", letter:"M", desc:"Meta's AI across apps and the web", isNew:false, featured:false },
-  { name:"Copilot", cat:"Chat", url:"https://copilot.microsoft.com", color:"#0078d4", text:"#fff", letter:"C", desc:"Microsoft's AI assistant powered by GPT-4", isNew:false, featured:false },
-  { name:"DeepSeek", cat:"Chat", url:"https://chat.deepseek.com", color:"#4f46e5", text:"#fff", letter:"D", desc:"Powerful open-source reasoning model", isNew:true, featured:false },
-  { name:"Le Chat", cat:"Chat", url:"https://chat.mistral.ai", color:"#ff6b35", text:"#fff", letter:"L", desc:"Mistral's fast conversational AI", isNew:true, featured:false },
-  { name:"Pi AI", cat:"Chat", url:"https://pi.ai", color:"#6d28d9", text:"#fff", letter:"P", desc:"Your personal AI that listens and learns", isNew:false, featured:false },
+  { name:"ChatGPT", cat:"Chat", url:"https://chat.openai.com", color:"#10a37f", text:"#fff", letter:"C", desc:"OpenAI's flagship AI assistant for everything", isNew:false, featured:false, pricing:"FREE tier available" },
+  { name:"Claude", cat:"Chat", url:"https://claude.ai", color:"#d97706", text:"#fff", letter:"A", desc:"Anthropic's thoughtful and safe AI assistant", isNew:false, featured:false, pricing:"FREE tier available" },
+  { name:"Gemini", cat:"Chat", url:"https://gemini.google.com", color:"#4285f4", text:"#fff", letter:"G", desc:"Google's powerful multimodal AI model", isNew:false, featured:false, pricing:"COMPLETELY FREE" },
+  { name:"Grok", cat:"Chat", url:"https://grok.com", color:"#1a1a1a", text:"#fff", letter:"G", desc:"xAI's witty real-time AI by Elon Musk", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Mistral", cat:"Chat", url:"https://chat.mistral.ai", color:"#f97316", text:"#fff", letter:"M", desc:"Open-weight European AI models", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Meta AI", cat:"Chat", url:"https://meta.ai", color:"#0668E1", text:"#fff", letter:"M", desc:"Meta's AI across apps and the web", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Copilot", cat:"Chat", url:"https://copilot.microsoft.com", color:"#0078d4", text:"#fff", letter:"C", desc:"Microsoft's AI assistant powered by GPT-4", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"DeepSeek", cat:"Chat", url:"https://chat.deepseek.com", color:"#4f46e5", text:"#fff", letter:"D", desc:"Powerful open-source reasoning model", isNew:true, featured:false, pricing:"COMPLETELY FREE" },
+  { name:"Le Chat", cat:"Chat", url:"https://chat.mistral.ai", color:"#ff6b35", text:"#fff", letter:"L", desc:"Mistral's fast conversational AI", isNew:true, featured:false, pricing:"see site for pricing" },
+  { name:"Pi AI", cat:"Chat", url:"https://pi.ai", color:"#6d28d9", text:"#fff", letter:"P", desc:"Your personal AI that listens and learns", isNew:false, featured:false, pricing:"see site for pricing" },
   // Search
-  { name:"Perplexity", cat:"Search", url:"https://perplexity.ai", color:"#7c3aed", text:"#fff", letter:"P", desc:"AI-powered answer engine with citations", isNew:false, featured:false },
-  { name:"You.com", cat:"Search", url:"https://you.com", color:"#2563eb", text:"#fff", letter:"Y", desc:"AI search with cited answers", isNew:false, featured:false },
-  { name:"Exa AI", cat:"Search", url:"https://exa.ai", color:"#111827", text:"#fff", letter:"E", desc:"Neural search for developers and researchers", isNew:true, featured:false },
+  { name:"Perplexity", cat:"Search", url:"https://perplexity.ai", color:"#7c3aed", text:"#fff", letter:"P", desc:"AI-powered answer engine with citations", isNew:false, featured:false, pricing:"COMPLETELY FREE" },
+  { name:"You.com", cat:"Search", url:"https://you.com", color:"#2563eb", text:"#fff", letter:"Y", desc:"AI search with cited answers", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Exa AI", cat:"Search", url:"https://exa.ai", color:"#111827", text:"#fff", letter:"E", desc:"Neural search for developers and researchers", isNew:true, featured:false, pricing:"see site for pricing" },
   // Image
-  { name:"Midjourney", cat:"Image", url:"https://midjourney.com", color:"#1a1a2e", text:"#fff", letter:"M", desc:"Stunning AI image generation", isNew:false, featured:false },
-  { name:"Stable Diff.", cat:"Image", url:"https://stability.ai", color:"#7f1d1d", text:"#fff", letter:"S", desc:"Open-source image generation model", isNew:false, featured:false },
-  { name:"Adobe Firefly", cat:"Image", url:"https://firefly.adobe.com", color:"#ff0000", text:"#fff", letter:"F", desc:"Adobe's generative AI for creatives", isNew:false, featured:false },
-  { name:"Krea", cat:"Image", url:"https://krea.ai", color:"#6d28d9", text:"#fff", letter:"K", desc:"Real-time AI image creation tool", isNew:true, featured:false },
-  { name:"Ideogram", cat:"Image", url:"https://ideogram.ai", color:"#0f172a", text:"#fff", letter:"I", desc:"AI image gen with great text typography", isNew:true, featured:false },
-  { name:"Leonardo AI", cat:"Image", url:"https://leonardo.ai", color:"#b45309", text:"#fff", letter:"L", desc:"AI images for games and creative work", isNew:false, featured:false },
-  { name:"Flux", cat:"Image", url:"https://blackforestlabs.ai", color:"#1e1b4b", text:"#fff", letter:"F", desc:"State of the art image generation model", isNew:true, featured:false },
-  { name:"Canva AI", cat:"Image", url:"https://canva.com/ai-image-generator", color:"#00c4cc", text:"#fff", letter:"C", desc:"AI image generation inside Canva", isNew:false, featured:false },
+  { name:"Midjourney", cat:"Image", url:"https://midjourney.com", color:"#1a1a2e", text:"#fff", letter:"M", desc:"Stunning AI image generation", isNew:false, featured:false, pricing:"PAID only $10/mo" },
+  { name:"Stable Diff.", cat:"Image", url:"https://stability.ai", color:"#7f1d1d", text:"#fff", letter:"S", desc:"Open-source image generation model", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Adobe Firefly", cat:"Image", url:"https://firefly.adobe.com", color:"#ff0000", text:"#fff", letter:"F", desc:"Adobe's generative AI for creatives", isNew:false, featured:false, pricing:"FREE credits monthly" },
+  { name:"Krea", cat:"Image", url:"https://krea.ai", color:"#6d28d9", text:"#fff", letter:"K", desc:"Real-time AI image creation tool", isNew:true, featured:false, pricing:"see site for pricing" },
+  { name:"Ideogram", cat:"Image", url:"https://ideogram.ai", color:"#0f172a", text:"#fff", letter:"I", desc:"AI image gen with great text typography", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"Leonardo AI", cat:"Image", url:"https://leonardo.ai", color:"#b45309", text:"#fff", letter:"L", desc:"AI images for games and creative work", isNew:false, featured:false, pricing:"FREE daily credits" },
+  { name:"Flux", cat:"Image", url:"https://blackforestlabs.ai", color:"#1e1b4b", text:"#fff", letter:"F", desc:"State of the art image generation model", isNew:true, featured:false, pricing:"see site for pricing" },
+  { name:"Canva AI", cat:"Image", url:"https://canva.com/ai-image-generator", color:"#00c4cc", text:"#fff", letter:"C", desc:"AI image generation inside Canva", isNew:false, featured:false, pricing:"FREE with Canva account" },
   // Video
-  { name:"Runway", cat:"Video", url:"https://runwayml.com", color:"#0f172a", text:"#fff", letter:"R", desc:"AI video generation and editing suite", isNew:true, featured:false },
-  { name:"Sora", cat:"Video", url:"https://sora.com", color:"#10a37f", text:"#fff", letter:"S", desc:"OpenAI's text-to-video model", isNew:true, featured:false },
-  { name:"Kling AI", cat:"Video", url:"https://klingai.com", color:"#1e1b4b", text:"#fff", letter:"K", desc:"Realistic AI video generation", isNew:true, featured:false },
-  { name:"Pika", cat:"Video", url:"https://pika.art", color:"#7c3aed", text:"#fff", letter:"P", desc:"AI video from text or images", isNew:true, featured:false },
-  { name:"HeyGen", cat:"Video", url:"https://heygen.com", color:"#0ea5e9", text:"#fff", letter:"H", desc:"AI avatar video creator for business", isNew:true, featured:false },
-  { name:"Synthesia", cat:"Video", url:"https://synthesia.io", color:"#6d28d9", text:"#fff", letter:"S", desc:"AI video with realistic avatars", isNew:false, featured:false },
+  { name:"Runway", cat:"Video", url:"https://runwayml.com", color:"#0f172a", text:"#fff", letter:"R", desc:"AI video generation and editing suite", isNew:true, featured:false, pricing:"FREE trial credits" },
+  { name:"Sora", cat:"Video", url:"https://sora.com", color:"#10a37f", text:"#fff", letter:"S", desc:"OpenAI's text-to-video model", isNew:true, featured:false, pricing:"REQUIRES ChatGPT Plus" },
+  { name:"Kling AI", cat:"Video", url:"https://klingai.com", color:"#1e1b4b", text:"#fff", letter:"K", desc:"Realistic AI video generation", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"Pika", cat:"Video", url:"https://pika.art", color:"#7c3aed", text:"#fff", letter:"P", desc:"AI video from text or images", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"HeyGen", cat:"Video", url:"https://heygen.com", color:"#0ea5e9", text:"#fff", letter:"H", desc:"AI avatar video creator for business", isNew:true, featured:false, pricing:"1 FREE video/month" },
+  { name:"Synthesia", cat:"Video", url:"https://synthesia.io", color:"#6d28d9", text:"#fff", letter:"S", desc:"AI video with realistic avatars", isNew:false, featured:false, pricing:"see site for pricing" },
   // Audio
-  { name:"ElevenLabs", cat:"Audio", url:"https://elevenlabs.io", color:"#111827", text:"#fff", letter:"E", desc:"Ultra-realistic AI voice cloning", isNew:false, featured:false },
-  { name:"Suno", cat:"Audio", url:"https://suno.com", color:"#7c3aed", text:"#fff", letter:"S", desc:"Generate full songs with AI", isNew:false, featured:false },
-  { name:"Udio", cat:"Audio", url:"https://udio.com", color:"#0f172a", text:"#fff", letter:"U", desc:"AI music creation and generation", isNew:true, featured:false },
-  { name:"Murf AI", cat:"Audio", url:"https://murf.ai", color:"#0369a1", text:"#fff", letter:"M", desc:"AI voiceover and text-to-speech", isNew:false, featured:false },
-  { name:"Descript", cat:"Audio", url:"https://descript.com", color:"#111827", text:"#fff", letter:"D", desc:"Edit audio and video like a document", isNew:false, featured:false },
+  { name:"ElevenLabs", cat:"Audio", url:"https://elevenlabs.io", color:"#111827", text:"#fff", letter:"E", desc:"Ultra-realistic AI voice cloning", isNew:false, featured:false, pricing:"FREE limited minutes" },
+  { name:"Suno", cat:"Audio", url:"https://suno.com", color:"#7c3aed", text:"#fff", letter:"S", desc:"Generate full songs with AI", isNew:false, featured:false, pricing:"FREE tier available" },
+  { name:"Udio", cat:"Audio", url:"https://udio.com", color:"#0f172a", text:"#fff", letter:"U", desc:"AI music creation and generation", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"Murf AI", cat:"Audio", url:"https://murf.ai", color:"#0369a1", text:"#fff", letter:"M", desc:"AI voiceover and text-to-speech", isNew:false, featured:false, pricing:"FREE trial" },
+  { name:"Descript", cat:"Audio", url:"https://descript.com", color:"#111827", text:"#fff", letter:"D", desc:"Edit audio and video like a document", isNew:false, featured:false, pricing:"see site for pricing" },
   // Code
-  { name:"GitHub Copilot", cat:"Code", url:"https://github.com/features/copilot", color:"#24292e", text:"#fff", letter:"G", desc:"AI pair programmer inside your IDE", isNew:false, featured:false },
-  { name:"Cursor", cat:"Code", url:"https://cursor.sh", color:"#1d4ed8", text:"#fff", letter:"C", desc:"The AI-first code editor", isNew:false, featured:false },
-  { name:"v0", cat:"Code", url:"https://v0.dev", color:"#000", text:"#fff", letter:"v", desc:"Generate UI components with AI by Vercel", isNew:true, featured:false },
-  { name:"Bolt", cat:"Code", url:"https://bolt.new", color:"#c2410c", text:"#fff", letter:"B", desc:"Full-stack AI app builder in browser", isNew:true, featured:false },
-  { name:"Lovable", cat:"Code", url:"https://lovable.dev", color:"#db2777", text:"#fff", letter:"L", desc:"AI that builds full web apps from prompts", isNew:true, featured:false },
-  { name:"Replit AI", cat:"Code", url:"https://replit.com", color:"#f97316", text:"#fff", letter:"R", desc:"AI-powered coding in the browser", isNew:false, featured:false },
-  { name:"Windsurf", cat:"Code", url:"https://codeium.com/windsurf", color:"#0ea5e9", text:"#fff", letter:"W", desc:"AI code editor by Codeium", isNew:true, featured:false },
-  { name:"Tabnine", cat:"Code", url:"https://tabnine.com", color:"#6d28d9", text:"#fff", letter:"T", desc:"AI code completion for all IDEs", isNew:false, featured:false },
+  { name:"GitHub Copilot", cat:"Code", url:"https://github.com/features/copilot", color:"#24292e", text:"#fff", letter:"G", desc:"AI pair programmer inside your IDE", isNew:false, featured:false, pricing:"FREE for individuals" },
+  { name:"Cursor", cat:"Code", url:"https://cursor.sh", color:"#1d4ed8", text:"#fff", letter:"C", desc:"The AI-first code editor", isNew:false, featured:false, pricing:"FREE tier available" },
+  { name:"v0", cat:"Code", url:"https://v0.dev", color:"#000", text:"#fff", letter:"v", desc:"Generate UI components with AI by Vercel", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"Bolt", cat:"Code", url:"https://bolt.new", color:"#c2410c", text:"#fff", letter:"B", desc:"Full-stack AI app builder in browser", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"Lovable", cat:"Code", url:"https://lovable.dev", color:"#db2777", text:"#fff", letter:"L", desc:"AI that builds full web apps from prompts", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"Replit AI", cat:"Code", url:"https://replit.com", color:"#f97316", text:"#fff", letter:"R", desc:"AI-powered coding in the browser", isNew:false, featured:false, pricing:"FREE tier available" },
+  { name:"Windsurf", cat:"Code", url:"https://codeium.com/windsurf", color:"#0ea5e9", text:"#fff", letter:"W", desc:"AI code editor by Codeium", isNew:true, featured:false, pricing:"see site for pricing" },
+  { name:"Tabnine", cat:"Code", url:"https://tabnine.com", color:"#6d28d9", text:"#fff", letter:"T", desc:"AI code completion for all IDEs", isNew:false, featured:false, pricing:"see site for pricing" },
   // Writing
-  { name:"Jasper", cat:"Writing", url:"https://jasper.ai", color:"#f97316", text:"#fff", letter:"J", desc:"AI for marketing content and copywriting", isNew:false, featured:false },
-  { name:"Copy.ai", cat:"Writing", url:"https://copy.ai", color:"#7c3aed", text:"#fff", letter:"C", desc:"AI writing and workflow automation", isNew:false, featured:false },
-  { name:"Grammarly", cat:"Writing", url:"https://grammarly.com", color:"#15c369", text:"#fff", letter:"G", desc:"AI grammar and writing assistant", isNew:false, featured:false },
-  { name:"Quillbot", cat:"Writing", url:"https://quillbot.com", color:"#2da44e", text:"#fff", letter:"Q", desc:"AI paraphrasing and summarisation", isNew:false, featured:false },
-  { name:"Writesonic", cat:"Writing", url:"https://writesonic.com", color:"#6d28d9", text:"#fff", letter:"W", desc:"AI writing platform for marketers", isNew:false, featured:false },
+  { name:"Jasper", cat:"Writing", url:"https://jasper.ai", color:"#f97316", text:"#fff", letter:"J", desc:"AI for marketing content and copywriting", isNew:false, featured:false, pricing:"PAID only" },
+  { name:"Copy.ai", cat:"Writing", url:"https://copy.ai", color:"#7c3aed", text:"#fff", letter:"C", desc:"AI writing and workflow automation", isNew:false, featured:false, pricing:"FREE tier available" },
+  { name:"Grammarly", cat:"Writing", url:"https://grammarly.com", color:"#15c369", text:"#fff", letter:"G", desc:"AI grammar and writing assistant", isNew:false, featured:false, pricing:"FREE basic version" },
+  { name:"Quillbot", cat:"Writing", url:"https://quillbot.com", color:"#2da44e", text:"#fff", letter:"Q", desc:"AI paraphrasing and summarisation", isNew:false, featured:false, pricing:"FREE tier available" },
+  { name:"Writesonic", cat:"Writing", url:"https://writesonic.com", color:"#6d28d9", text:"#fff", letter:"W", desc:"AI writing platform for marketers", isNew:false, featured:false, pricing:"see site for pricing" },
   // Productivity
-  { name:"Notion AI", cat:"Productivity", url:"https://notion.so/ai", color:"#000", text:"#fff", letter:"N", desc:"AI inside your notes and documents", isNew:false, featured:false },
-  { name:"Otter.ai", cat:"Productivity", url:"https://otter.ai", color:"#1d4ed8", text:"#fff", letter:"O", desc:"AI meeting notes and transcription", isNew:false, featured:false },
-  { name:"Mem.ai", cat:"Productivity", url:"https://mem.ai", color:"#0f172a", text:"#fff", letter:"M", desc:"AI-powered notes that self-organise", isNew:false, featured:false },
-  { name:"Reclaim AI", cat:"Productivity", url:"https://reclaim.ai", color:"#0ea5e9", text:"#fff", letter:"R", desc:"AI calendar and time management", isNew:true, featured:false },
-  { name:"Motion", cat:"Productivity", url:"https://usemotion.com", color:"#7c3aed", text:"#fff", letter:"M", desc:"AI task and project scheduling", isNew:false, featured:false },
+  { name:"Notion AI", cat:"Productivity", url:"https://notion.so/ai", color:"#000", text:"#fff", letter:"N", desc:"AI inside your notes and documents", isNew:false, featured:false, pricing:"REQUIRES Notion paid plan" },
+  { name:"Otter.ai", cat:"Productivity", url:"https://otter.ai", color:"#1d4ed8", text:"#fff", letter:"O", desc:"AI meeting notes and transcription", isNew:false, featured:false, pricing:"FREE 300 min/month" },
+  { name:"Mem.ai", cat:"Productivity", url:"https://mem.ai", color:"#0f172a", text:"#fff", letter:"M", desc:"AI-powered notes that self-organise", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Reclaim AI", cat:"Productivity", url:"https://reclaim.ai", color:"#0ea5e9", text:"#fff", letter:"R", desc:"AI calendar and time management", isNew:true, featured:false, pricing:"see site for pricing" },
+  { name:"Motion", cat:"Productivity", url:"https://usemotion.com", color:"#7c3aed", text:"#fff", letter:"M", desc:"AI task and project scheduling", isNew:false, featured:false, pricing:"see site for pricing" },
   // Research
-  { name:"HuggingFace", cat:"Research", url:"https://huggingface.co", color:"#f7c948", text:"#1a1a1a", letter:"H", desc:"The GitHub of AI models and datasets", isNew:false, featured:false },
-  { name:"Replicate", cat:"Research", url:"https://replicate.com", color:"#111827", text:"#fff", letter:"R", desc:"Run open-source AI models via API", isNew:false, featured:false },
-  { name:"Together AI", cat:"Research", url:"https://together.ai", color:"#4f46e5", text:"#fff", letter:"T", desc:"Fast inference for open-source models", isNew:false, featured:false },
-  { name:"Arxiv + AI", cat:"Research", url:"https://arxiv.org", color:"#b45309", text:"#fff", letter:"A", desc:"Latest AI research papers", isNew:false, featured:false },
+  { name:"HuggingFace", cat:"Research", url:"https://huggingface.co", color:"#f7c948", text:"#1a1a1a", letter:"H", desc:"The GitHub of AI models and datasets", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Replicate", cat:"Research", url:"https://replicate.com", color:"#111827", text:"#fff", letter:"R", desc:"Run open-source AI models via API", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Together AI", cat:"Research", url:"https://together.ai", color:"#4f46e5", text:"#fff", letter:"T", desc:"Fast inference for open-source models", isNew:false, featured:false, pricing:"see site for pricing" },
+  { name:"Arxiv + AI", cat:"Research", url:"https://arxiv.org", color:"#b45309", text:"#fff", letter:"A", desc:"Latest AI research papers", isNew:false, featured:false, pricing:"see site for pricing" },
   // Design
-  { name:"Figma AI", cat:"Design", url:"https://figma.com", color:"#f24e1e", text:"#fff", letter:"F", desc:"AI-powered design features in Figma", isNew:true, featured:false },
-  { name:"Framer AI", cat:"Design", url:"https://framer.com", color:"#0055ff", text:"#fff", letter:"F", desc:"AI website builder with animations", isNew:true, featured:false },
-  { name:"Looka", cat:"Design", url:"https://looka.com", color:"#7c3aed", text:"#fff", letter:"L", desc:"AI logo and brand design maker", isNew:false, featured:false },
+  { name:"Figma AI", cat:"Design", url:"https://figma.com", color:"#f24e1e", text:"#fff", letter:"F", desc:"AI-powered design features in Figma", isNew:true, featured:false, pricing:"FREE for small teams" },
+  { name:"Framer AI", cat:"Design", url:"https://framer.com", color:"#0055ff", text:"#fff", letter:"F", desc:"AI website builder with animations", isNew:true, featured:false, pricing:"FREE tier available" },
+  { name:"Looka", cat:"Design", url:"https://looka.com", color:"#7c3aed", text:"#fff", letter:"L", desc:"AI logo and brand design maker", isNew:false, featured:false, pricing:"PAID only" },
   // Marketing
-  { name:"AdCreative", cat:"Marketing", url:"https://adcreative.ai", color:"#2563eb", text:"#fff", letter:"A", desc:"AI-generated ad creatives that convert", isNew:false, featured:false },
-  { name:"Surfer SEO", cat:"Marketing", url:"https://surferseo.com", color:"#0ea5e9", text:"#fff", letter:"S", desc:"AI SEO writing and optimisation", isNew:false, featured:false },
-  { name:"Lately AI", cat:"Marketing", url:"https://lately.ai", color:"#f97316", text:"#fff", letter:"L", desc:"AI social media content repurposing", isNew:false, featured:false },
+  { name:"AdCreative", cat:"Marketing", url:"https://adcreative.ai", color:"#2563eb", text:"#fff", letter:"A", desc:"AI-generated ad creatives that convert", isNew:false, featured:false, pricing:"PAID only" },
+  { name:"Surfer SEO", cat:"Marketing", url:"https://surferseo.com", color:"#0ea5e9", text:"#fff", letter:"S", desc:"AI SEO writing and optimisation", isNew:false, featured:false, pricing:"PAID only" },
+  { name:"Lately AI", cat:"Marketing", url:"https://lately.ai", color:"#f97316", text:"#fff", letter:"L", desc:"AI social media content repurposing", isNew:false, featured:false, pricing:"see site for pricing" },
   // Uncategorized
-  { name:"PMB", cat:"Uncategorized", url:"https://pmbai.dev", color:"#7c6cfa", text:"#fff", letter:"P", desc:"Show HN: PMB – local memory for coding agents that shows if it is used", isNew:true, featured:false },
-  { name:"Appaca", cat:"Uncategorized", url:"https://www.appaca.ai/", color:"#7c6cfa", text:"#fff", letter:"A", desc:"Show HN: Appaca – AI Workspace for Operators", isNew:true, featured:false },
+  { name:"PMB", cat:"Uncategorized", url:"https://pmbai.dev", color:"#7c6cfa", text:"#fff", letter:"P", desc:"Show HN: PMB – local memory for coding agents that shows if it is used", isNew:true, featured:false, pricing:"see site for pricing" },
+  { name:"Appaca", cat:"Uncategorized", url:"https://www.appaca.ai/", color:"#7c6cfa", text:"#fff", letter:"A", desc:"Show HN: Appaca – AI Workspace for Operators", isNew:true, featured:false, pricing:"see site for pricing" },
 ];
 
 const cats = ["All", ...new Set(tools.map(t => t.cat))];
@@ -749,14 +812,36 @@ cats.forEach(c => {
   filterBar.appendChild(btn);
 });
 
+let freeOnly = false;
+function classifyPricingTier(pricingText) {
+  const text = (pricingText || "").toLowerCase();
+  if (!text || text.includes("see site")) return "unknown";
+  if (text.includes("completely free")) return "free";
+  if (text.includes("paid only") || text.includes("requires")) return "paid";
+  if (text.includes("trial") && !text.includes("credits") && !text.includes("tier")) return "paid";
+  if (text.includes("free")) return "freemium";
+  return "unknown";
+}
+const freeBtn = document.createElement("button");
+freeBtn.className = "filter-btn filter-toggle";
+freeBtn.textContent = "🆓 Free Only";
+freeBtn.onclick = () => {
+  freeOnly = !freeOnly;
+  freeBtn.classList.toggle("active", freeOnly);
+  render();
+};
+filterBar.appendChild(freeBtn);
+
 document.getElementById("search-input").addEventListener("input", render);
 
 function render() {
   const q = document.getElementById("search-input").value.toLowerCase().trim();
-  const filtered = tools.filter(t =>
-    (active === "All" || t.cat === active) &&
-    (!q || t.name.toLowerCase().includes(q) || t.cat.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q))
-  );
+  const filtered = tools.filter(t => {
+    const tier = classifyPricingTier(t.pricing);
+    return (active === "All" || t.cat === active) &&
+      (!freeOnly || tier === "free" || tier === "freemium") &&
+      (!q || t.name.toLowerCase().includes(q) || t.cat.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q));
+  });
   document.getElementById("count-bar").innerHTML = `Showing <span>${filtered.length}</span> of <span>${tools.length}</span> tools`;
   document.getElementById("total-count").textContent = tools.length + "+";
   const grid = document.getElementById("tools-grid");
@@ -764,8 +849,11 @@ function render() {
     grid.innerHTML = `<div class="no-results">No tools found for "<strong>${q}</strong>" 🤔<br><small>Submit it using the button above!</small></div>`;
     return;
   }
-  grid.innerHTML = filtered.map((t, i) => `
-    <a class="tool-card" href="${t.url}" target="_blank" rel="noopener noreferrer" style="animation-delay:${i * 0.025}s">
+  const TIER_LABELS = { free: "Free", freemium: "Freemium", paid: "Paid", unknown: "Pricing varies" };
+  grid.innerHTML = filtered.map((t, i) => {
+    const tier = classifyPricingTier(t.pricing);
+    return `
+    <a class="tool-card" href="${t.url}" target="_blank" rel="noopener noreferrer" data-pricing="${tier}" style="animation-delay:${i * 0.025}s">
       <div class="card-top">
         <div class="tool-icon" style="background:${t.color}; color:${t.text}">${t.letter}</div>
         ${t.featured ? '<span class="featured-pill">Featured</span>' : t.isNew ? '<span class="new-pill">New</span>' : ''}
@@ -774,13 +862,162 @@ function render() {
         <div class="tool-name">${t.name}</div>
         <div class="tool-desc">${t.desc}</div>
       </div>
-      <div class="tool-cat">${t.cat}</div>
+      <div class="card-foot">
+        <span class="tool-cat">${t.cat}</span>
+        <span class="tool-price tool-price-${tier}">${TIER_LABELS[tier]}</span>
+      </div>
     </a>
-  `).join("");
+  `;
+  }).join("");
 }
 render();
 
-// ── THEME TOGGLE ──
+// ── MATCHMAKER DATA ──
+const matchTasks = [
+  { id: "write", icon: "✍️", label: "Write anything", best: "ChatGPT", runner: "Claude", budget: "Gemini",
+    reasons: { best: "Fastest, most versatile all-purpose writer", runner: "Best for long, careful, well-structured writing", budget: "Completely free, solid everyday writing help" } },
+  { id: "image", icon: "🎨", label: "Generate images", best: "Midjourney", runner: "Adobe Firefly", budget: "Stable Diff.",
+    reasons: { best: "Highest artistic quality, most popular for a reason", runner: "Simple, built into Adobe's Creative Cloud apps", budget: "Open-source, free to run" } },
+  { id: "code", icon: "💻", label: "Write & debug code", best: "GitHub Copilot", runner: "Cursor", budget: "Windsurf",
+    reasons: { best: "Deepest IDE integration, industry standard", runner: "Full AI-native editor experience", budget: "Free tier covers most solo projects" } },
+  { id: "website", icon: "🌐", label: "Build a website", best: "v0", runner: "Bolt", budget: "Framer AI",
+    reasons: { best: "Best for clean, production-ready UI from a prompt", runner: "Great for fast full-stack prototypes", budget: "Easiest for a simple site, generous free tier" } },
+  { id: "video", icon: "🎬", label: "Edit or generate video", best: "Runway", runner: "Descript", budget: "Kling AI",
+    reasons: { best: "Most powerful AI video generation toolkit", runner: "Best for text-based editing of talking-head video", budget: "Strong free tier for shorter clips" } },
+  { id: "logo", icon: "🖼️", label: "Design a logo/brand", best: "Looka", runner: "Canva AI", budget: "Ideogram",
+    reasons: { best: "Purpose-built for logo and brand kits", runner: "Fast, flexible, great free templates", budget: "Good for a quick logo concept" } },
+  { id: "research", icon: "🔍", label: "Research a topic", best: "Perplexity", runner: "You.com", budget: "Exa AI",
+    reasons: { best: "Best real-time cited answers", runner: "Good blend of search + AI summary", budget: "Great free tier for technical/developer research" } },
+  { id: "notes", icon: "📝", label: "Take notes / organize", best: "Notion AI", runner: "Mem.ai", budget: "Otter.ai",
+    reasons: { best: "Best if you already live in Notion", runner: "Notes that organize themselves", budget: "Free tier great for meeting notes" } },
+  { id: "voice", icon: "🎙️", label: "Generate a voiceover", best: "ElevenLabs", runner: "Murf AI", budget: "Descript",
+    reasons: { best: "Most realistic voice cloning/generation", runner: "Easy studio-style voiceovers", budget: "Good enough free tier to start" } },
+  { id: "music", icon: "🎵", label: "Generate music", best: "Suno", runner: "Udio", budget: "Suno",
+    reasons: { best: "Most complete songs from a prompt", runner: "Strong alternative, different style strengths", budget: "Both have usable free tiers" } },
+  { id: "grammar", icon: "✅", label: "Fix my writing/grammar", best: "Grammarly", runner: "Quillbot", budget: "ChatGPT",
+    reasons: { best: "Most precise grammar/tone checking", runner: "Great for rephrasing and tone shifts", budget: "Free and good enough for most edits" } },
+  { id: "schedule", icon: "📅", label: "Manage my schedule", best: "Motion", runner: "Reclaim AI", budget: "Notion AI",
+    reasons: { best: "Fully automated calendar planning", runner: "Great habit + meeting balancing", budget: "If you already use Notion for tasks" } },
+];
+
+function renderTaskGrid() {
+  const grid = document.getElementById("task-grid");
+  grid.innerHTML = matchTasks.map(t => `
+    <div class="task-btn" data-task="${t.id}" onclick="showMatch('${t.id}')">
+      <span class="icon">${t.icon}</span>${t.label}
+    </div>
+  `).join("");
+}
+
+function findTool(name) { return tools.find(t => t.name === name); }
+
+function showMatch(taskId) {
+  document.querySelectorAll(".task-btn").forEach(b => b.classList.toggle("active", b.dataset.task === taskId));
+  const task = matchTasks.find(t => t.id === taskId);
+  const resultsEl = document.getElementById("match-results");
+  const tiers = [
+    { key: "best", label: "⭐ Best Choice", cls: "best" },
+    { key: "runner", label: "Runner Up", cls: "runner" },
+    { key: "budget", label: "Budget / Free", cls: "budget" },
+  ];
+  resultsEl.innerHTML = tiers.map(tier => {
+    const toolName = task[tier.key];
+    const tool = findTool(toolName);
+    if (!tool) return "";
+    return `
+      <div class="match-card ${tier.cls}">
+        <span class="match-tier ${tier.cls}">${tier.label}</span>
+        <div class="match-tool-name">${tool.name}</div>
+        <div class="match-reason">${task.reasons[tier.key]}</div>
+        <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="match-link">Try ${tool.name} →</a>
+      </div>
+    `;
+  }).join("");
+  resultsEl.classList.add("show");
+  resultsEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+renderTaskGrid();
+
+// ── COMPARE TOOLS DATA ──
+function stars(n) { return "★".repeat(n) + "☆".repeat(5 - n); }
+
+const comparisons = [
+  { id: "chatgpt-claude", a: "ChatGPT", b: "Claude",
+    rows: [
+      ["Everyday writing", 4, 5], ["Coding help", 4, 5], ["Image generation", 5, 0],
+      ["Long documents", 3, 5], ["Free plan", "Yes", "Yes"],
+    ],
+    verdict: "Choose ChatGPT for broad everyday use and image generation. Choose Claude for long documents, careful writing, and coding-heavy work." },
+  { id: "chatgpt-gemini", a: "ChatGPT", b: "Gemini",
+    rows: [
+      ["Everyday writing", 4, 4], ["Google integration", 2, 5], ["Image generation", 5, 3],
+      ["Free plan", "Yes", "Yes"],
+    ],
+    verdict: "Choose ChatGPT for the most polished all-around assistant. Choose Gemini if you're deep in Google Docs/Workspace already." },
+  { id: "cursor-copilot", a: "Cursor", b: "GitHub Copilot",
+    rows: [
+      ["Full editor experience", 5, 2], ["Works inside VS Code", 3, 5], ["Autocomplete quality", 4, 5],
+      ["Free plan", "Yes", "Yes"],
+    ],
+    verdict: "Choose Cursor if you want a full AI-native editor. Choose Copilot if you want to stay in your existing VS Code setup." },
+  { id: "runway-kling", a: "Runway", b: "Kling AI",
+    rows: [
+      ["Video quality", 5, 4], ["Ease of use", 4, 4], ["Free tier generosity", 3, 4],
+    ],
+    verdict: "Runway has the more complete toolkit for serious video work. Kling AI's free tier is more generous for casual use." },
+  { id: "midjourney-ideogram", a: "Midjourney", b: "Ideogram",
+    rows: [
+      ["Artistic quality", 5, 4], ["Text/typography in images", 2, 5], ["Free plan", "No", "Yes"],
+    ],
+    verdict: "Midjourney generally produces more painterly, artistic results. Ideogram is the better choice when you need real, readable text inside the image." },
+  { id: "notion-mem", a: "Notion AI", b: "Mem.ai",
+    rows: [
+      ["Best if you already use", 5, 3], ["Auto-organization", 3, 5], ["Free plan", "Yes", "Yes"],
+    ],
+    verdict: "Notion AI is best if your notes already live in Notion. Mem.ai is built specifically around notes that organize themselves." },
+  { id: "perplexity-you", a: "Perplexity", b: "You.com",
+    rows: [
+      ["Answer quality", 5, 4], ["Source citations", 5, 4], ["Free plan", "Yes", "Yes"],
+    ],
+    verdict: "Perplexity is generally considered the sharper AI-search experience, but both are strong free options worth trying." },
+  { id: "suno-udio", a: "Suno", b: "Udio",
+    rows: [
+      ["Full song generation", 5, 4], ["Vocal quality", 4, 4], ["Free plan", "Yes", "Yes"],
+    ],
+    verdict: "Both are strong — Suno tends to edge out on completeness, but try both since style preference varies a lot person to person." },
+];
+
+function renderComparePresets() {
+  const wrap = document.getElementById("compare-presets");
+  wrap.innerHTML = comparisons.map(c => `
+    <div class="compare-preset-btn" data-id="${c.id}" onclick="showComparison('${c.id}')">${c.a} vs ${c.b}</div>
+  `).join("");
+}
+
+function showComparison(id) {
+  document.querySelectorAll(".compare-preset-btn").forEach(b => b.classList.toggle("active", b.dataset.id === id));
+  const c = comparisons.find(x => x.id === id);
+  const wrap = document.getElementById("compare-table-wrap");
+  const rowsHtml = c.rows.map(([label, a, b]) => `
+    <tr>
+      <td>${label}</td>
+      <td>${typeof a === "number" ? `<span class="stars">${stars(a)}</span>` : a}</td>
+      <td>${typeof b === "number" ? `<span class="stars">${stars(b)}</span>` : b}</td>
+    </tr>
+  `).join("");
+  wrap.innerHTML = `
+    <table class="compare-table">
+      <tr><th></th><th>${c.a}</th><th>${c.b}</th></tr>
+      ${rowsHtml}
+    </table>
+    <div class="compare-verdict">💡 ${c.verdict}</div>
+  `;
+  wrap.classList.add("show");
+  wrap.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+renderComparePresets();
 function toggleTheme() {
   const html = document.documentElement;
   const isDark = html.getAttribute("data-theme") === "dark";
