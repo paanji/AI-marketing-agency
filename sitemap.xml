@@ -7,40 +7,52 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.allaidunia.com/websites.html</loc>
+    <loc>https://www.allaidunia.com/guides/websites.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.allaidunia.com/video-generation.html</loc>
+    <loc>https://www.allaidunia.com/guides/video-generation.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.allaidunia.com/3d-image-generation.html</loc>
+    <loc>https://www.allaidunia.com/guides/3d-image-generation.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.allaidunia.com/voice-audio.html</loc>
+    <loc>https://www.allaidunia.com/guides/voice-audio.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.allaidunia.com/chatbots-agents.html</loc>
+    <loc>https://www.allaidunia.com/guides/chatbots-agents.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.allaidunia.com/writing-content.html</loc>
+    <loc>https://www.allaidunia.com/guides/writing-content.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.allaidunia.com/about.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.allaidunia.com/contact.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.allaidunia.com/video-ai-tools.html</loc>
