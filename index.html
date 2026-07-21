@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AllAIDunia — Find the Right AI Tool for Any Task</title>
-  <meta name="description" content="Looking for an AI tool? AllAIDunia organizes 60+ AI tools by category — document writing, video editing, image generation, coding, and more. Free, searchable…" />
+  <title>Best AI Tools by Category — Guides & Prompts | AllAIDunia</title>
+  <meta name="description" content="Hand-picked AI tools for websites, video, 3D, voice, chat, and writing. Each category includes a step-by-step guide and copy-paste prompts to start free." />
   <link rel="canonical" href="https://www.allaidunia.com/" />
   <meta name="author" content="Pavan Kumar" />
   <meta name="keywords" content="AI tools, artificial intelligence tools, best AI tools, free AI tools, AI directory, ChatGPT alternatives, AI image generator, AI video tools, AI writing tools, AI coding tools" />
-  <meta property="og:title" content="AllAIDunia — Find the Right AI Tool for Any Task" />
-  <meta property="og:description" content="60+ AI tools organized by category — document writing, video editing, image generation, coding and more. Free, searchable, updated regularly." />
+  <meta property="og:title" content="Best AI Tools by Category — Guides & Prompts | AllAIDunia" />
+  <meta property="og:description" content="Hand-picked AI tools for websites, video, 3D, voice, chat, and writing — each with a step-by-step guide and copy-paste starter prompts." />
   <meta property="og:url" content="https://www.allaidunia.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AllAIDunia" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AllAIDunia — Find the Right AI Tool for Any Task" />
-  <meta name="twitter:description" content="60+ AI tools organized by category — free to browse, updated regularly." />
+  <meta name="twitter:title" content="Best AI Tools by Category — Guides & Prompts | AllAIDunia" />
+  <meta name="twitter:description" content="Hand-picked AI tools by category — with step-by-step guides and copy-paste prompts." />
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -452,6 +452,66 @@
       .hero-stats { gap: 20px; }
       .nav-badge { display: none; }
     }
+
+    /* ── NEW HERO + SHOWCASE ── */
+    .hero { padding: 56px 24px 16px; }
+    .hero-h1-new {
+      font-family: var(--font-head); font-weight: 800;
+      font-size: clamp(22px, 2.9vw, 40px); line-height: 1.15;
+      letter-spacing: -0.5px; margin-bottom: 14px; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    @media (max-width: 700px) { .hero-h1-new { white-space: normal; font-size: 24px; } }
+
+    .hs-wrap { position: relative; width: 100%; margin: 26px 0 0; z-index: 1; }
+    .hs-viewport {
+      position: relative; width: 100%; height: 70vh; min-height: 420px;
+      overflow: hidden; background: var(--bg2);
+    }
+    @media (max-width: 700px) {
+      .hs-viewport { height: auto; min-height: unset; aspect-ratio: 16 / 9; }
+    }
+    .hs-slide {
+      position: absolute; inset: 0; opacity: 0; transform: translateX(40px);
+      transition: opacity .6s ease, transform .6s ease;
+      pointer-events: none; cursor: pointer;
+    }
+    .hs-slide.active { opacity: 1; transform: translateX(0); pointer-events: auto; }
+    .hs-slide.leaving { opacity: 0; transform: translateX(-40px); }
+    .hs-slide img, .hs-slide video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hs-overlay {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 4vw 6vw;
+      background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.55) 45%, rgba(0,0,0,0) 100%);
+      display: flex; align-items: flex-end; justify-content: space-between;
+    }
+    .hs-caption {
+      background: rgba(10,10,15,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 14px 20px;
+    }
+    .hs-name {
+      font-family: var(--font-head); font-size: clamp(20px, 2.6vw, 32px);
+      font-weight: 700; color: #f2f0ec; text-shadow: 0 2px 10px rgba(0,0,0,.6);
+    }
+    .hs-tag { font-size: clamp(12px, 1.1vw, 15px); color: #b9b8c2; margin-top: 5px; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+    .hs-cta {
+      font-size: 14px; font-weight: 600; color: #e8733f; white-space: nowrap;
+      padding: 10px 18px; background: rgba(10,10,15,.55);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      border: 1px solid #e8733f; border-radius: 999px; flex-shrink: 0; margin-left: 20px;
+    }
+    .hs-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 46px; height: 46px; border-radius: 50%;
+      background: rgba(0,0,0,.4); border: 1px solid rgba(255,255,255,.2);
+      color: #f2f0ec; font-size: 20px; display: flex; align-items: center;
+      justify-content: center; cursor: pointer; z-index: 5; transition: background .2s ease;
+    }
+    .hs-arrow:hover { background: rgba(232,115,63,.85); }
+    .hs-prev { left: 22px; } .hs-next { right: 22px; }
+    .hs-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .hs-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--border2); cursor: pointer; transition: all .25s ease; }
+    .hs-dot.active { background: #e8733f; transform: scale(1.2); }
+    .hero-under { padding-top: 34px; padding-bottom: 8px; text-align: center; }
   </style>
 <!-- CONTENT-AGENT:SCHEMA:43c9528852 -->
 <script type="application/ld+json">
@@ -1178,18 +1238,54 @@
 <!-- HERO -->
 <div class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Your AI Universe Starts Here</div>
-    <h1>All the AI Tools<br><span class="line2">in One World</span></h1>
-    <p class="hero-sub">Discover, explore, and launch the best AI tools across every category — updated as new ones arrive.</p>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num" id="total-count">60+</div><div class="stat-label">AI Tools</div></div>
-      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Categories</div></div>
-      <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
+    <div class="hero-eyebrow">Curated Tools · Real Guides · Starter Prompts</div>
+    <h1 class="hero-h1-new">Find the best AI tool for the job — then learn to use it</h1>
+    <p class="hero-sub" style="max-width:640px;">We hand-pick the best AI tools for websites, video, 3D, voice, chat, and writing. Every category comes with a step-by-step guide and a prompt you can copy to start creating today.</p>
+  </div>
+</div>
+
+<!-- HERO SHOWCASE -->
+<div class="hs-wrap">
+  <div class="hs-viewport" id="hsViewport">
+    <div class="hs-slide active" data-href="websites.html">
+      <img src="assets/hero/website.webp" alt="Example website built with AI" fetchpriority="high">
+      <div class="hs-overlay"><div class="hs-caption"><div class="hs-name">Websites</div><div class="hs-tag">A full site, built from one description</div></div><div class="hs-cta">See how →</div></div>
     </div>
-    <div class="search-wrap">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="search-input" placeholder="Search AI tools..." autocomplete="off" />
+    <div class="hs-slide" data-href="video-generation.html">
+      <video src="assets/hero/video.mp4" muted loop playsinline preload="metadata"></video>
+      <div class="hs-overlay"><div class="hs-caption"><div class="hs-name">Video Generation</div><div class="hs-tag">Commercials and clips, generated on request</div></div><div class="hs-cta">See how →</div></div>
     </div>
+    <div class="hs-slide" data-href="3d-image-generation.html">
+      <img src="assets/hero/3d_image.webp" alt="Example 3D scene generated with AI" loading="lazy">
+      <div class="hs-overlay"><div class="hs-caption"><div class="hs-name">3D &amp; Image</div><div class="hs-tag">Production-ready renders, no 3D skills needed</div></div><div class="hs-cta">See how →</div></div>
+    </div>
+    <div class="hs-slide" data-href="voice-audio.html">
+      <video src="assets/hero/audio.mp4" muted loop playsinline preload="metadata"></video>
+      <div class="hs-overlay"><div class="hs-caption"><div class="hs-name">Voice &amp; Audio</div><div class="hs-tag">Natural-sounding speech from plain text</div></div><div class="hs-cta">See how →</div></div>
+    </div>
+    <div class="hs-slide" data-href="chatbots-agents.html">
+      <img src="assets/hero/chatbot.webp" alt="Example AI chatbot conversation" loading="lazy">
+      <div class="hs-overlay"><div class="hs-caption"><div class="hs-name">Chatbots &amp; Agents</div><div class="hs-tag">An assistant that actually gets things done</div></div><div class="hs-cta">See how →</div></div>
+    </div>
+    <div class="hs-slide" data-href="writing-content.html">
+      <img src="assets/hero/content.webp" alt="Example AI writing assistant" loading="lazy">
+      <div class="hs-overlay"><div class="hs-caption"><div class="hs-name">Writing &amp; Content</div><div class="hs-tag">Blog posts, stories, and copy — drafted instantly</div></div><div class="hs-cta">See how →</div></div>
+    </div>
+    <div class="hs-arrow hs-prev" id="hsPrev">&#8249;</div>
+    <div class="hs-arrow hs-next" id="hsNext">&#8250;</div>
+  </div>
+  <div class="hs-dots" id="hsDots"></div>
+</div>
+
+<div class="hero-under container">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="Search AI tools..." autocomplete="off" />
+  </div>
+  <div class="hero-stats" style="margin:26px 0 0;">
+    <div class="stat"><div class="stat-num" id="total-count">60+</div><div class="stat-label">AI Tools</div></div>
+    <div class="stat"><div class="stat-num">12</div><div class="stat-label">Categories</div></div>
+    <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
   </div>
 </div>
 
@@ -1291,9 +1387,33 @@
   <div class="link-section">
     <h2 class="link-section-title">Browse by category</h2>
     <div class="link-cards">
+      <a href="websites.html" class="link-card">
+        <div class="link-card-name">Build a Website with AI</div>
+        <div class="link-card-desc">Step-by-step guide, starter prompt, and our top website builder picks.</div>
+      </a>
+      <a href="video-generation.html" class="link-card">
+        <div class="link-card-name">Make Videos with AI</div>
+        <div class="link-card-desc">From written idea to finished clip — the process, prompt, and tools.</div>
+      </a>
+      <a href="3d-image-generation.html" class="link-card">
+        <div class="link-card-name">Create Images &amp; 3D with AI</div>
+        <div class="link-card-desc">Professional-looking renders and images — guide plus starter prompt.</div>
+      </a>
+      <a href="voice-audio.html" class="link-card">
+        <div class="link-card-name">Generate Voiceovers with AI</div>
+        <div class="link-card-desc">Natural-sounding speech from text — script format included.</div>
+      </a>
+      <a href="chatbots-agents.html" class="link-card">
+        <div class="link-card-name">Set Up an AI Chatbot</div>
+        <div class="link-card-desc">A bot that answers your customers — instruction prompt included.</div>
+      </a>
+      <a href="writing-content.html" class="link-card">
+        <div class="link-card-name">Write Content with AI</div>
+        <div class="link-card-desc">Blog posts and copy that don't sound AI-written — guide and prompt.</div>
+      </a>
       <a href="video-ai-tools.html" class="link-card">
-        <div class="link-card-name">AI Video Tools</div>
-        <div class="link-card-desc">Runway, Sora, Kling AI, Pika, HeyGen and more — compared side by side.</div>
+        <div class="link-card-name">AI Video Tools Compared</div>
+        <div class="link-card-desc">Runway, Sora, Kling AI, Pika, HeyGen and more — side by side.</div>
       </a>
     </div>
   </div>
@@ -2041,6 +2161,48 @@ Respond ONLY in this exact JSON format (no markdown, no extra text):
 }
 
 
+</script>
+<script>
+(function(){
+  const viewport = document.getElementById("hsViewport");
+  if (!viewport) return;
+  const slides = Array.from(viewport.querySelectorAll(".hs-slide"));
+  const dotsWrap = document.getElementById("hsDots");
+  let current = 0, timer = null;
+  const AUTO_MS = 4000;
+
+  slides.forEach((s, i) => {
+    const dot = document.createElement("div");
+    dot.className = "hs-dot" + (i === 0 ? " active" : "");
+    dot.addEventListener("click", () => { goTo(i); restart(); });
+    dotsWrap.appendChild(dot);
+    s.addEventListener("click", () => { window.location.href = s.dataset.href; });
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function vid(s){ return s.querySelector("video"); }
+  function goTo(index){
+    const prev = slides[current];
+    prev.classList.remove("active"); prev.classList.add("leaving");
+    if (vid(prev)) vid(prev).pause();
+    setTimeout(() => prev.classList.remove("leaving"), 650);
+    current = (index + slides.length) % slides.length;
+    const next = slides[current];
+    next.classList.add("active");
+    if (vid(next)) { vid(next).currentTime = 0; vid(next).play().catch(()=>{}); }
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
+  }
+  function nextSlide(){ goTo(current + 1); }
+  function start(){ timer = setInterval(nextSlide, AUTO_MS); }
+  function stop(){ clearInterval(timer); }
+  function restart(){ stop(); start(); }
+
+  document.getElementById("hsNext").addEventListener("click", (e) => { e.stopPropagation(); nextSlide(); restart(); });
+  document.getElementById("hsPrev").addEventListener("click", (e) => { e.stopPropagation(); goTo(current - 1); restart(); });
+  viewport.addEventListener("mouseenter", stop);
+  viewport.addEventListener("mouseleave", start);
+  start();
+})();
 </script>
 </body>
 </html>
