@@ -1,0 +1,35 @@
+name: Deploy Site (Full)
+
+on:
+  workflow_dispatch: {}   # trigger manually from the Actions tab — no schedule
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy site files to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: ./
+          exclude: |
+            **
+            !index.html
+            !sitemap.xml
+            !websites.html
+            !video-generation.html
+            !3d-image-generation.html
+            !voice-audio.html
+            !chatbots-agents.html
+            !writing-content.html
+            !assets/hero/**
