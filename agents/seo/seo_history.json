@@ -58,5 +58,17 @@
     "action_items_total": 10,
     "action_items_high": 3,
     "avg_pagespeed_score": 74
+  },
+  {
+    "date": "2026-07-21",
+    "total_clicks": 0,
+    "total_impressions": 18,
+    "avg_position": 15.7,
+    "overall_ctr": 0.0,
+    "pages_checked": 9,
+    "pages_indexed": 1,
+    "action_items_total": 34,
+    "action_items_high": 8,
+    "avg_pagespeed_score": 90
   }
 ]
