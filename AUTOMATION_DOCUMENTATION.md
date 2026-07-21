@@ -142,5 +142,42 @@ Stored securely under **Settings → Secrets and variables → Actions** — nev
    - *A real tool showing as FLAGGED for a bot-blocked reason* — check `check_links.py`'s `INCONCLUSIVE_CODES` list is still `{403, 429, 503}` and hasn't been accidentally changed
 
 ---
+## Known Issue — Stale Content Agent queue item after the July 2026 hero redesign
 
+**Background:** In July 2026, `index.html`'s homepage title, meta description,
+hero section, and "Browse by category" links were rewritten as part of the
+site repositioning (curated tools + guided creation) and the hero showcase
+build. This was done as a direct manual edit, outside the normal SEO Agent →
+Content Agent pipeline.
+
+**The gotcha:** `apply_content_fixes.py` applies title/meta fixes via exact
+string match (`html.replace(current_value, proposed_fix, 1)`). If
+`content_pending.json` contains an item with `fix_type: "title"` or
+`fix_type: "meta_description"` whose `current_value` is the OLD homepage
+text (`"AllAIDunia — Find the Right AI Tool for Any Task"` or its old meta
+description), approving that item will fail — the string no longer exists
+in `index.html`. The script safely no-ops (it won't corrupt the file), but
+the item will stay stuck in the queue and the workflow will exit with a
+visible failure (red X) in the Actions tab on every run until resolved.
+
+**What to do:** Before approving any pending title/meta item that predates
+the July 2026 hero redesign, check its `current_value` against the current
+`index.html`. If it references the old homepage title/meta text, **reject
+it** (`approved: false`) instead of approving — it's moot, since that text
+was already changed through a separate, direct edit.
+
+**Verified safe (no other changes needed):** Both `regenerate_html.py` and
+`apply_content_fixes.py` were reviewed line-by-line against the hero/category
+page changes:
+- `regenerate_html.py`'s four regex replacements are bounded to the `tools`
+  array, `toolsDB` array, the chatbot's `systemPrompt` pricing list, and the
+  tools-grid `<div>` (anchored to the `<!-- CATEGORY PAGES + BLOG LINKS -->`
+  comment) — none overlap the hero, slideshow, or `<head>` tags.
+- `apply_content_fixes.py` only ever touches exact strings named in
+  `content_pending.json`, or content between its own
+  `<!-- CONTENT-AGENT:SCHEMA:... -->` markers — no broad rewrites.
+
+Both scripts can keep running on schedule with zero risk to the new hero,
+the six category pages, or the updated head tags — this stale-queue-item
+issue is the only follow-up action needed, and it's one-time.
 *This document reflects the system as of July 2026. If you add new workflows or scripts later, update this file to keep it accurate.*
