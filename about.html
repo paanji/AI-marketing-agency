@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/favicon-192.png">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About AllAIDunia — Why We Curate, Not Just List</title>
+  <meta name="description" content="AllAIDunia hand-picks the best AI tools by category and shows you exactly how to use them — with real step-by-step guides and starter prompts." />
+  <link rel="canonical" href="https://www.allaidunia.com/about.html" />
+  <meta property="og:title" content="About — AllAIDunia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.allaidunia.com/assets/brand/og-image.png" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39JW5S0605"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-39JW5S0605');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    [data-theme="dark"] {
+      --bg: #0a0a0f; --bg2: #111118; --bg3: #18181f;
+      --border: rgba(255,255,255,0.08); --border2: rgba(255,255,255,0.14);
+      --text: #f0eff5; --muted: #8b8a96; --card-bg: #111118;
+      --nav-bg: rgba(10,10,15,0.85); --shadow: rgba(0,0,0,0.5);
+    }
+    :root {
+      --accent: #7c6cfa; --accent2: #fa6c9f; --accent3: #6cf0c2; --gold: #f0c060;
+      --font-head: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+      --radius: 14px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--bg); color: var(--text); min-height: 100vh; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(20px); background: var(--nav-bg); border-bottom: 1px solid var(--border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1200px; margin: 0 auto; gap: 12px; }
+    .logo-svg { height: 42px; width: auto; cursor: pointer; }
+    .logo-text-main { fill: var(--accent); font-family: 'Syne', sans-serif; font-weight: 800; }
+    .logo-text-dunia { fill: var(--gold); font-family: 'Syne', sans-serif; font-weight: 800; }
+    .nav-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .nav-link { font-size: 14px; font-weight: 500; color: var(--muted); }
+    .nav-link:hover { color: var(--text); text-decoration: none; }
+    .nav-link.active { color: var(--text); }
+    .submit-nav-btn { font-size: 12px; padding: 7px 16px; border-radius: 20px; background: var(--accent); color: #fff; border: none; cursor: pointer; font-weight: 500; font-family: var(--font-body); }
+    .submit-nav-btn:hover { opacity: 0.85; text-decoration: none; }
+
+    .page-hero { padding: 60px 24px 20px; text-align: center; }
+    .eyebrow { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; font-weight: 500; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(30px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px; }
+    .page-hero p { font-size: 17px; color: var(--muted); line-height: 1.6; max-width: 620px; margin: 0 auto; }
+
+    .content { padding: 40px 24px 80px; }
+    .content h2 { font-family: var(--font-head); font-size: 22px; margin: 40px 0 14px; }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 15.5px; line-height: 1.75; color: var(--muted); margin-bottom: 14px; }
+    .content p strong { color: var(--text); font-weight: 600; }
+
+    .stats-row { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin: 36px 0; padding: 28px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .stat { text-align: center; }
+    .stat-num { font-family: var(--font-head); font-size: 26px; font-weight: 800; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0 10px; }
+    .principle { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .principle .icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .principle h3 { font-family: var(--font-head); font-size: 15px; margin-bottom: 6px; }
+    .principle p { font-size: 13.5px; margin-bottom: 0; }
+
+    .cta-box { text-align: center; margin-top: 50px; padding: 32px 24px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); }
+    .cta-box h2 { margin-top: 0; }
+    .cta-box a.btn { display: inline-block; margin-top: 14px; padding: 11px 24px; background: var(--accent); color: #fff; border-radius: 999px; font-size: 14px; font-weight: 600; }
+    .cta-box a.btn:hover { opacity: 0.85; text-decoration: none; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+    .footer-logo { font-family: var(--font-head); font-size: 20px; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .footer-text { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .footer-links { display: flex; gap: 20px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .footer-links a { font-size: 12px; color: var(--muted); }
+    .footer-links a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .page-hero { padding: 40px 16px 12px; }
+      .content { padding: 30px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/"><svg class="logo-svg" viewBox="0 0 270 44" xmlns="http://www.w3.org/2000/svg" aria-label="AllAIDunia home">
+      <ellipse cx="22" cy="22" rx="18" ry="6.7" fill="none" stroke="#e8733f" stroke-width="1.7" stroke-linecap="round" transform="rotate(18 22 22)"/>
+      <ellipse cx="22" cy="22" rx="18" ry="6.7" fill="none" stroke="#e8733f" stroke-width="1.7" stroke-linecap="round" transform="rotate(-18 22 22)"/>
+      <ellipse cx="22" cy="22" rx="6.7" ry="18" fill="none" stroke="#e8733f" stroke-width="1.9" stroke-linecap="round"/>
+      <text x="50" y="30" font-size="21"><tspan class="logo-text-main">AllAI</tspan><tspan class="logo-text-dunia">Dunia</tspan></text>
+    </svg></a>
+    <div class="nav-right">
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <button class="submit-nav-btn" onclick="window.location.href='/#submit'">+ Submit Tool</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding-top:20px;">
+  <div style="font-size:13px; color:var(--muted);">
+    <a href="/" style="color:var(--muted);">Home</a> &nbsp;/&nbsp; <span style="color:var(--text);">About</span>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="eyebrow">About AllAIDunia</div>
+  <h1>Curated tools, not endless scrolling</h1>
+  <p>There are thousands of AI tools now. Most directories just dump all of them on you. We do something different.</p>
+</div>
+
+<div class="container content">
+
+  <h2>Why this exists</h2>
+  <p>New AI tools launch every week, and it's easy to lose track of what's actually worth using. Most "AI tool directories" solve this by listing everything — which just moves the overwhelm from Google to their homepage.</p>
+  <p><strong>AllAIDunia takes a different approach.</strong> We hand-pick the best AI tools for what people actually need to do — build a website, make a video, generate an image, set up a chatbot, write content, or create a voiceover — and for each one, we tell you exactly which tool to start with and how to use it.</p>
+
+  <div class="stats-row">
+    <div class="stat"><div class="stat-num">62</div><div class="stat-label">Tools Tracked</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Guided Categories</div></div>
+    <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
+  </div>
+
+  <h2>How we're different</h2>
+  <div class="principles">
+    <div class="principle">
+      <span class="icon">🎯</span>
+      <h3>We pick, not just list</h3>
+      <p>Every category has a Best Choice, a Runner Up, and a Budget/Free pick — with a real reason for each, not just a directory dump.</p>
+    </div>
+    <div class="principle">
+      <span class="icon">📋</span>
+      <h3>We show you how</h3>
+      <p>Each guide includes the actual steps and a starter prompt you can copy — not just a link and good luck.</p>
+    </div>
+    <div class="principle">
+      <span class="icon">🔄</span>
+      <h3>We keep it current</h3>
+      <p>Broken links get caught and fixed automatically. New tools get added as they prove themselves — not just on launch day hype.</p>
+    </div>
+    <div class="principle">
+      <span class="icon">🆓</span>
+      <h3>We stay free</h3>
+      <p>Browsing, guides, and prompts are free to use — no account, no paywall, no catch.</p>
+    </div>
+  </div>
+
+  <h2>Who's behind it</h2>
+  <p>AllAIDunia is built and maintained independently — one person tracking, testing, and writing about AI tools so you don't have to sort through the noise yourself. If a tool is listed here, it's because it earned the spot, not because it paid for it.</p>
+
+  <div class="cta-box">
+    <h2>Have a tool we should know about?</h2>
+    <p>If you've built or found an AI tool that deserves a spot, we'd like to hear about it.</p>
+    <a class="btn" href="contact.html">Get in touch →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">AllAIDunia</div>
+  <div class="footer-text">Curating the world of AI, one tool at a time · Updated regularly</div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://allaidunia.substack.com" target="_blank">Newsletter</a>
+    <a href="mailto:hello@allaidunia.com">hello@allaidunia.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
