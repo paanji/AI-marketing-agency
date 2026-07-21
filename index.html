@@ -455,13 +455,12 @@
 
     /* ── NEW HERO + SHOWCASE ── */
     .hero { padding: 56px 24px 16px; }
-    .hero-h1-new {
+     .hero .hero-h1-new {
       font-family: var(--font-head); font-weight: 800;
-      font-size: clamp(22px, 2.9vw, 40px); line-height: 1.15;
-      letter-spacing: -0.5px; margin-bottom: 14px; white-space: nowrap;
-      overflow: hidden; text-overflow: ellipsis;
+      font-size: clamp(24px, 3.4vw, 44px); line-height: 1.18;
+      letter-spacing: -0.5px; margin-bottom: 14px;
+      white-space: normal; max-width: 900px; margin-left: auto; margin-right: auto;
     }
-    @media (max-width: 700px) { .hero-h1-new { white-space: normal; font-size: 24px; } }
 
     .hs-wrap { position: relative; width: 100%; margin: 26px 0 0; z-index: 1; }
     .hs-viewport {
