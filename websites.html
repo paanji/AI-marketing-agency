@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build a Website with AI — Step-by-Step Guide & Tools | AllAIDunia</title>
+<meta name="description" content="How to build a full website with AI: a step-by-step guide, a copy-paste starter prompt, and our hand-picked best AI website builders — including free options.">
+<style>
+  :root{
+    --bg: #0e1013;
+    --panel: #16181d;
+    --panel-2: #1b1e24;
+    --accent: #e8733f;
+    --text: #f2f0ec;
+    --muted: #9a9ea6;
+    --line: #24272e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color:var(--text);
+    line-height:1.6;
+  }
+  a{ color:var(--accent); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+
+  .topbar{
+    max-width:880px;
+    margin:0 auto;
+    padding:20px 24px 0;
+    font-size:14px;
+  }
+  .topbar a{ color:var(--muted); }
+  .topbar a:hover{ color:var(--accent); text-decoration:none; }
+
+  .page{
+    max-width:880px;
+    margin:0 auto;
+    padding:28px 24px 90px;
+  }
+
+  .eyebrow{
+    color:var(--accent);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:600;
+  }
+  h1{
+    font-size:clamp(26px, 4vw, 40px);
+    line-height:1.15;
+    margin:10px 0 14px;
+  }
+  .lede{
+    color:var(--muted);
+    font-size:17px;
+    max-width:640px;
+    margin:0 0 42px;
+  }
+
+  h2{
+    font-size:22px;
+    margin:48px 0 16px;
+  }
+
+  /* Steps */
+  .steps{ counter-reset: step; padding:0; margin:0; list-style:none; }
+  .steps li{
+    counter-increment: step;
+    position:relative;
+    padding:0 0 26px 58px;
+  }
+  .steps li::before{
+    content: counter(step);
+    position:absolute;
+    left:0; top:0;
+    width:38px; height:38px;
+    border-radius:50%;
+    background:var(--panel);
+    border:1px solid var(--line);
+    color:var(--accent);
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .steps li:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    left:19px; top:44px; bottom:4px;
+    width:1px;
+    background:var(--line);
+  }
+  .steps .step-title{
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .steps p{ margin:0; color:var(--muted); font-size:15px; }
+
+  /* Prompt box */
+  .prompt-box{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    margin-top:18px;
+  }
+  .prompt-box .bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 18px;
+    border-bottom:1px solid var(--line);
+    font-size:13px;
+    color:var(--muted);
+  }
+  .copy-btn{
+    background:none;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    font-size:13px;
+    font-weight:600;
+    padding:6px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    transition: background .2s ease, color .2s ease;
+  }
+  .copy-btn:hover{ background:var(--accent); color:#0e1013; }
+  .prompt-box pre{
+    margin:0;
+    padding:18px 20px;
+    white-space:pre-wrap;
+    word-break:break-word;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size:14px;
+    color:var(--text);
+  }
+
+  /* Tool picks */
+  .picks{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-top:18px;
+  }
+  @media (max-width:700px){
+    .picks{ grid-template-columns:1fr; }
+  }
+  .pick{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+  }
+  .pick .badge{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .pick.best{ border-color:var(--accent); background:var(--panel-2); }
+  .pick h3{ margin:0 0 6px; font-size:18px; }
+  .pick .why{ color:var(--muted); font-size:14px; flex:1; margin:0 0 14px; }
+  .pick .go{
+    font-size:14px;
+    font-weight:600;
+  }
+
+  .note{
+    margin-top:42px;
+    padding:16px 20px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    border-radius:10px;
+    font-size:14px;
+    color:var(--muted);
+  }
+
+  .back-cta{
+    margin-top:52px;
+    text-align:center;
+  }
+  .back-cta a{
+    display:inline-block;
+    padding:12px 26px;
+    border:1px solid var(--accent);
+    border-radius:999px;
+    font-weight:600;
+  }
+  .back-cta a:hover{ background:var(--accent); color:#0e1013; text-decoration:none; }
+
+  /* Soft warm glow behind the header */
+  .page{ position:relative; }
+  .page::before{
+    content:"";
+    position:absolute;
+    top:-60px; left:50%;
+    transform:translateX(-50%);
+    width:min(900px, 100%);
+    height:420px;
+    background: radial-gradient(ellipse at center top, rgba(232,115,63,.09), transparent 65%);
+    pointer-events:none;
+  }
+  .page > *{ position:relative; }
+
+  /* Category banner */
+  .banner{
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    margin:0 0 44px;
+    aspect-ratio: 21 / 9;
+    background:var(--panel);
+  }
+  .banner img, .banner video{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="topbar"><a href="/">&larr; AllAIDunia</a></div>
+
+<div class="page">
+
+  <div class="eyebrow">Websites</div>
+  <h1>Build a website with AI — step by step</h1>
+  <p class="lede">You don't need to know how to code. Describe what you want, and today's AI website tools will design, write, and build it for you. Here's the exact process, a prompt to start from, and the tools we recommend.</p>
+
+  <div class="banner"><img src="assets/hero/website.webp" alt="Example website built with AI"></div>
+
+  <h2>The process</h2>
+  <ol class="steps">
+    <li>
+      <div class="step-title">Write down what your site is for</div>
+      <p>One or two sentences: who it's for and the single action a visitor should take (call you, book, buy, read). Everything else flows from this.</p>
+    </li>
+    <li>
+      <div class="step-title">Gather your raw material</div>
+      <p>Your business name, a few photos, your services or products with prices, contact details, and 2–3 sites you like the look of. AI fills gaps, but real details make it yours.</p>
+    </li>
+    <li>
+      <div class="step-title">Pick a tool below and paste the starter prompt</div>
+      <p>Start with our Best Choice unless the "why" on another pick fits you better. Paste the prompt, replace the bracketed parts with your details, and generate.</p>
+    </li>
+    <li>
+      <div class="step-title">Refine in plain English</div>
+      <p>Don't settle for the first draft. Ask for changes the way you'd tell a designer: "make the header darker", "add a testimonials section", "shorter about text".</p>
+    </li>
+    <li>
+      <div class="step-title">Connect a domain and publish</div>
+      <p>Every tool below has a publish step — connect your own domain name (or use a free subdomain to start) and your site is live.</p>
+    </li>
+  </ol>
+
+  <h2>Your starter prompt</h2>
+  <div class="prompt-box">
+    <div class="bar">
+      <span>Copy, fill the [brackets], paste into the tool</span>
+      <button class="copy-btn" id="copyBtn">Copy prompt</button>
+    </div>
+    <pre id="promptText">Build a modern, mobile-friendly website for [business name], a [type of business] in [city].
+
+Pages: Home, About, Services, Contact.
+
+The main goal: get visitors to [call us / book an appointment / buy online].
+
+Style: clean and professional, [dark/light] theme, accent color [color]. 
+
+Include: a clear headline about [main service], a services section with [list your services and prices], customer reviews section, and a contact section with [phone/address/hours].
+
+Write all the text in simple, friendly English. Avoid buzzwords.</pre>
+  </div>
+
+  <h2>The tools we recommend</h2>
+  <div class="picks">
+    <div class="pick best">
+      <div class="badge">Best choice</div>
+      <h3>v0</h3>
+      <p class="why">Best for clean, production-ready UI from a prompt.</p>
+      <a class="go" href="https://v0.dev" target="_blank" rel="noopener noreferrer">Try it &rarr;</a>
+    </div>
+    <div class="pick">
+      <div class="badge">Runner up</div>
+      <h3>Bolt</h3>
+      <p class="why">Great for fast full-stack prototypes.</p>
+      <a class="go" href="https://bolt.new" target="_blank" rel="noopener noreferrer">Try it &rarr;</a>
+    </div>
+    <div class="pick">
+      <div class="badge">Budget / free</div>
+      <h3>Framer AI</h3>
+      <p class="why">Easiest for a simple site, generous free tier.</p>
+      <a class="go" href="https://framer.com" target="_blank" rel="noopener noreferrer">Try it &rarr;</a>
+    </div>
+  </div>
+
+  <div class="note">
+    New to AI tools entirely? Start with the Best Choice and the prompt above — you can have a first draft of your site in under ten minutes, free.
+  </div>
+
+  <div class="back-cta">
+    <a href="/#tools-grid">Browse all website tools &rarr;</a>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById("copyBtn").addEventListener("click", () => {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById("copyBtn");
+      btn.textContent = "Copied!";
+      setTimeout(() => { btn.textContent = "Copy prompt"; }, 1800);
+    });
+  });
+</script>
+
+</body>
+</html>
