@@ -22,14 +22,14 @@ jobs:
           protocol: ftps
           local-dir: ./
           server-dir: ./
+          state-name: .ftp-deploy-sync-state-fullsite.json
           exclude: |
             **
             !index.html
             !sitemap.xml
-            !websites.html
-            !video-generation.html
-            !3d-image-generation.html
-            !voice-audio.html
-            !chatbots-agents.html
-            !writing-content.html
+            !about.html
+            !contact.html
+            !favicon.ico
+            !guides/**
             !assets/hero/**
+            !assets/brand/**
