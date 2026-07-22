@@ -2,16 +2,16 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-07-21",
+    "run_date": "2026-07-22",
     "status": "success",
-    "summary": "35 action items found (11 high priority)"
+    "summary": "35 action items found (10 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-07-21",
+  "generated_date": "2026-07-22",
   "window": {
-    "start": "2026-06-20",
-    "end": "2026-07-18"
+    "start": "2026-06-21",
+    "end": "2026-07-19"
   },
   "overview": {
     "total_queries": 3,
@@ -94,10 +94,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.48,
-        "lcp_display": "7.2 s",
-        "cls_display": "0.001",
-        "tbt_display": "760 ms"
+        "performance_score": 0.64,
+        "lcp_display": "8.4 s",
+        "cls_display": "0.04",
+        "tbt_display": "100 ms"
       }
     },
     {
@@ -186,8 +186,8 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.96,
-        "lcp_display": "2.3 s",
+        "performance_score": 0.9,
+        "lcp_display": "2.9 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -278,8 +278,8 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.98,
-        "lcp_display": "1.9 s",
+        "performance_score": 1,
+        "lcp_display": "0.8 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -546,9 +546,9 @@
   },
   "action_items": [
     {
-      "id": "e23285c663",
-      "description": "Poor page speed (Lighthouse performance score: 48/100, mobile). LCP: 7.2 s, CLS: 0.001. Core Web Vitals are a confirmed Google ranking factor.",
-      "priority": "high",
+      "id": "5dd4d68621",
+      "description": "Page speed could be better (Lighthouse performance score: 64/100, mobile). LCP: 8.4 s, CLS: 0.04.",
+      "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/",

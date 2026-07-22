@@ -1,13 +1,12 @@
 # SEO Report — AllAIDunia
-_2026-07-21_
+_2026-07-22_
 
-Data window: 2026-06-20 to 2026-07-18 (vs. prior 2026-05-23 to 2026-06-19)
+Data window: 2026-06-21 to 2026-07-19 (vs. prior 2026-05-24 to 2026-06-20)
 
 ## Recommended Actions
 Prioritized suggestions combining Search Console data and a live site audit. Items tagged for `content_agent` will be actioned automatically once that agent exists — items tagged `manual` need a person for now.
 
 ### High Priority
-- [technical] Poor page speed (Lighthouse performance score: 48/100, mobile). LCP: 7.2 s, CLS: 0.001. Core Web Vitals are a confirmed Google ranking factor. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 - [technical] Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/guides/websites.html)_ — *suggested owner: manual*
 - [technical] Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/guides/video-generation.html)_ — *suggested owner: manual*
 - [technical] Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/guides/3d-image-generation.html)_ — *suggested owner: manual*
@@ -20,6 +19,7 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 - [technical] Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
 
 ### Medium Priority
+- [technical] Page speed could be better (Lighthouse performance score: 64/100, mobile). LCP: 8.4 s, CLS: 0.04. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 **Title** _(page: https://www.allaidunia.com/guides/websites.html)_ — *suggested owner: content_agent*
 - Current (65 chars): "Build a Website with AI — Step-by-Step Guide & Tools | AllAIDunia"
 - Target: 30-60 characters
@@ -60,7 +60,7 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 
 
 ## Historical Trend
-Comparing this run (2026-07-21) to the earliest recorded snapshot (2026-07-07, ~2 week(s) ago):
+Comparing this run (2026-07-22) to the earliest recorded snapshot (2026-07-07, ~2 week(s) ago):
 
 | Metric | Then | Now | Change |
 |---|---|---|---|
@@ -68,7 +68,7 @@ Comparing this run (2026-07-21) to the earliest recorded snapshot (2026-07-07, ~
 | Total impressions | 4 | 18 | 📈 +14 |
 | Avg. position | 8.8 | 15.7 | 📉 +6.9 |
 | Pages indexed | 1/3 | 1/11 | no change |
-| High-priority issues | 2 | 11 | 📉 +9 |
+| High-priority issues | 2 | 10 | 📉 +8 |
 
 
 ## Overview
