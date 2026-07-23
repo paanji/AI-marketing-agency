@@ -2,16 +2,16 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-07-22",
+    "run_date": "2026-07-23",
     "status": "success",
-    "summary": "35 action items found (10 high priority)"
+    "summary": "22 action items found (5 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-07-22",
+  "generated_date": "2026-07-23",
   "window": {
-    "start": "2026-06-21",
-    "end": "2026-07-19"
+    "start": "2026-06-22",
+    "end": "2026-07-20"
   },
   "overview": {
     "total_queries": 3,
@@ -94,10 +94,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.64,
-        "lcp_display": "8.4 s",
-        "cls_display": "0.04",
-        "tbt_display": "100 ms"
+        "performance_score": 0.62,
+        "lcp_display": "10.1 s",
+        "cls_display": "0.039",
+        "tbt_display": "30 ms"
       }
     },
     {
@@ -121,12 +121,12 @@
       },
       "js_blindspot": null,
       "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-22T15:10:33Z"
       },
       "noindex": false,
       "canonical": {
@@ -135,13 +135,13 @@
         "domain_mismatch": false
       },
       "open_graph": {
-        "has_og_title": false,
-        "has_og_description": false,
+        "has_og_title": true,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.93,
-        "lcp_display": "3.0 s",
+        "performance_score": 0.96,
+        "lcp_display": "2.7 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -181,13 +181,13 @@
         "domain_mismatch": false
       },
       "open_graph": {
-        "has_og_title": false,
-        "has_og_description": false,
+        "has_og_title": true,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.9,
-        "lcp_display": "2.9 s",
+        "performance_score": 0.92,
+        "lcp_display": "2.7 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -227,13 +227,13 @@
         "domain_mismatch": false
       },
       "open_graph": {
-        "has_og_title": false,
-        "has_og_description": false,
+        "has_og_title": true,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.98,
-        "lcp_display": "2.3 s",
+        "performance_score": 0.95,
+        "lcp_display": "2.7 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -259,12 +259,12 @@
       },
       "js_blindspot": null,
       "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-22T15:12:34Z"
       },
       "noindex": false,
       "canonical": {
@@ -273,13 +273,13 @@
         "domain_mismatch": false
       },
       "open_graph": {
-        "has_og_title": false,
-        "has_og_description": false,
+        "has_og_title": true,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 1,
-        "lcp_display": "0.8 s",
+        "performance_score": 0.91,
+        "lcp_display": "2.8 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -305,12 +305,12 @@
       },
       "js_blindspot": null,
       "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-22T15:14:36Z"
       },
       "noindex": false,
       "canonical": {
@@ -319,8 +319,8 @@
         "domain_mismatch": false
       },
       "open_graph": {
-        "has_og_title": false,
-        "has_og_description": false,
+        "has_og_title": true,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": null
@@ -346,12 +346,12 @@
       },
       "js_blindspot": null,
       "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-22T15:14:34Z"
       },
       "noindex": false,
       "canonical": {
@@ -360,8 +360,8 @@
         "domain_mismatch": false
       },
       "open_graph": {
-        "has_og_title": false,
-        "has_og_description": false,
+        "has_og_title": true,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": null
@@ -387,12 +387,12 @@
       },
       "js_blindspot": null,
       "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-22T15:14:36Z"
       },
       "noindex": false,
       "canonical": {
@@ -402,7 +402,7 @@
       },
       "open_graph": {
         "has_og_title": true,
-        "has_og_description": false,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": null
@@ -443,7 +443,7 @@
       },
       "open_graph": {
         "has_og_title": true,
-        "has_og_description": false,
+        "has_og_description": true,
         "has_og_image": true
       },
       "pagespeed": null
@@ -546,8 +546,8 @@
   },
   "action_items": [
     {
-      "id": "5dd4d68621",
-      "description": "Page speed could be better (Lighthouse performance score: 64/100, mobile). LCP: 8.4 s, CLS: 0.04.",
+      "id": "492d6f7096",
+      "description": "Page speed could be better (Lighthouse performance score: 62/100, mobile). LCP: 10.1 s, CLS: 0.039.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -594,30 +594,6 @@
       "target_range": null
     },
     {
-      "id": "0c209183ae",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/guides/websites.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "9cc4df8907",
-      "description": "Missing Open Graph tags (og:title, og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/websites.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
       "id": "ba6e4c1a8e",
       "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
       "priority": "medium",
@@ -635,18 +611,6 @@
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/guides/video-generation.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "ea1ef7a0d3",
-      "description": "Missing Open Graph tags (og:title, og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/guides/video-generation.html",
       "proposed_fix": null,
       "field_type": null,
@@ -678,18 +642,6 @@
       "target_range": null
     },
     {
-      "id": "996e420f4c",
-      "description": "Missing Open Graph tags (og:title, og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/3d-image-generation.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
       "id": "22ae469c43",
       "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
       "priority": "medium",
@@ -697,30 +649,6 @@
       "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/guides/voice-audio.html",
       "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — AI Tools Directory\",\n  \"url\": \"https://www.allaidunia.com/\",\n  \"numberOfItems\": 62,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"ChatGPT\",\n        \"url\": \"https://chat.openai.com\",\n        \"description\": \"OpenAI's flagship AI assistant for everything\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Claude\",\n        \"url\": \"https://claude.ai\",\n        \"description\": \"Anthropic's thoughtful and safe AI assistant\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Gemini\",\n        \"url\": \"https://gemini.google.com\",\n        \"description\": \"Google's powerful multimodal AI model\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Grok\",\n        \"url\": \"https://grok.com\",\n        \"description\": \"xAI's witty real-time AI by Elon Musk\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Mistral\",\n        \"url\": \"https://chat.mistral.ai\",\n        \"description\": \"Open-weight European AI models\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 6,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Meta AI\",\n        \"url\": \"https://meta.ai\",\n        \"description\": \"Meta's AI across apps and the web\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 7,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Copilot\",\n        \"url\": \"https://copilot.microsoft.com\",\n        \"description\": \"Microsoft's AI assistant powered by GPT-4\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 8,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"DeepSeek\",\n        \"url\": \"https://chat.deepseek.com\",\n        \"description\": \"Powerful open-source reasoning model\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 9,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Le Chat\",\n        \"url\": \"https://chat.mistral.ai\",\n        \"description\": \"Mistral's fast conversational AI\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 10,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Pi AI\",\n        \"url\": \"https://pi.ai\",\n        \"description\": \"Your personal AI that listens and learns\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 11,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Perplexity\",\n        \"url\": \"https://perplexity.ai\",\n        \"description\": \"AI-powered answer engine with citations\",\n        \"applicationCategory\": \"Search\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 12,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"You.com\",\n        \"url\": \"https://you.com\",\n        \"description\": \"AI search with cited answers\",\n        \"applicationCategory\": \"Search\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 13,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Exa AI\",\n        \"url\": \"https://exa.ai\",\n        \"description\": \"Neural search for developers and researchers\",\n        \"applicationCategory\": \"Search\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 14,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Midjourney\",\n        \"url\": \"https://midjourney.com\",\n        \"description\": \"Stunning AI image generation\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 15,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Stable Diff.\",\n        \"url\": \"https://stability.ai\",\n        \"description\": \"Open-source image generation model\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 16,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Adobe Firefly\",\n        \"url\": \"https://firefly.adobe.com\",\n        \"description\": \"Adobe's generative AI for creatives\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 17,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Krea\",\n        \"url\": \"https://krea.ai\",\n        \"description\": \"Real-time AI image creation tool\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 18,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Ideogram\",\n        \"url\": \"https://ideogram.ai\",\n        \"description\": \"AI image gen with great text typography\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 19,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Leonardo AI\",\n        \"url\": \"https://leonardo.ai\",\n        \"description\": \"AI images for games and creative work\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 20,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Flux\",\n        \"url\": \"https://blackforestlabs.ai\",\n        \"description\": \"State of the art image generation model\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 21,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Canva AI\",\n        \"url\": \"https://canva.com/ai-image-generator\",\n        \"description\": \"AI image generation inside Canva\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 22,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Runway\",\n        \"url\": \"https://runwayml.com\",\n        \"description\": \"AI video generation and editing suite\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 23,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Sora\",\n        \"url\": \"https://sora.com\",\n        \"description\": \"OpenAI's text-to-video model\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 24,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Kling AI\",\n        \"url\": \"https://klingai.com\",\n        \"description\": \"Realistic AI video generation\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 25,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Pika\",\n        \"url\": \"https://pika.art\",\n        \"description\": \"AI video from text or images\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 26,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"HeyGen\",\n        \"url\": \"https://heygen.com\",\n        \"description\": \"AI avatar video creator for business\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 27,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Synthesia\",\n        \"url\": \"https://synthesia.io\",\n        \"description\": \"AI video with realistic avatars\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 28,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"ElevenLabs\",\n        \"url\": \"https://elevenlabs.io\",\n        \"description\": \"Ultra-realistic AI voice cloning\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 29,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Suno\",\n        \"url\": \"https://suno.com\",\n        \"description\": \"Generate full songs with AI\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 30,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Udio\",\n        \"url\": \"https://udio.com\",\n        \"description\": \"AI music creation and generation\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 31,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Murf AI\",\n        \"url\": \"https://murf.ai\",\n        \"description\": \"AI voiceover and text-to-speech\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 32,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Descript\",\n        \"url\": \"https://descript.com\",\n        \"description\": \"Edit audio and video like a document\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 33,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"GitHub Copilot\",\n        \"url\": \"https://github.com/features/copilot\",\n        \"description\": \"AI pair programmer inside your IDE\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 34,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Cursor\",\n        \"url\": \"https://cursor.sh\",\n        \"description\": \"The AI-first code editor\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 35,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"v0\",\n        \"url\": \"https://v0.dev\",\n        \"description\": \"Generate UI components with AI by Vercel\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 36,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Bolt\",\n        \"url\": \"https://bolt.new\",\n        \"description\": \"Full-stack AI app builder in browser\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 37,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Lovable\",\n        \"url\": \"https://lovable.dev\",\n        \"description\": \"AI that builds full web apps from prompts\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 38,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Replit AI\",\n        \"url\": \"https://replit.com\",\n        \"description\": \"AI-powered coding in the browser\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 39,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Windsurf\",\n        \"url\": \"https://codeium.com/windsurf\",\n        \"description\": \"AI code editor by Codeium\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 40,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Tabnine\",\n        \"url\": \"https://tabnine.com\",\n        \"description\": \"AI code completion for all IDEs\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 41,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Jasper\",\n        \"url\": \"https://jasper.ai\",\n        \"description\": \"AI for marketing content and copywriting\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 42,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Copy.ai\",\n        \"url\": \"https://copy.ai\",\n        \"description\": \"AI writing and workflow automation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 43,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Grammarly\",\n        \"url\": \"https://grammarly.com\",\n        \"description\": \"AI grammar and writing assistant\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 44,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Quillbot\",\n        \"url\": \"https://quillbot.com\",\n        \"description\": \"AI paraphrasing and summarisation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 45,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Writesonic\",\n        \"url\": \"https://writesonic.com\",\n        \"description\": \"AI writing platform for marketers\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 46,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Notion AI\",\n        \"url\": \"https://notion.so/ai\",\n        \"description\": \"AI inside your notes and documents\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 47,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Otter.ai\",\n        \"url\": \"https://otter.ai\",\n        \"description\": \"AI meeting notes and transcription\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 48,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Mem.ai\",\n        \"url\": \"https://mem.ai\",\n        \"description\": \"AI-powered notes that self-organise\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 49,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Reclaim AI\",\n        \"url\": \"https://reclaim.ai\",\n        \"description\": \"AI calendar and time management\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 50,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Motion\",\n        \"url\": \"https://usemotion.com\",\n        \"description\": \"AI task and project scheduling\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 51,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"HuggingFace\",\n        \"url\": \"https://huggingface.co\",\n        \"description\": \"The GitHub of AI models and datasets\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 52,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Replicate\",\n        \"url\": \"https://replicate.com\",\n        \"description\": \"Run open-source AI models via API\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 53,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Together AI\",\n        \"url\": \"https://together.ai\",\n        \"description\": \"Fast inference for open-source models\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 54,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Arxiv + AI\",\n        \"url\": \"https://arxiv.org\",\n        \"description\": \"Latest AI research papers\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 55,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Figma AI\",\n        \"url\": \"https://figma.com\",\n        \"description\": \"AI-powered design features in Figma\",\n        \"applicationCategory\": \"Design\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 56,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Framer AI\",\n        \"url\": \"https://framer.com\",\n        \"description\": \"AI website builder with animations\",\n        \"applicationCategory\": \"Design\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 57,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Looka\",\n        \"url\": \"https://looka.com\",\n        \"description\": \"AI logo and brand design maker\",\n        \"applicationCategory\": \"Design\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 58,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"AdCreative\",\n        \"url\": \"https://adcreative.ai\",\n        \"description\": \"AI-generated ad creatives that convert\",\n        \"applicationCategory\": \"Marketing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 59,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Surfer SEO\",\n        \"url\": \"https://surferseo.com\",\n        \"description\": \"AI SEO writing and optimisation\",\n        \"applicationCategory\": \"Marketing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 60,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Lately AI\",\n        \"url\": \"https://lately.ai\",\n        \"description\": \"AI social media content repurposing\",\n        \"applicationCategory\": \"Marketing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 61,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"PMB\",\n        \"url\": \"https://pmbai.dev\",\n        \"description\": \"Show HN: PMB – local memory for coding agents that shows if it is used\",\n        \"applicationCategory\": \"Uncategorized\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 62,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Appaca\",\n        \"url\": \"https://www.appaca.ai/\",\n        \"description\": \"Show HN: Appaca – AI Workspace for Operators\",\n        \"applicationCategory\": \"Uncategorized\"\n      }\n    }\n  ]\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "f52fbee52a",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/guides/voice-audio.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "864b23d965",
-      "description": "Missing Open Graph tags (og:title, og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/voice-audio.html",
-      "proposed_fix": null,
       "field_type": null,
       "current_value": null,
       "target_range": null
@@ -738,30 +666,6 @@
       "target_range": null
     },
     {
-      "id": "cd41bb1069",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/guides/chatbots-agents.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "98be8aa343",
-      "description": "Missing Open Graph tags (og:title, og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/chatbots-agents.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
       "id": "5a5714d8f6",
       "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
       "priority": "medium",
@@ -774,30 +678,6 @@
       "target_range": null
     },
     {
-      "id": "74343735e5",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/guides/writing-content.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "0a96c24598",
-      "description": "Missing Open Graph tags (og:title, og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/writing-content.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
       "id": "d72212eb10",
       "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
       "priority": "medium",
@@ -805,30 +685,6 @@
       "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/about.html",
       "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — AI Tools Directory\",\n  \"url\": \"https://www.allaidunia.com/\",\n  \"numberOfItems\": 62,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"ChatGPT\",\n        \"url\": \"https://chat.openai.com\",\n        \"description\": \"OpenAI's flagship AI assistant for everything\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Claude\",\n        \"url\": \"https://claude.ai\",\n        \"description\": \"Anthropic's thoughtful and safe AI assistant\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Gemini\",\n        \"url\": \"https://gemini.google.com\",\n        \"description\": \"Google's powerful multimodal AI model\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Grok\",\n        \"url\": \"https://grok.com\",\n        \"description\": \"xAI's witty real-time AI by Elon Musk\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Mistral\",\n        \"url\": \"https://chat.mistral.ai\",\n        \"description\": \"Open-weight European AI models\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 6,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Meta AI\",\n        \"url\": \"https://meta.ai\",\n        \"description\": \"Meta's AI across apps and the web\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 7,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Copilot\",\n        \"url\": \"https://copilot.microsoft.com\",\n        \"description\": \"Microsoft's AI assistant powered by GPT-4\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 8,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"DeepSeek\",\n        \"url\": \"https://chat.deepseek.com\",\n        \"description\": \"Powerful open-source reasoning model\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 9,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Le Chat\",\n        \"url\": \"https://chat.mistral.ai\",\n        \"description\": \"Mistral's fast conversational AI\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 10,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Pi AI\",\n        \"url\": \"https://pi.ai\",\n        \"description\": \"Your personal AI that listens and learns\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 11,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Perplexity\",\n        \"url\": \"https://perplexity.ai\",\n        \"description\": \"AI-powered answer engine with citations\",\n        \"applicationCategory\": \"Search\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 12,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"You.com\",\n        \"url\": \"https://you.com\",\n        \"description\": \"AI search with cited answers\",\n        \"applicationCategory\": \"Search\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 13,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Exa AI\",\n        \"url\": \"https://exa.ai\",\n        \"description\": \"Neural search for developers and researchers\",\n        \"applicationCategory\": \"Search\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 14,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Midjourney\",\n        \"url\": \"https://midjourney.com\",\n        \"description\": \"Stunning AI image generation\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 15,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Stable Diff.\",\n        \"url\": \"https://stability.ai\",\n        \"description\": \"Open-source image generation model\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 16,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Adobe Firefly\",\n        \"url\": \"https://firefly.adobe.com\",\n        \"description\": \"Adobe's generative AI for creatives\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 17,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Krea\",\n        \"url\": \"https://krea.ai\",\n        \"description\": \"Real-time AI image creation tool\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 18,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Ideogram\",\n        \"url\": \"https://ideogram.ai\",\n        \"description\": \"AI image gen with great text typography\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 19,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Leonardo AI\",\n        \"url\": \"https://leonardo.ai\",\n        \"description\": \"AI images for games and creative work\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 20,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Flux\",\n        \"url\": \"https://blackforestlabs.ai\",\n        \"description\": \"State of the art image generation model\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 21,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Canva AI\",\n        \"url\": \"https://canva.com/ai-image-generator\",\n        \"description\": \"AI image generation inside Canva\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 22,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Runway\",\n        \"url\": \"https://runwayml.com\",\n        \"description\": \"AI video generation and editing suite\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 23,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Sora\",\n        \"url\": \"https://sora.com\",\n        \"description\": \"OpenAI's text-to-video model\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 24,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Kling AI\",\n        \"url\": \"https://klingai.com\",\n        \"description\": \"Realistic AI video generation\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 25,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Pika\",\n        \"url\": \"https://pika.art\",\n        \"description\": \"AI video from text or images\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 26,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"HeyGen\",\n        \"url\": \"https://heygen.com\",\n        \"description\": \"AI avatar video creator for business\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 27,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Synthesia\",\n        \"url\": \"https://synthesia.io\",\n        \"description\": \"AI video with realistic avatars\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 28,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"ElevenLabs\",\n        \"url\": \"https://elevenlabs.io\",\n        \"description\": \"Ultra-realistic AI voice cloning\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 29,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Suno\",\n        \"url\": \"https://suno.com\",\n        \"description\": \"Generate full songs with AI\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 30,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Udio\",\n        \"url\": \"https://udio.com\",\n        \"description\": \"AI music creation and generation\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 31,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Murf AI\",\n        \"url\": \"https://murf.ai\",\n        \"description\": \"AI voiceover and text-to-speech\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 32,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Descript\",\n        \"url\": \"https://descript.com\",\n        \"description\": \"Edit audio and video like a document\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 33,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"GitHub Copilot\",\n        \"url\": \"https://github.com/features/copilot\",\n        \"description\": \"AI pair programmer inside your IDE\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 34,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Cursor\",\n        \"url\": \"https://cursor.sh\",\n        \"description\": \"The AI-first code editor\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 35,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"v0\",\n        \"url\": \"https://v0.dev\",\n        \"description\": \"Generate UI components with AI by Vercel\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 36,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Bolt\",\n        \"url\": \"https://bolt.new\",\n        \"description\": \"Full-stack AI app builder in browser\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 37,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Lovable\",\n        \"url\": \"https://lovable.dev\",\n        \"description\": \"AI that builds full web apps from prompts\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 38,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Replit AI\",\n        \"url\": \"https://replit.com\",\n        \"description\": \"AI-powered coding in the browser\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 39,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Windsurf\",\n        \"url\": \"https://codeium.com/windsurf\",\n        \"description\": \"AI code editor by Codeium\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 40,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Tabnine\",\n        \"url\": \"https://tabnine.com\",\n        \"description\": \"AI code completion for all IDEs\",\n        \"applicationCategory\": \"Code\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 41,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Jasper\",\n        \"url\": \"https://jasper.ai\",\n        \"description\": \"AI for marketing content and copywriting\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 42,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Copy.ai\",\n        \"url\": \"https://copy.ai\",\n        \"description\": \"AI writing and workflow automation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 43,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Grammarly\",\n        \"url\": \"https://grammarly.com\",\n        \"description\": \"AI grammar and writing assistant\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 44,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Quillbot\",\n        \"url\": \"https://quillbot.com\",\n        \"description\": \"AI paraphrasing and summarisation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 45,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Writesonic\",\n        \"url\": \"https://writesonic.com\",\n        \"description\": \"AI writing platform for marketers\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 46,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Notion AI\",\n        \"url\": \"https://notion.so/ai\",\n        \"description\": \"AI inside your notes and documents\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 47,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Otter.ai\",\n        \"url\": \"https://otter.ai\",\n        \"description\": \"AI meeting notes and transcription\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 48,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Mem.ai\",\n        \"url\": \"https://mem.ai\",\n        \"description\": \"AI-powered notes that self-organise\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 49,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Reclaim AI\",\n        \"url\": \"https://reclaim.ai\",\n        \"description\": \"AI calendar and time management\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 50,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Motion\",\n        \"url\": \"https://usemotion.com\",\n        \"description\": \"AI task and project scheduling\",\n        \"applicationCategory\": \"Productivity\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 51,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"HuggingFace\",\n        \"url\": \"https://huggingface.co\",\n        \"description\": \"The GitHub of AI models and datasets\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 52,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Replicate\",\n        \"url\": \"https://replicate.com\",\n        \"description\": \"Run open-source AI models via API\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 53,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Together AI\",\n        \"url\": \"https://together.ai\",\n        \"description\": \"Fast inference for open-source models\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 54,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Arxiv + AI\",\n        \"url\": \"https://arxiv.org\",\n        \"description\": \"Latest AI research papers\",\n        \"applicationCategory\": \"Research\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 55,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Figma AI\",\n        \"url\": \"https://figma.com\",\n        \"description\": \"AI-powered design features in Figma\",\n        \"applicationCategory\": \"Design\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 56,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Framer AI\",\n        \"url\": \"https://framer.com\",\n        \"description\": \"AI website builder with animations\",\n        \"applicationCategory\": \"Design\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 57,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Looka\",\n        \"url\": \"https://looka.com\",\n        \"description\": \"AI logo and brand design maker\",\n        \"applicationCategory\": \"Design\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 58,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"AdCreative\",\n        \"url\": \"https://adcreative.ai\",\n        \"description\": \"AI-generated ad creatives that convert\",\n        \"applicationCategory\": \"Marketing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 59,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Surfer SEO\",\n        \"url\": \"https://surferseo.com\",\n        \"description\": \"AI SEO writing and optimisation\",\n        \"applicationCategory\": \"Marketing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 60,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Lately AI\",\n        \"url\": \"https://lately.ai\",\n        \"description\": \"AI social media content repurposing\",\n        \"applicationCategory\": \"Marketing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 61,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"PMB\",\n        \"url\": \"https://pmbai.dev\",\n        \"description\": \"Show HN: PMB – local memory for coding agents that shows if it is used\",\n        \"applicationCategory\": \"Uncategorized\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 62,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Appaca\",\n        \"url\": \"https://www.appaca.ai/\",\n        \"description\": \"Show HN: Appaca – AI Workspace for Operators\",\n        \"applicationCategory\": \"Uncategorized\"\n      }\n    }\n  ]\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "a72d6e02d3",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/about.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "8c3fd183b1",
-      "description": "Missing Open Graph tags (og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/about.html",
-      "proposed_fix": null,
       "field_type": null,
       "current_value": null,
       "target_range": null
@@ -875,18 +731,6 @@
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/contact.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "b78556a5ee",
-      "description": "Missing Open Graph tags (og:description) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/contact.html",
       "proposed_fix": null,
       "field_type": null,
