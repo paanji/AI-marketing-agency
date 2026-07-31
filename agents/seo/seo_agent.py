@@ -42,7 +42,7 @@ HEADERS = {
 TIMEOUT_SECONDS = 10
 
 
-def record_history_snapshot(overview, action_items, page_audits):
+def record_history_snapshot(overview, action_items, page_audits, window_start=None, window_end=None):
     """Appends a lightweight snapshot of key metrics to a running history
     log, rather than overwriting like the main report does. This is what
     lets us eventually show 'traffic grew X% over 3 months' — exactly the
@@ -60,6 +60,8 @@ def record_history_snapshot(overview, action_items, page_audits):
 
     snapshot = {
         "date": today_str,
+        "window_start": window_start.isoformat() if window_start else None,
+        "window_end": window_end.isoformat() if window_end else None,
         "total_clicks": overview["total_clicks"],
         "total_impressions": overview["total_impressions"],
         "avg_position": overview["avg_position"],
@@ -1000,7 +1002,7 @@ def main():
                     lines.append(f"  **Proposed fix:** \"{fix}\"")
         lines.append("")
 
-    history = record_history_snapshot(overview, suggestions, page_audits)
+    history = record_history_snapshot(overview, suggestions, page_audits, recent_start, end_date)
     lines += [""] + build_trend_section(history)
 
     lines += ["", "## Overview", "| Metric | Value |", "|---|---|",
