@@ -548,10 +548,11 @@ def suggest_meta_description_fix(current_desc: str, cfg: dict, page_queries: lis
     return None
 
 
-def generate_homepage_schema(tools: list, business_name: str, site_url: str) -> str:
-    """Generates real, ready-to-insert ItemList JSON-LD from tools.json data
-    — deterministic, not AI-generated, so there's no hallucination risk in
-    something as structurally important as schema markup."""
+def _build_item_list_schema(tools: list, name: str, url: str) -> str:
+    """Shared ItemList JSON-LD builder — deterministic, not AI-generated, so
+    there's no hallucination risk in something as structurally important as
+    schema markup. Takes whatever tool subset the caller has already decided
+    is relevant to the page in question."""
     items = []
     for i, t in enumerate(tools[:100], 1):  # ItemList practical cap
         items.append({
@@ -568,10 +569,88 @@ def generate_homepage_schema(tools: list, business_name: str, site_url: str) -> 
     schema = {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": f"{business_name} — AI Tools Directory",
-        "url": site_url,
+        "name": name,
+        "url": url,
         "numberOfItems": len(tools),
         "itemListElement": items,
+    }
+    return json.dumps(schema, indent=2, ensure_ascii=False)
+
+
+def generate_homepage_schema(tools: list, business_name: str, site_url: str) -> str:
+    """Full-directory ItemList — use only for the actual homepage/directory
+    index, where every tool genuinely belongs on the page."""
+    return _build_item_list_schema(tools, f"{business_name} — AI Tools Directory", site_url)
+
+
+def _match_category_from_url(url: str, categories: list) -> list:
+    """Looks for a tools.json category name inside the page's URL slug, e.g.
+    '.../guides/voice-audio.html' -> ['Audio']. Matching is intentionally
+    conservative (whole-word / substring against the slug's hyphen-split
+    tokens) — an ambiguous or absent match should fall through to the
+    generic page schema below rather than guessing wrong."""
+    path = urlparse(url).path
+    slug = path.rsplit("/", 1)[-1].rsplit(".", 1)[0].lower()
+    tokens = set(slug.split("-"))
+    matches = []
+    for cat in categories:
+        cat_lower = cat.lower()
+        if cat_lower in tokens or any(cat_lower in tok or tok in cat_lower for tok in tokens):
+            matches.append(cat)
+    return matches
+
+
+def generate_page_schema(url: str, tools: list, business_name: str, site_url: str,
+                          page_title: str = "", page_description: str = "") -> str:
+    """Page-aware schema generator. This replaces the old behaviour of
+    stamping the entire 64-tool directory ItemList onto every page missing
+    schema — a page about AI voice tools has no business listing Cursor and
+    Figma AI in its structured data, and repeating the full list on every
+    guide page was pure duplicate payload with no SEO upside.
+
+    Rules, in order:
+      1. The actual homepage/directory index gets the full ItemList — every
+         tool genuinely belongs there.
+      2. A page whose URL slug clearly maps to one tools.json category (e.g.
+         'guides/voice-audio.html' -> 'Audio') gets an ItemList scoped to
+         just that category.
+      3. Anything else (about, contact, or any page with no confident
+         category match) gets a lightweight WebPage schema instead of a tool
+         list — a generic page doesn't need fake structured data pretending
+         it's a product listing.
+    """
+    normalized_site_url = site_url.rstrip("/")
+    normalized_url = url.rstrip("/")
+
+    if normalized_url == normalized_site_url:
+        return generate_homepage_schema(tools, business_name, site_url)
+
+    categories = sorted(set(t.get("cat", "") for t in tools if t.get("cat")))
+    matched = _match_category_from_url(url, categories)
+
+    if len(matched) == 1:
+        category = matched[0]
+        scoped_tools = [t for t in tools if t.get("cat") == category]
+        if scoped_tools:
+            return _build_item_list_schema(
+                scoped_tools,
+                f"{business_name} — Best AI Tools for {category}",
+                url,
+            )
+
+    # No confident single-category match (0 matches, or ambiguous 2+) —
+    # generic WebPage schema rather than an irrelevant tool dump.
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": page_title or business_name,
+        "url": url,
+        "description": page_description or "",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": business_name,
+            "url": site_url,
+        },
     }
     return json.dumps(schema, indent=2, ensure_ascii=False)
 
@@ -810,7 +889,10 @@ def generate_suggestions(cfg, overview, quick_wins, low_ctr, declines, page_audi
                 "medium", "content_opportunity", "content_agent", url)
 
         if not page.get("schema_types"):
-            proposed_schema = generate_homepage_schema(all_tools, cfg.get("business_name", ""), cfg.get("site_url", "")) if all_tools else None
+            proposed_schema = generate_page_schema(
+                url, all_tools, cfg.get("business_name", ""), cfg.get("site_url", ""),
+                page_title=page.get("title", ""), page_description=page.get("meta_description", ""),
+            ) if all_tools else None
             add(f"No schema.org markup — adding {'/'.join(cfg['ideal_schema_types'][:2])} schema helps "
                 f"AI systems understand and cite this page correctly.",
                 "medium", "ai_search_geo", "content_agent", url, proposed_fix=proposed_schema)
