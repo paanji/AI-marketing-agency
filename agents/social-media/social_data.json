@@ -2,7 +2,7 @@
   "agent_meta": {
     "agent_name": "social_media_agent",
     "schema_version": "1.1",
-    "run_date": "2026-07-27",
+    "run_date": "2026-08-03",
     "status": "success",
     "summary": "0 new draft(s) queued. 2 source(s) had errors and were skipped: new_catalog_items: 'list' object has no attribute 'get'; catalog_milestones: 'list' object has no attribute 'get'"
   },
