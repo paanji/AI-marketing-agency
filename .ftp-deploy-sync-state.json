@@ -1,8 +1,14 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1784488334087,
+    "generatedTime": 1785817448039,
     "data": [
+        {
+            "type": "file",
+            "name": "about.html",
+            "size": 11726,
+            "hash": "286dc27cf709247714982a5fcb2548e093baa56c6c09c60cf2771b5d07077e93"
+        },
         {
             "type": "file",
             "name": "best-free-ai-video-editing-tools.html",
@@ -11,9 +17,9 @@
         },
         {
             "type": "file",
-            "name": "index.html",
-            "size": 126246,
-            "hash": "f32fc466dd7184854dd2655dcd54cfaa7361df3127f825144ad29e24e986da3e"
+            "name": "contact.html",
+            "size": 12617,
+            "hash": "affaef521585fbadd695f2ad5a1ca3759feb90c84e539335a17133903c5cbd03"
         },
         {
             "type": "file",
@@ -23,9 +29,51 @@
         },
         {
             "type": "file",
+            "name": "index.html",
+            "size": 136152,
+            "hash": "936d2c6f2d12cc346df5148b0b5af4f448cd2d745158b39019ba1b844b204c41"
+        },
+        {
+            "type": "file",
             "name": "video-ai-tools.html",
             "size": 39557,
             "hash": "11d1fbf0f3606d136e4c265fc7c30c92e903d6c9155d753706705bfb550dc2a3"
+        },
+        {
+            "type": "file",
+            "name": "guides/3d-image-generation.html",
+            "size": 12630,
+            "hash": "e890d43a25a328d351c45a290faa740ade27634c42f79f586c1ec8bbc24c150f"
+        },
+        {
+            "type": "file",
+            "name": "guides/chatbots-agents.html",
+            "size": 13515,
+            "hash": "9020c9d269fb603f53f7426576e4e14b75ff441882d9c88143b3d8861a8e06c7"
+        },
+        {
+            "type": "file",
+            "name": "guides/video-generation.html",
+            "size": 12125,
+            "hash": "eab2414c9cc78eebe57b4cd1d211e4d66ee56248013c44ef3dcf13902b62b238"
+        },
+        {
+            "type": "file",
+            "name": "guides/websites.html",
+            "size": 10820,
+            "hash": "8a2fbc7cb2b1321d96dc8f45f331a9d440c85fb420539b808a242822ffd24c8c"
+        },
+        {
+            "type": "file",
+            "name": "guides/voice-audio.html",
+            "size": 11806,
+            "hash": "c40806fcbbba64f5fbda0450114fd5b27ec0b193b693d1fd204a1e015e848951"
+        },
+        {
+            "type": "file",
+            "name": "guides/writing-content.html",
+            "size": 11908,
+            "hash": "af58e0f890347b92c382f0e6c3de79d10102ab3cd5f0196dde5c7d44d521ae8e"
         }
     ]
 }
