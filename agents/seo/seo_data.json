@@ -2,29 +2,36 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-08-03",
+    "run_date": "2026-08-04",
     "status": "success",
-    "summary": "24 action items found (4 high priority)"
+    "summary": "16 action items found (4 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-08-03",
+  "generated_date": "2026-08-04",
   "window": {
-    "start": "2026-07-03",
-    "end": "2026-07-31"
+    "start": "2026-07-04",
+    "end": "2026-08-01"
   },
   "overview": {
     "total_queries": 7,
     "total_clicks": 0,
-    "total_impressions": 39,
-    "avg_position": 22.5,
+    "total_impressions": 44,
+    "avg_position": 23.1,
     "overall_ctr": 0.0
   },
   "top_queries": [
     {
       "query": "ai dunia",
-      "position": 9.7,
-      "impressions": 17,
+      "position": 9.6,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "dunia ai chat",
+      "position": 6.9,
+      "impressions": 8,
       "clicks": 0,
       "ctr": 0
     },
@@ -36,16 +43,9 @@
       "ctr": 0
     },
     {
-      "query": "dunia ai chat",
-      "position": 7.7,
-      "impressions": 6,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
       "query": "how to write ai",
-      "position": 66.8,
-      "impressions": 5,
+      "position": 65.4,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0
     },
@@ -75,8 +75,8 @@
   "low_ctr_queries": [
     {
       "query": "ai dunia",
-      "position": 9.7,
-      "impressions": 17,
+      "position": 9.6,
+      "impressions": 18,
       "clicks": 0,
       "ctr": 0
     }
@@ -130,10 +130,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.68,
-        "lcp_display": "8.1 s",
+        "performance_score": 0.56,
+        "lcp_display": "8.6 s",
         "cls_display": "0.039",
-        "tbt_display": "90 ms"
+        "tbt_display": "400 ms"
       }
     },
     {
@@ -149,7 +149,9 @@
       "images_total": 0,
       "images_missing_alt": 0,
       "word_count": 352,
-      "schema_types": [],
+      "schema_types": [
+        "WebPage"
+      ],
       "extractability": {
         "lists_and_tables_count": 0,
         "avg_paragraph_words": 28.8,
@@ -176,10 +178,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.87,
+        "performance_score": 0.86,
         "lcp_display": "3.3 s",
         "cls_display": "0.079",
-        "tbt_display": "20 ms"
+        "tbt_display": "110 ms"
       }
     },
     {
@@ -195,7 +197,9 @@
       "images_total": 0,
       "images_missing_alt": 0,
       "word_count": 113,
-      "schema_types": [],
+      "schema_types": [
+        "WebPage"
+      ],
       "extractability": {
         "lists_and_tables_count": 0,
         "avg_paragraph_words": 19.0,
@@ -222,10 +226,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.88,
-        "lcp_display": "3.2 s",
+        "performance_score": 0.85,
+        "lcp_display": "3.4 s",
         "cls_display": "0.065",
-        "tbt_display": "10 ms"
+        "tbt_display": "170 ms"
       }
     },
     {
@@ -241,7 +245,9 @@
       "images_total": 1,
       "images_missing_alt": 0,
       "word_count": 398,
-      "schema_types": [],
+      "schema_types": [
+        "WebPage"
+      ],
       "extractability": {
         "lists_and_tables_count": 1,
         "avg_paragraph_words": 21.4,
@@ -268,8 +274,8 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.95,
-        "lcp_display": "2.8 s",
+        "performance_score": 0.94,
+        "lcp_display": "3.0 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -287,7 +293,9 @@
       "images_total": 0,
       "images_missing_alt": 0,
       "word_count": 363,
-      "schema_types": [],
+      "schema_types": [
+        "ItemList"
+      ],
       "extractability": {
         "lists_and_tables_count": 1,
         "avg_paragraph_words": 20.2,
@@ -314,8 +322,8 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.97,
-        "lcp_display": "2.1 s",
+        "performance_score": 0.93,
+        "lcp_display": "2.5 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -333,7 +341,9 @@
       "images_total": 1,
       "images_missing_alt": 0,
       "word_count": 323,
-      "schema_types": [],
+      "schema_types": [
+        "ItemList"
+      ],
       "extractability": {
         "lists_and_tables_count": 1,
         "avg_paragraph_words": 17.2,
@@ -374,7 +384,9 @@
       "images_total": 0,
       "images_missing_alt": 0,
       "word_count": 353,
-      "schema_types": [],
+      "schema_types": [
+        "ItemList"
+      ],
       "extractability": {
         "lists_and_tables_count": 1,
         "avg_paragraph_words": 18.3,
@@ -415,7 +427,9 @@
       "images_total": 1,
       "images_missing_alt": 0,
       "word_count": 395,
-      "schema_types": [],
+      "schema_types": [
+        "ItemList"
+      ],
       "extractability": {
         "lists_and_tables_count": 1,
         "avg_paragraph_words": 20.0,
@@ -456,7 +470,9 @@
       "images_total": 1,
       "images_missing_alt": 0,
       "word_count": 354,
-      "schema_types": [],
+      "schema_types": [
+        "ItemList"
+      ],
       "extractability": {
         "lists_and_tables_count": 1,
         "avg_paragraph_words": 19.1,
@@ -582,8 +598,8 @@
   },
   "action_items": [
     {
-      "id": "86295f586e",
-      "description": "Page speed could be better (Lighthouse performance score: 68/100, mobile). LCP: 8.1 s, CLS: 0.039.",
+      "id": "0c65b69c51",
+      "description": "Page speed could be better (Lighthouse performance score: 56/100, mobile). LCP: 8.6 s, CLS: 0.039.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -606,20 +622,8 @@
       "target_range": null
     },
     {
-      "id": "d72212eb10",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/about.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"About AllAIDunia — Why We Curate, Not Just List\",\n  \"url\": \"https://www.allaidunia.com/about.html\",\n  \"description\": \"AllAIDunia hand-picks the best AI tools by category and shows you exactly how to use them — with real step-by-step guides and starter prompts.\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"AllAIDunia\",\n    \"url\": \"https://www.allaidunia.com/\"\n  }\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "c0ecf2e206",
-      "description": "Page speed could be better (Lighthouse performance score: 87/100, mobile). LCP: 3.3 s, CLS: 0.079.",
+      "id": "acdfe2072c",
+      "description": "Page speed could be better (Lighthouse performance score: 86/100, mobile). LCP: 3.3 s, CLS: 0.079.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -654,20 +658,8 @@
       "target_range": null
     },
     {
-      "id": "41b506ca2d",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/contact.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Contact AllAIDunia — Questions, Feedback, Tool Suggestions\",\n  \"url\": \"https://www.allaidunia.com/contact.html\",\n  \"description\": \"Get in touch with AllAIDunia — ask a question, suggest a tool, or send feedback. We read every message.\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"AllAIDunia\",\n    \"url\": \"https://www.allaidunia.com/\"\n  }\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "e28de82e97",
-      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.065.",
+      "id": "27c3d98c4e",
+      "description": "Page speed could be better (Lighthouse performance score: 85/100, mobile). LCP: 3.4 s, CLS: 0.065.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -690,30 +682,6 @@
       "target_range": "30-60 characters"
     },
     {
-      "id": "0b7e4ca450",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/websites.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Build a Website with AI — Step-by-Step Guide & Tools | AllAIDunia\",\n  \"url\": \"https://www.allaidunia.com/guides/websites.html\",\n  \"description\": \"How to build a full website with AI: a step-by-step guide, a copy-paste starter prompt, and our hand-picked best AI website builders — including free options.\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"AllAIDunia\",\n    \"url\": \"https://www.allaidunia.com/\"\n  }\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "ba6e4c1a8e",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/video-generation.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — Best AI Tools for Video\",\n  \"url\": \"https://www.allaidunia.com/guides/video-generation.html\",\n  \"numberOfItems\": 6,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Runway\",\n        \"url\": \"https://runwayml.com\",\n        \"description\": \"AI video generation and editing suite\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Sora\",\n        \"url\": \"https://sora.com\",\n        \"description\": \"OpenAI's text-to-video model\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Kling AI\",\n        \"url\": \"https://klingai.com\",\n        \"description\": \"Realistic AI video generation\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Pika\",\n        \"url\": \"https://pika.art\",\n        \"description\": \"AI video from text or images\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"HeyGen\",\n        \"url\": \"https://heygen.com\",\n        \"description\": \"AI avatar video creator for business\",\n        \"applicationCategory\": \"Video\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 6,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Synthesia\",\n        \"url\": \"https://synthesia.io\",\n        \"description\": \"AI video with realistic avatars\",\n        \"applicationCategory\": \"Video\"\n      }\n    }\n  ]\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
       "id": "95b6c740e6",
       "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
       "priority": "high",
@@ -726,18 +694,6 @@
       "target_range": null
     },
     {
-      "id": "58803bcec5",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/3d-image-generation.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — Best AI Tools for Image\",\n  \"url\": \"https://www.allaidunia.com/guides/3d-image-generation.html\",\n  \"numberOfItems\": 8,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Midjourney\",\n        \"url\": \"https://midjourney.com\",\n        \"description\": \"Stunning AI image generation\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Stable Diff.\",\n        \"url\": \"https://stability.ai\",\n        \"description\": \"Open-source image generation model\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Adobe Firefly\",\n        \"url\": \"https://firefly.adobe.com\",\n        \"description\": \"Adobe's generative AI for creatives\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Krea\",\n        \"url\": \"https://krea.ai\",\n        \"description\": \"Real-time AI image creation tool\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Ideogram\",\n        \"url\": \"https://ideogram.ai\",\n        \"description\": \"AI image gen with great text typography\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 6,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Leonardo AI\",\n        \"url\": \"https://leonardo.ai\",\n        \"description\": \"AI images for games and creative work\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 7,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Flux\",\n        \"url\": \"https://blackforestlabs.ai\",\n        \"description\": \"State of the art image generation model\",\n        \"applicationCategory\": \"Image\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 8,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Canva AI\",\n        \"url\": \"https://canva.com/ai-image-generator\",\n        \"description\": \"AI image generation inside Canva\",\n        \"applicationCategory\": \"Image\"\n      }\n    }\n  ]\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
       "id": "c3918f61af",
       "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
       "priority": "high",
@@ -745,42 +701,6 @@
       "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/guides/3d-image-generation.html",
       "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "22ae469c43",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/voice-audio.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — Best AI Tools for Audio\",\n  \"url\": \"https://www.allaidunia.com/guides/voice-audio.html\",\n  \"numberOfItems\": 5,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"ElevenLabs\",\n        \"url\": \"https://elevenlabs.io\",\n        \"description\": \"Ultra-realistic AI voice cloning\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Suno\",\n        \"url\": \"https://suno.com\",\n        \"description\": \"Generate full songs with AI\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Udio\",\n        \"url\": \"https://udio.com\",\n        \"description\": \"AI music creation and generation\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Murf AI\",\n        \"url\": \"https://murf.ai\",\n        \"description\": \"AI voiceover and text-to-speech\",\n        \"applicationCategory\": \"Audio\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Descript\",\n        \"url\": \"https://descript.com\",\n        \"description\": \"Edit audio and video like a document\",\n        \"applicationCategory\": \"Audio\"\n      }\n    }\n  ]\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "ab4adb31a8",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/chatbots-agents.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — Best AI Tools for Chat\",\n  \"url\": \"https://www.allaidunia.com/guides/chatbots-agents.html\",\n  \"numberOfItems\": 10,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"ChatGPT\",\n        \"url\": \"https://chat.openai.com\",\n        \"description\": \"OpenAI's flagship AI assistant for everything\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Claude\",\n        \"url\": \"https://claude.ai\",\n        \"description\": \"Anthropic's thoughtful and safe AI assistant\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Gemini\",\n        \"url\": \"https://gemini.google.com\",\n        \"description\": \"Google's powerful multimodal AI model\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Grok\",\n        \"url\": \"https://grok.com\",\n        \"description\": \"xAI's witty real-time AI by Elon Musk\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Mistral\",\n        \"url\": \"https://chat.mistral.ai\",\n        \"description\": \"Open-weight European AI models\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 6,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Meta AI\",\n        \"url\": \"https://meta.ai\",\n        \"description\": \"Meta's AI across apps and the web\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 7,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Copilot\",\n        \"url\": \"https://copilot.microsoft.com\",\n        \"description\": \"Microsoft's AI assistant powered by GPT-4\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 8,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"DeepSeek\",\n        \"url\": \"https://chat.deepseek.com\",\n        \"description\": \"Powerful open-source reasoning model\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 9,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Le Chat\",\n        \"url\": \"https://chat.mistral.ai\",\n        \"description\": \"Mistral's fast conversational AI\",\n        \"applicationCategory\": \"Chat\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 10,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Pi AI\",\n        \"url\": \"https://pi.ai\",\n        \"description\": \"Your personal AI that listens and learns\",\n        \"applicationCategory\": \"Chat\"\n      }\n    }\n  ]\n}",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "5a5714d8f6",
-      "description": "No schema.org markup — adding ItemList/SoftwareApplication schema helps AI systems understand and cite this page correctly.",
-      "priority": "medium",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/guides/writing-content.html",
-      "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — Best AI Tools for Writing\",\n  \"url\": \"https://www.allaidunia.com/guides/writing-content.html\",\n  \"numberOfItems\": 5,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Jasper\",\n        \"url\": \"https://jasper.ai\",\n        \"description\": \"AI for marketing content and copywriting\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Copy.ai\",\n        \"url\": \"https://copy.ai\",\n        \"description\": \"AI writing and workflow automation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Grammarly\",\n        \"url\": \"https://grammarly.com\",\n        \"description\": \"AI grammar and writing assistant\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Quillbot\",\n        \"url\": \"https://quillbot.com\",\n        \"description\": \"AI paraphrasing and summarisation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Writesonic\",\n        \"url\": \"https://writesonic.com\",\n        \"description\": \"AI writing platform for marketers\",\n        \"applicationCategory\": \"Writing\"\n      }\n    }\n  ]\n}",
       "field_type": null,
       "current_value": null,
       "target_range": null
@@ -858,8 +778,8 @@
       "target_range": null
     },
     {
-      "id": "04a6e9235c",
-      "description": "Query \"ai dunia\" gets 17 impressions but only 0% CTR at position 9.7 — likely needs a more compelling title/meta description.",
+      "id": "4b520970a2",
+      "description": "Query \"ai dunia\" gets 18 impressions but only 0% CTR at position 9.6 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
