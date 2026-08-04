@@ -117,10 +117,10 @@
     "total_impressions": 44,
     "avg_position": 23.1,
     "overall_ctr": 0.0,
-    "pages_checked": 11,
-    "pages_indexed": 7,
-    "action_items_total": 16,
-    "action_items_high": 4,
-    "avg_pagespeed_score": 83
+    "pages_checked": 1,
+    "pages_indexed": 0,
+    "action_items_total": 3,
+    "action_items_high": 1,
+    "avg_pagespeed_score": null
   }
 ]
