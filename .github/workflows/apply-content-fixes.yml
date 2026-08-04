@@ -26,11 +26,14 @@ jobs:
         run: python3 agents/content/apply_content_fixes.py
 
       # NOTE: this whitelist must list every file the Content Agent can touch.
-      # As of today that's the 3 known pages + llms.txt. If a new page is added
-      # to the sitemap and gets content_agent fixes, add it here too, or it
-      # will be applied locally/committed but never actually deployed.
+      # As of 2026-08-03 that's: index.html, about.html, contact.html, the 5
+      # active guide pages, video-ai-tools.html, best-free-ai-video-editing-tools.html,
+      # and llms.txt. If a new page is added to the sitemap and gets
+      # content_agent fixes, add it here too, or it will be applied
+      # locally/committed but never actually deployed.
       - name: Deploy changed site files to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        timeout-minutes: 5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -41,6 +44,14 @@ jobs:
           exclude: |
             **
             !index.html
+            !about.html
+            !contact.html
+            !guides/websites.html
+            !guides/video-generation.html
+            !guides/3d-image-generation.html
+            !guides/voice-audio.html
+            !guides/chatbots-agents.html
+            !guides/writing-content.html
             !video-ai-tools.html
             !best-free-ai-video-editing-tools.html
             !llms.txt
