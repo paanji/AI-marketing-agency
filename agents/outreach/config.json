@@ -8,7 +8,7 @@
 
   "enable_sponsorship_outreach": true,
   "max_sponsorship_per_run": 3,
-  "sponsorship_eligible_pricing": ["Paid", "Freemium"],
+  "sponsorship_eligible_pricing": ["paid", "freemium"],
   "sponsorship_pitch_note": "Deliberately does NOT claim specific traffic numbers — pitch leans on curation, category count, and the AI-search/GEO optimization angle instead. Revisit once Analytics Agent has real numbers to cite; a founding-sponsor discount framing works either way.",
 
   "sponsorship_tiers": [
