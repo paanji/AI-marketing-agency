@@ -1,0 +1,92 @@
+{
+  "outreach_type": "local_citation",
+  "site_name": "<Client Business Name>",
+  "from_name": "<Client Business Name> Team",
+  "max_per_run": 5,
+
+  "business_profile": {
+    "_comment": "Reuses the same business_profile block already defined for SEO Agent's local_service_business type — one source of truth for NAP data across both agents.",
+    "name": "<Exact legal/trading name — must match EVERYWHERE, character for character>",
+    "address": {
+      "street": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "country": ""
+    },
+    "phone": "",
+    "website": "",
+    "hours": {
+      "mon_fri": "",
+      "sat": "",
+      "sun": ""
+    },
+    "categories": ["Computer repair service", "Computer store", "Electronics repair shop"],
+    "services": [],
+    "short_description": "One or two sentences, reused verbatim across every listing so wording stays consistent."
+  },
+
+  "citation_platforms": [
+    {
+      "name": "Google Business Profile",
+      "tier": 1,
+      "type": "self_serve",
+      "submission_url": "https://business.google.com/create",
+      "notes": "Highest priority by far — verification takes days (postcard/phone), start this one first regardless of what else runs."
+    },
+    {
+      "name": "Bing Places for Business",
+      "tier": 1,
+      "type": "self_serve",
+      "submission_url": "https://www.bingplaces.com/"
+    },
+    {
+      "name": "Apple Business Connect",
+      "tier": 1,
+      "type": "self_serve",
+      "submission_url": "https://businessconnect.apple.com/"
+    },
+    {
+      "name": "Yelp for Business",
+      "tier": 2,
+      "type": "self_serve",
+      "submission_url": "https://biz.yelp.com/"
+    },
+    {
+      "name": "Facebook Business Page",
+      "tier": 2,
+      "type": "self_serve",
+      "submission_url": "https://www.facebook.com/pages/create"
+    }
+  ],
+
+  "directory_partnership_targets": [
+    {
+      "name": "Dell Authorized Service Provider Program",
+      "tier": 2,
+      "type": "application",
+      "contact_method": "form",
+      "notes": "Requires technician certification — longer sales cycle, flag as manual-only, don't auto-draft a casual email for this one."
+    },
+    {
+      "name": "HP Authorized Repair Partner",
+      "tier": 2,
+      "type": "application",
+      "contact_method": "form"
+    },
+    {
+      "name": "Local Chamber of Commerce business directory",
+      "tier": 3,
+      "type": "application",
+      "contact_method": "email"
+    },
+    {
+      "name": "Local city/county small-business directory",
+      "tier": 3,
+      "type": "application",
+      "contact_method": "email"
+    }
+  ],
+
+  "_comment_review_requests": "Not included here on purpose — see design doc: review-request outreach needs a hard non-negotiable rule (ask every customer, never filter by satisfaction) before it's safe to automate at all, distinct from the citation/partnership tracks above."
+}
