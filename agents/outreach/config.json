@@ -1,0 +1,32 @@
+{
+  "site_name": "AllAIDunia",
+  "site_url": "https://www.allaidunia.com/",
+  "from_name": "AllAIDunia Team",
+  "max_per_run": 5,
+  "min_days_since_added": 0,
+  "excluded_domains": [],
+
+  "enable_sponsorship_outreach": true,
+  "max_sponsorship_per_run": 3,
+  "sponsorship_eligible_pricing": ["Paid", "Freemium"],
+  "sponsorship_pitch_note": "Deliberately does NOT claim specific traffic numbers — pitch leans on curation, category count, and the AI-search/GEO optimization angle instead. Revisit once Analytics Agent has real numbers to cite; a founding-sponsor discount framing works either way.",
+
+  "sponsorship_tiers": [
+    {
+      "name": "Featured Listing",
+      "price_usd_month": 49,
+      "includes": ["Top-of-category placement", "\"Featured\" badge on the card", "Priority in AI Tool Matchmaker results"]
+    },
+    {
+      "name": "Homepage Spotlight",
+      "price_usd_month": 99,
+      "includes": ["Rotating homepage banner slot", "All Featured Listing benefits", "Mention in the monthly tools roundup"]
+    },
+    {
+      "name": "Category Sponsor",
+      "price_usd_month": 149,
+      "includes": ["Exclusive top placement in one category, no competitor sharing the slot", "All Homepage Spotlight benefits"]
+    }
+  ],
+  "_comment_pricing": "Placeholder numbers — replace with real pricing you're comfortable defending before this goes live. Keep tiers few and simple; a company evaluating a cold sponsorship pitch won't parse a complex rate card."
+}
