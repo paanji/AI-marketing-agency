@@ -1,0 +1,42 @@
+name: Generate Outreach Drafts
+
+on:
+  schedule:
+    - cron: '0 4 * * 2'   # Weekly, Tuesday 4 AM UTC — staggered from SEO Agent's Tuesday run
+  workflow_dispatch: {}
+
+concurrency:
+  group: outreach-agent
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests openai
+
+      - name: Run Outreach Agent
+        working-directory: agents/outreach
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 outreach_agent.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add agents/outreach/outreach_pending.json agents/outreach/outreach_log.json
+          git diff --staged --quiet || git commit -m "Outreach Agent: new drafts queued for review"
+          git pull --rebase
+          git push
