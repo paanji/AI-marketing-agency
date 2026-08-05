@@ -12,9 +12,9 @@ What it does, per run:
   6. NEVER sends anything itself. Sending only happens after you approve, and even then
      apply_outreach.py currently just marks it ready-to-send (see that file's docstring).
 
-Paid-sponsorship outreach is deliberately NOT part of this script. Per PROJECT_OVERVIEW.md,
-that track waits until Analytics Agent shows real traffic growth to back the pitch. Revisit
-`draft_message()` to add a sponsorship variant once that's true.
+Also runs a second, separate sponsorship-pitch track (see build_sponsorship_item / config's
+sponsorship_tiers) — kept as its own log namespace and rate limit so it can be tuned or paused
+independently of backlink outreach.
 """
 
 import json
@@ -204,6 +204,28 @@ def make_id(category, tool_domain):
     return hashlib.sha256(f"outreach:{category}:{tool_domain}".encode()).hexdigest()[:10]
 
 
+def classify_pricing_tier(pricing_text: str) -> str:
+    """
+    Same classifier as agents/directory-freshness/regenerate_html.py's classify_pricing_tier,
+    duplicated here rather than imported (the two agents' folders aren't set up as a shared
+    package). tools.json's `pricing` field is free text ("PAID only", "FREE tier available",
+    "", etc), not a clean enum — this derives free / freemium / paid / unknown from it.
+    Keep this in sync with regenerate_html.py's version if that logic ever changes.
+    """
+    text = (pricing_text or "").lower()
+    if not text or "see site" in text:
+        return "unknown"
+    if "completely free" in text:
+        return "free"
+    if "paid only" in text or "requires" in text:
+        return "paid"
+    if "trial" in text and "credits" not in text and "tier" not in text:
+        return "paid"
+    if "free" in text:
+        return "freemium"
+    return "unknown"
+
+
 def select_candidates(tool_list, log_key, log, already_used_domains, config, limit,
                        pricing_filter=None):
     candidates = []
@@ -220,7 +242,7 @@ def select_candidates(tool_list, log_key, log, already_used_domains, config, lim
             continue
         if domain in config.get("excluded_domains", []):
             continue
-        if pricing_filter and tool.get("pricing") not in pricing_filter:
+        if pricing_filter and classify_pricing_tier(tool.get("pricing")) not in pricing_filter:
             continue
         candidates.append(tool)
         if len(candidates) >= limit:
@@ -274,8 +296,8 @@ def build_sponsorship_item(tool, config):
 
 def main():
     config = load_config()
-    tools = load_json(TOOLS_PATH, {"tools": []})
-    tool_list = tools.get("tools", tools if isinstance(tools, list) else [])
+    tools = load_json(TOOLS_PATH, [])
+    tool_list = tools if isinstance(tools, list) else tools.get("tools", [])
 
     log = load_json(LOG_PATH, {"contacted": {}, "sponsorship_contacted": {}})
     pending = load_json(PENDING_PATH, {"agent_meta": {}, "action_items": []})
