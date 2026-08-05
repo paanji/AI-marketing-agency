@@ -355,6 +355,7 @@ def main():
         pending["agent_meta"]["errors"] = errors
 
     save_json(PENDING_PATH, pending)
+    save_json(LOG_PATH, log)
     print(pending["agent_meta"]["summary"])
 
 
