@@ -14,6 +14,9 @@ For each action item:
                         it's never queued again either.
   approved == null  -> left untouched, still waiting.
 
+Also regenerates outreach_review.md so it never goes stale showing already-decided
+items — see outreach_common.py, shared with outreach_agent.py.
+
 NOTE ON SENDING: this script does not send email. There's no SMTP/email-API credential
 configured yet, and auto-sending is exactly the kind of "publishes/sends something
 externally" action that should stay behind human approval per the project's automation
@@ -22,27 +25,10 @@ SMTP secret and a send step here — contact_form-method items will still need a
 either way, since most contact forms aren't scriptable without hitting ToS issues.
 """
 
-import json
-import os
 import sys
 import datetime
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-PENDING_PATH = os.path.join(ROOT, "outreach_pending.json")
-LOG_PATH = os.path.join(ROOT, "outreach_log.json")
-
-
-def load_json(path, default):
-    if not os.path.exists(path):
-        return default
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def save_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-
+from outreach_common import load_json, save_json, write_review_report, PENDING_PATH, LOG_PATH
 
 LOG_KEY_BY_CATEGORY = {
     "backlink_outreach": "contacted",
@@ -74,6 +60,7 @@ def main():
                 "tool_name": item.get("tool_name"),
                 "contact_method": item.get("contact_method"),
                 "contact_value": item.get("contact_value"),
+                "contact_confidence": item.get("contact_confidence"),
                 "proposed_message": item.get("proposed_message"),
                 "decided_date": datetime.date.today().isoformat(),
             }
@@ -101,6 +88,7 @@ def main():
 
     save_json(PENDING_PATH, pending)
     save_json(LOG_PATH, log)
+    write_review_report(pending)
     print(pending["agent_meta"]["summary"])
     if approved_count:
         print(
