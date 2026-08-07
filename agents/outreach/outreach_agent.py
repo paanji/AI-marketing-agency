@@ -34,7 +34,11 @@ PENDING_PATH = os.path.join(ROOT, "outreach_pending.json")
 LOG_PATH = os.path.join(ROOT, "outreach_log.json")
 
 CONTACT_PAGE_GUESSES = ["/contact", "/contact-us", "/about", "/about-us"]
+CONTACT_LINK_KEYWORDS = ["contact", "support", "get in touch", "reach us", "reach out", "help"]
 MAILTO_RE = re.compile(r'mailto:([^\s"\'<>?]+)', re.IGNORECASE)
+LINK_RE = re.compile(r'<a\s[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.IGNORECASE | re.DOTALL)
+TAG_RE = re.compile(r'<[^>]+>')
+TITLE_RE = re.compile(r'<title[^>]*>(.*?)</title>', re.IGNORECASE | re.DOTALL)
 REQUEST_TIMEOUT = 10
 USER_AGENT = "Mozilla/5.0 (compatible; AllAIDuniaOutreachBot/1.0; +https://www.allaidunia.com/)"
 
@@ -69,41 +73,125 @@ def domain_of(url):
         return url
 
 
+def strip_tags(html_fragment):
+    return TAG_RE.sub("", html_fragment).strip()
+
+
+def get_title(html):
+    match = TITLE_RE.search(html)
+    return strip_tags(match.group(1)) if match else ""
+
+
+def fetch(url, headers):
+    """Thin wrapper — returns Response or None, never raises."""
+    try:
+        resp = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
+        return resp if resp.status_code < 400 else None
+    except requests.RequestException:
+        return None
+
+
+def find_contact_links(html, base_url):
+    """
+    Parses real <a> tags from the page and returns any whose href or visible text
+    matches a contact-ish keyword. These are links the site itself put there —
+    far more trustworthy than a guessed path that happens to return 200.
+    """
+    matches = []
+    for href, text in LINK_RE.findall(html):
+        text_clean = strip_tags(text).lower()
+        href_lower = href.lower()
+        if any(kw in href_lower or kw in text_clean for kw in CONTACT_LINK_KEYWORDS):
+            matches.append(urljoin(base_url, href))
+    return matches
+
+
+def looks_like_same_shell(homepage_html, candidate_html):
+    """
+    Heuristic for JS-rendered SPAs that return 200 + the same app shell for every route
+    (a real risk here — this project's own site had the mirror-image bug: real content that
+    crawlers couldn't see). If a guessed path's <title> matches the homepage's, or its content
+    length is within 10% of the homepage's, it's likely the same shell, not a distinct page.
+    """
+    home_title = get_title(homepage_html)
+    cand_title = get_title(candidate_html)
+    if home_title and cand_title and home_title == cand_title:
+        return True
+    home_len, cand_len = len(homepage_html), len(candidate_html)
+    if home_len and abs(cand_len - home_len) / home_len < 0.10:
+        return True
+    return False
+
+
 def find_contact(tool_url, excluded_domains):
     """
-    Best-effort contact discovery. Returns dict:
-      {"method": "email"|"contact_form"|"unknown", "value": <email or url>}
-    Never raises — network/parse errors just fall through to "unknown".
+    Layered, best-effort contact discovery. Returns:
+      {"method": "email"|"contact_form"|"help_center"|"unknown",
+       "value": <email or url or None>,
+       "confidence": "verified"|"guessed"|"unknown"}
+
+    Order of trust, highest first:
+      1. mailto: link anywhere on the homepage
+      2. a real on-site link whose href/text says "contact"/"support"/etc — confidence: verified
+      3. a help./support. subdomain that resolves — flagged separately, since a ticket queue
+         isn't a great fit for a casual outreach ask
+      4. guessed common paths (/contact, /about, ...) — confidence: verified only if the content
+         looks meaningfully different from the homepage; guessed (low-trust) if it looks like
+         the same SPA shell answering every route
+    Never raises — network/parse errors just fall through to the next layer or "unknown".
     """
     domain = domain_of(tool_url)
     if domain in excluded_domains:
-        return {"method": "unknown", "value": None}
+        return {"method": "unknown", "value": None, "confidence": "unknown"}
 
     headers = {"User-Agent": USER_AGENT}
-    try:
-        resp = requests.get(tool_url, headers=headers, timeout=REQUEST_TIMEOUT)
-        if resp.status_code < 400:
-            match = MAILTO_RE.search(resp.text)
-            if match:
-                return {"method": "email", "value": match.group(1)}
-    except requests.RequestException:
-        pass
+    home_resp = fetch(tool_url, headers)
+    home_html = home_resp.text if home_resp else ""
 
-    for path in CONTACT_PAGE_GUESSES:
-        try:
-            candidate_url = urljoin(tool_url, path)
-            resp = requests.get(candidate_url, headers=headers, timeout=REQUEST_TIMEOUT)
-            if resp.status_code >= 400:
+    # Layer 1: mailto anywhere on the homepage
+    if home_html:
+        match = MAILTO_RE.search(home_html)
+        if match:
+            return {"method": "email", "value": match.group(1), "confidence": "verified"}
+
+    # Layer 2: a real on-site link to something contact-like
+    if home_html:
+        for link in find_contact_links(home_html, tool_url):
+            link_resp = fetch(link, headers)
+            if not link_resp:
                 continue
-            match = MAILTO_RE.search(resp.text)
+            match = MAILTO_RE.search(link_resp.text)
             if match:
-                return {"method": "email", "value": match.group(1)}
-            # No mailto found, but a real contact page exists — good enough fallback
-            return {"method": "contact_form", "value": candidate_url}
-        except requests.RequestException:
-            continue
+                return {"method": "email", "value": match.group(1), "confidence": "verified"}
+            return {"method": "contact_form", "value": link, "confidence": "verified"}
 
-    return {"method": "unknown", "value": None}
+    # Layer 3: help/support subdomain
+    parsed = urlparse(tool_url)
+    for prefix in ("help", "support"):
+        candidate = f"{parsed.scheme}://{prefix}.{domain}"
+        if fetch(candidate, headers):
+            return {"method": "help_center", "value": candidate, "confidence": "verified"}
+
+    # Layer 4: guessed common paths, with SPA-shell detection
+    for path in CONTACT_PAGE_GUESSES:
+        candidate_url = urljoin(tool_url, path)
+        resp = fetch(candidate_url, headers)
+        if not resp:
+            continue
+        match = MAILTO_RE.search(resp.text)
+        if match:
+            return {"method": "email", "value": match.group(1), "confidence": "verified"}
+        if home_html and looks_like_same_shell(home_html, resp.text):
+            continue  # almost certainly the same app shell, not a real distinct page — keep looking
+        return {"method": "contact_form", "value": candidate_url, "confidence": "verified"}
+
+    # Nothing verified — fall back to the single lowest-trust guess so there's still
+    # something for a human to try, but mark it clearly unverified
+    if home_html:
+        fallback_url = urljoin(tool_url, CONTACT_PAGE_GUESSES[0])
+        return {"method": "contact_form", "value": fallback_url, "confidence": "guessed"}
+
+    return {"method": "unknown", "value": None, "confidence": "unknown"}
 
 
 def deterministic_message(tool, config, contact):
@@ -267,6 +355,7 @@ def build_backlink_item(tool, config):
         "tool_url": tool.get("url"),
         "contact_method": contact["method"],
         "contact_value": contact["value"],
+        "contact_confidence": contact["confidence"],
         "proposed_message": draft,
         "approved": None,
     }
@@ -289,6 +378,7 @@ def build_sponsorship_item(tool, config):
         "tool_url": tool.get("url"),
         "contact_method": contact["method"],
         "contact_value": contact["value"],
+        "contact_confidence": contact["confidence"],
         "proposed_message": draft,
         "approved": None,
     }
