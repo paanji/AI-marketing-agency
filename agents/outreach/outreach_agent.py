@@ -27,11 +27,14 @@ from urllib.parse import urljoin, urlparse
 
 import requests
 
+from outreach_common import (
+    load_json, save_json, sort_by_confidence, write_review_report,
+    PENDING_PATH, LOG_PATH,
+)
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(ROOT, "config.json")
 TOOLS_PATH = os.path.join(ROOT, "..", "directory-freshness", "tools.json")
-PENDING_PATH = os.path.join(ROOT, "outreach_pending.json")
-LOG_PATH = os.path.join(ROOT, "outreach_log.json")
 
 CONTACT_PAGE_GUESSES = ["/contact", "/contact-us", "/about", "/about-us"]
 CONTACT_LINK_KEYWORDS = ["contact", "support", "get in touch", "reach us", "reach out", "help"]
@@ -41,18 +44,6 @@ TAG_RE = re.compile(r'<[^>]+>')
 TITLE_RE = re.compile(r'<title[^>]*>(.*?)</title>', re.IGNORECASE | re.DOTALL)
 REQUEST_TIMEOUT = 10
 USER_AGENT = "Mozilla/5.0 (compatible; AllAIDuniaOutreachBot/1.0; +https://www.allaidunia.com/)"
-
-
-def load_json(path, default):
-    if not os.path.exists(path):
-        return default
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def save_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def load_config():
@@ -316,6 +307,8 @@ def classify_pricing_tier(pricing_text: str) -> str:
 
 def select_candidates(tool_list, log_key, log, already_used_domains, config, limit,
                        pricing_filter=None):
+    if limit <= 0:
+        return []
     candidates = []
     for tool in tool_list:
         if tool.get("status") != "active":
@@ -444,8 +437,11 @@ def main():
     if errors:
         pending["agent_meta"]["errors"] = errors
 
+    pending["action_items"] = sort_by_confidence(pending["action_items"])
+
     save_json(PENDING_PATH, pending)
     save_json(LOG_PATH, log)
+    write_review_report(pending)
     print(pending["agent_meta"]["summary"])
 
 
