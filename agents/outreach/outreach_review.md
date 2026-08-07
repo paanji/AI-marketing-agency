@@ -1,6 +1,6 @@
 # Outreach Review
 
-_Generated 2026-08-07 — 5 backlink draft(s), 3 sponsorship draft(s) queued for review_
+_Generated 2026-08-07 — 0 approved (ready to send), 0 declined, 24 still awaiting review_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 
@@ -13,7 +13,7 @@ To act on any item: edit `outreach_pending.json`, set that item's `"approved"` t
 | ✅ verified | sponsorship_pitch | Runway | email | press@runwayml.com |
 | ✅ verified | backlink_outreach | You.com | contact_form | https://you.com/book-a-demo |
 | ✅ verified | backlink_outreach | Exa AI | email | support@exa.ai |
-| ✅ verified | backlink_outreach | Stable Diff. | email | mailto:press@stability.ai |
+| ✅ verified | backlink_outreach | Stable Diff. | email | press@stability.ai |
 | ✅ verified | backlink_outreach | Krea | contact_form | https://krea.ai/enterprise |
 | ✅ verified | backlink_outreach | Flux | email | info@blackforestlabs.ai |
 | ✅ verified | sponsorship_pitch | Kling AI | email | support@kling.ai |
