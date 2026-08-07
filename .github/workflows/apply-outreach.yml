@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add agents/outreach/outreach_pending.json agents/outreach/outreach_log.json
+          git add agents/outreach/outreach_pending.json agents/outreach/outreach_log.json agents/outreach/outreach_review.md
           git diff --staged --quiet || git commit -m "Outreach Agent: applied review decisions"
           git pull --rebase
           git push
