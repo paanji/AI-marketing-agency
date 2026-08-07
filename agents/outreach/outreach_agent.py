@@ -39,6 +39,7 @@ TOOLS_PATH = os.path.join(ROOT, "..", "directory-freshness", "tools.json")
 CONTACT_PAGE_GUESSES = ["/contact", "/contact-us", "/about", "/about-us"]
 CONTACT_LINK_KEYWORDS = ["contact", "support", "get in touch", "reach us", "reach out", "help"]
 MAILTO_RE = re.compile(r'mailto:([^\s"\'<>?]+)', re.IGNORECASE)
+EMAIL_SANITY_RE = re.compile(r'^[\w.+-]+@[\w-]+\.[\w.-]+$')
 LINK_RE = re.compile(r'<a\s[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.IGNORECASE | re.DOTALL)
 TAG_RE = re.compile(r'<[^>]+>')
 TITLE_RE = re.compile(r'<title[^>]*>(.*?)</title>', re.IGNORECASE | re.DOTALL)
@@ -71,6 +72,21 @@ def strip_tags(html_fragment):
 def get_title(html):
     match = TITLE_RE.search(html)
     return strip_tags(match.group(1)) if match else ""
+
+
+def clean_mailto_match(html):
+    """
+    Finds a mailto: link and returns a validated, clean email address, or None.
+    Guards against malformed/doubled hrefs some sites produce (e.g. email-obfuscation
+    plugins wrapping mailto:mailto:real@address.com), where a naive regex capture would
+    include the second "mailto:" literally in the result. Strips any repeated prefix and
+    checks the remainder actually looks like an email before trusting it.
+    """
+    match = MAILTO_RE.search(html)
+    if not match:
+        return None
+    value = re.sub(r'^mailto:', '', match.group(1), flags=re.IGNORECASE)
+    return value if EMAIL_SANITY_RE.match(value) else None
 
 
 def fetch(url, headers):
@@ -141,19 +157,24 @@ def find_contact(tool_url, excluded_domains):
 
     # Layer 1: mailto anywhere on the homepage
     if home_html:
-        match = MAILTO_RE.search(home_html)
-        if match:
-            return {"method": "email", "value": match.group(1), "confidence": "verified"}
+        email = clean_mailto_match(home_html)
+        if email:
+            return {"method": "email", "value": email, "confidence": "verified"}
 
     # Layer 2: a real on-site link to something contact-like
     if home_html:
         for link in find_contact_links(home_html, tool_url):
+            if link.lower().startswith("mailto:"):
+                email = clean_mailto_match(link)
+                if email:
+                    return {"method": "email", "value": email, "confidence": "verified"}
+                continue  # malformed mailto href — try the next candidate link instead
             link_resp = fetch(link, headers)
             if not link_resp:
                 continue
-            match = MAILTO_RE.search(link_resp.text)
-            if match:
-                return {"method": "email", "value": match.group(1), "confidence": "verified"}
+            email = clean_mailto_match(link_resp.text)
+            if email:
+                return {"method": "email", "value": email, "confidence": "verified"}
             return {"method": "contact_form", "value": link, "confidence": "verified"}
 
     # Layer 3: help/support subdomain
@@ -169,9 +190,9 @@ def find_contact(tool_url, excluded_domains):
         resp = fetch(candidate_url, headers)
         if not resp:
             continue
-        match = MAILTO_RE.search(resp.text)
-        if match:
-            return {"method": "email", "value": match.group(1), "confidence": "verified"}
+        email = clean_mailto_match(resp.text)
+        if email:
+            return {"method": "email", "value": email, "confidence": "verified"}
         if home_html and looks_like_same_shell(home_html, resp.text):
             continue  # almost certainly the same app shell, not a real distinct page — keep looking
         return {"method": "contact_form", "value": candidate_url, "confidence": "verified"}
