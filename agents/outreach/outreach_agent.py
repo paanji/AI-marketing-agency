@@ -346,8 +346,36 @@ def classify_pricing_tier(pricing_text: str) -> str:
     return "unknown"
 
 
+def fetch_live_site_html(config):
+    """
+    Fetches the actual deployed homepage once per run. Returns the HTML text, or None if
+    the fetch fails — callers must treat None as "couldn't verify" and fail open (proceed
+    without the live-check) rather than silently drafting nothing, since a transient network
+    blip here shouldn't zero out an entire run.
+    """
+    headers = {"User-Agent": USER_AGENT}
+    try:
+        resp = requests.get(config["site_url"], headers=headers, timeout=REQUEST_TIMEOUT)
+        return resp.text if resp.status_code < 400 else None
+    except requests.RequestException:
+        return None
+
+
+def is_tool_live_on_site(tool, live_html):
+    """
+    Checks the tool is actually present on the deployed site, not just in tools.json — these
+    can drift apart (a tool added to tools.json but not yet deployed, a failed FTP push, etc).
+    Matches on the tool's own URL rather than its internal id, since the id-attribute fix
+    (added to fix broken #tool-id anchor links) may not have reached the live site yet at the
+    time this runs — matching the href is reliable either way.
+    """
+    if live_html is None:
+        return True  # couldn't verify — fail open, don't block outreach on a network blip
+    return tool.get("url", "") in live_html
+
+
 def select_candidates(tool_list, log_key, log, already_used_domains, config, limit,
-                       pricing_filter=None):
+                       pricing_filter=None, live_html=None):
     if limit <= 0:
         return []
     candidates = []
@@ -365,6 +393,8 @@ def select_candidates(tool_list, log_key, log, already_used_domains, config, lim
         if domain in config.get("excluded_domains", []):
             continue
         if pricing_filter and classify_pricing_tier(tool.get("pricing")) not in pricing_filter:
+            continue
+        if not is_tool_live_on_site(tool, live_html):
             continue
         candidates.append(tool)
         if len(candidates) >= limit:
@@ -429,6 +459,12 @@ def main():
         item.get("tool_domain") for item in pending.get("action_items", [])
     }
 
+    live_html = fetch_live_site_html(config)
+    live_check_note = (
+        "live-site check: could not fetch site, skipped this run"
+        if live_html is None else "live-site check: ok"
+    )
+
     new_items = []
     errors = []
     used_this_run = set()  # dedupe: never draft two messages to the same domain in one run
@@ -437,6 +473,7 @@ def main():
         tool_list, "contacted", log,
         already_queued_domains | used_this_run, config,
         config.get("max_per_run", 5),
+        live_html=live_html,
     )
     for tool in backlink_candidates:
         try:
@@ -452,6 +489,7 @@ def main():
             already_queued_domains | used_this_run, config,
             config.get("max_sponsorship_per_run", 3),
             pricing_filter=config.get("sponsorship_eligible_pricing"),
+            live_html=live_html,
         )
         for tool in sponsorship_candidates:
             try:
@@ -472,7 +510,8 @@ def main():
         "status": "success" if not errors else "success_with_errors",
         "summary": (
             f"{backlink_count} backlink draft(s), {sponsorship_count} sponsorship draft(s) "
-            f"queued for review" + (f"; {len(errors)} error(s)" if errors else "")
+            f"queued for review ({live_check_note})"
+            + (f"; {len(errors)} error(s)" if errors else "")
         ),
     }
     if errors:
