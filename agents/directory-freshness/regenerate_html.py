@@ -84,8 +84,9 @@ def build_static_grid_html(tools: list) -> str:
         text_color = html_lib.escape(t.get("text", "#fff"), quote=True)
         tier = classify_pricing_tier(t.get("pricing", ""))
         tier_label = TIER_LABELS[tier]
+        anchor_id = html_lib.escape(t.get("id", ""), quote=True)
         cards.append(
-            f'<a class="tool-card" href="{url}" target="_blank" rel="noopener noreferrer" '
+            f'<a class="tool-card" id="{anchor_id}" href="{url}" target="_blank" rel="noopener noreferrer" '
             f'data-pricing="{tier}" style="animation-delay:{i * 0.025}s">'
             f'<div class="card-top">'
             f'<div class="tool-icon" style="background:{color}; color:{text_color}">{letter}</div>'
@@ -112,9 +113,10 @@ def build_tools_array(tools: list) -> str:
             current_cat = t["cat"]
             lines.append(f"  // {current_cat}")
         lines.append(
-            "  { name:\"%s\", cat:\"%s\", url:\"%s\", color:\"%s\", text:\"%s\", "
+            "  { id:\"%s\", name:\"%s\", cat:\"%s\", url:\"%s\", color:\"%s\", text:\"%s\", "
             "letter:\"%s\", desc:\"%s\", isNew:%s, featured:%s, pricing:\"%s\" },"
             % (
+                js_string(t.get("id", "")),
                 js_string(t["name"]), js_string(t["cat"]), js_string(t["url"]),
                 t.get("color", "#333"), t.get("text", "#fff"), js_string(t.get("letter", "?")),
                 js_string(t.get("desc", "")),
