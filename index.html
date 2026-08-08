@@ -1697,7 +1697,15 @@ function render() {
 }
 render();
 
-// ── MATCHMAKER DATA ──
+// Explicitly scroll to a #tool-id anchor after render() rebuilds the grid — the browser's
+// native fragment-scroll fires before render() replaces the static HTML, and JS-injected
+// content doesn't reliably re-trigger that scroll on its own.
+if (window.location.hash) {
+  const target = document.getElementById(window.location.hash.slice(1));
+  if (target) target.scrollIntoView({ behavior: "instant", block: "center" });
+}
+
+// ── MATCHMAKER DATA ——
 const matchTasks = [
   { id: "write", icon: "✍️", label: "Write anything", best: "ChatGPT", runner: "Claude", budget: "Gemini",
     reasons: { best: "Fastest, most versatile all-purpose writer", runner: "Best for long, careful, well-structured writing", budget: "Completely free, solid everyday writing help" } },
