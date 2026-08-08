@@ -1,21 +1,15 @@
 # Outreach Review
 
-_Generated 2026-08-07 — 0 approved (ready to send), 0 declined, 24 still awaiting review_
+_Generated 2026-08-08 — 6 approved (ready to send), 0 declined, 18 still awaiting review_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 
 | Confidence | Category | Tool | Method | Contact |
 |---|---|---|---|---|
-| ✅ verified | backlink_outreach | DeepSeek | contact_form | https://chat.deepseek.com/contact |
 | ✅ verified | backlink_outreach | Pi AI | help_center | https://help.pi.ai |
 | ✅ verified | backlink_outreach | Perplexity | help_center | https://help.perplexity.ai |
 | ✅ verified | sponsorship_pitch | Canva AI | help_center | https://support.canva.com |
 | ✅ verified | sponsorship_pitch | Runway | email | press@runwayml.com |
-| ✅ verified | backlink_outreach | You.com | contact_form | https://you.com/book-a-demo |
-| ✅ verified | backlink_outreach | Exa AI | email | support@exa.ai |
-| ✅ verified | backlink_outreach | Stable Diff. | email | press@stability.ai |
-| ✅ verified | backlink_outreach | Krea | contact_form | https://krea.ai/enterprise |
-| ✅ verified | backlink_outreach | Flux | email | info@blackforestlabs.ai |
 | ✅ verified | sponsorship_pitch | Kling AI | email | support@kling.ai |
 | ✅ verified | sponsorship_pitch | Pika | contact_form | https://pika.art/contact-us |
 | ⚠️ guessed | backlink_outreach | Copilot | contact_form | https://copilot.microsoft.com/contact |
