@@ -1,6 +1,6 @@
 # Outreach Review
 
-_Generated 2026-08-08 — 6 approved (ready to send), 0 declined, 18 still awaiting review_
+_Generated 2026-08-08 — 0 approved (ready to send), 0 declined, 18 still awaiting review_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 
