@@ -1678,7 +1678,7 @@ function render() {
   grid.innerHTML = filtered.map((t, i) => {
     const tier = classifyPricingTier(t.pricing);
     return `
-    <a class="tool-card" href="${t.url}" target="_blank" rel="noopener noreferrer" data-pricing="${tier}" style="animation-delay:${i * 0.025}s">
+    <a class="tool-card" id="${t.id}" href="${t.url}" target="_blank" rel="noopener noreferrer" data-pricing="${tier}" style="animation-delay:${i * 0.025}s">
       <div class="card-top">
         <div class="tool-icon" style="background:${t.color}; color:${t.text}">${t.letter}</div>
         ${t.featured ? '<span class="featured-pill">Featured</span>' : t.isNew ? '<span class="new-pill">New</span>' : ''}
