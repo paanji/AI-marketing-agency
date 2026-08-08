@@ -1,7 +1,8 @@
 {
   "contacted": {
     "chat.deepseek.com": {
-      "status": "approved_ready_to_send",
+      "status": "sent",
+      "sent_date": "2026-08-09",
       "category": "backlink_outreach",
       "tool_name": "DeepSeek",
       "contact_method": "contact_form",
@@ -40,7 +41,8 @@
       "decided_date": "2026-08-08"
     },
     "stability.ai": {
-      "status": "approved_ready_to_send",
+      "status": "sent",
+      "sent_date": "2026-08-09",
       "category": "backlink_outreach",
       "tool_name": "Stable Diff.",
       "contact_method": "email",
@@ -66,7 +68,8 @@
       "decided_date": "2026-08-08"
     },
     "blackforestlabs.ai": {
-      "status": "approved_ready_to_send",
+      "status": "sent",
+      "sent_date": "2026-08-09",
       "category": "backlink_outreach",
       "tool_name": "Flux",
       "contact_method": "email",
