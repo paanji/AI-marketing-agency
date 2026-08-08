@@ -210,7 +210,7 @@ def deterministic_message(tool, config, contact):
     """Template-based draft. Always available, zero cost, zero hallucination risk."""
     tool_name = tool.get("name", "your tool")
     our_page = f"{config['site_url'].rstrip('/')}/#{tool.get('id', '')}"
-    subject = f"You're listed on {config['site_name']} — quick backlink ask"
+    subject = f"{tool_name} — you're listed on {config['site_name']}"
     body = (
         f"Hi {tool_name} team,\n\n"
         f"Just a heads up — {tool_name} is featured on {config['site_name']} "
@@ -264,9 +264,21 @@ def deterministic_sponsorship_message(tool, config):
 
 def polish_with_llm(draft, tool, config):
     """
-    Optional LLM pass to make the deterministic draft read less templated.
+    Optional LLM pass to make the deterministic draft's body read less templated.
     Only runs if OPENAI_API_KEY is set. Falls back silently to the deterministic
-    draft on any error — this is a polish step, never a required step.
+    draft on any error or suspicious output — this is a polish step, never required.
+
+    Deliberately does NOT let the LLM touch the subject line — the deterministic
+    subject is already specific and professional (tool name + clear purpose), and an
+    LLM asked to "make it warmer" tends to drift into vague, casual phrasing
+    ("Quick Note from AllAIDunia 😊") that's worse than what it started with.
+
+    Also deliberately does NOT ask for JSON output. Asking a model to hand back
+    {"subject": ..., "body": ...} means parsing it with json.loads(), and if the model
+    double-escapes its own newlines/quotes inside that JSON string, json.loads() faithfully
+    preserves the literal "\\n" and "\\\"" characters instead of real line breaks — exactly
+    the bug that showed up in a real drafted email. Asking for plain text body only removes
+    the entire escaping failure mode rather than trying to detect and repair it after the fact.
     """
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
@@ -276,12 +288,12 @@ def polish_with_llm(draft, tool, config):
         import openai
         client = openai.OpenAI(api_key=api_key)
         prompt = (
-            "Rewrite this outreach email to sound warmer and less templated, "
-            "while keeping it short, honest, and low-pressure. Keep the same ask "
-            "(backlink, reciprocal link offer) and keep all URLs exactly as given. "
-            "Return ONLY JSON: {\"subject\": \"...\", \"body\": \"...\"}\n\n"
-            f"Tool name: {tool.get('name')}\n"
-            f"Original subject: {draft['subject']}\n"
+            "Rewrite the email body below to sound warmer and less templated, while keeping "
+            "it short, honest, and low-pressure. Keep the same ask and keep all URLs exactly "
+            "as given. Reply with ONLY the rewritten body text — no subject line, no JSON, "
+            "no markdown code fences, no quotation marks wrapping the whole thing, just the "
+            "plain email body with real line breaks between paragraphs.\n\n"
+            f"Tool name: {tool.get('name')}\n\n"
             f"Original body:\n{draft['body']}"
         )
         resp = client.chat.completions.create(
@@ -289,11 +301,19 @@ def polish_with_llm(draft, tool, config):
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
         )
-        text = resp.choices[0].message.content.strip()
-        text = re.sub(r"^```json|```$", "", text).strip()
-        parsed = json.loads(text)
-        if parsed.get("subject") and parsed.get("body"):
-            return parsed
+        body = resp.choices[0].message.content.strip()
+        body = re.sub(r"^```[a-zA-Z]*\n?|```$", "", body).strip()
+        body = body.strip('"').strip()
+
+        # Defensive check: if the model still produced escaping artifacts (shouldn't happen
+        # with plain-text output, but guard anyway rather than trust it blindly), or an
+        # implausibly short/long result, fall back to the safe deterministic draft.
+        if "\\n" in body or '\\"' in body:
+            return draft
+        if len(body) < 40 or len(body) > len(draft["body"]) * 3:
+            return draft
+
+        return {"subject": draft["subject"], "body": body}
     except Exception:
         pass
     return draft
