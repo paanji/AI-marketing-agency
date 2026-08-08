@@ -7,15 +7,18 @@ on your commit to outreach_pending.json.
 
 For each action item:
   approved == true  -> moved to outreach_log.json as "approved_ready_to_send"
-                        (contact info + message stay there so you can copy/send it),
+                        (contact info + message stay there as the permanent record),
                         removed from outreach_pending.json, domain permanently marked
                         contacted so it's never queued again.
   approved == false -> discarded, domain permanently marked contacted (declined) so
                         it's never queued again either.
   approved == null  -> left untouched, still waiting.
 
-Also regenerates outreach_review.md so it never goes stale showing already-decided
-items — see outreach_common.py, shared with outreach_agent.py.
+Also regenerates outreach_review.md (undecided items still awaiting a decision) and
+outreach_ready_to_send.md (approved items rendered as real markdown, safe to copy
+directly — outreach_log.json is raw JSON and copying from its GitHub file view will
+show literal escape characters instead of real line breaks, so that file is a data
+store, not something to copy send-ready text out of). See outreach_common.py.
 
 NOTE ON SENDING: this script does not send email. There's no SMTP/email-API credential
 configured yet, and auto-sending is exactly the kind of "publishes/sends something
@@ -28,7 +31,10 @@ either way, since most contact forms aren't scriptable without hitting ToS issue
 import sys
 import datetime
 
-from outreach_common import load_json, save_json, write_review_report, PENDING_PATH, LOG_PATH
+from outreach_common import (
+    load_json, save_json, write_review_report, write_ready_to_send_report,
+    PENDING_PATH, LOG_PATH,
+)
 
 LOG_KEY_BY_CATEGORY = {
     "backlink_outreach": "contacted",
@@ -89,11 +95,12 @@ def main():
     save_json(PENDING_PATH, pending)
     save_json(LOG_PATH, log)
     write_review_report(pending)
+    write_ready_to_send_report(log)
     print(pending["agent_meta"]["summary"])
     if approved_count:
         print(
-            "Approved drafts are in outreach_log.json under \"approved_ready_to_send\" "
-            "— copy the proposed_message and send it yourself for now."
+            "Approved drafts are ready in outreach_ready_to_send.md — copy the subject/body "
+            "from there (not from raw outreach_log.json) and send it yourself for now."
         )
 
 
