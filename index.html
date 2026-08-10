@@ -1479,8 +1479,22 @@
         <textarea id="f-desc" placeholder="What does this tool do? (1-2 sentences)"></textarea>
       </div>
       <div class="form-group">
-        <label>Your Email (optional)</label>
-        <input type="email" id="f-email" placeholder="We'll notify you when it's added" />
+        <label>Your Email *</label>
+        <input type="email" id="f-email" placeholder="you@example.com" />
+      </div>
+      <div class="form-group">
+        <label>Are You From This Company? *</label>
+        <select id="f-affiliation" onchange="toggleBacklinkField()">
+          <option value="">Select one</option>
+          <option value="user">No, I'm just a user recommending it</option>
+          <option value="company">Yes, I'm from this company</option>
+        </select>
+      </div>
+      <div class="form-group" id="backlink-group" style="display:none;">
+        <label style="display:flex; align-items:center; gap:8px; text-transform:none;">
+          <input type="checkbox" id="f-backlink" style="width:auto;" />
+          We'd be happy to link back to AllAIDunia from our site once listed
+        </label>
       </div>
       <button class="submit-form-btn" onclick="submitTool()">Submit Tool →</button>
     </div>
@@ -1884,14 +1898,24 @@ document.getElementById("modal").addEventListener("click", function(e) {
   if (e.target === this) closeModal();
 });
 
+function toggleBacklinkField() {
+  const isCompany = document.getElementById("f-affiliation").value === "company";
+  document.getElementById("backlink-group").style.display = isCompany ? "block" : "none";
+}
+
 async function submitTool() {
   const name = document.getElementById("f-name").value.trim();
   const url = document.getElementById("f-url").value.trim();
   const cat = document.getElementById("f-cat").value;
   const desc = document.getElementById("f-desc").value.trim();
   const email = document.getElementById("f-email").value.trim();
-  if (!name || !url || !cat || !desc) {
-    alert("Please fill in all required fields!");
+  const affiliation = document.getElementById("f-affiliation").value;
+  const backlinkOffered = document.getElementById("f-backlink").checked;
+
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (!name || !url || !cat || !desc || !emailValid || !affiliation) {
+    alert("Please fill in all required fields with a valid email!");
     return;
   }
   const btn = document.querySelector(".submit-form-btn");
@@ -1906,8 +1930,10 @@ async function submitTool() {
         "Website URL": url,
         "Category": cat,
         "Description": desc,
-        "Submitter Email": email || "Not provided",
-        "_subject": "New AI Tool Submission — " + name
+        "Submitter Email": email,
+        "Affiliation": affiliation === "company" ? "From the company" : "User recommendation",
+        "Backlink Offered": affiliation === "company" ? (backlinkOffered ? "Yes" : "No") : "N/A",
+        "_subject": "New AI Tool Submission — " + name + (affiliation === "company" ? " (COMPANY SUBMISSION)" : "")
       })
     });
     if (response.ok) {
