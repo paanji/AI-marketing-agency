@@ -188,14 +188,14 @@ export default {
       return json({ error: "Not found" }, 404, origin);
     }
 
-    // Rate limit both endpoints per IP
-    const ip = request.headers.get("CF-Connecting-IP") || "unknown";
-    const allowed = await checkRateLimit(env, ip);
-    if (!allowed) {
-      return json({ error: "Daily limit reached — come back tomorrow!" }, 429, origin);
-    }
-
     try {
+      // Rate limit both endpoints per IP
+      const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+      const allowed = await checkRateLimit(env, ip);
+      if (!allowed) {
+        return json({ error: "Daily limit reached — come back tomorrow!" }, 429, origin);
+      }
+
       if (url.pathname === "/api/prompt-guru/questions") {
         return await handleQuestions(request, env, origin);
       }
@@ -203,7 +203,7 @@ export default {
         return await handleSynthesize(request, env, origin);
       }
     } catch (err) {
-      return json({ error: "Something went wrong — please try again." }, 500, origin);
+      return json({ error: "Something went wrong: " + err.message }, 500, origin);
     }
 
     return json({ error: "Not found" }, 404, origin);
