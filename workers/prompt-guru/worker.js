@@ -125,9 +125,15 @@ async function handleQuestions(request, env, origin) {
   let parsed;
   try { parsed = JSON.parse(raw); } catch { return json({ error: "Could not generate questions — try rephrasing your request." }, 502, origin); }
 
-  let outCategory = String(parsed.category || "").toLowerCase();
-  if (!VALID_CATEGORIES.includes(outCategory)) {
-    outCategory = category === "auto" ? "image" : category;
+  // If the user explicitly chose a category on the start screen, it is
+  // authoritative — the model's opinion never overrides it. Only in "auto"
+  // mode do we accept the model's inference.
+  let outCategory;
+  if (category !== "auto") {
+    outCategory = category;
+  } else {
+    outCategory = String(parsed.category || "").toLowerCase();
+    if (!VALID_CATEGORIES.includes(outCategory)) outCategory = "image";
   }
 
   const rawQs = Array.isArray(parsed.questions) ? parsed.questions.slice(0, 4) : [];
@@ -182,7 +188,18 @@ async function handleSynthesize(request, env, origin) {
     ? "The user is creating a LOGO — favor clean, iconic, brand-appropriate design language in the prompt."
     : "";
 
-  if (toolSpec) {
+  if (tool === "__universal__") {
+    toolLabel = "any tool";
+    systemPrompt = [
+      "You are a senior prompt engineer. Compose the single best UNIVERSAL prompt for this " + cat + " task — one that works well pasted into any AI tool.",
+      categoryHint,
+      "Rules:",
+      "- Clean, natural descriptive language only — no tool-specific flags, tags, or syntax (no --ar, no [Verse] markers, no negative-prompt lines).",
+      "- Be specific and concrete: subject, style, mood, and the details gathered below.",
+      "- Structure it so it reads clearly to both humans and AI models.",
+      "Output ONLY the final prompt. No explanation, no preamble, no quotes around it."
+    ].filter(Boolean).join("\n");
+  } else if (toolSpec) {
     toolLabel = toolSpec.label;
     toolUrl = toolSpec.directory_url;
     systemPrompt = [
