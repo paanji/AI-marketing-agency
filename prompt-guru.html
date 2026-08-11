@@ -227,6 +227,45 @@
     margin-top: 60px; text-align:center; font-size: 12.5px; color: var(--muted);
   }
   .built-by a { color: var(--accent); text-decoration:none; }
+
+  /* ---------- Start screen (card grid, Matchmaker-style) ---------- */
+  .start-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .start-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 12px 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color .15s, transform .15s;
+    font-family: var(--font-body);
+    color: var(--text);
+  }
+  .start-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .start-card .ic { font-size: 26px; display:block; margin-bottom: 10px; }
+  .start-card .lb { font-size: 13.5px; font-weight: 500; }
+
+  /* ---------- Example answer chips ---------- */
+  .example-chips {
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;
+  }
+  .example-chip {
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 12.5px;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: border-color .15s, color .15s;
+  }
+  .example-chip:hover { border-color: var(--accent); color: var(--text); }
 </style>
 </head>
 <body>
@@ -239,16 +278,18 @@
 <div class="wrap">
   <div class="eyebrow">Built by AllAIDunia</div>
   <h1>Prompt <span class="grad">Guru</span></h1>
-  <p class="sub">Describe what you want to create. The Guru asks a few sharp questions — like a senior prompt engineer would — then writes you the perfect prompt, formatted exactly for your tool.</p>
+  <p class="sub">Pick what you're creating, describe it, and answer a few sharp questions — the Guru writes you the perfect prompt, formatted exactly for your tool.</p>
+
+  <div class="start-grid" id="startGrid"></div>
 
   <div class="chat" id="chat"></div>
 
-  <div class="input-bar" id="inputBar">
+  <div class="input-bar" id="inputBar" style="display:none;">
     <textarea id="userInput" rows="1" placeholder="e.g. A video of ocean waves for my meditation app intro…" aria-label="Your message"></textarea>
     <button class="send-btn" id="sendBtn">Send</button>
   </div>
 
-  <div class="built-by">A free tool by <a href="/">AllAIDunia</a> · Works with Midjourney, DALL-E, Stable Diffusion, Ideogram, Sora, Runway, Kling & Pika</div>
+  <div class="built-by">A free tool by <a href="/">AllAIDunia</a> · Works with Midjourney, Sora, Runway, v0, Bolt, Suno, ElevenLabs, ChatGPT & many more</div>
 </div>
 
 <script>
@@ -263,21 +304,67 @@
       { id:"midjourney", label:"Midjourney" },
       { id:"dalle", label:"DALL-E" },
       { id:"stable-diffusion", label:"Stable Diffusion" },
-      { id:"ideogram", label:"Ideogram" }
+      { id:"ideogram", label:"Ideogram" },
+      { id:"adobe-firefly", label:"Adobe Firefly" },
+      { id:"krea", label:"Krea" },
+      { id:"leonardo-ai", label:"Leonardo AI" },
+      { id:"flux", label:"Flux" },
+      { id:"canva-ai", label:"Canva AI" }
     ],
     video: [
       { id:"sora", label:"Sora" },
       { id:"runway", label:"Runway" },
       { id:"kling", label:"Kling AI" },
-      { id:"pika", label:"Pika" }
+      { id:"pika", label:"Pika" },
+      { id:"heygen", label:"HeyGen" },
+      { id:"synthesia", label:"Synthesia" }
+    ],
+    website: [
+      { id:"v0", label:"v0 (Vercel)" },
+      { id:"bolt", label:"Bolt" },
+      { id:"lovable", label:"Lovable" }
+    ],
+    writing: [
+      { id:"chatgpt", label:"ChatGPT" },
+      { id:"claude", label:"Claude" },
+      { id:"gemini", label:"Gemini" }
+    ],
+    code: [
+      { id:"cursor", label:"Cursor" },
+      { id:"github-copilot", label:"GitHub Copilot" },
+      { id:"chatgpt", label:"ChatGPT" }
+    ],
+    voiceover: [
+      { id:"elevenlabs", label:"ElevenLabs" },
+      { id:"murf", label:"Murf AI" }
+    ],
+    music: [
+      { id:"suno", label:"Suno" },
+      { id:"udio", label:"Udio" }
+    ],
+    logo: [
+      { id:"ideogram", label:"Ideogram" },
+      { id:"midjourney", label:"Midjourney" },
+      { id:"canva-ai", label:"Canva AI" }
     ]
   };
 
+  var CATEGORIES = [
+    { id:"image", icon:"🎨", label:"Generate an image", ask:"Great — describe the image you want. Rough or detailed, both work." },
+    { id:"video", icon:"🎬", label:"Generate a video", ask:"Nice — describe the video you have in mind. What should happen in it?" },
+    { id:"website", icon:"🌐", label:"Build a website", ask:"Let's build it — what's the site or app for, and who's it for?" },
+    { id:"writing", icon:"✍️", label:"Write something", ask:"Happy to help — what needs writing, and for whom?" },
+    { id:"code", icon:"💻", label:"Code something", ask:"Let's code — describe what you're building or fixing." },
+    { id:"voiceover", icon:"🎙️", label:"Generate a voiceover", ask:"Tell me about the voiceover — what's it for and what should it say?" },
+    { id:"music", icon:"🎵", label:"Generate music", ask:"Let's make music — describe the track you're imagining." },
+    { id:"logo", icon:"🖌️", label:"Design a logo", ask:"Exciting — tell me about the brand this logo is for." }
+  ];
+
   var state = {
-    phase: "intro",          // intro -> questions -> tool -> done
-    originalRequest: "",
+    phase: "start",          // start -> intro -> questions -> tool -> done
     category: null,
-    questions: [],
+    originalRequest: "",
+    questions: [],           // [{q, examples}]
     qIndex: 0,
     qa: [],
     tool: null
@@ -286,6 +373,8 @@
   var chat = document.getElementById("chat");
   var input = document.getElementById("userInput");
   var sendBtn = document.getElementById("sendBtn");
+  var inputBar = document.getElementById("inputBar");
+  var startGrid = document.getElementById("startGrid");
 
   function addMsg(text, who, isHTML){
     var div = document.createElement("div");
@@ -321,8 +410,23 @@
     if(on) input.focus();
   }
 
-  // ── Intro message ──
-  addMsg("Namaste! 🙏 Tell me what you want to create — an image, a video, anything visual. Be as rough or as detailed as you like; asking the right questions is my job.", "guru");
+  // ── Start screen ──
+  CATEGORIES.forEach(function(c){
+    var card = document.createElement("button");
+    card.className = "start-card";
+    card.innerHTML = '<span class="ic">' + c.icon + '</span><span class="lb">' + c.label + '</span>';
+    card.onclick = function(){ startCategory(c); };
+    startGrid.appendChild(card);
+  });
+
+  function startCategory(c){
+    state.category = c.id;
+    state.phase = "intro";
+    startGrid.style.display = "none";
+    inputBar.style.display = "flex";
+    addMsg(c.ask, "guru");
+    setInputEnabled(true, "Describe it here…");
+  }
 
   // ── Send handling ──
   function handleSend(){
@@ -335,7 +439,7 @@
       state.originalRequest = text;
       fetchQuestions(text);
     } else if(state.phase === "questions"){
-      state.qa.push({ q: state.questions[state.qIndex], a: text });
+      state.qa.push({ q: state.questions[state.qIndex].q, a: text });
       state.qIndex++;
       askNextQuestion();
     }
@@ -356,14 +460,16 @@
     fetch(API_BASE + "/api/prompt-guru/questions", {
       method:"POST",
       headers:{ "Content-Type":"application/json" },
-      body: JSON.stringify({ request: request })
+      body: JSON.stringify({ request: request, category: state.category || "auto" })
     })
     .then(function(r){ return r.json().then(function(d){ return { ok:r.ok, data:d }; }); })
     .then(function(res){
       removeTyping();
       if(!res.ok){ throw new Error(res.data.error || "Something went wrong."); }
       state.category = res.data.category;
-      state.questions = res.data.questions;
+      state.questions = res.data.questions.map(function(item){
+        return (typeof item === "string") ? { q: item, examples: [] } : item;
+      });
       state.qIndex = 0;
       state.qa = [];
       state.phase = "questions";
@@ -379,8 +485,28 @@
 
   function askNextQuestion(){
     if(state.qIndex < state.questions.length){
-      addMsg(state.questions[state.qIndex], "guru");
-      setInputEnabled(true, "Type your answer…");
+      var item = state.questions[state.qIndex];
+      var msg = addMsg(item.q, "guru");
+      if(item.examples && item.examples.length){
+        var chips = document.createElement("div");
+        chips.className = "example-chips";
+        item.examples.forEach(function(ex){
+          var chip = document.createElement("button");
+          chip.className = "example-chip";
+          chip.textContent = ex;
+          chip.onclick = function(){
+            input.value = "";
+            addMsg(ex, "user");
+            state.qa.push({ q: item.q, a: ex });
+            state.qIndex++;
+            askNextQuestion();
+          };
+          chips.appendChild(chip);
+        });
+        msg.appendChild(chips);
+        msg.scrollIntoView({ behavior:"smooth", block:"end" });
+      }
+      setInputEnabled(true, "Tap an example or type your own…");
     } else {
       state.phase = "tool";
       showToolPicker();
@@ -391,24 +517,59 @@
   function showToolPicker(){
     setInputEnabled(false, "");
     var tools = TOOLS[state.category] || TOOLS.image;
-    var html = "Last thing — which tool will you use? I'll format the prompt for its exact syntax.";
+    var html = "Last thing — which tool will you use? I'll format the prompt for its exact syntax. Don't see yours? Pick \"Other\" and just type the name.";
     var msg = addMsg(html, "guru");
 
     var pick = document.createElement("div");
     pick.className = "tool-pick";
+
+    function pickTool(id, label){
+      Array.prototype.forEach.call(pick.children, function(c){ c.classList.remove("picked"); });
+      state.tool = id;
+      addMsg(label, "user");
+      synthesize();
+    }
+
     tools.forEach(function(t){
       var chip = document.createElement("button");
       chip.className = "tool-chip";
       chip.textContent = t.label;
       chip.onclick = function(){
-        Array.prototype.forEach.call(pick.children, function(c){ c.classList.remove("picked"); });
         chip.classList.add("picked");
-        state.tool = t.id;
-        addMsg(t.label, "user");
-        synthesize();
+        pickTool(t.id, t.label);
       };
       pick.appendChild(chip);
     });
+
+    var otherChip = document.createElement("button");
+    otherChip.className = "tool-chip";
+    otherChip.textContent = "Other…";
+    otherChip.onclick = function(){
+      otherChip.style.display = "none";
+      var row = document.createElement("div");
+      row.style.cssText = "display:flex;gap:8px;margin-top:8px;width:100%;";
+      var otherInput = document.createElement("input");
+      otherInput.type = "text";
+      otherInput.placeholder = "Type the tool's name…";
+      otherInput.style.cssText = "flex:1;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--text);font-family:var(--font-body);font-size:13.5px;padding:8px 12px;outline:none;";
+      var goBtn = document.createElement("button");
+      goBtn.className = "tool-chip";
+      goBtn.textContent = "Go";
+      goBtn.onclick = function(){
+        var name = otherInput.value.trim();
+        if(!name) return;
+        pickTool(name, name);
+      };
+      otherInput.addEventListener("keydown", function(e){
+        if(e.key === "Enter"){ e.preventDefault(); goBtn.click(); }
+      });
+      row.appendChild(otherInput);
+      row.appendChild(goBtn);
+      pick.appendChild(row);
+      otherInput.focus();
+    };
+    pick.appendChild(otherChip);
+
     msg.appendChild(pick);
     msg.scrollIntoView({ behavior:"smooth", block:"end" });
   }
