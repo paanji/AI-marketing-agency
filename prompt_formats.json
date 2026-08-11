@@ -51,6 +51,66 @@
         "Mention color palette if the user expressed one"
       ],
       "example": "A retro travel poster of a space station with the text \"GREETINGS FROM ORBIT\" in bold vintage lettering, warm sunset palette, clean vector illustration style."
+    },
+    "adobe-firefly": {
+      "label": "Adobe Firefly",
+      "directory_url": "https://firefly.adobe.com",
+      "style": "natural descriptive sentences, commercial/brand-safe tone",
+      "rules": [
+        "Write as one or two clear, natural sentences",
+        "No flags or tag syntax — Firefly reads plain descriptive language",
+        "Firefly favors clean commercial/editorial imagery — lean toward polished, brand-safe phrasing",
+        "State style, lighting, and composition explicitly in plain words",
+        "Mention if a transparent background or specific aspect ratio is needed"
+      ],
+      "example": "A clean product photo of a golden retriever wearing a small astronaut helmet, studio lighting, white background, commercial photography style."
+    },
+    "krea": {
+      "label": "Krea",
+      "directory_url": "https://krea.ai",
+      "style": "short real-time-iteration-friendly phrases",
+      "rules": [
+        "Krea is used for real-time generation — keep prompts short and punchy, not long paragraphs",
+        "Lead with the single most important visual element",
+        "Comma-separated style descriptors work well, similar to Midjourney but no flags needed",
+        "Keep under 200 characters — short prompts iterate better in real-time tools"
+      ],
+      "example": "golden retriever astronaut, space station, photorealistic, warm lighting, detailed"
+    },
+    "leonardo-ai": {
+      "label": "Leonardo AI",
+      "directory_url": "https://leonardo.ai",
+      "style": "descriptive tag-style prompt, game-art and concept-art friendly",
+      "rules": [
+        "Comma-separated descriptive phrases, similar density to Stable Diffusion",
+        "Leonardo is strong at game/concept art — mention art style explicitly if relevant (concept art, character sheet, environment art)",
+        "Include lighting and material detail where relevant",
+        "Keep under 300 characters"
+      ],
+      "example": "golden retriever astronaut character design, concept art, space station background, dramatic rim lighting, highly detailed, digital painting"
+    },
+    "flux": {
+      "label": "Flux",
+      "directory_url": "https://blackforestlabs.ai",
+      "style": "natural descriptive sentences with strong detail",
+      "rules": [
+        "Write as flowing natural-language sentences, not tag lists",
+        "Flux responds well to specific, concrete detail — avoid vague adjectives",
+        "Describe lighting, texture, and camera/lens detail explicitly if relevant",
+        "No flags needed"
+      ],
+      "example": "A photorealistic image of a golden retriever wearing a detailed NASA spacesuit, floating inside a softly lit space station interior, shot on an 85mm lens with shallow depth of field."
+    },
+    "canva-ai": {
+      "label": "Canva AI",
+      "directory_url": "https://canva.com/ai-image-generator",
+      "style": "simple plain-language sentence",
+      "rules": [
+        "Keep it to one simple, plain sentence — Canva's generator favors simplicity over dense detail",
+        "State the subject and style clearly",
+        "Avoid technical photography/camera jargon — plain descriptive words work best here"
+      ],
+      "example": "A cute golden retriever dressed as an astronaut, floating in a space station, colorful and friendly illustration style."
     }
   },
   "video": {
@@ -103,6 +163,97 @@
         "Mention camera motion simply if needed ('camera slowly zooms in')"
       ],
       "example": "Ocean waves rolling onto a beach at sunset, camera slowly pans across the water, cinematic, warm tones, peaceful."
+    },
+    "heygen": {
+      "label": "HeyGen",
+      "directory_url": "https://heygen.com",
+      "style": "avatar + script instructions, not scene description",
+      "rules": [
+        "HeyGen generates avatar-presenter videos, not freeform scenes — the 'prompt' is really the script the avatar will speak plus delivery notes",
+        "Write the actual spoken script as natural sentences",
+        "Add a short delivery note in brackets if tone matters, e.g. [warm, conversational tone]",
+        "Do not describe camera movement or scenery — HeyGen controls that separately"
+      ],
+      "example": "[Warm, conversational tone] Hi there! Ever wondered what it's like to work in zero gravity? Let me walk you through a day in the life aboard the space station."
+    },
+    "synthesia": {
+      "label": "Synthesia",
+      "directory_url": "https://synthesia.io",
+      "style": "avatar + script instructions, not scene description",
+      "rules": [
+        "Like HeyGen, Synthesia's input is a spoken script for an avatar, not a visual scene description",
+        "Write natural, presenter-style sentences meant to be read aloud",
+        "Keep sentences short — avatars read more naturally with simple sentence structure",
+        "Add a short tone/delivery note in brackets if relevant"
+      ],
+      "example": "[Friendly, upbeat tone] Welcome aboard! Today we're taking a look at how astronauts train before their very first mission to space."
+    }
+  },
+  "website": {
+    "v0": {
+      "label": "v0 (Vercel)",
+      "directory_url": "https://v0.dev",
+      "style": "structured UI requirements",
+      "rules": [
+        "Describe the UI as structured requirements: what the page/app is, then each section in order",
+        "Name concrete components (navbar, hero, pricing cards, footer) rather than vague vibes",
+        "State the visual style explicitly (minimal, glassmorphism, brutalist, corporate) and color direction",
+        "Mention responsive behavior if it matters",
+        "v0 builds React + Tailwind — you can reference shadcn/ui components by name"
+      ],
+      "example": "A landing page for a meditation app. Sticky navbar with logo and two links. Hero with a calming gradient background, app screenshot, headline, and App Store buttons. Below: three feature cards with icons, a testimonial carousel, and a simple footer. Minimal style, soft blues and sand tones, rounded corners, generous whitespace. Fully responsive."
+    },
+    "bolt": {
+      "label": "Bolt",
+      "directory_url": "https://bolt.new",
+      "style": "full app description with tech expectations",
+      "rules": [
+        "Describe the whole app: purpose, pages, and key functionality — Bolt scaffolds full projects, not just one screen",
+        "List the pages/routes you need and what each does",
+        "State data behavior plainly (what gets saved, what's just visual)",
+        "Mention the stack only if you care (otherwise Bolt picks)",
+        "Keep it organized — short paragraphs or a numbered list of requirements work well"
+      ],
+      "example": "Build a recipe-sharing web app. Pages: home feed of recipe cards, a recipe detail page, and a submit-recipe form (title, ingredients, steps, photo URL). Save submissions to local storage. Clean modern design, warm color palette, mobile friendly."
+    },
+    "lovable": {
+      "label": "Lovable",
+      "directory_url": "https://lovable.dev",
+      "style": "product-focused description",
+      "rules": [
+        "Describe it like a product brief: who it's for and what it does, then the screens",
+        "Lovable responds well to user-flow language: 'when a user clicks X, Y happens'",
+        "State the design mood in a few words (playful, corporate, elegant)",
+        "List must-have features explicitly — implied features get skipped"
+      ],
+      "example": "A simple habit tracker for busy professionals. Home screen shows today's habits as tappable cards that toggle done/undone, with a weekly progress bar on top. An add-habit screen with name, frequency, and reminder time. When a user completes all habits, show a small celebration animation. Clean, elegant, calming green palette."
+    }
+  },
+  "music": {
+    "suno": {
+      "label": "Suno",
+      "directory_url": "https://suno.com",
+      "style": "style description + optional structured lyrics",
+      "rules": [
+        "Style prompt: comma-separated genre and mood tags (e.g. 'lo-fi hip hop, chill, mellow piano, vinyl crackle')",
+        "Include tempo/energy words (slow, driving, upbeat) and key instruments",
+        "If lyrics matter, structure them with [Verse], [Chorus], [Bridge] tags on their own lines",
+        "For instrumental tracks, just say 'instrumental' in the style",
+        "Keep the style line under 120 characters — Suno truncates long style prompts"
+      ],
+      "example": "Style: dreamy synthwave, nostalgic, mid-tempo, analog synths, soft drums, instrumental"
+    },
+    "udio": {
+      "label": "Udio",
+      "directory_url": "https://udio.com",
+      "style": "descriptive genre tags with production detail",
+      "rules": [
+        "Comma-separated genre, mood, and production descriptors",
+        "Udio responds well to production language: 'warm analog mix', 'punchy drums', 'wide stereo'",
+        "Name era or artist-style influences generically ('80s synth-pop style') — not specific artist names",
+        "State vocal type if wanted (male vocals, female vocals, choir) or 'instrumental'"
+      ],
+      "example": "uplifting orchestral cinematic, sweeping strings, powerful brass, epic percussion, warm mix, instrumental"
     }
   }
 }
