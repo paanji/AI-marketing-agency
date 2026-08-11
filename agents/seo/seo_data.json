@@ -2,57 +2,50 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-08-04",
+    "run_date": "2026-08-11",
     "status": "success",
-    "summary": "3 action items found (1 high priority)"
+    "summary": "15 action items found (3 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-08-04",
+  "generated_date": "2026-08-11",
   "window": {
-    "start": "2026-07-04",
-    "end": "2026-08-01"
+    "start": "2026-07-11",
+    "end": "2026-08-08"
   },
   "overview": {
-    "total_queries": 7,
+    "total_queries": 6,
     "total_clicks": 0,
-    "total_impressions": 44,
-    "avg_position": 23.1,
+    "total_impressions": 49,
+    "avg_position": 29.6,
     "overall_ctr": 0.0
   },
   "top_queries": [
     {
-      "query": "ai dunia",
-      "position": 9.6,
-      "impressions": 18,
+      "query": "how to write ai",
+      "position": 64.3,
+      "impressions": 17,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "dunia ai chat",
-      "position": 6.9,
-      "impressions": 8,
+      "position": 5.9,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ai dunia",
+      "position": 7.4,
+      "impressions": 11,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "dunia ai",
-      "position": 7.4,
-      "impressions": 7,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "how to write ai",
-      "position": 65.4,
-      "impressions": 7,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "keyword-aiynunvz",
-      "position": 62.5,
-      "impressions": 2,
+      "position": 7.8,
+      "impressions": 5,
       "clicks": 0,
       "ctr": 0
     },
@@ -74,9 +67,9 @@
   "quick_wins": [],
   "low_ctr_queries": [
     {
-      "query": "ai dunia",
-      "position": 9.6,
-      "impressions": 18,
+      "query": "how to write ai",
+      "position": 64.3,
+      "impressions": 17,
       "clicks": 0,
       "ctr": 0
     }
@@ -85,32 +78,522 @@
   "page_audits": [
     {
       "url": "https://www.allaidunia.com/",
-      "status_code": null,
-      "fetch_error": true,
-      "error": "HTTPSConnectionPool(host='www.allaidunia.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='www.allaidunia.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Best AI Tools by Category — Guides & Prompts | AllAIDunia",
+      "title_length": 57,
+      "has_meta_description": true,
+      "meta_description": "Hand-picked AI tools for websites, video, 3D, voice, chat, and writing. Each category includes a step-by-step guide and copy-paste prompts to start free.",
+      "meta_description_length": 153,
+      "h1_count": 1,
+      "images_total": 4,
+      "images_missing_alt": 0,
+      "word_count": 1172,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 15.0,
+        "subheading_count": 4
+      },
+      "js_blindspot": {
+        "selector": "#tools-grid",
+        "children_found": 62,
+        "expected_min": 2,
+        "likely_invisible_to_crawlers": false
+      },
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-08-05T16:01:56Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": {
+        "performance_score": 0.68,
+        "lcp_display": "6.5 s",
+        "cls_display": "0.033",
+        "tbt_display": "20 ms"
+      }
+    },
+    {
+      "url": "https://www.allaidunia.com/about.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "About AllAIDunia — Why We Curate, Not Just List",
+      "title_length": 47,
+      "has_meta_description": true,
+      "meta_description": "AllAIDunia hand-picks the best AI tools by category and shows you exactly how to use them — with real step-by-step guides and starter prompts.",
+      "meta_description_length": 142,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 352,
+      "schema_types": [
+        "WebPage"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 28.8,
+        "subheading_count": 8
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-22T15:14:36Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/about.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": {
+        "performance_score": 0.87,
+        "lcp_display": "3.3 s",
+        "cls_display": "0.079",
+        "tbt_display": "40 ms"
+      }
+    },
+    {
+      "url": "https://www.allaidunia.com/contact.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Contact AllAIDunia — Questions, Feedback, Tool Suggestions",
+      "title_length": 58,
+      "has_meta_description": true,
+      "meta_description": "Get in touch with AllAIDunia — ask a question, suggest a tool, or send feedback. We read every message.",
+      "meta_description_length": 103,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 113,
+      "schema_types": [
+        "WebPage"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 19.0,
+        "subheading_count": 0
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-25T11:11:13Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/contact.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": {
+        "performance_score": 0.88,
+        "lcp_display": "3.3 s",
+        "cls_display": "0.065",
+        "tbt_display": "60 ms"
+      }
+    },
+    {
+      "url": "https://www.allaidunia.com/guides/websites.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Build a Website with AI — Step-by-Step Guide & Tools | AllAIDunia",
+      "title_length": 65,
+      "has_meta_description": true,
+      "meta_description": "How to build a full website with AI: a step-by-step guide, a copy-paste starter prompt, and our hand-picked best AI website builders — including free options.",
+      "meta_description_length": 158,
+      "h1_count": 1,
+      "images_total": 1,
+      "images_missing_alt": 0,
+      "word_count": 398,
+      "schema_types": [
+        "WebPage"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 1,
+        "avg_paragraph_words": 21.4,
+        "subheading_count": 6
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-08-04T17:25:42Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/guides/websites.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": {
+        "performance_score": 0.95,
+        "lcp_display": "2.8 s",
+        "cls_display": "0",
+        "tbt_display": "0 ms"
+      }
+    },
+    {
+      "url": "https://www.allaidunia.com/guides/video-generation.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Make AI Videos — Step-by-Step Guide & Tools | AllAIDunia",
+      "title_length": 56,
+      "has_meta_description": true,
+      "meta_description": "How to create videos with AI: a step-by-step process, a copy-paste starter prompt, and our hand-picked best AI video generators — including free options.",
+      "meta_description_length": 153,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 363,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 1,
+        "avg_paragraph_words": 20.2,
+        "subheading_count": 6
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "NEUTRAL",
+        "coverage_state": "Discovered - currently not indexed",
+        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "last_crawl_time": null
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/guides/video-generation.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": {
+        "performance_score": 0.96,
+        "lcp_display": "2.2 s",
+        "cls_display": "0",
+        "tbt_display": "0 ms"
+      }
+    },
+    {
+      "url": "https://www.allaidunia.com/guides/3d-image-generation.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "AI Images & 3D — Step-by-Step Guide & Tools | AllAIDunia",
+      "title_length": 56,
+      "has_meta_description": true,
+      "meta_description": "How to create images and 3D renders with AI: a simple step-by-step process, a copy-paste starter prompt, and our hand-picked best AI image tools.",
+      "meta_description_length": 145,
+      "h1_count": 1,
+      "images_total": 1,
+      "images_missing_alt": 0,
+      "word_count": 323,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 1,
+        "avg_paragraph_words": 17.2,
+        "subheading_count": 6
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-08-04T07:51:56Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/guides/3d-image-generation.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": null
+    },
+    {
+      "url": "https://www.allaidunia.com/guides/voice-audio.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "AI Voice & Audio — Step-by-Step Guide & Tools | AllAIDunia",
+      "title_length": 58,
+      "has_meta_description": true,
+      "meta_description": "How to generate natural-sounding voiceovers and audio with AI: a step-by-step guide, a starter script format, and our hand-picked best AI voice tools.",
+      "meta_description_length": 150,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 353,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 1,
+        "avg_paragraph_words": 18.3,
+        "subheading_count": 6
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-07-22T15:12:34Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/guides/voice-audio.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": null
+    },
+    {
+      "url": "https://www.allaidunia.com/guides/chatbots-agents.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "AI Chatbots & Agents — Setup Guide & Best Tools | AllAIDunia",
+      "title_length": 60,
+      "has_meta_description": true,
+      "meta_description": "How to set up an AI chatbot or agent for your business: a step-by-step guide, a ready-to-use instruction prompt, and our hand-picked best chatbot tools.",
+      "meta_description_length": 152,
+      "h1_count": 1,
+      "images_total": 1,
+      "images_missing_alt": 0,
+      "word_count": 395,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 1,
+        "avg_paragraph_words": 20.0,
+        "subheading_count": 6
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-08-04T17:50:46Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/guides/chatbots-agents.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": null
+    },
+    {
+      "url": "https://www.allaidunia.com/guides/writing-content.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "AI Writing Tools — Step-by-Step Guide & Prompts | AllAIDunia",
+      "title_length": 60,
+      "has_meta_description": true,
+      "meta_description": "How to write blog posts, product copy, and content with AI: a step-by-step process, a copy-paste starter prompt, and our hand-picked best AI writing tools.",
+      "meta_description_length": 155,
+      "h1_count": 1,
+      "images_total": 1,
+      "images_missing_alt": 0,
+      "word_count": 354,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 1,
+        "avg_paragraph_words": 19.1,
+        "subheading_count": 6
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "robots_txt_state": "ALLOWED",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "last_crawl_time": "2026-08-04T17:00:59Z"
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/guides/writing-content.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true
+      },
+      "pagespeed": null
+    },
+    {
+      "url": "https://www.allaidunia.com/video-ai-tools.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Best AI Video Tools 2026 — Free & Paid Video AI | AllAIDunia",
+      "title_length": 60,
+      "has_meta_description": true,
+      "meta_description": "Looking for the best AI video tools? Compare Runway, Sora, Kling AI, Pika, HeyGen and more — all in one place. Free to browse, updated regularly.",
+      "meta_description_length": 145,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 385,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 33.4,
+        "subheading_count": 1
+      },
+      "js_blindspot": {
+        "selector": "#tools-grid",
+        "children_found": 6,
+        "expected_min": 2,
+        "likely_invisible_to_crawlers": false
+      },
+      "indexing": {
+        "verdict": "NEUTRAL",
+        "coverage_state": "URL is unknown to Google",
+        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "last_crawl_time": null
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/video-ai-tools.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": false
+      },
+      "pagespeed": null
+    },
+    {
+      "url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+      "status_code": 200,
+      "fetch_error": false,
+      "title": "Best Free AI Tools for Video Editing in 2026 | AllAIDunia",
+      "title_length": 57,
+      "has_meta_description": true,
+      "meta_description": "Editing video the old way takes hours. Here are the best free AI tools for video editing in 2026 — from text-to-video generation to AI avatars, compared…",
+      "meta_description_length": 153,
+      "h1_count": 1,
+      "images_total": 0,
+      "images_missing_alt": 0,
+      "word_count": 571,
+      "schema_types": [
+        "ItemList"
+      ],
+      "extractability": {
+        "lists_and_tables_count": 0,
+        "avg_paragraph_words": 35.9,
+        "subheading_count": 7
+      },
+      "js_blindspot": null,
+      "indexing": {
+        "verdict": "NEUTRAL",
+        "coverage_state": "Discovered - currently not indexed",
+        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "last_crawl_time": null
+      },
+      "noindex": false,
+      "canonical": {
+        "has_canonical": true,
+        "canonical_url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+        "domain_mismatch": false
+      },
+      "open_graph": {
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": false
+      },
+      "pagespeed": null
     }
   ],
   "geo_checks": {
-    "blocked_ai_crawlers": null,
-    "has_llms_txt": false
+    "blocked_ai_crawlers": [],
+    "has_llms_txt": true
   },
   "action_items": [
     {
-      "id": "f41d6d992f",
-      "description": "No llms.txt file — an emerging standard giving AI systems a clean, structured summary of your site. Not yet universal, but cheap to add and forward-looking.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": "# AllAIDunia\n\n> A free directory of 62+ AI tools, organized by category.\n\n## Audio\n- [ElevenLabs](https://elevenlabs.io): Ultra-realistic AI voice cloning\n- [Suno](https://suno.com): Generate full songs with AI\n- [Udio](https://udio.com): AI music creation and generation\n- [Murf AI](https://murf.ai): AI voiceover and text-to-speech\n- [Descript](https://descript.com): Edit audio and video like a document\n\n## Chat\n- [ChatGPT](https://chat.openai.com): OpenAI's flagship AI assistant for everything\n- [Claude](https://claude.ai): Anthropic's thoughtful and safe AI assistant\n- [Gemini](https://gemini.google.com): Google's powerful multimodal AI model\n- [Grok](https://grok.com): xAI's witty real-time AI by Elon Musk\n- [Mistral](https://chat.mistral.ai): Open-weight European AI models\n- [Meta AI](https://meta.ai): Meta's AI across apps and the web\n- [Copilot](https://copilot.microsoft.com): Microsoft's AI assistant powered by GPT-4\n- [DeepSeek](https://chat.deepseek.com): Powerful open-source reasoning model\n- [Le Chat](https://chat.mistral.ai): Mistral's fast conversational AI\n- [Pi AI](https://pi.ai): Your personal AI that listens and learns\n\n## Code\n- [GitHub Copilot](https://github.com/features/copilot): AI pair programmer inside your IDE\n- [Cursor](https://cursor.sh): The AI-first code editor\n- [v0](https://v0.dev): Generate UI components with AI by Vercel\n- [Bolt](https://bolt.new): Full-stack AI app builder in browser\n- [Lovable](https://lovable.dev): AI that builds full web apps from prompts\n- [Replit AI](https://replit.com): AI-powered coding in the browser\n- [Windsurf](https://codeium.com/windsurf): AI code editor by Codeium\n- [Tabnine](https://tabnine.com): AI code completion for all IDEs\n\n## Design\n- [Figma AI](https://figma.com): AI-powered design features in Figma\n- [Framer AI](https://framer.com): AI website builder with animations\n- [Looka](https://looka.com): AI logo and brand design maker\n\n## Image\n- [Midjourney](https://midjourney.com): Stunning AI image generation\n- [Stable Diff.](https://stability.ai): Open-source image generation model\n- [Adobe Firefly](https://firefly.adobe.com): Adobe's generative AI for creatives\n- [Krea](https://krea.ai): Real-time AI image creation tool\n- [Ideogram](https://ideogram.ai): AI image gen with great text typography\n- [Leonardo AI](https://leonardo.ai): AI images for games and creative work\n- [Flux](https://blackforestlabs.ai): State of the art image generation model\n- [Canva AI](https://canva.com/ai-image-generator): AI image generation inside Canva\n\n## Marketing\n- [AdCreative](https://adcreative.ai): AI-generated ad creatives that convert\n- [Surfer SEO](https://surferseo.com): AI SEO writing and optimisation\n- [Lately AI](https://lately.ai): AI social media content repurposing\n\n## Productivity\n- [Notion AI](https://notion.so/ai): AI inside your notes and documents\n- [Otter.ai](https://otter.ai): AI meeting notes and transcription\n- [Mem.ai](https://mem.ai): AI-powered notes that self-organise\n- [Reclaim AI](https://reclaim.ai): AI calendar and time management\n- [Motion](https://usemotion.com): AI task and project scheduling\n\n## Research\n- [HuggingFace](https://huggingface.co): The GitHub of AI models and datasets\n- [Replicate](https://replicate.com): Run open-source AI models via API\n- [Together AI](https://together.ai): Fast inference for open-source models\n- [Arxiv + AI](https://arxiv.org): Latest AI research papers\n\n## Search\n- [Perplexity](https://perplexity.ai): AI-powered answer engine with citations\n- [You.com](https://you.com): AI search with cited answers\n- [Exa AI](https://exa.ai): Neural search for developers and researchers\n\n## Uncategorized\n- [PMB](https://pmbai.dev): Show HN: PMB – local memory for coding agents that shows if it is used\n- [Appaca](https://www.appaca.ai/): Show HN: Appaca – AI Workspace for Operators\n\n## Video\n- [Runway](https://runwayml.com): AI video generation and editing suite\n- [Sora](https://sora.com): OpenAI's text-to-video model\n- [Kling AI](https://klingai.com): Realistic AI video generation\n- [Pika](https://pika.art): AI video from text or images\n- [HeyGen](https://heygen.com): AI avatar video creator for business\n- [Synthesia](https://synthesia.io): AI video with realistic avatars\n\n## Writing\n- [Jasper](https://jasper.ai): AI for marketing content and copywriting\n- [Copy.ai](https://copy.ai): AI writing and workflow automation\n- [Grammarly](https://grammarly.com): AI grammar and writing assistant\n- [Quillbot](https://quillbot.com): AI paraphrasing and summarisation\n- [Writesonic](https://writesonic.com): AI writing platform for marketers\n",
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "18fc850cb8",
-      "description": "Page could not be loaded (status: None). Search engines can't index a page they can't fetch.",
-      "priority": "high",
+      "id": "c9e26c8472",
+      "description": "Page speed could be better (Lighthouse performance score: 68/100, mobile). LCP: 6.5 s, CLS: 0.033.",
+      "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/",
@@ -120,8 +603,164 @@
       "target_range": null
     },
     {
-      "id": "4b520970a2",
-      "description": "Query \"ai dunia\" gets 18 impressions but only 0% CTR at position 9.6 — likely needs a more compelling title/meta description.",
+      "id": "37b84329a5",
+      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "c0ecf2e206",
+      "description": "Page speed could be better (Lighthouse performance score: 87/100, mobile). LCP: 3.3 s, CLS: 0.079.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/about.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "fd2b214014",
+      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/about.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "a2b7cec80c",
+      "description": "Only ~113 words — more substantive content tends to rank better.",
+      "priority": "medium",
+      "category": "content_opportunity",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/contact.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "d055938d34",
+      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.3 s, CLS: 0.065.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/contact.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "eef31caf2f",
+      "description": "Title is 65 characters — Google truncates over ~60.",
+      "priority": "medium",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/guides/websites.html",
+      "proposed_fix": "Build a Website with AI — Step-by-Step Guide & Tools |",
+      "field_type": "title",
+      "current_value": "Build a Website with AI — Step-by-Step Guide & Tools | AllAIDunia",
+      "target_range": "30-60 characters"
+    },
+    {
+      "id": "3db299b843",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "priority": "high",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/guides/video-generation.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "8cf90269f8",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "priority": "high",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/video-ai-tools.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "02f7041e73",
+      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
+      "priority": "low",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/video-ai-tools.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "330664a728",
+      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/video-ai-tools.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "a8ca9b6116",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "priority": "high",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "1e67e76a54",
+      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
+      "priority": "low",
+      "category": "on_page_seo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "06dcf2442e",
+      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "ae1c6d1f67",
+      "description": "Query \"how to write ai\" gets 17 impressions but only 0% CTR at position 64.3 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
