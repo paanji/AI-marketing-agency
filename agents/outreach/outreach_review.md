@@ -1,6 +1,6 @@
 # Outreach Review
 
-_Generated 2026-08-08 — 0 approved (ready to send), 0 declined, 18 still awaiting review_
+_Generated 2026-08-11 — 5 backlink draft(s), 3 sponsorship draft(s) queued for review (live-site check: ok)_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 
@@ -12,6 +12,14 @@ To act on any item: edit `outreach_pending.json`, set that item's `"approved"` t
 | ✅ verified | sponsorship_pitch | Runway | email | press@runwayml.com |
 | ✅ verified | sponsorship_pitch | Kling AI | email | support@kling.ai |
 | ✅ verified | sponsorship_pitch | Pika | contact_form | https://pika.art/contact-us |
+| ✅ verified | backlink_outreach | HeyGen | contact_form | https://heygen.com/avatars/avatar-v |
+| ✅ verified | backlink_outreach | Synthesia | contact_form | https://help.synthesia.io/ |
+| ✅ verified | backlink_outreach | ElevenLabs | contact_form | https://elevenlabs.io/contact-sales |
+| ✅ verified | backlink_outreach | Suno | contact_form | https://help.suno.com |
+| ✅ verified | backlink_outreach | Udio | help_center | https://help.udio.com |
+| ✅ verified | sponsorship_pitch | Murf AI | email | support@murf.ai |
+| ✅ verified | sponsorship_pitch | GitHub Copilot | email | copilot-safety@github.com |
+| ✅ verified | sponsorship_pitch | Cursor | contact_form | https://cursor.com/help |
 | ⚠️ guessed | backlink_outreach | Copilot | contact_form | https://copilot.microsoft.com/contact |
 | ⚠️ guessed | sponsorship_pitch | Sora | contact_form | https://sora.com/contact |
 | ❓ unknown | backlink_outreach | ChatGPT | contact_form | https://chat.openai.com/contact |

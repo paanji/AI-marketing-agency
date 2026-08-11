@@ -2,9 +2,9 @@
   "agent_meta": {
     "agent_name": "outreach_agent",
     "schema_version": "1.0",
-    "run_date": "2026-08-08",
+    "run_date": "2026-08-11",
     "status": "success",
-    "summary": "0 approved (ready to send), 0 declined, 18 still awaiting review"
+    "summary": "5 backlink draft(s), 3 sponsorship draft(s) queued for review (live-site check: ok)"
   },
   "action_items": [
     {
@@ -118,6 +118,158 @@
       "proposed_message": {
         "subject": "Exciting Opportunity for Pika on AllAIDunia!",
         "body": "Hi Pika Team,\n\nI hope this message finds you well! I wanted to reach out because we’re thrilled to have Pika featured on AllAIDunia (https://www.allaidunia.com/#pika). We’re a curated directory of AI tools designed to help both users and AI engines easily find and cite amazing tools.\n\nWe’re currently offering a few special featured-placement options for tools looking to shine a bit brighter:\n\n- **Featured Listing** — $49/mo: Top-of-category placement, \"Featured\" badge, and priority in AI Tool Matchmaker results.\n- **Homepage Spotlight** — $99/mo: A rotating banner on our homepage, all the benefits of the Featured Listing, plus a mention in our monthly tools roundup.\n- **Category Sponsor** — $149/mo: Exclusive top placement in one category with no competitors, plus all the Homepage Spotlight perks.\n\nWe’re in the early stages and keeping these rates for a small group of select tools before they go up. If this sounds interesting, I’d love to share more details. But if it’s not the right time for you, that’s completely okay too!\n\nWarm regards,\nThe AllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "bec0bb61c8",
+      "description": "Backlink outreach draft for HeyGen",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "HeyGen",
+      "tool_domain": "heygen.com",
+      "tool_url": "https://heygen.com",
+      "contact_method": "contact_form",
+      "contact_value": "https://heygen.com/avatars/avatar-v",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "HeyGen — you're listed on AllAIDunia",
+        "body": "Hi HeyGen team,\n\nI hope you’re all doing well! I wanted to share some exciting news — HeyGen is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#heygen.\n\nIf you’re open to it, we’d be so grateful if you could include a link back to us on your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page you’d like on your site.\n\nOf course, no pressure at all! Thank you for creating such a fantastic tool with HeyGen — it truly stands out in our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "d9430aeee2",
+      "description": "Backlink outreach draft for Synthesia",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Synthesia",
+      "tool_domain": "synthesia.io",
+      "tool_url": "https://synthesia.io",
+      "contact_method": "contact_form",
+      "contact_value": "https://help.synthesia.io/",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Synthesia — you're listed on AllAIDunia",
+        "body": "Hi Synthesia team,\n\nI hope this message finds you well! I wanted to share some exciting news — Synthesia is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#synthesia.\n\nIf you’re open to it, we’d be so grateful for a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page on your site that you’d like.\n\nNo pressure at all, and thank you for creating Synthesia — it truly adds value to our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "3bc7982283",
+      "description": "Backlink outreach draft for ElevenLabs",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "ElevenLabs",
+      "tool_domain": "elevenlabs.io",
+      "tool_url": "https://elevenlabs.io",
+      "contact_method": "contact_form",
+      "contact_value": "https://elevenlabs.io/contact-sales",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "ElevenLabs — you're listed on AllAIDunia",
+        "body": "Hello ElevenLabs team,\n\nI hope this message finds you well! I wanted to share some exciting news—ElevenLabs is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#elevenlabs.\n\nIf you’re open to it, we would be thrilled if you could add a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page you’d like on your site (docs, blog, etc.).\n\nNo pressure at all, and thank you for creating such a valuable tool with ElevenLabs. It’s truly appreciated!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "497f77e56f",
+      "description": "Backlink outreach draft for Suno",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Suno",
+      "tool_domain": "suno.com",
+      "tool_url": "https://suno.com",
+      "contact_method": "contact_form",
+      "contact_value": "https://help.suno.com",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Suno — you're listed on AllAIDunia",
+        "body": "Hi Suno team,\n\nI hope this message finds you well! I wanted to share some exciting news—Suno is now featured on AllAIDunia (https://www.allaidunia.com/), a free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#suno.\n\nIf you feel comfortable, we would love it if you could include a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page you'd like on your site, whether it’s your docs, blog, or something else.\n\nNo pressure at all! We really appreciate the work you’re doing with Suno—it’s a fantastic addition to our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "566661a54d",
+      "description": "Backlink outreach draft for Udio",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Udio",
+      "tool_domain": "udio.com",
+      "tool_url": "https://udio.com",
+      "contact_method": "help_center",
+      "contact_value": "https://help.udio.com",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Udio — you're listed on AllAIDunia",
+        "body": "Hi Udio team,\n\nI hope this message finds you well! I wanted to share some exciting news — Udio is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#udio.\n\nIf you feel inclined, we would truly appreciate a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page on your site that you'd like (docs, blog, etc.).\n\nNo pressure at all, and thank you for creating Udio — it’s a fantastic addition to our directory!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "4be26f7262",
+      "description": "Sponsorship pitch draft for Murf AI",
+      "priority": "low",
+      "category": "sponsorship_pitch",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Murf AI",
+      "tool_domain": "murf.ai",
+      "tool_url": "https://murf.ai",
+      "contact_method": "email",
+      "contact_value": "support@murf.ai",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Murf AI on AllAIDunia — featured placement option",
+        "body": "Hi Murf AI team,\n\nI hope this message finds you well! I'm excited to share that Murf AI is already featured on AllAIDunia (https://www.allaidunia.com/#murf-ai), our curated directory of AI tools designed to be easily accessible for everyone.\n\nWe’re currently offering a few options for featured placements if you’re looking to boost your visibility:\n\n- **Featured Listing** — $49/mo: Top placement in your category, a \"Featured\" badge, and priority in AI Tool Matchmaker results.\n- **Homepage Spotlight** — $99/mo: A rotating banner on our homepage, all the benefits of a Featured Listing, plus a mention in our monthly tools roundup.\n- **Category Sponsor** — $149/mo: Exclusive top placement in one category, with no competitors in the same slot, plus all the benefits from the Homepage Spotlight.\n\nWe're keeping this opportunity exclusive and at these introductory rates for a small group before prices increase. If you're interested, I’d be happy to share more details, and if not, that’s completely okay too!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "d9cc9abc65",
+      "description": "Sponsorship pitch draft for GitHub Copilot",
+      "priority": "low",
+      "category": "sponsorship_pitch",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "GitHub Copilot",
+      "tool_domain": "github.com",
+      "tool_url": "https://github.com/features/copilot",
+      "contact_method": "email",
+      "contact_value": "copilot-safety@github.com",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "GitHub Copilot on AllAIDunia — featured placement option",
+        "body": "Hello GitHub Copilot team,\n\nI hope this message finds you well! I wanted to share that GitHub Copilot is already featured on AllAIDunia (https://www.allaidunia.com/#github-copilot), our curated directory of AI tools designed to be user-friendly for everyone, including AI answer engines.\n\nWe’re excited to offer a few options for featured placements if you’re looking for a bit more visibility:\n\n- Featured Listing — $49/mo: Top-of-category placement, a \"Featured\" badge on your card, and priority in AI Tool Matchmaker results.\n- Homepage Spotlight — $99/mo: A rotating banner on our homepage, all the benefits of the Featured Listing, plus a mention in our monthly tools roundup.\n- Category Sponsor — $149/mo: Exclusive top placement in one category, ensuring no competitors share the slot, along with all the benefits of the Homepage Spotlight.\n\nWe're just getting started and keeping this to a small founding group at these introductory rates before they increase. If you’d like more details or feel this isn’t the right time, that’s completely okay too!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "705da87d5d",
+      "description": "Sponsorship pitch draft for Cursor",
+      "priority": "low",
+      "category": "sponsorship_pitch",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Cursor",
+      "tool_domain": "cursor.sh",
+      "tool_url": "https://cursor.sh",
+      "contact_method": "contact_form",
+      "contact_value": "https://cursor.com/help",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Cursor on AllAIDunia — featured placement option",
+        "body": "Hi Cursor team,\n\nI hope this message finds you well! I wanted to share some exciting news—Cursor is already featured on AllAIDunia (https://www.allaidunia.com/#cursor), our curated directory of AI tools designed to help users and AI answer engines easily discover and cite tools.\n\nWe’re currently offering a few special featured-placement options for tools looking to shine a little brighter:\n\n- Featured Listing — $49/mo: Top-of-category placement, \"Featured\" badge, and priority in AI Tool Matchmaker results\n- Homepage Spotlight — $99/mo: A rotating banner on our homepage, all the benefits of a Featured Listing, plus a mention in our monthly tools roundup\n- Category Sponsor — $149/mo: Exclusive top placement in one category, with no competitors sharing the slot, and all Homepage Spotlight benefits\n\nWe’re in the early stages and keeping this opportunity to a small founding group at these rates before we adjust them. If you're interested, I'd be happy to share more details, or if it’s not the right time for you, that’s completely okay too!\n\nTake care,  \nAllAIDunia Team"
       },
       "approved": null
     },
