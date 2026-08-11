@@ -466,7 +466,7 @@
     .then(function(res){
       removeTyping();
       if(!res.ok){ throw new Error(res.data.error || "Something went wrong."); }
-      state.category = res.data.category;
+      if(!state.category) state.category = res.data.category;
       state.questions = res.data.questions.map(function(item){
         return (typeof item === "string") ? { q: item, examples: [] } : item;
       });
@@ -517,7 +517,7 @@
   function showToolPicker(){
     setInputEnabled(false, "");
     var tools = TOOLS[state.category] || TOOLS.image;
-    var html = "Last thing — which tool will you use? I'll format the prompt for its exact syntax. Don't see yours? Pick \"Other\" and just type the name.";
+    var html = "Last thing — which tool will you use? Pick one and I'll format for its exact syntax, or choose \"Any tool\" for a universal prompt that works everywhere.";
     var msg = addMsg(html, "guru");
 
     var pick = document.createElement("div");
@@ -529,6 +529,16 @@
       addMsg(label, "user");
       synthesize();
     }
+
+    var uniChip = document.createElement("button");
+    uniChip.className = "tool-chip";
+    uniChip.style.borderColor = "var(--accent)";
+    uniChip.textContent = "\u2728 Any tool (universal)";
+    uniChip.onclick = function(){
+      uniChip.classList.add("picked");
+      pickTool("__universal__", "Any tool");
+    };
+    pick.appendChild(uniChip);
 
     tools.forEach(function(t){
       var chip = document.createElement("button");
@@ -602,14 +612,17 @@
   }
 
   function showResult(prompt, toolLabel, toolUrl){
-    addMsg("Here it is — crafted for " + toolLabel + ". Copy it, paste it, create. ✨", "guru");
+    var isUniversal = toolLabel === "any tool";
+    addMsg(isUniversal
+      ? "Here it is — a universal prompt that works pasted into any tool. Copy it and create. ✨"
+      : "Here it is — crafted for " + toolLabel + ". Copy it, paste it, create. ✨", "guru");
 
     var card = document.createElement("div");
     card.className = "result";
 
     var label = document.createElement("div");
     label.className = "result-label";
-    label.textContent = "Your " + toolLabel + " prompt";
+    label.textContent = isUniversal ? "Your universal prompt" : "Your " + toolLabel + " prompt";
     card.appendChild(label);
 
     var p = document.createElement("div");
