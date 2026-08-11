@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Guru — Get the Perfect AI Prompt | AllAIDunia</title>
+<meta name="description" content="Describe what you want to create. Prompt Guru asks the right questions, then writes you a perfect, tool-specific prompt for Midjourney, Sora, Runway, DALL-E and more.">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Prompt Guru",
+  "url": "https://www.allaidunia.com/prompt-guru.html",
+  "applicationCategory": "Productivity",
+  "description": "A guided prompt builder that asks tailored questions about what you want to create, then writes a perfect, tool-specific prompt for AI image and video tools.",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isPartOf": { "@type": "WebSite", "name": "AllAIDunia", "url": "https://www.allaidunia.com/" }
+}
+</script>
+
+<style>
+  [data-theme="dark"] {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #18181f;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #f0eff5;
+    --muted: #8b8a96;
+    --card-bg: #111118;
+  }
+  [data-theme="light"] {
+    --bg: #f5f5fa;
+    --bg2: #ffffff;
+    --bg3: #eeeef5;
+    --border: rgba(0,0,0,0.08);
+    --border2: rgba(0,0,0,0.14);
+    --text: #0a0a0f;
+    --muted: #666680;
+    --card-bg: #ffffff;
+  }
+  :root {
+    --accent: #7c6cfa;
+    --accent2: #fa6c9f;
+    --accent3: #6cf0c2;
+    --gold: #f0c060;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* ---------- Nav ---------- */
+  .nav {
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px clamp(16px, 4vw, 48px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav a.home-link {
+    font-family: var(--font-head); font-weight: 800; font-size: 18px;
+    color: var(--accent); text-decoration: none;
+  }
+  .nav a.home-link span { color: var(--gold); }
+  .nav .back-link {
+    font-size: 13px; color: var(--muted); text-decoration: none;
+  }
+  .nav .back-link:hover { color: var(--text); }
+
+  /* ---------- Layout ---------- */
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 16px 100px; }
+
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px; font-weight: 500;
+  }
+  h1 {
+    font-family: var(--font-head);
+    font-size: clamp(30px, 6vw, 46px);
+    font-weight: 800; line-height: 1.1; margin-bottom: 10px;
+  }
+  h1 .grad {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { color: var(--muted); font-size: 15px; margin-bottom: 36px; max-width: 54ch; }
+
+  /* ---------- Chat area ---------- */
+  .chat {
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .msg {
+    max-width: 85%;
+    padding: 13px 16px;
+    border-radius: var(--radius);
+    font-size: 14.5px;
+    line-height: 1.5;
+    animation: rise .28s ease both;
+  }
+  @keyframes rise { from { opacity:0; transform: translateY(8px);} to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce){ .msg { animation:none; } }
+
+  .msg.guru {
+    align-self: flex-start;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-bottom-left-radius: 4px;
+  }
+  .msg.user {
+    align-self: flex-end;
+    background: var(--accent);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+  .guru-tag {
+    font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 4px;
+    display:flex; align-items:center; gap:6px;
+  }
+  .guru-tag::before { content:"🧘"; font-size: 13px; }
+
+  .typing { display:inline-flex; gap:4px; padding: 4px 0; }
+  .typing span {
+    width:6px; height:6px; border-radius:50%; background: var(--muted);
+    animation: blink 1.2s infinite ease-in-out;
+  }
+  .typing span:nth-child(2){ animation-delay:.15s; }
+  .typing span:nth-child(3){ animation-delay:.3s; }
+  @keyframes blink { 0%,80%,100%{ opacity:.25 } 40%{ opacity:1 } }
+
+  /* ---------- Input bar ---------- */
+  .input-bar {
+    display:flex; gap:10px; margin-top: 22px;
+  }
+  .input-bar textarea {
+    flex:1; resize:none;
+    background: var(--card-bg);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    padding: 13px 15px;
+    min-height: 52px; max-height: 140px;
+    outline: none;
+  }
+  .input-bar textarea:focus { border-color: var(--accent); }
+  .send-btn {
+    background: var(--accent); color:#fff; border:none;
+    border-radius: var(--radius);
+    padding: 0 22px;
+    font-family: var(--font-body); font-weight: 500; font-size: 14.5px;
+    cursor:pointer; transition: opacity .15s;
+    flex-shrink: 0;
+  }
+  .send-btn:hover { opacity:.85; }
+  .send-btn:disabled { opacity:.4; cursor:default; }
+
+  /* ---------- Tool picker ---------- */
+  .tool-pick {
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;
+  }
+  .tool-chip {
+    background: var(--card-bg);
+    border: 1px solid var(--border2);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 13.5px; color: var(--text);
+    cursor:pointer; transition: border-color .15s, background .15s;
+    font-family: var(--font-body);
+  }
+  .tool-chip:hover { border-color: var(--accent); }
+  .tool-chip.picked { background: var(--accent); border-color: var(--accent); color:#fff; }
+
+  /* ---------- Result card ---------- */
+  .result {
+    margin-top: 26px;
+    background: var(--card-bg);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 22px;
+    animation: rise .35s ease both;
+  }
+  .result-label {
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 10px;
+  }
+  .result-prompt {
+    font-size: 15px; line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 18px;
+  }
+  .result-actions { display:flex; flex-wrap:wrap; gap:10px; }
+  .action-btn {
+    border-radius: var(--radius-sm);
+    padding: 10px 18px;
+    font-family: var(--font-body); font-size: 13.5px; font-weight: 500;
+    cursor:pointer; text-decoration:none; display:inline-block;
+    transition: opacity .15s;
+  }
+  .action-btn.primary { background: var(--accent); color:#fff; border:none; }
+  .action-btn.ghost { background: transparent; color: var(--text); border:1px solid var(--border2); }
+  .action-btn:hover { opacity:.85; }
+
+  .error-note {
+    margin-top: 14px; font-size: 13.5px; color: var(--accent2);
+  }
+
+  .built-by {
+    margin-top: 60px; text-align:center; font-size: 12.5px; color: var(--muted);
+  }
+  .built-by a { color: var(--accent); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="home-link" href="/">AllAI<span>Dunia</span></a>
+  <a class="back-link" href="/">← Back to directory</a>
+</nav>
+
+<div class="wrap">
+  <div class="eyebrow">Built by AllAIDunia</div>
+  <h1>Prompt <span class="grad">Guru</span></h1>
+  <p class="sub">Describe what you want to create. The Guru asks a few sharp questions — like a senior prompt engineer would — then writes you the perfect prompt, formatted exactly for your tool.</p>
+
+  <div class="chat" id="chat"></div>
+
+  <div class="input-bar" id="inputBar">
+    <textarea id="userInput" rows="1" placeholder="e.g. A video of ocean waves for my meditation app intro…" aria-label="Your message"></textarea>
+    <button class="send-btn" id="sendBtn">Send</button>
+  </div>
+
+  <div class="built-by">A free tool by <a href="/">AllAIDunia</a> · Works with Midjourney, DALL-E, Stable Diffusion, Ideogram, Sora, Runway, Kling & Pika</div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ── CONFIG — set this after deploying prompt-guru-worker.js ──
+  var API_BASE = "https://prompt-guru.YOUR-SUBDOMAIN.workers.dev";
+
+  var TOOLS = {
+    image: [
+      { id:"midjourney", label:"Midjourney" },
+      { id:"dalle", label:"DALL-E" },
+      { id:"stable-diffusion", label:"Stable Diffusion" },
+      { id:"ideogram", label:"Ideogram" }
+    ],
+    video: [
+      { id:"sora", label:"Sora" },
+      { id:"runway", label:"Runway" },
+      { id:"kling", label:"Kling AI" },
+      { id:"pika", label:"Pika" }
+    ]
+  };
+
+  var state = {
+    phase: "intro",          // intro -> questions -> tool -> done
+    originalRequest: "",
+    category: null,
+    questions: [],
+    qIndex: 0,
+    qa: [],
+    tool: null
+  };
+
+  var chat = document.getElementById("chat");
+  var input = document.getElementById("userInput");
+  var sendBtn = document.getElementById("sendBtn");
+
+  function addMsg(text, who, isHTML){
+    var div = document.createElement("div");
+    div.className = "msg " + who;
+    if(who === "guru"){
+      var tag = document.createElement("div");
+      tag.className = "guru-tag";
+      tag.textContent = "Prompt Guru";
+      div.appendChild(tag);
+    }
+    var body = document.createElement("div");
+    if(isHTML){ body.innerHTML = text; } else { body.textContent = text; }
+    div.appendChild(body);
+    chat.appendChild(div);
+    div.scrollIntoView({ behavior:"smooth", block:"end" });
+    return div;
+  }
+
+  function addTyping(){
+    var div = addMsg('<span class="typing"><span></span><span></span><span></span></span>', "guru", true);
+    div.id = "typing";
+    return div;
+  }
+  function removeTyping(){
+    var t = document.getElementById("typing");
+    if(t) t.remove();
+  }
+
+  function setInputEnabled(on, placeholder){
+    input.disabled = !on;
+    sendBtn.disabled = !on;
+    if(placeholder !== undefined) input.placeholder = placeholder;
+    if(on) input.focus();
+  }
+
+  // ── Intro message ──
+  addMsg("Namaste! 🙏 Tell me what you want to create — an image, a video, anything visual. Be as rough or as detailed as you like; asking the right questions is my job.", "guru");
+
+  // ── Send handling ──
+  function handleSend(){
+    var text = input.value.trim();
+    if(!text) return;
+    input.value = "";
+    addMsg(text, "user");
+
+    if(state.phase === "intro"){
+      state.originalRequest = text;
+      fetchQuestions(text);
+    } else if(state.phase === "questions"){
+      state.qa.push({ q: state.questions[state.qIndex], a: text });
+      state.qIndex++;
+      askNextQuestion();
+    }
+  }
+
+  sendBtn.addEventListener("click", handleSend);
+  input.addEventListener("keydown", function(e){
+    if(e.key === "Enter" && !e.shiftKey){
+      e.preventDefault();
+      handleSend();
+    }
+  });
+
+  // ── Phase 1: get tailored questions ──
+  function fetchQuestions(request){
+    setInputEnabled(false);
+    addTyping();
+    fetch(API_BASE + "/api/prompt-guru/questions", {
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ request: request })
+    })
+    .then(function(r){ return r.json().then(function(d){ return { ok:r.ok, data:d }; }); })
+    .then(function(res){
+      removeTyping();
+      if(!res.ok){ throw new Error(res.data.error || "Something went wrong."); }
+      state.category = res.data.category;
+      state.questions = res.data.questions;
+      state.qIndex = 0;
+      state.qa = [];
+      state.phase = "questions";
+      askNextQuestion();
+    })
+    .catch(function(err){
+      removeTyping();
+      addMsg("Hmm — " + err.message + " Try describing it again.", "guru");
+      state.phase = "intro";
+      setInputEnabled(true);
+    });
+  }
+
+  function askNextQuestion(){
+    if(state.qIndex < state.questions.length){
+      addMsg(state.questions[state.qIndex], "guru");
+      setInputEnabled(true, "Type your answer…");
+    } else {
+      state.phase = "tool";
+      showToolPicker();
+    }
+  }
+
+  // ── Phase 2: tool picker (deterministic, from local list) ──
+  function showToolPicker(){
+    setInputEnabled(false, "");
+    var tools = TOOLS[state.category] || TOOLS.image;
+    var html = "Last thing — which tool will you use? I'll format the prompt for its exact syntax.";
+    var msg = addMsg(html, "guru");
+
+    var pick = document.createElement("div");
+    pick.className = "tool-pick";
+    tools.forEach(function(t){
+      var chip = document.createElement("button");
+      chip.className = "tool-chip";
+      chip.textContent = t.label;
+      chip.onclick = function(){
+        Array.prototype.forEach.call(pick.children, function(c){ c.classList.remove("picked"); });
+        chip.classList.add("picked");
+        state.tool = t.id;
+        addMsg(t.label, "user");
+        synthesize();
+      };
+      pick.appendChild(chip);
+    });
+    msg.appendChild(pick);
+    msg.scrollIntoView({ behavior:"smooth", block:"end" });
+  }
+
+  // ── Phase 3: synthesize final prompt ──
+  function synthesize(){
+    addTyping();
+    fetch(API_BASE + "/api/prompt-guru/synthesize", {
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({
+        original_request: state.originalRequest,
+        qa: state.qa,
+        tool: state.tool,
+        category: state.category
+      })
+    })
+    .then(function(r){ return r.json().then(function(d){ return { ok:r.ok, data:d }; }); })
+    .then(function(res){
+      removeTyping();
+      if(!res.ok){ throw new Error(res.data.error || "Something went wrong."); }
+      showResult(res.data.prompt, res.data.tool_label, res.data.tool_url);
+      state.phase = "done";
+    })
+    .catch(function(err){
+      removeTyping();
+      addMsg("Hmm — " + err.message + " Pick a tool again and I'll retry.", "guru");
+      state.phase = "tool";
+    });
+  }
+
+  function showResult(prompt, toolLabel, toolUrl){
+    addMsg("Here it is — crafted for " + toolLabel + ". Copy it, paste it, create. ✨", "guru");
+
+    var card = document.createElement("div");
+    card.className = "result";
+
+    var label = document.createElement("div");
+    label.className = "result-label";
+    label.textContent = "Your " + toolLabel + " prompt";
+    card.appendChild(label);
+
+    var p = document.createElement("div");
+    p.className = "result-prompt";
+    p.textContent = prompt;
+    card.appendChild(p);
+
+    var actions = document.createElement("div");
+    actions.className = "result-actions";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "action-btn primary";
+    copyBtn.textContent = "Copy prompt";
+    copyBtn.onclick = function(){
+      navigator.clipboard.writeText(prompt).then(function(){
+        copyBtn.textContent = "Copied ✓";
+        setTimeout(function(){ copyBtn.textContent = "Copy prompt"; }, 1800);
+      });
+    };
+    actions.appendChild(copyBtn);
+
+    if(toolUrl){
+      var tryLink = document.createElement("a");
+      tryLink.className = "action-btn ghost";
+      tryLink.href = toolUrl;
+      tryLink.target = "_blank";
+      tryLink.rel = "noopener";
+      tryLink.textContent = "Try it on " + toolLabel + " →";
+      actions.appendChild(tryLink);
+    }
+
+    var againBtn = document.createElement("button");
+    againBtn.className = "action-btn ghost";
+    againBtn.textContent = "Start over";
+    againBtn.onclick = function(){ location.reload(); };
+    actions.appendChild(againBtn);
+
+    card.appendChild(actions);
+    chat.appendChild(card);
+    card.scrollIntoView({ behavior:"smooth", block:"end" });
+  }
+
+  // Respect saved theme from main site
+  try {
+    var saved = localStorage.getItem("theme");
+    if(saved) document.documentElement.setAttribute("data-theme", saved);
+  } catch(e){}
+
+  setInputEnabled(true);
+})();
+</script>
+</body>
+</html>

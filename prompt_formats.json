@@ -1,0 +1,108 @@
+{
+  "_comment": "Prompt Guru tool syntax rules. Each entry defines how the final prompt must be formatted for that tool. Edit this file to tune output or add tools — no Worker code changes needed. The Worker fetches this from the live site at /prompt_formats.json.",
+  "image": {
+    "midjourney": {
+      "label": "Midjourney",
+      "directory_url": "https://midjourney.com",
+      "style": "comma-separated descriptive phrases with parameter flags",
+      "rules": [
+        "Comma-separated descriptive phrases, not full sentences",
+        "Order: subject first, then style, then lighting/mood, then composition",
+        "End with parameter flags: aspect ratio as --ar W:H, version as --v 6",
+        "If the user wants to avoid something, use --no <thing> flag",
+        "Keep under 350 characters before flags"
+      ],
+      "example": "golden retriever astronaut floating inside a space station, photorealistic, warm rim lighting, shallow depth of field, shot on 85mm lens --ar 16:9 --v 6"
+    },
+    "dalle": {
+      "label": "DALL-E",
+      "directory_url": "https://openai.com/dall-e-3",
+      "style": "natural descriptive sentences",
+      "rules": [
+        "Write as one or two natural, flowing sentences",
+        "No flags, no parameter syntax, no tag lists",
+        "Be explicit about style (e.g. 'a photorealistic photo of', 'a watercolor illustration of')",
+        "State composition and lighting in plain language",
+        "Mention what to avoid in plain words if needed"
+      ],
+      "example": "A photorealistic photo of a golden retriever wearing a NASA spacesuit floating inside a space station, warm light from a window, gentle and playful mood, centered composition."
+    },
+    "stable-diffusion": {
+      "label": "Stable Diffusion",
+      "directory_url": "https://stability.ai",
+      "style": "tag-style prompt plus separate negative prompt",
+      "rules": [
+        "Main prompt: comma-separated tags and short phrases, most important first",
+        "Include quality tags like 'highly detailed, sharp focus' where appropriate",
+        "Always provide a separate 'Negative prompt:' line listing what to avoid",
+        "No sentence structure needed — density of relevant tags matters more",
+        "Keep main prompt under 300 characters"
+      ],
+      "example": "golden retriever in astronaut suit, space station interior, photorealistic, highly detailed, warm lighting, sharp focus, 85mm\nNegative prompt: blurry, cartoon, extra limbs, text, watermark"
+    },
+    "ideogram": {
+      "label": "Ideogram",
+      "directory_url": "https://ideogram.ai",
+      "style": "natural sentences, strong at rendering text in images",
+      "rules": [
+        "Natural descriptive sentences",
+        "If the image should contain visible text, put the exact text in double quotes",
+        "State the style plainly (poster, logo, photo, illustration)",
+        "Mention color palette if the user expressed one"
+      ],
+      "example": "A retro travel poster of a space station with the text \"GREETINGS FROM ORBIT\" in bold vintage lettering, warm sunset palette, clean vector illustration style."
+    }
+  },
+  "video": {
+    "sora": {
+      "label": "Sora",
+      "directory_url": "https://sora.com",
+      "style": "cinematic descriptive paragraph",
+      "rules": [
+        "One flowing cinematic paragraph, no flags or tags",
+        "Describe the scene, then the motion, then the camera behavior",
+        "Use concrete camera language: 'slow dolly in', 'static wide shot', 'handheld tracking shot'",
+        "Describe lighting and atmosphere explicitly",
+        "Keep under 600 characters"
+      ],
+      "example": "Gentle ocean waves rolling onto an empty beach at golden hour, warm sunlight glinting off the water. Static wide shot, slow rhythmic motion, calm meditative atmosphere with soft ambient haze."
+    },
+    "runway": {
+      "label": "Runway",
+      "directory_url": "https://runwayml.com",
+      "style": "concise cinematic description with explicit motion",
+      "rules": [
+        "One short paragraph, motion-focused — Runway responds strongly to movement verbs",
+        "Name the camera move explicitly ('slow pan left', 'aerial pullback', 'locked-off shot')",
+        "Describe subject motion separately from camera motion",
+        "No negative prompts — not supported",
+        "Keep under 450 characters"
+      ],
+      "example": "Slow aerial pullback over calm ocean waves at sunset, waves rolling gently toward shore, warm golden light, soft atmospheric haze, smooth continuous camera motion."
+    },
+    "kling": {
+      "label": "Kling AI",
+      "directory_url": "https://klingai.com",
+      "style": "detailed scene description with physical realism cues",
+      "rules": [
+        "Describe the scene in natural sentences with strong physical detail",
+        "Kling excels at realistic physics — describe how things move and interact",
+        "Specify shot type and duration feel (brief clip vs continuous take)",
+        "State the mood and lighting"
+      ],
+      "example": "A close-up of ocean waves curling and breaking in slow motion at sunset, water droplets catching golden light, realistic fluid physics, cinematic shallow depth of field, serene mood."
+    },
+    "pika": {
+      "label": "Pika",
+      "directory_url": "https://pika.art",
+      "style": "short punchy description with style modifiers",
+      "rules": [
+        "Short and direct — one or two sentences",
+        "Lead with the subject and action",
+        "Add style modifiers at the end (cinematic, anime, 3D render, claymation)",
+        "Mention camera motion simply if needed ('camera slowly zooms in')"
+      ],
+      "example": "Ocean waves rolling onto a beach at sunset, camera slowly pans across the water, cinematic, warm tones, peaceful."
+    }
+  }
+}
