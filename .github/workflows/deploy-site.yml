@@ -29,6 +29,8 @@ jobs:
             !sitemap.xml
             !about.html
             !contact.html
+            !prompt-guru.html
+            !prompt_formats.json
             !favicon.ico
             !guides/**
             !assets/hero/**
