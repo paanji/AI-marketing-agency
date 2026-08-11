@@ -1,0 +1,13 @@
+# Prompt Guru Worker — deploy config
+# From this directory (workers/prompt-guru/), run:
+#   wrangler kv:namespace create GURU_KV     (first time only — paste the id below)
+#   wrangler secret put OPENAI_API_KEY       (first time only — same key as chatbot)
+#   wrangler deploy
+
+name = "prompt-guru"
+main = "worker.js"
+compatibility_date = "2026-08-01"
+
+[[kv_namespaces]]
+binding = "GURU_KV"
+id = "PASTE_THE_KV_NAMESPACE_ID_HERE"
