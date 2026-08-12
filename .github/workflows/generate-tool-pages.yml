@@ -1,0 +1,60 @@
+name: Generate Tool Pages
+on:
+  workflow_dispatch: {}          # manual trigger from Actions tab
+  push:
+    branches: [main]
+    paths:
+      - "agents/directory-freshness/tools.json"   # auto-regen when the directory changes
+permissions:
+  contents: write
+concurrency:
+  group: generate-tool-pages
+  cancel-in-progress: false
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate tool pages and sitemap
+        run: python3 agents/directory-freshness/generate_tool_pages.py
+
+      - name: Deploy tool pages and sitemap to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        timeout-minutes: 5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: ./
+          state-name: .ftp-deploy-sync-state-toolpages.json
+          exclude: |
+            **
+            !tools/**
+            !sitemap.xml
+
+      - name: Commit generated pages (if changed)
+        run: |
+          git config user.name "Tool Pages Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Regenerate tool pages + sitemap $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              if git push; then
+                break
+              fi
+              echo "Push rejected, pulling latest and retrying ($i/3)..."
+              git pull --rebase
+            done
+          fi
