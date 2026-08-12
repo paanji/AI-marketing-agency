@@ -1,0 +1,395 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1786545931547,
+    "data": [
+        {
+            "type": "file",
+            "name": "sitemap.xml",
+            "size": 11961,
+            "hash": "062206b334bab63a7d8bce34d0ed1913e48513500f540420091e5e4f6bd63679"
+        },
+        {
+            "type": "folder",
+            "name": "tools"
+        },
+        {
+            "type": "file",
+            "name": "tools/adcreative.html",
+            "size": 6950,
+            "hash": "b04af74c30bd112f6ff1cfc66841e80ff840a7e350498e12bae8cf747c1f0ef2"
+        },
+        {
+            "type": "file",
+            "name": "tools/adobe-firefly.html",
+            "size": 8154,
+            "hash": "7887c0cf7cadb330d3651bf0ca39d98540ea376dc42efa028d05818fbcf403e2"
+        },
+        {
+            "type": "file",
+            "name": "tools/appaca.html",
+            "size": 6692,
+            "hash": "05bdcc30dd880dea8155633178b6629bf88c8f428cfdd144989a7791f06e7546"
+        },
+        {
+            "type": "file",
+            "name": "tools/arxiv-ai.html",
+            "size": 7228,
+            "hash": "d82bb88a37339190c170d1f22a156923da8efb184d0efd9c306b7687e5faf2b8"
+        },
+        {
+            "type": "file",
+            "name": "tools/bolt.html",
+            "size": 7951,
+            "hash": "f9e0ea0944435984d72450afd754abfc5640e3b0574d30e4b4f178f116e91f1a"
+        },
+        {
+            "type": "file",
+            "name": "tools/canva-ai.html",
+            "size": 8091,
+            "hash": "d7e465a478741f5d5a190619520fda5d67d601398d7404d9664feb39ce3e68ed"
+        },
+        {
+            "type": "file",
+            "name": "tools/chatgpt.html",
+            "size": 8080,
+            "hash": "e70c289bd46f120dbc58f74ab41f6a51c3f14b90f13253d02d69b6c3f47e4a9c"
+        },
+        {
+            "type": "file",
+            "name": "tools/claude.html",
+            "size": 8046,
+            "hash": "1336ca9f2874fd996e474cc6336d7f7d212fdce530ae53fd1b0e9adc03e2c8ad"
+        },
+        {
+            "type": "file",
+            "name": "tools/copilot.html",
+            "size": 8037,
+            "hash": "54717f10117fa28cc4162023a8603372ab224e45901752cdc9829d8e2492ef5b"
+        },
+        {
+            "type": "file",
+            "name": "tools/copy-ai.html",
+            "size": 8049,
+            "hash": "031076e9373335c0fe5d245b1c53b332086952a2d89dc742f3b368e3b03387bb"
+        },
+        {
+            "type": "file",
+            "name": "tools/cursor.html",
+            "size": 7913,
+            "hash": "a59bc165a89df8b6bfbfe43796b20a24e3f8db99e05596d4ea7f708aa029e1e5"
+        },
+        {
+            "type": "file",
+            "name": "tools/deepseek.html",
+            "size": 8042,
+            "hash": "6ef4ba3647c6c5d26bf5d258f5079695aa6d438dc6ab006cb9f387e51f3ca012"
+        },
+        {
+            "type": "file",
+            "name": "tools/descript.html",
+            "size": 7993,
+            "hash": "0f2ccdf689ddcdacf7857d325b17205aac107dcea7d45b5a3e5494fca02e9247"
+        },
+        {
+            "type": "file",
+            "name": "tools/elevenlabs.html",
+            "size": 8021,
+            "hash": "8474cda20bb7e3633f37b0d8b8ea45e01ac13d3cce7588742b9e4a7113916999"
+        },
+        {
+            "type": "file",
+            "name": "tools/exa-ai.html",
+            "size": 6924,
+            "hash": "8671f73999bfff7a1a38f5dba08c6b7f05b2bd101b526b24fff15255564b5f08"
+        },
+        {
+            "type": "file",
+            "name": "tools/figma-ai.html",
+            "size": 6910,
+            "hash": "3b0e5ae468f17a8c8ec02b63a316667a1e15780a9b32fc4138b3f4f40db03464"
+        },
+        {
+            "type": "file",
+            "name": "tools/flux.html",
+            "size": 8015,
+            "hash": "dcc464e0665e191a677b67682cf7796ef8848065ce0ef7004d178bde2d402238"
+        },
+        {
+            "type": "file",
+            "name": "tools/framer-ai.html",
+            "size": 7013,
+            "hash": "3fb5bf5922491b0a6a98cdbad4c6f0aba7a2d4e5142c44b768f2bd4fbf5e68f3"
+        },
+        {
+            "type": "file",
+            "name": "tools/gemini.html",
+            "size": 7999,
+            "hash": "418d8e71a21edc2c151e4ab66ab713b880a3f6dcf63236b018af49843c50d61a"
+        },
+        {
+            "type": "file",
+            "name": "tools/grammarly.html",
+            "size": 8039,
+            "hash": "f59614922b70fc009cf4f63c3598983657554ccfb7fe8574c457fd9ac7e15c68"
+        },
+        {
+            "type": "file",
+            "name": "tools/github-copilot.html",
+            "size": 8051,
+            "hash": "3c3745bac04942cc802da421e7d3e600951ad8e2cc404df58578d6495a959026"
+        },
+        {
+            "type": "file",
+            "name": "tools/grok.html",
+            "size": 7931,
+            "hash": "bc9994eac4cd660c13b060fe29e00b7be6cf1c5e9fe6a71be61d4c79e07a108c"
+        },
+        {
+            "type": "file",
+            "name": "tools/heygen.html",
+            "size": 7977,
+            "hash": "856a0a273817702ec2eea5fb2351e4a8354136cce36cf083b8f08865ba3a2de7"
+        },
+        {
+            "type": "file",
+            "name": "tools/huggingface.html",
+            "size": 7265,
+            "hash": "795931b47584f927b45fc8b890b048763d98c860946a2a996ea482c035e16b9a"
+        },
+        {
+            "type": "file",
+            "name": "tools/ideogram.html",
+            "size": 8139,
+            "hash": "d63912fa5371ede8a9638cb8264a78c0127060db86768c10a0709c41a471d509"
+        },
+        {
+            "type": "file",
+            "name": "tools/jasper.html",
+            "size": 7942,
+            "hash": "8d9aa5c4417688b13629076afae7811fa1942094e74247924033c85a222950e8"
+        },
+        {
+            "type": "file",
+            "name": "tools/kling-ai.html",
+            "size": 8050,
+            "hash": "573f7750ae7162765b6918b406ae3b7b2a0dcc6f17a51b3ffea415134e039c9f"
+        },
+        {
+            "type": "file",
+            "name": "tools/krea.html",
+            "size": 7980,
+            "hash": "1e30cf5f48309d40ea30ba3a8cffa1728d7bdb99105b0ec998d4b562aa8ea12d"
+        },
+        {
+            "type": "file",
+            "name": "tools/lately-ai.html",
+            "size": 6971,
+            "hash": "ae2476f5af4fcc8e1dfec012afd7cde598fc7323ee9a842c7035d7a0a39bec74"
+        },
+        {
+            "type": "file",
+            "name": "tools/le-chat.html",
+            "size": 7989,
+            "hash": "2ae81a8836fcc02a665ac0e63007f2ebb2f4128626fa4d2640141259c1b4fce5"
+        },
+        {
+            "type": "file",
+            "name": "tools/leonardo-ai.html",
+            "size": 8114,
+            "hash": "27068ae28fa9d9fe11f5ef45f3de936af6a0961c4c4f6371615a08c870b31222"
+        },
+        {
+            "type": "file",
+            "name": "tools/looka.html",
+            "size": 6785,
+            "hash": "00f5a4d52bd8ee949a64b7c0c73b7931509e35d8ba4fa195ec659cd0b4a8e96b"
+        },
+        {
+            "type": "file",
+            "name": "tools/lovable.html",
+            "size": 7987,
+            "hash": "4a3db441711d7fe37cca642c5875e1049019c65daae4f835a158dd0480c8a79d"
+        },
+        {
+            "type": "file",
+            "name": "tools/mem-ai.html",
+            "size": 7529,
+            "hash": "1e4c86ad73a5bdad0558a0bd5aaed297cc66a57111b564cb2540438fe5d7fbd9"
+        },
+        {
+            "type": "file",
+            "name": "tools/meta-ai.html",
+            "size": 7977,
+            "hash": "93ee08c953f22f288f248a7d254ad12b4b6d2aa10a45cb898bac186355b54d5d"
+        },
+        {
+            "type": "file",
+            "name": "tools/midjourney.html",
+            "size": 8054,
+            "hash": "703827fb9a66a46114319067548f1e1b106bcdfc8c509c79b2f8b341a15f3365"
+        },
+        {
+            "type": "file",
+            "name": "tools/mistral.html",
+            "size": 7981,
+            "hash": "8627cebe715ce74c5f3c41436131cb749cb32e1465fb065ed7d93dffda37bb8e"
+        },
+        {
+            "type": "file",
+            "name": "tools/motion.html",
+            "size": 7519,
+            "hash": "6539c1a485c60158c6d912814fdd9c68abec093b303f80c4cd24b1caa37b1d76"
+        },
+        {
+            "type": "file",
+            "name": "tools/murf-ai.html",
+            "size": 7949,
+            "hash": "233f9308a38cba813822662c18d401ae845676167fcdc62490e0c7a9c399453e"
+        },
+        {
+            "type": "file",
+            "name": "tools/notion-ai.html",
+            "size": 7568,
+            "hash": "acd4b65e26e968e4cbc39dddae42cf9f540a39abc93b7f2c3a6b03aecf390a54"
+        },
+        {
+            "type": "file",
+            "name": "tools/otter-ai.html",
+            "size": 7566,
+            "hash": "3d005b033394bc607620fd859c3eb8af0a55149a934f591df34f5b769f741932"
+        },
+        {
+            "type": "file",
+            "name": "tools/perplexity.html",
+            "size": 7007,
+            "hash": "4d7d65c1b915a76fc55a599b9c6a77be03449aa9245e3aea35e323606043458c"
+        },
+        {
+            "type": "file",
+            "name": "tools/pi-ai.html",
+            "size": 7959,
+            "hash": "19bfbde8274017db150033f0fe0b104ba7e04cb1cbf8584ca430fc8374fd96d1"
+        },
+        {
+            "type": "file",
+            "name": "tools/pika.html",
+            "size": 7965,
+            "hash": "2bedec49e57cbd7949f5e69f09de7c5bace78d54b99a4715d7ff0320ca4038fc"
+        },
+        {
+            "type": "file",
+            "name": "tools/pmb.html",
+            "size": 6670,
+            "hash": "dfe3a7ac6d62c9bc6fb5bdadc5256f0bd3b66e039300835537f6d757f02846b2"
+        },
+        {
+            "type": "file",
+            "name": "tools/prompt-guru.html",
+            "size": 7846,
+            "hash": "b0c24decd83e67c013b89e2526712228f7011cf9ef40e3e5f73979e59d3bc37c"
+        },
+        {
+            "type": "file",
+            "name": "tools/quillbot.html",
+            "size": 8075,
+            "hash": "70c0b6ab760953eba354158890663ca5956b342ccd9d9334dfd9cc5e2acc05da"
+        },
+        {
+            "type": "file",
+            "name": "tools/reclaim-ai.html",
+            "size": 7597,
+            "hash": "c0c0f5b71a414f0a8b4f6839f9658c1a7b5f30090e4186ab1b5146d8adac1d3c"
+        },
+        {
+            "type": "file",
+            "name": "tools/replicate.html",
+            "size": 7244,
+            "hash": "99e32c611226e1fec2d8ccb910bb89be608ea07571895ed01a85a54ed54f7596"
+        },
+        {
+            "type": "file",
+            "name": "tools/replit-ai.html",
+            "size": 7991,
+            "hash": "83fce2226b78086c7d23b24a3e568460bca524d569ed5134867f7a73ca61d557"
+        },
+        {
+            "type": "file",
+            "name": "tools/runway.html",
+            "size": 7984,
+            "hash": "b89ed863094556c9f99893b70a19b49463a75f559e9e22ad01ebc4c1c04eb920"
+        },
+        {
+            "type": "file",
+            "name": "tools/sora.html",
+            "size": 7911,
+            "hash": "ab15f6ef87e357cf1306f58df305b52821f0ee8f3ccce760e33d3afea58c362a"
+        },
+        {
+            "type": "file",
+            "name": "tools/stable-diff.html",
+            "size": 8121,
+            "hash": "6850b073676f95f0e438f0a27f2ee671497f5c65e1458c7b5f930b41f78170fc"
+        },
+        {
+            "type": "file",
+            "name": "tools/suno.html",
+            "size": 7936,
+            "hash": "6cb9c79ee45fe38ff6f127f4e1192cf519c4db42e37272ccdf5de7c5030347b5"
+        },
+        {
+            "type": "file",
+            "name": "tools/surfer-seo.html",
+            "size": 6929,
+            "hash": "2b503738dddbc5b9dd9f0a65e0d77123c4ea5dab920504afacf9a81e139441c5"
+        },
+        {
+            "type": "file",
+            "name": "tools/synthesia.html",
+            "size": 8024,
+            "hash": "f39451557d4627a70a7335ba1315f4463f27062e1d4a9e070a9e93ec939b7352"
+        },
+        {
+            "type": "file",
+            "name": "tools/tabnine.html",
+            "size": 7893,
+            "hash": "b29a5ac610c9fd98bb1a6c257d05a26c48b436335df1eaa68efce211941a25a7"
+        },
+        {
+            "type": "file",
+            "name": "tools/udio.html",
+            "size": 7951,
+            "hash": "4fdccb287dfba7adf0e7a3638e5d69aab198273ca40fc6c748c7375517f822b1"
+        },
+        {
+            "type": "file",
+            "name": "tools/together-ai.html",
+            "size": 7262,
+            "hash": "63ccc367af075062cbd4efb7d120b3320c41905bbee437f85c2bcb95967dab21"
+        },
+        {
+            "type": "file",
+            "name": "tools/v0.html",
+            "size": 7879,
+            "hash": "73b480841be378e27d7f9cc723e73ffd01a4d52494e1f9622abe4063aee6f484"
+        },
+        {
+            "type": "file",
+            "name": "tools/windsurf.html",
+            "size": 7908,
+            "hash": "0e7cfa904ff2363862112cbbf07f714e7eeb8e94198b8353f429422f02f0f10b"
+        },
+        {
+            "type": "file",
+            "name": "tools/writesonic.html",
+            "size": 8063,
+            "hash": "38faa03fe08260e123fad3a70e02fd06381f1b7e5fc01d20dcbc256360589483"
+        },
+        {
+            "type": "file",
+            "name": "tools/you-com.html",
+            "size": 6896,
+            "hash": "da173f6c9c653ee3be4cf1a4b331304fc8f244c9af4ba663a31d874bea72e2fa"
+        }
+    ]
+}

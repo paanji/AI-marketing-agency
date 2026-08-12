@@ -1,69 +1,453 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.allaidunia.com/</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/guides/websites.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/guides/video-generation.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/guides/3d-image-generation.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/guides/voice-audio.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/guides/chatbots-agents.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/guides/writing-content.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/about.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/contact.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/video-ai-tools.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.allaidunia.com/best-free-ai-video-editing-tools.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://www.allaidunia.com/</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/about.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/contact.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/prompt-guru.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/guides/websites.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/guides/video-generation.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/guides/3d-image-generation.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/guides/voice-audio.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/guides/chatbots-agents.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/guides/writing-content.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/video-ai-tools.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/best-free-ai-video-editing-tools.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/adcreative.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/adobe-firefly.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/appaca.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/arxiv-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/bolt.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/canva-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/chatgpt.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/claude.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/copilot.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/copy-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/cursor.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/deepseek.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/descript.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/elevenlabs.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/exa-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/figma-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/flux.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/framer-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/gemini.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/github-copilot.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/grammarly.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/grok.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/heygen.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/huggingface.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/ideogram.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/jasper.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/kling-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/krea.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/lately-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/le-chat.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/leonardo-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/looka.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/lovable.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/mem-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/meta-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/midjourney.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/mistral.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/motion.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/murf-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/notion-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/otter-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/perplexity.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/pi-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/pika.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/pmb.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/prompt-guru.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/quillbot.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/reclaim-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/replicate.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/replit-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/runway.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/sora.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/stable-diff.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/suno.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/surfer-seo.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/synthesia.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/tabnine.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/together-ai.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/udio.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/v0.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/windsurf.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/writesonic.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.allaidunia.com/tools/you-com.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
