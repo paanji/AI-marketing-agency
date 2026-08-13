@@ -163,5 +163,181 @@
     "proposed_fix": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"ItemList\",\n  \"name\": \"AllAIDunia — Best AI Tools for Writing\",\n  \"url\": \"https://www.allaidunia.com/guides/writing-content.html\",\n  \"numberOfItems\": 5,\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Jasper\",\n        \"url\": \"https://jasper.ai\",\n        \"description\": \"AI for marketing content and copywriting\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Copy.ai\",\n        \"url\": \"https://copy.ai\",\n        \"description\": \"AI writing and workflow automation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Grammarly\",\n        \"url\": \"https://grammarly.com\",\n        \"description\": \"AI grammar and writing assistant\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Quillbot\",\n        \"url\": \"https://quillbot.com\",\n        \"description\": \"AI paraphrasing and summarisation\",\n        \"applicationCategory\": \"Writing\"\n      }\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 5,\n      \"item\": {\n        \"@type\": \"SoftwareApplication\",\n        \"name\": \"Writesonic\",\n        \"url\": \"https://writesonic.com\",\n        \"description\": \"AI writing platform for marketers\",\n        \"applicationCategory\": \"Writing\"\n      }\n    }\n  ]\n}",
     "target_range": null,
     "approved": true
+  },
+  {
+    "id": "90d9a650dd",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/",
+    "file_path": "index.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "Best AI Tools by Category — Guides & Prompts | AllAIDunia",
+    "proposed_fix": "Best AI Tools 2026 — Directory & Guides | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "e306d69bf9",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/",
+    "file_path": "index.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "Hand-picked AI tools for websites, video, 3D, voice, chat, and writing. Each category includes a step-by-step guide and copy-paste prompts to start free.",
+    "proposed_fix": "Browse the best AI tools directory for 2026 — websites, video, image, voice, chat & writing. Hand-picked, with free step-by-step guides and prompts.",
+    "target_range": "70-160 characters",
+    "approved": true
+  },
+  {
+    "id": "7623579faa",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/guides/websites.html",
+    "file_path": "guides/websites.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "Build a Website with AI — Step-by-Step Guide & Tools | AllAIDunia",
+    "proposed_fix": "Best AI Website Builder — Free Tools 2026 | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "da2a87a73b",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/guides/websites.html",
+    "file_path": "guides/websites.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "How to build a full website with AI: a step-by-step guide, a copy-paste starter prompt, and our hand-picked best AI website builders — including free options.",
+    "proposed_fix": "Compare the best AI website builders for 2026 — free and paid. Plus a step-by-step guide and copy-paste starter prompt to build your site fast.",
+    "target_range": "70-160 characters",
+    "approved": true
+  },
+  {
+    "id": "e4eead911c",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/guides/video-generation.html",
+    "file_path": "guides/video-generation.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "Make AI Videos — Step-by-Step Guide & Tools | AllAIDunia",
+    "proposed_fix": "Best AI Video Generator — Free Tools 2026 | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "7a9f6d1026",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/guides/video-generation.html",
+    "file_path": "guides/video-generation.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "How to create videos with AI: a step-by-step process, a copy-paste starter prompt, and our hand-picked best AI video generators — including free options.",
+    "proposed_fix": "Compare the best AI video generators for 2026 — Sora, Runway, Kling & more. Plus a step-by-step guide and copy-paste starter prompt.",
+    "target_range": "70-160 characters",
+    "approved": true
+  },
+  {
+    "id": "4992b59c04",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/guides/3d-image-generation.html",
+    "file_path": "guides/3d-image-generation.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "AI Images & 3D — Step-by-Step Guide & Tools | AllAIDunia",
+    "proposed_fix": "Best AI Image Generator — Free Tools 2026 | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "41b8678b72",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/guides/3d-image-generation.html",
+    "file_path": "guides/3d-image-generation.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "How to create images and 3D renders with AI: a simple step-by-step process, a copy-paste starter prompt, and our hand-picked best AI image tools.",
+    "proposed_fix": "Compare the best AI image generators for 2026 — Midjourney, Stable Diffusion & more. Plus a simple guide and copy-paste starter prompt.",
+    "target_range": "70-160 characters",
+    "approved": true
+  },
+  {
+    "id": "001ba4a43e",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/guides/voice-audio.html",
+    "file_path": "guides/voice-audio.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "AI Voice & Audio — Step-by-Step Guide & Tools | AllAIDunia",
+    "proposed_fix": "Best AI Voice Generator — Free Tools 2026 | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "58f42ae6be",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/guides/voice-audio.html",
+    "file_path": "guides/voice-audio.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "How to generate natural-sounding voiceovers and audio with AI: a step-by-step guide, a starter script format, and our hand-picked best AI voice tools.",
+    "proposed_fix": "Compare the best AI voice generators and text-to-speech tools for 2026. Plus a step-by-step guide and starter script format.",
+    "target_range": "70-160 characters",
+    "approved": true
+  },
+  {
+    "id": "ba7db6425c",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/guides/chatbots-agents.html",
+    "file_path": "guides/chatbots-agents.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "AI Chatbots & Agents — Setup Guide & Best Tools | AllAIDunia",
+    "proposed_fix": "Best AI Chatbot Builder — Free Tools 2026 | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "95a9033a7a",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/guides/chatbots-agents.html",
+    "file_path": "guides/chatbots-agents.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "How to set up an AI chatbot or agent for your business: a step-by-step guide, a ready-to-use instruction prompt, and our hand-picked best chatbot tools.",
+    "proposed_fix": "Compare the best AI chatbot builders for 2026 — ChatGPT, Claude, Gemini & more. Plus a setup guide and ready-to-use instruction prompt.",
+    "target_range": "70-160 characters",
+    "approved": true
+  },
+  {
+    "id": "5de2739339",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/guides/writing-content.html",
+    "file_path": "guides/writing-content.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "AI Writing Tools — Step-by-Step Guide & Prompts | AllAIDunia",
+    "proposed_fix": "Best AI Writing Tool — Free Generators 2026 | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "5baa768584",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/guides/writing-content.html",
+    "file_path": "guides/writing-content.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "How to write blog posts, product copy, and content with AI: a step-by-step process, a copy-paste starter prompt, and our hand-picked best AI writing tools.",
+    "proposed_fix": "Compare the best AI writing tools and content generators for 2026. Plus a step-by-step process and copy-paste starter prompt.",
+    "target_range": "70-160 characters",
+    "approved": true
+  },
+  {
+    "id": "661b6227bc",
+    "fix_type": "title",
+    "page": "https://www.allaidunia.com/prompt-guru.html",
+    "file_path": "prompt-guru.html",
+    "description": "Keyword remap (title) — align with real search phrasing instead of instructional wording.",
+    "current_value": "Prompt Guru — Get the Perfect AI Prompt | AllAIDunia",
+    "proposed_fix": "AI Prompt Generator — For Any AI Tool | AllAIDunia",
+    "target_range": "30-60 characters",
+    "approved": true
+  },
+  {
+    "id": "4767e06d02",
+    "fix_type": "meta_description",
+    "page": "https://www.allaidunia.com/prompt-guru.html",
+    "file_path": "prompt-guru.html",
+    "description": "Keyword remap (meta_description) — align with real search phrasing instead of instructional wording.",
+    "current_value": "Describe what you want to create. Prompt Guru asks the right questions, then writes you a perfect, tool-specific prompt for Midjourney, Sora, Runway, DALL-E and more.",
+    "proposed_fix": "Free AI prompt generator for images, video, websites, music & more. Answer a few questions and get the perfect, tool-specific prompt instantly.",
+    "target_range": "70-160 characters",
+    "approved": true
   }
 ]
