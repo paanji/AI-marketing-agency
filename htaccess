@@ -1,0 +1,52 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^allaidunia\.com [NC]
+RewriteRule ^(.*)$ https://www.allaidunia.com/$1 [L,R=301]
+
+# ---------------------------------------------------------------------------
+# Browser caching — tells returning visitors' browsers to reuse files they
+# already downloaded instead of re-fetching them every visit. Directly
+# addresses the "12,284 KiB not cached" PageSpeed finding.
+# Wrapped in <IfModule> so nothing breaks if a module isn't enabled.
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # CSS and JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+
+  # HTML — short, since this is the content that actually changes
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Compression — sends files gzipped, reducing transfer size. Helps every
+# metric PageSpeed measures, not just one.
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/json
+</IfModule>
