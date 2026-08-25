@@ -1,13 +1,1 @@
-[
-  {
-    "id": "34ddd60587",
-    "fix_type": "meta_description",
-    "page": "https://www.allaidunia.com/prompt-guru.html",
-    "file_path": "prompt-guru.html",
-    "description": "Meta description is 166 characters — will get truncated.",
-    "current_value": "Describe what you want to create. Prompt Guru asks the right questions, then writes you a perfect, tool-specific prompt for Midjourney, Sora, Runway, DALL-E and more.",
-    "proposed_fix": "Describe what you want to create. Prompt Guru asks the right questions, then writes you a perfect, tool-specific prompt for Midjourney, Sora, Runway, DALL-E…",
-    "target_range": "70-160 characters",
-    "approved": null
-  }
-]
+[]
