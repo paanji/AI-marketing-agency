@@ -2,105 +2,126 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-09-01",
+    "run_date": "2026-09-08",
     "status": "success",
-    "summary": "37 action items found (5 high priority)"
+    "summary": "37 action items found (3 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-09-01",
+  "generated_date": "2026-09-08",
   "window": {
-    "start": "2026-08-01",
-    "end": "2026-08-29"
+    "start": "2026-08-08",
+    "end": "2026-09-05"
   },
   "overview": {
-    "total_queries": 242,
+    "total_queries": 282,
     "total_clicks": 0,
-    "total_impressions": 741,
-    "avg_position": 48.8,
+    "total_impressions": 1051,
+    "avg_position": 47.8,
     "overall_ctr": 0.0
   },
   "top_queries": [
     {
       "query": "ideogram",
-      "position": 58.7,
-      "impressions": 74,
+      "position": 56.9,
+      "impressions": 131,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram ai",
-      "position": 64.9,
-      "impressions": 57,
+      "position": 63.6,
+      "impressions": 109,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai",
-      "position": 25.4,
-      "impressions": 46,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "new ai websites",
-      "position": 35.4,
-      "impressions": 35,
+      "position": 25.6,
+      "impressions": 71,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "notion ai",
-      "position": 35.6,
-      "impressions": 32,
+      "position": 34.5,
+      "impressions": 56,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "new ai websites",
+      "position": 36,
+      "impressions": 41,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "udio",
+      "position": 53.4,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "مواقع ai",
+      "position": 44.8,
+      "impressions": 24,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "new artificial intelligence website",
+      "position": 39.2,
+      "impressions": 22,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai",
+      "position": 44.2,
+      "impressions": 20,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ai writing for dummies",
+      "position": 74.8,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "dunia ai chat",
       "position": 5.5,
-      "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "udio",
-      "position": 54.4,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "how to write ai",
-      "position": 61.1,
-      "impressions": 17,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "مواقع ai",
-      "position": 45.1,
-      "impressions": 16,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ai writing for dummies",
-      "position": 74.6,
-      "impressions": 15,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "new artificial intelligence website",
-      "position": 40.5,
-      "impressions": 15,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram.",
-      "position": 61.5,
+      "position": 60.1,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "appaca",
+      "position": 14.8,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "is framer ai free",
+      "position": 12.3,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "grammarly",
+      "position": 24.1,
       "impressions": 13,
       "clicks": 0,
       "ctr": 0
@@ -113,151 +134,136 @@
       "ctr": 0
     },
     {
-      "query": "exa ai",
-      "position": 47.7,
-      "impressions": 12,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "appaca",
-      "position": 14.5,
+      "query": "quillbot",
+      "position": 29.4,
       "impressions": 11,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "all creator",
-      "position": 37.1,
-      "impressions": 8,
+      "query": "ai ideogram",
+      "position": 65,
+      "impressions": 10,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "arxiv trending pricing",
-      "position": 17.8,
-      "impressions": 8,
+      "position": 17.1,
+      "impressions": 10,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "grammarly",
-      "position": 25.2,
-      "impressions": 8,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "is framer ai free",
-      "position": 18.4,
-      "impressions": 8,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "quillbot",
-      "position": 27.1,
-      "impressions": 7,
+      "query": "dunia ai",
+      "position": 9,
+      "impressions": 10,
       "clicks": 0,
       "ctr": 0
     }
   ],
-  "quick_wins": [
-    {
-      "query": "dunia ai chat",
-      "position": 5.5,
-      "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
-    }
-  ],
+  "quick_wins": [],
   "low_ctr_queries": [
     {
       "query": "ideogram",
-      "position": 58.7,
-      "impressions": 74,
+      "position": 56.9,
+      "impressions": 131,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram ai",
-      "position": 64.9,
-      "impressions": 57,
+      "position": 63.6,
+      "impressions": 109,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai",
-      "position": 25.4,
-      "impressions": 46,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "new ai websites",
-      "position": 35.4,
-      "impressions": 35,
+      "position": 25.6,
+      "impressions": 71,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "notion ai",
-      "position": 35.6,
-      "impressions": 32,
+      "position": 34.5,
+      "impressions": 56,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "new ai websites",
+      "position": 36,
+      "impressions": 41,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "udio",
+      "position": 53.4,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "مواقع ai",
+      "position": 44.8,
+      "impressions": 24,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "new artificial intelligence website",
+      "position": 39.2,
+      "impressions": 22,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai",
+      "position": 44.2,
+      "impressions": 20,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ai writing for dummies",
+      "position": 74.8,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "dunia ai chat",
       "position": 5.5,
-      "impressions": 22,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "udio",
-      "position": 54.4,
+      "query": "ideogram.",
+      "position": 60.1,
       "impressions": 18,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "how to write ai",
-      "position": 61.1,
-      "impressions": 17,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "مواقع ai",
-      "position": 45.1,
-      "impressions": 16,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ai writing for dummies",
-      "position": 74.6,
+      "query": "appaca",
+      "position": 14.8,
       "impressions": 15,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "new artificial intelligence website",
-      "position": 40.5,
+      "query": "is framer ai free",
+      "position": 12.3,
       "impressions": 15,
       "clicks": 0,
       "ctr": 0
     }
   ],
-  "declining_pages": [
-    {
-      "page": "https://www.allaidunia.com/",
-      "prior_clicks": 5,
-      "recent_clicks": 2,
-      "drop_pct": 60.0
-    }
-  ],
+  "declining_pages": [],
   "page_audits": [
     {
       "url": "https://www.allaidunia.com/",
@@ -292,7 +298,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-29T02:38:58Z"
+        "last_crawl_time": "2026-09-05T18:41:20Z"
       },
       "noindex": false,
       "canonical": {
@@ -305,7 +311,12 @@
         "has_og_description": true,
         "has_og_image": true
       },
-      "pagespeed": null
+      "pagespeed": {
+        "performance_score": 0.71,
+        "lcp_display": "5.2 s",
+        "cls_display": "0.002",
+        "tbt_display": "300 ms"
+      }
     },
     {
       "url": "https://www.allaidunia.com/about.html",
@@ -348,7 +359,12 @@
         "has_og_description": true,
         "has_og_image": true
       },
-      "pagespeed": null
+      "pagespeed": {
+        "performance_score": 0.85,
+        "lcp_display": "3.3 s",
+        "cls_display": "0.079",
+        "tbt_display": "150 ms"
+      }
     },
     {
       "url": "https://www.allaidunia.com/contact.html",
@@ -392,8 +408,8 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.88,
-        "lcp_display": "3.3 s",
+        "performance_score": 0.77,
+        "lcp_display": "4.1 s",
         "cls_display": "0.065",
         "tbt_display": "60 ms"
       }
@@ -440,9 +456,9 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.9,
+        "performance_score": 0.92,
         "lcp_display": "2.6 s",
-        "cls_display": "0.111",
+        "cls_display": "0.067",
         "tbt_display": "0 ms"
       }
     },
@@ -487,7 +503,12 @@
         "has_og_description": true,
         "has_og_image": true
       },
-      "pagespeed": null
+      "pagespeed": {
+        "performance_score": 1,
+        "lcp_display": "1.4 s",
+        "cls_display": "0",
+        "tbt_display": "0 ms"
+      }
     },
     {
       "url": "https://www.allaidunia.com/guides/video-generation.html",
@@ -646,7 +667,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-04T17:50:46Z"
+        "last_crawl_time": "2026-09-08T07:51:42Z"
       },
       "noindex": false,
       "canonical": {
@@ -689,7 +710,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-04T17:00:59Z"
+        "last_crawl_time": "2026-09-02T13:03:22Z"
       },
       "noindex": false,
       "canonical": {
@@ -1361,12 +1382,36 @@
   },
   "action_items": [
     {
+      "id": "1c59c13909",
+      "description": "Page speed could be better (Lighthouse performance score: 71/100, mobile). LCP: 5.2 s, CLS: 0.002.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
       "id": "37b84329a5",
       "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
       "priority": "low",
       "category": "ai_search_geo",
       "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "1e5315b742",
+      "description": "Page speed could be better (Lighthouse performance score: 85/100, mobile). LCP: 3.3 s, CLS: 0.079.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/about.html",
       "proposed_fix": null,
       "field_type": null,
       "current_value": null,
@@ -1397,8 +1442,8 @@
       "target_range": null
     },
     {
-      "id": "d055938d34",
-      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.3 s, CLS: 0.065.",
+      "id": "307c840e8d",
+      "description": "Page speed could be better (Lighthouse performance score: 77/100, mobile). LCP: 4.1 s, CLS: 0.065.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1721,8 +1766,8 @@
       "target_range": null
     },
     {
-      "id": "47d4bed95f",
-      "description": "Query \"ideogram\" gets 74 impressions but only 0% CTR at position 58.7 — likely needs a more compelling title/meta description.",
+      "id": "47fa4cdd32",
+      "description": "Query \"ideogram\" gets 131 impressions but only 0% CTR at position 56.9 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1733,8 +1778,8 @@
       "target_range": null
     },
     {
-      "id": "d91b198ce4",
-      "description": "Query \"ideogram ai\" gets 57 impressions but only 0% CTR at position 64.9 — likely needs a more compelling title/meta description.",
+      "id": "33bf79725c",
+      "description": "Query \"ideogram ai\" gets 109 impressions but only 0% CTR at position 63.6 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1745,8 +1790,8 @@
       "target_range": null
     },
     {
-      "id": "ab932340a3",
-      "description": "Query \"figma ai\" gets 46 impressions but only 0% CTR at position 25.4 — likely needs a more compelling title/meta description.",
+      "id": "c3dbadfb7f",
+      "description": "Query \"figma ai\" gets 71 impressions but only 0% CTR at position 25.6 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1757,8 +1802,8 @@
       "target_range": null
     },
     {
-      "id": "88288bb0ca",
-      "description": "Query \"new ai websites\" gets 35 impressions but only 0% CTR at position 35.4 — likely needs a more compelling title/meta description.",
+      "id": "429f56a7f7",
+      "description": "Query \"notion ai\" gets 56 impressions but only 0% CTR at position 34.5 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1769,36 +1814,12 @@
       "target_range": null
     },
     {
-      "id": "a4d3b1a38c",
-      "description": "Query \"notion ai\" gets 32 impressions but only 0% CTR at position 35.6 — likely needs a more compelling title/meta description.",
+      "id": "bdca63df44",
+      "description": "Query \"new ai websites\" gets 41 impressions but only 0% CTR at position 36 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
       "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "69141513e8",
-      "description": "\"dunia ai chat\" ranks position 5.5 with 22 impressions — a supporting blog post or added internal links could push this onto page 1.",
-      "priority": "high",
-      "category": "content_opportunity",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "007e2fb664",
-      "description": "https://www.allaidunia.com/ lost 60.0% of its clicks (5 to 2) — check for recent changes, broken elements, or content going stale.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/",
       "proposed_fix": null,
       "field_type": null,
       "current_value": null,
