@@ -2,227 +2,105 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-09-08",
+    "run_date": "2026-09-15",
     "status": "success",
-    "summary": "37 action items found (3 high priority)"
+    "summary": "8 action items found (2 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-09-08",
+  "generated_date": "2026-09-15",
   "window": {
-    "start": "2026-08-08",
-    "end": "2026-09-05"
+    "start": "2026-08-15",
+    "end": "2026-09-12"
   },
   "overview": {
-    "total_queries": 282,
-    "total_clicks": 0,
-    "total_impressions": 1051,
-    "avg_position": 47.8,
-    "overall_ctr": 0.0
+    "total_queries": 287,
+    "total_clicks": 1,
+    "total_impressions": 1245,
+    "avg_position": 45.8,
+    "overall_ctr": 0.08
   },
   "top_queries": [
     {
       "query": "ideogram",
-      "position": 56.9,
-      "impressions": 131,
+      "position": 57.0,
+      "impressions": 166,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram ai",
-      "position": 63.6,
-      "impressions": 109,
+      "position": 63.1,
+      "impressions": 130,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai",
-      "position": 25.6,
-      "impressions": 71,
+      "position": 25.2,
+      "impressions": 86,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "notion ai",
-      "position": 34.5,
-      "impressions": 56,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "new ai websites",
-      "position": 36,
-      "impressions": 41,
+      "position": 34.0,
+      "impressions": 70,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "udio",
-      "position": 53.4,
-      "impressions": 35,
+      "position": 48.4,
+      "impressions": 45,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "مواقع ai",
-      "position": 44.8,
-      "impressions": 24,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "new artificial intelligence website",
-      "position": 39.2,
-      "impressions": 22,
+      "query": "new ai websites",
+      "position": 35.1,
+      "impressions": 43,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa ai",
-      "position": 44.2,
-      "impressions": 20,
+      "position": 38.7,
+      "impressions": 32,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "ai writing for dummies",
-      "position": 74.8,
-      "impressions": 19,
+      "query": "new artificial intelligence website",
+      "position": 37.2,
+      "impressions": 29,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "dunia ai chat",
-      "position": 5.5,
-      "impressions": 19,
+      "query": "مواقع ai",
+      "position": 43.8,
+      "impressions": 26,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram.",
-      "position": 60.1,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "appaca",
-      "position": 14.8,
-      "impressions": 15,
+      "position": 60.4,
+      "impressions": 23,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "is framer ai free",
-      "position": 12.3,
-      "impressions": 15,
+      "position": 9.7,
+      "impressions": 23,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "grammarly",
-      "position": 24.1,
-      "impressions": 13,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "all ai",
-      "position": 40.2,
-      "impressions": 12,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "quillbot",
-      "position": 29.4,
-      "impressions": 11,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ai ideogram",
-      "position": 65,
-      "impressions": 10,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "arxiv trending pricing",
-      "position": 17.1,
-      "impressions": 10,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "dunia ai",
-      "position": 9,
-      "impressions": 10,
-      "clicks": 0,
-      "ctr": 0
-    }
-  ],
-  "quick_wins": [],
-  "low_ctr_queries": [
-    {
-      "query": "ideogram",
-      "position": 56.9,
-      "impressions": 131,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ideogram ai",
-      "position": 63.6,
-      "impressions": 109,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "figma ai",
-      "position": 25.6,
-      "impressions": 71,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "notion ai",
-      "position": 34.5,
-      "impressions": 56,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "new ai websites",
-      "position": 36,
-      "impressions": 41,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "udio",
-      "position": 53.4,
-      "impressions": 35,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "مواقع ai",
-      "position": 44.8,
-      "impressions": 24,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "new artificial intelligence website",
-      "position": 39.2,
-      "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "exa ai",
-      "position": 44.2,
+      "position": 26.1,
       "impressions": 20,
       "clicks": 0,
       "ctr": 0
@@ -235,29 +113,180 @@
       "ctr": 0
     },
     {
+      "query": "appaca",
+      "position": 14.8,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
       "query": "dunia ai chat",
-      "position": 5.5,
-      "impressions": 19,
+      "position": 5.3,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai research innovation evaluation",
+      "position": 77.9,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "quillbot",
+      "position": 29,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "arxiv trending pricing",
+      "position": 16.6,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "dunia ai",
+      "position": 8.7,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ex ai",
+      "position": 41.6,
+      "impressions": 12,
+      "clicks": 0,
+      "ctr": 0
+    }
+  ],
+  "quick_wins": [
+    {
+      "query": "is framer ai free",
+      "position": 9.7,
+      "impressions": 23,
+      "clicks": 0,
+      "ctr": 0
+    }
+  ],
+  "low_ctr_queries": [
+    {
+      "query": "ideogram",
+      "position": 57.0,
+      "impressions": 166,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ideogram ai",
+      "position": 63.1,
+      "impressions": 130,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "figma ai",
+      "position": 25.2,
+      "impressions": 86,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "notion ai",
+      "position": 34.0,
+      "impressions": 70,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "udio",
+      "position": 48.4,
+      "impressions": 45,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "new ai websites",
+      "position": 35.1,
+      "impressions": 43,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai",
+      "position": 38.7,
+      "impressions": 32,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "new artificial intelligence website",
+      "position": 37.2,
+      "impressions": 29,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "مواقع ai",
+      "position": 43.8,
+      "impressions": 26,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram.",
-      "position": 60.1,
-      "impressions": 18,
+      "position": 60.4,
+      "impressions": 23,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "is framer ai free",
+      "position": 9.7,
+      "impressions": 23,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "grammarly",
+      "position": 26.1,
+      "impressions": 20,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ai writing for dummies",
+      "position": 74.8,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "appaca",
       "position": 14.8,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "dunia ai chat",
+      "position": 5.3,
       "impressions": 15,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "is framer ai free",
-      "position": 12.3,
+      "query": "exa ai research innovation evaluation",
+      "position": 77.9,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "quillbot",
+      "position": 29,
       "impressions": 15,
       "clicks": 0,
       "ctr": 0
@@ -267,1124 +296,32 @@
   "page_audits": [
     {
       "url": "https://www.allaidunia.com/",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Tools 2026 — Directory & Guides | AllAIDunia",
-      "title_length": 52,
-      "has_meta_description": true,
-      "meta_description": "Browse the best AI tools directory for 2026 — websites, video, image, voice, chat & writing. Hand-picked, with free step-by-step guides and prompts.",
-      "meta_description_length": 148,
-      "h1_count": 1,
-      "images_total": 4,
-      "images_missing_alt": 0,
-      "word_count": 1200,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 15.0,
-        "subheading_count": 4
-      },
-      "js_blindspot": {
-        "selector": "#tools-grid",
-        "children_found": 63,
-        "expected_min": 2,
-        "likely_invisible_to_crawlers": false
-      },
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-05T18:41:20Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": {
-        "performance_score": 0.71,
-        "lcp_display": "5.2 s",
-        "cls_display": "0.002",
-        "tbt_display": "300 ms"
-      }
-    },
-    {
-      "url": "https://www.allaidunia.com/about.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "About AllAIDunia — Why We Curate, Not Just List",
-      "title_length": 47,
-      "has_meta_description": true,
-      "meta_description": "AllAIDunia hand-picks the best AI tools by category and shows you exactly how to use them — with real step-by-step guides and starter prompts.",
-      "meta_description_length": 142,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 352,
-      "schema_types": [
-        "WebPage"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 28.8,
-        "subheading_count": 8
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-18T18:39:32Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/about.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": {
-        "performance_score": 0.85,
-        "lcp_display": "3.3 s",
-        "cls_display": "0.079",
-        "tbt_display": "150 ms"
-      }
-    },
-    {
-      "url": "https://www.allaidunia.com/contact.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Contact AllAIDunia — Questions, Feedback, Tool Suggestions",
-      "title_length": 58,
-      "has_meta_description": true,
-      "meta_description": "Get in touch with AllAIDunia — ask a question, suggest a tool, or send feedback. We read every message.",
-      "meta_description_length": 103,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 113,
-      "schema_types": [
-        "WebPage"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 19.0,
-        "subheading_count": 0
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-07-25T11:11:13Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/contact.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": {
-        "performance_score": 0.77,
-        "lcp_display": "4.1 s",
-        "cls_display": "0.065",
-        "tbt_display": "60 ms"
-      }
-    },
-    {
-      "url": "https://www.allaidunia.com/prompt-guru.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "AI Prompt Generator — For Any AI Tool | AllAIDunia",
-      "title_length": 50,
-      "has_meta_description": true,
-      "meta_description": "Free AI prompt generator for images, video, websites, music & more. Answer a few questions and get the perfect, tool-specific prompt instantly.",
-      "meta_description_length": 143,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 66,
-      "schema_types": [
-        "WebApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 25.0,
-        "subheading_count": 0
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T05:33:53Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": false,
-        "canonical_url": null,
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": false,
-        "has_og_description": false,
-        "has_og_image": false
-      },
-      "pagespeed": {
-        "performance_score": 0.92,
-        "lcp_display": "2.6 s",
-        "cls_display": "0.067",
-        "tbt_display": "0 ms"
-      }
-    },
-    {
-      "url": "https://www.allaidunia.com/guides/websites.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Website Builder — Free Tools 2026 | AllAIDunia",
-      "title_length": 54,
-      "has_meta_description": true,
-      "meta_description": "Compare the best AI website builders for 2026 — free and paid. Plus a step-by-step guide and copy-paste starter prompt to build your site fast.",
-      "meta_description_length": 143,
-      "h1_count": 1,
-      "images_total": 1,
-      "images_missing_alt": 0,
-      "word_count": 396,
-      "schema_types": [
-        "WebPage"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 21.4,
-        "subheading_count": 6
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-28T01:41:13Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/guides/websites.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": {
-        "performance_score": 1,
-        "lcp_display": "1.4 s",
-        "cls_display": "0",
-        "tbt_display": "0 ms"
-      }
-    },
-    {
-      "url": "https://www.allaidunia.com/guides/video-generation.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Video Generator — Free Tools 2026 | AllAIDunia",
-      "title_length": 54,
-      "has_meta_description": true,
-      "meta_description": "Compare the best AI video generators for 2026 — Sora, Runway, Kling & more. Plus a step-by-step guide and copy-paste starter prompt.",
-      "meta_description_length": 132,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 363,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 20.2,
-        "subheading_count": 6
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/guides/video-generation.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/guides/3d-image-generation.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Image Generator — Free Tools 2026 | AllAIDunia",
-      "title_length": 54,
-      "has_meta_description": true,
-      "meta_description": "Compare the best AI image generators for 2026 — Midjourney, Stable Diffusion & more. Plus a simple guide and copy-paste starter prompt.",
-      "meta_description_length": 135,
-      "h1_count": 1,
-      "images_total": 1,
-      "images_missing_alt": 0,
-      "word_count": 322,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 17.2,
-        "subheading_count": 6
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-30T02:49:05Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/guides/3d-image-generation.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/guides/voice-audio.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Voice Generator — Free Tools 2026 | AllAIDunia",
-      "title_length": 54,
-      "has_meta_description": true,
-      "meta_description": "Compare the best AI voice generators and text-to-speech tools for 2026. Plus a step-by-step guide and starter script format.",
-      "meta_description_length": 124,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 352,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 18.3,
-        "subheading_count": 6
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T05:23:44Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/guides/voice-audio.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/guides/chatbots-agents.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Chatbot Builder — Free Tools 2026 | AllAIDunia",
-      "title_length": 54,
-      "has_meta_description": true,
-      "meta_description": "Compare the best AI chatbot builders for 2026 — ChatGPT, Claude, Gemini & more. Plus a setup guide and ready-to-use instruction prompt.",
-      "meta_description_length": 135,
-      "h1_count": 1,
-      "images_total": 1,
-      "images_missing_alt": 0,
-      "word_count": 393,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 20.0,
-        "subheading_count": 6
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-08T07:51:42Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/guides/chatbots-agents.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/guides/writing-content.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Writing Tool — Free Generators 2026 | AllAIDunia",
-      "title_length": 56,
-      "has_meta_description": true,
-      "meta_description": "Compare the best AI writing tools and content generators for 2026. Plus a step-by-step process and copy-paste starter prompt.",
-      "meta_description_length": 125,
-      "h1_count": 1,
-      "images_total": 1,
-      "images_missing_alt": 0,
-      "word_count": 354,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 19.1,
-        "subheading_count": 6
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-02T13:03:22Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/guides/writing-content.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": true
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/video-ai-tools.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best AI Video Tools 2026 — Free & Paid Video AI | AllAIDunia",
-      "title_length": 60,
-      "has_meta_description": true,
-      "meta_description": "Looking for the best AI video tools? Compare Runway, Sora, Kling AI, Pika, HeyGen and more — all in one place. Free to browse, updated regularly.",
-      "meta_description_length": 145,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 385,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 33.4,
-        "subheading_count": 1
-      },
-      "js_blindspot": {
-        "selector": "#tools-grid",
-        "children_found": 6,
-        "expected_min": 2,
-        "likely_invisible_to_crawlers": false
-      },
-      "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/video-ai-tools.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Best Free AI Tools for Video Editing in 2026 | AllAIDunia",
-      "title_length": 57,
-      "has_meta_description": true,
-      "meta_description": "Editing video the old way takes hours. Here are the best free AI tools for video editing in 2026 — from text-to-video generation to AI avatars, compared…",
-      "meta_description_length": 153,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 571,
-      "schema_types": [
-        "ItemList"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 35.9,
-        "subheading_count": 7
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "NEUTRAL",
-        "coverage_state": "Discovered - currently not indexed",
-        "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-        "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
-        "last_crawl_time": null
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/adcreative.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "AdCreative Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 60,
-      "has_meta_description": true,
-      "meta_description": "Is AdCreative worth it in 2026? AI-generated ad creatives that convert. See pricing (paid), what it's best for, and the top marketing alternatives.",
-      "meta_description_length": 147,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 207,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 17.0,
-        "subheading_count": 4
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T08:18:39Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/adcreative.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/adobe-firefly.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Adobe Firefly Review 2026 — Pricing & Alternatives",
-      "title_length": 50,
-      "has_meta_description": true,
-      "meta_description": "Is Adobe Firefly worth it in 2026? Adobe's generative AI for creatives. See pricing (pricing varies), what it's best for, and the top image alternatives.",
-      "meta_description_length": 153,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 295,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 18.3,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T02:03:00Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/adobe-firefly.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/appaca.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Appaca Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 56,
-      "has_meta_description": true,
-      "meta_description": "Is Appaca worth it in 2026? Show HN: Appaca – AI Workspace for Operators. See pricing (pricing varies), what it's best for, and the top uncategorized…",
-      "meta_description_length": 150,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 211,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 17.2,
-        "subheading_count": 4
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T04:36:03Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/appaca.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/arxiv-ai.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Arxiv + AI Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 60,
-      "has_meta_description": true,
-      "meta_description": "Is Arxiv + AI worth it in 2026? Latest AI research papers. See pricing (pricing varies), what it's best for, and the top research alternatives.",
-      "meta_description_length": 143,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 245,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 0,
-        "avg_paragraph_words": 18.4,
-        "subheading_count": 4
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T02:07:52Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/arxiv-ai.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/bolt.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Bolt Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 54,
-      "has_meta_description": true,
-      "meta_description": "Is Bolt worth it in 2026? Full-stack AI app builder in browser. See pricing (freemium), what it's best for, and the top code alternatives.",
-      "meta_description_length": 138,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 308,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 18.7,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T02:26:01Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/bolt.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/canva-ai.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Canva AI Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 58,
-      "has_meta_description": true,
-      "meta_description": "Is Canva AI worth it in 2026? AI image generation inside Canva. See pricing (pricing varies), what it's best for, and the top image alternatives.",
-      "meta_description_length": 145,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 296,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 18.3,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T04:14:10Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/canva-ai.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/chatgpt.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "ChatGPT Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 57,
-      "has_meta_description": true,
-      "meta_description": "Is ChatGPT worth it in 2026? OpenAI's flagship AI assistant for everything. See pricing (freemium), what it's best for, and the top chat alternatives.",
-      "meta_description_length": 150,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 297,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 18.3,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T03:38:34Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/chatgpt.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/claude.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Claude Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 56,
-      "has_meta_description": true,
-      "meta_description": "Is Claude worth it in 2026? Anthropic's thoughtful and safe AI assistant. See pricing (freemium), what it's best for, and the top chat alternatives.",
-      "meta_description_length": 148,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 297,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 18.3,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T03:10:44Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/claude.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/copilot.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Copilot Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 57,
-      "has_meta_description": true,
-      "meta_description": "Is Copilot worth it in 2026? Microsoft's AI assistant powered by GPT-4. See pricing (pricing varies), what it's best for, and the top chat alternatives.",
-      "meta_description_length": 152,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 286,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 17.2,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T03:52:33Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/copilot.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/copy-ai.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Copy.ai Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 57,
-      "has_meta_description": true,
-      "meta_description": "Is Copy.ai worth it in 2026? AI writing and workflow automation. See pricing (freemium), what it's best for, and the top writing alternatives.",
-      "meta_description_length": 142,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 302,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 18.5,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T03:20:13Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/copy-ai.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/cursor.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Cursor Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 56,
-      "has_meta_description": true,
-      "meta_description": "Is Cursor worth it in 2026? The AI-first code editor. See pricing (freemium), what it's best for, and the top code alternatives.",
-      "meta_description_length": 128,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 300,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 17.7,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T04:17:01Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/cursor.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/deepseek.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "DeepSeek Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 58,
-      "has_meta_description": true,
-      "meta_description": "Is DeepSeek worth it in 2026? Powerful open-source reasoning model. See pricing (free), what it's best for, and the top chat alternatives.",
-      "meta_description_length": 138,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 279,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 16.5,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T03:57:48Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/deepseek.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
-    },
-    {
-      "url": "https://www.allaidunia.com/tools/descript.html",
-      "status_code": 200,
-      "fetch_error": false,
-      "title": "Descript Review 2026 — Pricing & Alternatives | AllAIDunia",
-      "title_length": 58,
-      "has_meta_description": true,
-      "meta_description": "Is Descript worth it in 2026? Edit audio and video like a document. See pricing (pricing varies), what it's best for, and the top audio alternatives.",
-      "meta_description_length": 149,
-      "h1_count": 1,
-      "images_total": 0,
-      "images_missing_alt": 0,
-      "word_count": 280,
-      "schema_types": [
-        "SoftwareApplication"
-      ],
-      "extractability": {
-        "lists_and_tables_count": 1,
-        "avg_paragraph_words": 17.8,
-        "subheading_count": 5
-      },
-      "js_blindspot": null,
-      "indexing": {
-        "verdict": "PASS",
-        "coverage_state": "Submitted and indexed",
-        "robots_txt_state": "ALLOWED",
-        "indexing_state": "INDEXING_ALLOWED",
-        "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T05:16:51Z"
-      },
-      "noindex": false,
-      "canonical": {
-        "has_canonical": true,
-        "canonical_url": "https://www.allaidunia.com/tools/descript.html",
-        "domain_mismatch": false
-      },
-      "open_graph": {
-        "has_og_title": true,
-        "has_og_description": true,
-        "has_og_image": false
-      },
-      "pagespeed": null
+      "status_code": null,
+      "fetch_error": true,
+      "error": "HTTPSConnectionPool(host='www.allaidunia.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='www.allaidunia.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
     }
   ],
   "geo_checks": {
-    "blocked_ai_crawlers": [],
-    "has_llms_txt": true
+    "blocked_ai_crawlers": null,
+    "has_llms_txt": false
   },
   "action_items": [
     {
-      "id": "1c59c13909",
-      "description": "Page speed could be better (Lighthouse performance score: 71/100, mobile). LCP: 5.2 s, CLS: 0.002.",
-      "priority": "medium",
+      "id": "f41d6d992f",
+      "description": "No llms.txt file — an emerging standard giving AI systems a clean, structured summary of your site. Not yet universal, but cheap to add and forward-looking.",
+      "priority": "low",
+      "category": "ai_search_geo",
+      "suggested_agent": "content_agent",
+      "page": null,
+      "proposed_fix": "# AllAIDunia\n\n> A free directory of 63+ AI tools, organized by category.\n\n## Audio\n- [ElevenLabs](https://elevenlabs.io): Ultra-realistic AI voice cloning\n- [Suno](https://suno.com): Generate full songs with AI\n- [Udio](https://udio.com): AI music creation and generation\n- [Murf AI](https://murf.ai): AI voiceover and text-to-speech\n- [Descript](https://descript.com): Edit audio and video like a document\n\n## Chat\n- [ChatGPT](https://chat.openai.com): OpenAI's flagship AI assistant for everything\n- [Claude](https://claude.ai): Anthropic's thoughtful and safe AI assistant\n- [Gemini](https://gemini.google.com): Google's powerful multimodal AI model\n- [Grok](https://grok.com): xAI's witty real-time AI by Elon Musk\n- [Mistral](https://chat.mistral.ai): Open-weight European AI models\n- [Meta AI](https://meta.ai): Meta's AI across apps and the web\n- [Copilot](https://copilot.microsoft.com): Microsoft's AI assistant powered by GPT-4\n- [DeepSeek](https://chat.deepseek.com): Powerful open-source reasoning model\n- [Le Chat](https://chat.mistral.ai): Mistral's fast conversational AI\n- [Pi AI](https://pi.ai): Your personal AI that listens and learns\n\n## Code\n- [GitHub Copilot](https://github.com/features/copilot): AI pair programmer inside your IDE\n- [Cursor](https://cursor.sh): The AI-first code editor\n- [v0](https://v0.dev): Generate UI components with AI by Vercel\n- [Bolt](https://bolt.new): Full-stack AI app builder in browser\n- [Lovable](https://lovable.dev): AI that builds full web apps from prompts\n- [Replit AI](https://replit.com): AI-powered coding in the browser\n- [Windsurf](https://codeium.com/windsurf): AI code editor by Codeium\n- [Tabnine](https://tabnine.com): AI code completion for all IDEs\n\n## Design\n- [Figma AI](https://figma.com): AI-powered design features in Figma\n- [Framer AI](https://framer.com): AI website builder with animations\n- [Looka](https://looka.com): AI logo and brand design maker\n\n## Image\n- [Midjourney](https://midjourney.com): Stunning AI image generation\n- [Stable Diff.](https://stability.ai): Open-source image generation model\n- [Adobe Firefly](https://firefly.adobe.com): Adobe's generative AI for creatives\n- [Krea](https://krea.ai): Real-time AI image creation tool\n- [Ideogram](https://ideogram.ai): AI image gen with great text typography\n- [Leonardo AI](https://leonardo.ai): AI images for games and creative work\n- [Flux](https://blackforestlabs.ai): State of the art image generation model\n- [Canva AI](https://canva.com/ai-image-generator): AI image generation inside Canva\n\n## Marketing\n- [AdCreative](https://adcreative.ai): AI-generated ad creatives that convert\n- [Surfer SEO](https://surferseo.com): AI SEO writing and optimisation\n- [Lately AI](https://lately.ai): AI social media content repurposing\n\n## Productivity\n- [Prompt Guru](https://www.allaidunia.com/prompt-guru.html): Built by AllAIDunia — answers a few questions, then writes the perfect prompt for any AI tool: images, video, websites, music & more\n- [Notion AI](https://notion.so/ai): AI inside your notes and documents\n- [Otter.ai](https://otter.ai): AI meeting notes and transcription\n- [Mem.ai](https://mem.ai): AI-powered notes that self-organise\n- [Reclaim AI](https://reclaim.ai): AI calendar and time management\n- [Motion](https://usemotion.com): AI task and project scheduling\n\n## Research\n- [HuggingFace](https://huggingface.co): The GitHub of AI models and datasets\n- [Replicate](https://replicate.com): Run open-source AI models via API\n- [Together AI](https://together.ai): Fast inference for open-source models\n- [Arxiv + AI](https://arxiv.org): Latest AI research papers\n\n## Search\n- [Perplexity](https://perplexity.ai): AI-powered answer engine with citations\n- [You.com](https://you.com): AI search with cited answers\n- [Exa AI](https://exa.ai): Neural search for developers and researchers\n\n## Uncategorized\n- [PMB](https://pmbai.dev): Show HN: PMB – local memory for coding agents that shows if it is used\n- [Appaca](https://www.appaca.ai/): Show HN: Appaca – AI Workspace for Operators\n\n## Video\n- [Runway](https://runwayml.com): AI video generation and editing suite\n- [Sora](https://sora.com): OpenAI's text-to-video model\n- [Kling AI](https://klingai.com): Realistic AI video generation\n- [Pika](https://pika.art): AI video from text or images\n- [HeyGen](https://heygen.com): AI avatar video creator for business\n- [Synthesia](https://synthesia.io): AI video with realistic avatars\n\n## Writing\n- [Jasper](https://jasper.ai): AI for marketing content and copywriting\n- [Copy.ai](https://copy.ai): AI writing and workflow automation\n- [Grammarly](https://grammarly.com): AI grammar and writing assistant\n- [Quillbot](https://quillbot.com): AI paraphrasing and summarisation\n- [Writesonic](https://writesonic.com): AI writing platform for marketers\n",
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "18fc850cb8",
+      "description": "Page could not be loaded (status: None). Search engines can't index a page they can't fetch.",
+      "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/",
@@ -1394,429 +331,69 @@
       "target_range": null
     },
     {
-      "id": "37b84329a5",
-      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "1e5315b742",
-      "description": "Page speed could be better (Lighthouse performance score: 85/100, mobile). LCP: 3.3 s, CLS: 0.079.",
-      "priority": "medium",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/about.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "fd2b214014",
-      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/about.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "a2b7cec80c",
-      "description": "Only ~113 words — more substantive content tends to rank better.",
+      "id": "1a56c590c6",
+      "description": "Query \"ideogram\" gets 166 impressions but only 0% CTR at position 57.0 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/contact.html",
+      "page": null,
       "proposed_fix": null,
       "field_type": null,
       "current_value": null,
       "target_range": null
     },
     {
-      "id": "307c840e8d",
-      "description": "Page speed could be better (Lighthouse performance score: 77/100, mobile). LCP: 4.1 s, CLS: 0.065.",
-      "priority": "medium",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/contact.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "30fb433b50",
-      "description": "Only ~66 words — more substantive content tends to rank better.",
+      "id": "c4691c7879",
+      "description": "Query \"ideogram ai\" gets 130 impressions but only 0% CTR at position 63.1 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/prompt-guru.html",
+      "page": null,
       "proposed_fix": null,
       "field_type": null,
       "current_value": null,
       "target_range": null
     },
     {
-      "id": "161458eb9c",
-      "description": "No canonical tag — recommended so search engines know the definitive URL for this page, especially relevant given this site previously had a www/non-www duplication issue.",
+      "id": "7403f36f58",
+      "description": "Query \"figma ai\" gets 86 impressions but only 0% CTR at position 25.2 — likely needs a more compelling title/meta description.",
       "priority": "medium",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/prompt-guru.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "0bb83fcb1d",
-      "description": "Missing Open Graph tags (og:title, og:description, og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
+      "category": "content_opportunity",
       "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/prompt-guru.html",
+      "page": null,
       "proposed_fix": null,
       "field_type": null,
       "current_value": null,
       "target_range": null
     },
     {
-      "id": "95b6c740e6",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "id": "3813cfe20a",
+      "description": "Query \"notion ai\" gets 70 impressions but only 0% CTR at position 34.0 — likely needs a more compelling title/meta description.",
+      "priority": "medium",
+      "category": "content_opportunity",
+      "suggested_agent": "content_agent",
+      "page": null,
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "5d1ee90b04",
+      "description": "Query \"udio\" gets 45 impressions but only 0% CTR at position 48.4 — likely needs a more compelling title/meta description.",
+      "priority": "medium",
+      "category": "content_opportunity",
+      "suggested_agent": "content_agent",
+      "page": null,
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "5a4b8326fb",
+      "description": "\"is framer ai free\" ranks position 9.7 with 23 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/guides/video-generation.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "8cf90269f8",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/video-ai-tools.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "02f7041e73",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/video-ai-tools.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "330664a728",
-      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/video-ai-tools.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "a8ca9b6116",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
-      "priority": "high",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "1e67e76a54",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "06dcf2442e",
-      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/best-free-ai-video-editing-tools.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "91710a81a0",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/adcreative.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "cdbd1ae9a8",
-      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/adcreative.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "64b6ded2ca",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/adobe-firefly.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "8241c77f84",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/appaca.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "a525015fde",
-      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/appaca.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "e390aa79ea",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/arxiv-ai.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "03881696a0",
-      "description": "No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation.",
-      "priority": "low",
-      "category": "ai_search_geo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/arxiv-ai.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "c0aaeabc9c",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/bolt.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "9114d59a82",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/canva-ai.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "5541401636",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/chatgpt.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "d5d3b596f1",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/claude.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "62c7e793d5",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/copilot.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "228534ecd1",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/copy-ai.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "5583f7a830",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/cursor.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "da6785e2da",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/deepseek.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "dc2b574f74",
-      "description": "Missing Open Graph tags (og:image) — affects how this page's links look when shared on social media, Slack, or WhatsApp.",
-      "priority": "low",
-      "category": "on_page_seo",
-      "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/tools/descript.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "47fa4cdd32",
-      "description": "Query \"ideogram\" gets 131 impressions but only 0% CTR at position 56.9 — likely needs a more compelling title/meta description.",
-      "priority": "medium",
-      "category": "content_opportunity",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "33bf79725c",
-      "description": "Query \"ideogram ai\" gets 109 impressions but only 0% CTR at position 63.6 — likely needs a more compelling title/meta description.",
-      "priority": "medium",
-      "category": "content_opportunity",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "c3dbadfb7f",
-      "description": "Query \"figma ai\" gets 71 impressions but only 0% CTR at position 25.6 — likely needs a more compelling title/meta description.",
-      "priority": "medium",
-      "category": "content_opportunity",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "429f56a7f7",
-      "description": "Query \"notion ai\" gets 56 impressions but only 0% CTR at position 34.5 — likely needs a more compelling title/meta description.",
-      "priority": "medium",
-      "category": "content_opportunity",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "bdca63df44",
-      "description": "Query \"new ai websites\" gets 41 impressions but only 0% CTR at position 36 — likely needs a more compelling title/meta description.",
-      "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
       "page": null,
