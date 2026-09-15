@@ -1,6 +1,6 @@
 # Outreach Review
 
-_Generated 2026-09-08 — 5 backlink draft(s), 3 sponsorship draft(s) queued for review (live-site check: ok)_
+_Generated 2026-09-15 — 5 backlink draft(s), 2 sponsorship draft(s) queued for review (live-site check: ok)_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 
@@ -34,6 +34,13 @@ To act on any item: edit `outreach_pending.json`, set that item's `"approved"` t
 | ✅ verified | backlink_outreach | Reclaim AI | contact_form | https://reclaim.ai/contact |
 | ✅ verified | sponsorship_pitch | Figma AI | contact_form | https://help.figma.com/hc/en-us |
 | ✅ verified | sponsorship_pitch | Framer AI | email | abuse@framer.com |
+| ✅ verified | backlink_outreach | Motion | contact_form | https://usemotion.com/features/ai-docs-assistant |
+| ✅ verified | backlink_outreach | HuggingFace | email | press@huggingface.co |
+| ✅ verified | backlink_outreach | Replicate | contact_form | https://replicate.com/black-forest-labs/flux-2-flex |
+| ✅ verified | backlink_outreach | Together AI | contact_form | https://together.ai/support |
+| ✅ verified | backlink_outreach | Arxiv + AI | contact_form | https://info.arxiv.org/help/math/index.html |
+| ✅ verified | sponsorship_pitch | AdCreative | email | contact@adcreative.ai |
+| ✅ verified | sponsorship_pitch | Surfer SEO | email | marketing@surferseo.com |
 | ⚠️ guessed | backlink_outreach | Prompt Guru | contact_form | https://www.allaidunia.com/contact |
 | ❓ unknown | backlink_outreach | Leonardo AI | unknown | — |
 | ❓ unknown | backlink_outreach | Lovable | unknown | — |

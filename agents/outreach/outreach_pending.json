@@ -2,9 +2,9 @@
   "agent_meta": {
     "agent_name": "outreach_agent",
     "schema_version": "1.0",
-    "run_date": "2026-09-08",
+    "run_date": "2026-09-15",
     "status": "success",
-    "summary": "5 backlink draft(s), 3 sponsorship draft(s) queued for review (live-site check: ok)"
+    "summary": "5 backlink draft(s), 2 sponsorship draft(s) queued for review (live-site check: ok)"
   },
   "action_items": [
     {
@@ -536,6 +536,139 @@
       "proposed_message": {
         "subject": "Framer AI on AllAIDunia — featured placement option",
         "body": "Hi Framer AI team,\n\nI hope this message finds you well! We're excited to let you know that Framer AI is already featured on AllAIDunia (https://www.allaidunia.com/#framer-ai), our curated directory of AI tools designed to make it easy for users and AI engines alike to discover and reference amazing tools.\n\nWe’re currently offering a few options for featured placements if you’re looking for a bit more visibility:\n\n- **Featured Listing** — $49/mo: This gives you a top spot in your category, a \"Featured\" badge, and priority in our AI Tool Matchmaker results.\n- **Homepage Spotlight** — $99/mo: This includes everything in the Featured Listing plus a rotating banner on our homepage and a mention in our monthly tools roundup.\n- **Category Sponsor** — $149/mo: This is an exclusive top placement in one category with no competitors sharing the spot, along with all the benefits of the Homepage Spotlight.\n\nAs we’re in the early stages, we’re keeping these rates for a small founding group before they increase. If you’d like more details or want to chat about whether this is a good fit for you right now, just let me know—no pressure at all!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "725aa6da77",
+      "description": "Backlink outreach draft for Motion",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Motion",
+      "tool_domain": "usemotion.com",
+      "tool_url": "https://usemotion.com",
+      "contact_method": "contact_form",
+      "contact_value": "https://usemotion.com/features/ai-docs-assistant",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Motion — you're listed on AllAIDunia",
+        "body": "Hi Motion team,\n\nI hope this message finds you well! I wanted to share some exciting news — Motion is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#motion.\n\nIf you’re open to it, we’d be so grateful for a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page of yours that you’d like (docs, blog, etc.).\n\nNo pressure at all — and thank you for creating Motion! It’s truly a fantastic addition to our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "72f9d258c7",
+      "description": "Backlink outreach draft for HuggingFace",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "HuggingFace",
+      "tool_domain": "huggingface.co",
+      "tool_url": "https://huggingface.co",
+      "contact_method": "email",
+      "contact_value": "press@huggingface.co",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "HuggingFace — you're listed on AllAIDunia",
+        "body": "Hi HuggingFace team,\n\nI hope this message finds you well! I wanted to share some exciting news — HuggingFace is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#huggingface.\n\nIf you feel comfortable, we would be so grateful if you could include a link back to us from your site, like on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page you’d like on your site, whether it’s your docs, blog, or something else.\n\nNo pressure at all, and thank you for all the amazing work you do with HuggingFace — it truly adds great value to our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "6b06b4b463",
+      "description": "Backlink outreach draft for Replicate",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Replicate",
+      "tool_domain": "replicate.com",
+      "tool_url": "https://replicate.com",
+      "contact_method": "contact_form",
+      "contact_value": "https://replicate.com/black-forest-labs/flux-2-flex",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Replicate — you're listed on AllAIDunia",
+        "body": "Hi Replicate team,\n\nI hope you're doing well! I wanted to share that Replicate is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#replicate.\n\nIf it feels right for you, we would be thrilled to have a link back to us from your site—perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page on your site that you'd like (docs, blog, etc.).\n\nNo pressure at all, and thank you for creating such a valuable tool with Replicate. \n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "bbc5326ee6",
+      "description": "Backlink outreach draft for Together AI",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Together AI",
+      "tool_domain": "together.ai",
+      "tool_url": "https://together.ai",
+      "contact_method": "contact_form",
+      "contact_value": "https://together.ai/support",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Together AI — you're listed on AllAIDunia",
+        "body": "Hi Together AI team,\n\nI hope this message finds you well! I wanted to share some exciting news—Together AI is now showcased on AllAIDunia (https://www.allaidunia.com/), a free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#together-ai.\n\nIf you feel comfortable, we would be so grateful for a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page you choose—whether it’s your docs, blog, or elsewhere.\n\nNo worries if it’s not possible, and thank you for all the great work you do with Together AI—it truly is a fantastic addition to our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "a64e3d7064",
+      "description": "Backlink outreach draft for Arxiv + AI",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Arxiv + AI",
+      "tool_domain": "arxiv.org",
+      "tool_url": "https://arxiv.org",
+      "contact_method": "contact_form",
+      "contact_value": "https://info.arxiv.org/help/math/index.html",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Arxiv + AI — you're listed on AllAIDunia",
+        "body": "Hi Arxiv + AI team,\n\nI hope this message finds you well! I wanted to share some exciting news that Arxiv + AI is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#arxiv-ai.\n\nIf it's something you’d consider, we would be thrilled if you could include a link back to us from your site—perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page of yours you’d like, whether it’s your docs, blog, or something else.\n\nNo pressure at all, and thank you for creating such a valuable tool with Arxiv + AI. It truly makes a difference!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "ca7daaf076",
+      "description": "Sponsorship pitch draft for AdCreative",
+      "priority": "low",
+      "category": "sponsorship_pitch",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "AdCreative",
+      "tool_domain": "adcreative.ai",
+      "tool_url": "https://adcreative.ai",
+      "contact_method": "email",
+      "contact_value": "contact@adcreative.ai",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "AdCreative on AllAIDunia — featured placement option",
+        "body": "Hi AdCreative team,\n\nI hope this message finds you well! \n\nI wanted to share that AdCreative is already featured on AllAIDunia (https://www.allaidunia.com/#adcreative), our curated directory of AI tools. We’ve designed it to be user-friendly for both people and AI answer engines like ChatGPT and Perplexity.\n\nWe’re excited to offer a few featured-placement options if you’re looking to boost your visibility beyond the standard listing:\n\n- Featured Listing — $49/mo: Top-of-category placement, \"Featured\" badge on the card, and priority in AI Tool Matchmaker results.\n- Homepage Spotlight — $99/mo: A rotating banner on our homepage, all Featured Listing benefits, plus a mention in our monthly tools roundup.\n- Category Sponsor — $149/mo: Exclusive top placement in one category, with no competitors in that slot, plus all Homepage Spotlight benefits.\n\nWe’re still in the early stages and would love to keep this opportunity within a small founding group at these rates before they increase. If you’d like more details or if this doesn’t quite fit your needs right now, that’s completely okay too!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "0ea923c20d",
+      "description": "Sponsorship pitch draft for Surfer SEO",
+      "priority": "low",
+      "category": "sponsorship_pitch",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Surfer SEO",
+      "tool_domain": "surferseo.com",
+      "tool_url": "https://surferseo.com",
+      "contact_method": "email",
+      "contact_value": "marketing@surferseo.com",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Surfer SEO on AllAIDunia — featured placement option",
+        "body": "Hi Surfer SEO team,\n\nI hope you’re doing well! I wanted to reach out and share that Surfer SEO is already featured on AllAIDunia (https://www.allaidunia.com/#surfer-seo), our curated directory of AI tools. We’ve designed it to be user-friendly for both people and AI answer engines, making it easy to find and cite great tools like yours.\n\nWe’re excited to offer some featured-placement options for those looking to enhance their visibility beyond a standard listing:\n\n- Featured Listing — $49/mo: Enjoy top-of-category placement, a \"Featured\" badge, and priority in AI Tool Matchmaker results.\n- Homepage Spotlight — $99/mo: Secure a rotating banner on our homepage, along with all Featured Listing benefits and a mention in our monthly tools roundup.\n- Category Sponsor — $149/mo: Get exclusive top placement in one category with no competitors sharing the slot, plus all Homepage Spotlight benefits.\n\nWe’re in the early stages and keeping this to a small founding group at these introductory rates before they increase. If you’re interested, I’d be happy to provide more details. And if it’s not the right fit for you at the moment, that’s totally okay too!\n\nWarm regards,  \nAllAIDunia Team"
       },
       "approved": null
     },
