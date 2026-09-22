@@ -1,6 +1,6 @@
 # Outreach Review
 
-_Generated 2026-09-15 — 5 backlink draft(s), 2 sponsorship draft(s) queued for review (live-site check: ok)_
+_Generated 2026-09-22 — 3 backlink draft(s), 0 sponsorship draft(s) queued for review (live-site check: ok)_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 
@@ -41,7 +41,10 @@ To act on any item: edit `outreach_pending.json`, set that item's `"approved"` t
 | ✅ verified | backlink_outreach | Arxiv + AI | contact_form | https://info.arxiv.org/help/math/index.html |
 | ✅ verified | sponsorship_pitch | AdCreative | email | contact@adcreative.ai |
 | ✅ verified | sponsorship_pitch | Surfer SEO | email | marketing@surferseo.com |
+| ✅ verified | backlink_outreach | Lately AI | email | sales@lately.ai |
+| ✅ verified | backlink_outreach | Appaca | contact_form | https://www.appaca.ai/solutions/it-support |
 | ⚠️ guessed | backlink_outreach | Prompt Guru | contact_form | https://www.allaidunia.com/contact |
+| ⚠️ guessed | backlink_outreach | PMB | contact_form | https://pmbai.dev/contact |
 | ❓ unknown | backlink_outreach | Leonardo AI | unknown | — |
 | ❓ unknown | backlink_outreach | Lovable | unknown | — |
 | ❓ unknown | sponsorship_pitch | Looka | unknown | — |

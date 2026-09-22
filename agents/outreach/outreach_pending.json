@@ -2,9 +2,9 @@
   "agent_meta": {
     "agent_name": "outreach_agent",
     "schema_version": "1.0",
-    "run_date": "2026-09-15",
+    "run_date": "2026-09-22",
     "status": "success",
-    "summary": "5 backlink draft(s), 2 sponsorship draft(s) queued for review (live-site check: ok)"
+    "summary": "3 backlink draft(s), 0 sponsorship draft(s) queued for review (live-site check: ok)"
   },
   "action_items": [
     {
@@ -673,6 +673,44 @@
       "approved": null
     },
     {
+      "id": "1b87a395f5",
+      "description": "Backlink outreach draft for Lately AI",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Lately AI",
+      "tool_domain": "lately.ai",
+      "tool_url": "https://lately.ai",
+      "contact_method": "email",
+      "contact_value": "sales@lately.ai",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Lately AI — you're listed on AllAIDunia",
+        "body": "Hello Lately AI team,\n\nI hope this message finds you well! I wanted to share some exciting news—Lately AI is now featured on AllAIDunia (https://www.allaidunia.com/), a free directory showcasing AI tools. You can check out your listing here: https://www.allaidunia.com/#lately-ai.\n\nIf you feel inclined, we’d be thrilled if you could include a link to us on your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to link back to any of your pages in return, whether it’s your docs, blog, or something else.\n\nNo worries if it’s not in the cards right now, and thank you for all the great work you do with Lately AI—it’s truly a valuable addition to our directory.\n\nWarmly,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "335b519ce0",
+      "description": "Backlink outreach draft for Appaca",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Appaca",
+      "tool_domain": "appaca.ai",
+      "tool_url": "https://www.appaca.ai/",
+      "contact_method": "contact_form",
+      "contact_value": "https://www.appaca.ai/solutions/it-support",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Appaca — you're listed on AllAIDunia",
+        "body": "Hi Appaca team,\n\nI hope this message finds you well! I wanted to share the exciting news that Appaca is now featured on AllAIDunia (https://www.allaidunia.com/), a free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#appaca.\n\nIf you're open to it, we'd be so grateful if you could add a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link to any area of your site that you’d like, whether it’s your docs, blog, or another page.\n\nNo pressure at all, and thank you for creating such a fantastic tool with Appaca — it truly stands out in the directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
       "id": "014c992f56",
       "description": "Backlink outreach draft for Prompt Guru",
       "priority": "low",
@@ -688,6 +726,25 @@
       "proposed_message": {
         "subject": "Prompt Guru — you're listed on AllAIDunia",
         "body": "Hello Prompt Guru team,\n\nI hope this message finds you well! I wanted to share some exciting news—Prompt Guru is now featured on AllAIDunia (https://www.allaidunia.com/), our directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#prompt-guru.\n\nIf you feel comfortable, we would be so grateful for a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to link to any page of yours that you’d prefer in return!\n\nNo pressure at all, and thank you for creating such a valuable tool with Prompt Guru. It really does make a difference.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "9d962c70cc",
+      "description": "Backlink outreach draft for PMB",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "PMB",
+      "tool_domain": "pmbai.dev",
+      "tool_url": "https://pmbai.dev",
+      "contact_method": "contact_form",
+      "contact_value": "https://pmbai.dev/contact",
+      "contact_confidence": "guessed",
+      "proposed_message": {
+        "subject": "PMB — you're listed on AllAIDunia",
+        "body": "Hi PMB team,\n\nI hope this message finds you well! I wanted to share some exciting news—PMB is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#pmb.\n\nIf it feels right for you, we would love to have a link back to us from your site, maybe on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page you’d like—whether it’s your docs, blog, or something else.\n\nNo pressure at all, and thank you for creating PMB. It truly adds value to our directory!\n\nWarm regards,  \nAllAIDunia Team"
       },
       "approved": null
     },
