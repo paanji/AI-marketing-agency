@@ -1326,7 +1326,7 @@
 
 <!-- GRID -->
 <div class="container grid-section">
-  <div class="count-bar" id="count-bar">Showing <span>63</span> of <span>63</span> tools</div>
+  <div class="count-bar" id="count-bar">Showing <span>64</span> of <span>64</span> tools</div>
   <div class="tools-grid" id="tools-grid">
 <a class="tool-card" id="prompt-guru" href="https://www.allaidunia.com/prompt-guru.html" target="_blank" rel="noopener noreferrer" data-pricing="free" style="animation-delay:0.0s"><div class="card-top"><div class="tool-icon" style="background:#7c6cfa; color:#fff">P</div><span class="featured-pill">Featured</span></div><div><div class="tool-name">Prompt Guru</div><div class="tool-desc">Built by AllAIDunia — answers a few questions, then writes the perfect prompt for any AI tool: images, video, websites, music &amp; more</div></div><div class="card-foot"><span class="tool-cat">Productivity</span><span class="tool-price tool-price-free">Free</span></div></a>
 <a class="tool-card" id="chatgpt" href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" data-pricing="freemium" style="animation-delay:0.025s"><div class="card-top"><div class="tool-icon" style="background:#10a37f; color:#fff">C</div></div><div><div class="tool-name">ChatGPT</div><div class="tool-desc">OpenAI&#x27;s flagship AI assistant for everything</div></div><div class="card-foot"><span class="tool-cat">Chat</span><span class="tool-price tool-price-freemium">Freemium</span></div></a>
@@ -1391,6 +1391,7 @@
 <a class="tool-card" id="lately-ai" href="https://lately.ai" target="_blank" rel="noopener noreferrer" data-pricing="unknown" style="animation-delay:1.5s"><div class="card-top"><div class="tool-icon" style="background:#f97316; color:#fff">L</div></div><div><div class="tool-name">Lately AI</div><div class="tool-desc">AI social media content repurposing</div></div><div class="card-foot"><span class="tool-cat">Marketing</span><span class="tool-price tool-price-unknown">Pricing varies</span></div></a>
 <a class="tool-card" id="pmb" href="https://pmbai.dev" target="_blank" rel="noopener noreferrer" data-pricing="unknown" style="animation-delay:1.5250000000000001s"><div class="card-top"><div class="tool-icon" style="background:#7c6cfa; color:#fff">P</div><span class="new-pill">New</span></div><div><div class="tool-name">PMB</div><div class="tool-desc">Show HN: PMB – local memory for coding agents that shows if it is used</div></div><div class="card-foot"><span class="tool-cat">Uncategorized</span><span class="tool-price tool-price-unknown">Pricing varies</span></div></a>
 <a class="tool-card" id="appaca" href="https://www.appaca.ai/" target="_blank" rel="noopener noreferrer" data-pricing="unknown" style="animation-delay:1.55s"><div class="card-top"><div class="tool-icon" style="background:#7c6cfa; color:#fff">A</div><span class="new-pill">New</span></div><div><div class="tool-name">Appaca</div><div class="tool-desc">Show HN: Appaca – AI Workspace for Operators</div></div><div class="card-foot"><span class="tool-cat">Uncategorized</span><span class="tool-price tool-price-unknown">Pricing varies</span></div></a>
+<a class="tool-card" id="stylegen-ai" href="https://stylegen.ai/" target="_blank" rel="noopener noreferrer" data-pricing="freemium" style="animation-delay:1.5750000000000002s"><div class="card-top"><div class="tool-icon" style="background:#7c6cfa; color:#fff">S</div><span class="new-pill">New</span></div><div><div class="tool-name">StyleGen.ai</div><div class="tool-desc">Try 200+ hairstyles and hair colors on your own photo with AI before committing to a real change</div></div><div class="card-foot"><span class="tool-cat">Image</span><span class="tool-price tool-price-freemium">Freemium</span></div></a>
   </div>
 </div>
 <!-- CATEGORY PAGES + BLOG LINKS -->
@@ -1635,6 +1636,8 @@ const tools = [
   // Uncategorized
   { id:"pmb", name:"PMB", cat:"Uncategorized", url:"https://pmbai.dev", color:"#7c6cfa", text:"#fff", letter:"P", desc:"Show HN: PMB – local memory for coding agents that shows if it is used", isNew:true, featured:false, pricing:"" },
   { id:"appaca", name:"Appaca", cat:"Uncategorized", url:"https://www.appaca.ai/", color:"#7c6cfa", text:"#fff", letter:"A", desc:"Show HN: Appaca – AI Workspace for Operators", isNew:true, featured:false, pricing:"" },
+  // Image
+  { id:"stylegen-ai", name:"StyleGen.ai", cat:"Image", url:"https://stylegen.ai/", color:"#7c6cfa", text:"#fff", letter:"S", desc:"Try 200+ hairstyles and hair colors on your own photo with AI before committing to a real change", isNew:true, featured:false, pricing:"FREE daily credits" },
 ];
 
 const cats = ["All", ...new Set(tools.map(t => t.cat))];
@@ -2020,6 +2023,7 @@ const toolsDB = [
   { name:"Lately AI", url:"https://lately.ai", color:"#f97316", letter:"L" },
   { name:"PMB", url:"https://pmbai.dev", color:"#7c6cfa", letter:"P" },
   { name:"Appaca", url:"https://www.appaca.ai/", color:"#7c6cfa", letter:"A" },
+  { name:"StyleGen.ai", url:"https://stylegen.ai/", color:"#7c6cfa", letter:"S" },
 ];
 
 let pChatHistory = [];
@@ -2162,6 +2166,7 @@ Surfer SEO (surferseo.com) - AI SEO writing and optimisation - PAID only
 Lately AI (lately.ai) - AI social media content repurposing - see site for pricing
 PMB (pmbai.dev) - Show HN: PMB – local memory for coding agents that shows if it is used - see site for pricing
 Appaca (appaca.ai) - Show HN: Appaca – AI Workspace for Operators - see site for pricing
+StyleGen.ai (stylegen.ai) - Try 200+ hairstyles and hair colors on your own photo with AI before committing to a real change - FREE daily credits
 
 RULES:
 - Recommend 2-3 tools MAXIMUM
