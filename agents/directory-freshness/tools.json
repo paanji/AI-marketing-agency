@@ -1231,5 +1231,24 @@
     "last_working": "2026-09-22",
     "archived_date": null,
     "source": "discovered"
-  }
+  },
+  {
+  "id": "stylegen-ai",
+  "name": "StyleGen.ai",
+  "cat": "Image",
+  "url": "https://stylegen.ai/",
+  "color": "#7c6cfa",
+  "text": "#fff",
+  "letter": "S",
+  "desc": "Try 200+ hairstyles and hair colors on your own photo with AI before committing to a real change",
+  "isNew": true,
+  "featured": false,
+  "status": "active",
+  "consecutive_failures": 0,
+  "last_checked": "2026-09-23",
+  "last_working": "2026-09-23",
+  "archived_date": null,
+  "source": "manual",
+  "pricing": "FREE daily credits"
+}
 ]
