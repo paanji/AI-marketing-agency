@@ -1,13 +1,13 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1790144898129,
+    "generatedTime": 1790404960373,
     "data": [
         {
             "type": "file",
             "name": "sitemap.xml",
-            "size": 12122,
-            "hash": "f9f7d216cd6e84aad9cc9cee1d5a8ba04093d991add3255f3696bd80977ba000"
+            "size": 12928,
+            "hash": "88800c82ac9aed141fdd28acaa97a7ed73b8bbd1a47dd0860963830e6668f20c"
         },
         {
             "type": "folder",
@@ -15,387 +15,417 @@
         },
         {
             "type": "file",
-            "name": "tools/adcreative.html",
-            "size": 6950,
-            "hash": "2027c6163f44381adf5dae8a5c97e5279fc85d55f5ccdeadfddf7ad13cdb4045"
+            "name": "tools/abodevid.html",
+            "size": 7353,
+            "hash": "40e525c9429fe2b21894fbcafd32a44bacb5c5c9a07a3a340d20e472003a19a8"
         },
         {
             "type": "file",
-            "name": "tools/adobe-firefly.html",
-            "size": 8154,
-            "hash": "52447188953a9512cf201f3bce5ce36e8b2852f51dfde6c755aca4e25dba99e3"
+            "name": "tools/adcreative.html",
+            "size": 7259,
+            "hash": "84ad605672fb316655f2ccee8044465ccf5590bbf0d423568e36429321fbc827"
         },
         {
             "type": "file",
             "name": "tools/appaca.html",
             "size": 6692,
-            "hash": "a7ae1799fb61eae7acb2afc068eb0646307c1d08ea2cb0f5453c4f777d7d0cfc"
+            "hash": "978aa5865b5f698b89519df169efaa5a011c3dcb7d89b6b6688d4df1276df860"
         },
         {
             "type": "file",
             "name": "tools/arxiv-ai.html",
             "size": 7228,
-            "hash": "a168e97079434f9c55225a3fe05a01a9cbc16b69ba6fdfc373e76af5b1eec433"
+            "hash": "247bd6c37069df3260bc0196f125707b5d63c9567c16ed2d1b2987b426425e1e"
+        },
+        {
+            "type": "file",
+            "name": "tools/adobe-firefly.html",
+            "size": 8154,
+            "hash": "072dffa0e485bbb7e21cfb2f13e85fa4b88a254b31fbbc5fe54e97b7f1b0f1b1"
         },
         {
             "type": "file",
             "name": "tools/bolt.html",
             "size": 7951,
-            "hash": "b0a1c88106a142072b4084d9b39ff038e16ad2de1302319bc1ff7ff4f3756d2f"
+            "hash": "f6a66ec8f827a37a70a3f4cafc7f4e5f81f4e1841ac2a7644ac1c5b2df7f276e"
         },
         {
             "type": "file",
             "name": "tools/canva-ai.html",
             "size": 8091,
-            "hash": "f568a5e72539fdc73262f034b8da52e747b1637983c5bd7ae2eebdb2d874d3e7"
+            "hash": "cc15f633021e358450bd1ba96e48b2f149ccb1ade5bce711e828adb1cd01a84c"
         },
         {
             "type": "file",
             "name": "tools/chatgpt.html",
             "size": 8080,
-            "hash": "8e202de08fc2e68f5ea56237b319a25e3005db5d29daa94624cef1ab8b0f1b6d"
+            "hash": "d15cbd904a5a4e831168f23346aca19b9184239d38bd65b93ce731ef32fac53d"
         },
         {
             "type": "file",
             "name": "tools/claude.html",
             "size": 8046,
-            "hash": "a25335a585b4dc13c888bbc8a206926071f428661763ca57a455545b81f8d918"
+            "hash": "07d1d72cb5f8da3427ae82d8ffec70765029ea51ced81bf0911956612af1f334"
         },
         {
             "type": "file",
             "name": "tools/copilot.html",
             "size": 8037,
-            "hash": "62686876660233873c1beca2d8bcb7ca3d4d00985b0038cf251d7d60ba504356"
+            "hash": "f91ded10f436eb1778a85c07340fcb71c22ea277c85313657609eaf71404ab17"
         },
         {
             "type": "file",
             "name": "tools/copy-ai.html",
             "size": 8049,
-            "hash": "907545783f690656670e01ccbd6f2909958e057a5402766411ec4a644738fc63"
+            "hash": "c633f2d505ec34d103735b305fcc788adb517f7ee2bfc69870b7563afa42f4de"
         },
         {
             "type": "file",
             "name": "tools/cursor.html",
             "size": 7913,
-            "hash": "01a9df97315b308bc9e167e1f0f2ae4548ce743b373a27c95acc28f0d9454f3f"
+            "hash": "2adde98266657650db8163336c0cbb857a5def73aba31a47d2a741c0f8ba5f9f"
         },
         {
             "type": "file",
             "name": "tools/deepseek.html",
             "size": 8042,
-            "hash": "42f7b46cbfc5fee7895f2c3fd12278b200fa66c956c8c87715eb6fd86eb1c3bf"
+            "hash": "981992f7360f45c9fdff7a07179c6dffc54a85efaed81b8964e94401cddbd5bd"
         },
         {
             "type": "file",
             "name": "tools/descript.html",
             "size": 7993,
-            "hash": "78446c0f82feb62914f34345282a0bd1835f4eac813f2e156e347f4f6b3aa98b"
+            "hash": "825766c339f2b6eebf28f7a20d5acd83c7b1ea638a47dc27d3f090cbae0fe397"
         },
         {
             "type": "file",
             "name": "tools/elevenlabs.html",
             "size": 8021,
-            "hash": "f5b6d0f6f48e2cff18f0f5afee4b3c469f6311b45dcb042882f995b5aa3a99d4"
+            "hash": "810b5d7ffe3842045d9ad14002a80a6b5d6d4fd8c4ebe20f28d2775a6590ff7b"
         },
         {
             "type": "file",
             "name": "tools/exa-ai.html",
             "size": 6924,
-            "hash": "41636e4e964b20a22352b01b52b952a7e06909e5dfd3099417a7694117ee9f5f"
+            "hash": "9498c7964874ee8a1e8c426f203a55ba51fdbf1dcac776dac7bf9b8b55591843"
         },
         {
             "type": "file",
             "name": "tools/figma-ai.html",
             "size": 6910,
-            "hash": "799f716392dc167a58af8f657140f050726102bca92d5ba82e4a84c128705b7d"
+            "hash": "a8ff0dac1e76417175dc168851f3e18838df0c7c44feca3d8b0c9629b864c5e4"
         },
         {
             "type": "file",
             "name": "tools/flux.html",
             "size": 8015,
-            "hash": "289c658202ae846e6f673f4b0e68b6f0a15cc5e0650fa63da92403e5074c4239"
+            "hash": "f8751e5d97413787259193f34761886498eb0cc840055d8f9aa9e6724a3521e4"
         },
         {
             "type": "file",
             "name": "tools/framer-ai.html",
             "size": 7013,
-            "hash": "7f43357bebc65067c6e2c5202cffb00256883eee11c63c9dd154e848b9709eac"
+            "hash": "bc38e674d5e6cf783d42c38cc2aa1446710bef34bf3bae87841e19c68cf46b62"
         },
         {
             "type": "file",
             "name": "tools/gemini.html",
             "size": 7999,
-            "hash": "0451860ff9b0bb051fe4884db3021bb9a90efefe55f069762a288f09e4f814a1"
+            "hash": "58c0866b223e9784e3d5b43ca09016e67a25399ef44c9268f5703148a1485613"
         },
         {
             "type": "file",
             "name": "tools/github-copilot.html",
             "size": 8051,
-            "hash": "e8d07991ba8785453b12fd97ee082e610a2e2379bf1c2a7ce2fc4637e45b0472"
-        },
-        {
-            "type": "file",
-            "name": "tools/grok.html",
-            "size": 7931,
-            "hash": "0158b3a7d7db7674d1154c5c3c4efc1cc1a127fc78081ac7ae920fbaa8167d1a"
+            "hash": "9669a693399011c33cda43c7cbe2e15454dd7c0b089421ce9d31b219d6d8fe18"
         },
         {
             "type": "file",
             "name": "tools/grammarly.html",
             "size": 8039,
-            "hash": "9a42fc714ddaafc6fd671b46ffa06b6abcb8d97ae874f33b1ea12a4d403876e6"
+            "hash": "cbe6ec34e6599252858dfa7582cd36f4ed67f027b3cf3a752dc01ac460696578"
+        },
+        {
+            "type": "file",
+            "name": "tools/grok.html",
+            "size": 7931,
+            "hash": "d9ba823b89c973b8edd408f93db0103fa230424eda047c55c2803fbd10ca4b57"
+        },
+        {
+            "type": "file",
+            "name": "tools/harku-youtube-to-text.html",
+            "size": 8206,
+            "hash": "6a01ed9c686919d33a54a84dd0866d3274989cd8faa64fef49f8821d6dc51749"
         },
         {
             "type": "file",
             "name": "tools/heygen.html",
             "size": 7977,
-            "hash": "3089ddfe51fb500ca10976dd87dc627e8c3291fc816717dd1f335070319cc1be"
+            "hash": "fe58691fedffb15a5ddfb5103ff76138b2ad4553e58beeca8ed9f7f4ab859dd7"
         },
         {
             "type": "file",
             "name": "tools/huggingface.html",
             "size": 7265,
-            "hash": "476e5d50746caa86fa5a346d9ee5e9afa069794713e01e49ee755fc8b9ab4b6d"
+            "hash": "0b140e9094ff08f3bdfdea2e8b017cad398baf11350b04dc33b24b8e19d46dc4"
+        },
+        {
+            "type": "file",
+            "name": "tools/htmlslides.html",
+            "size": 7825,
+            "hash": "120a8c8c468a108626aa8bb5e738b7c9eaa9f709b827ff1564f47778820f05d5"
         },
         {
             "type": "file",
             "name": "tools/ideogram.html",
             "size": 8139,
-            "hash": "2ca6ee832595e75700423fbb8d499fd8a7209f240a73a780d82c0122323b76c8"
+            "hash": "4d1f7ec7b2d225086f29c852e217341b3642ab540ac61064d554e16009af9bd6"
+        },
+        {
+            "type": "file",
+            "name": "tools/imgfree.html",
+            "size": 8320,
+            "hash": "bb4dab6c788d92843dcc15c0c9c044d2650248d18abbf00224c358b950416171"
         },
         {
             "type": "file",
             "name": "tools/kling-ai.html",
             "size": 8050,
-            "hash": "c46522f452498905ca2343596a22f9c4987aef61bd598d481457c0d42392a825"
-        },
-        {
-            "type": "file",
-            "name": "tools/krea.html",
-            "size": 7980,
-            "hash": "66370ce2636e1205178b46d203b4c1ece7e0e355ec1e39aedbb3783903e87d35"
+            "hash": "3258a7d59a37ca4532371bd8281b026186f687ab731f7f22a8cd8f932c2e2b0f"
         },
         {
             "type": "file",
             "name": "tools/jasper.html",
             "size": 7942,
-            "hash": "82fc77f6dad4b44b8362ea1029cb78483ee5b686b97e1943909369a39cf4761e"
+            "hash": "c6fd7fd86cd144d8d573b6c84a782fedba621f04e6906409d3fe1f44d215ad4e"
         },
         {
             "type": "file",
-            "name": "tools/le-chat.html",
-            "size": 7989,
-            "hash": "ec8ef0dd31d19947fa964e67f3117fdb884de1441b019483089eee395950371a"
+            "name": "tools/krea.html",
+            "size": 7980,
+            "hash": "c8a863b9ef393c15ce43bba638746c7b310412d37683994b7ef886e480009475"
         },
         {
             "type": "file",
             "name": "tools/lately-ai.html",
-            "size": 6971,
-            "hash": "23ae208439e5e02d52c810d8d01104eebf052f1172622667ac28082587c6f33a"
+            "size": 7280,
+            "hash": "448a40069efca7ef14b7d6d7f4a8875d70e17d17ea6d3f957bf0ac4b945d7152"
         },
         {
             "type": "file",
             "name": "tools/leonardo-ai.html",
             "size": 8114,
-            "hash": "0407f3f9553094550f9c3641c23ce234fdeb4380193dd0f57cea93c3d6306492"
+            "hash": "cdf2d865b698987f60b60af52c7e4b392f012dbabefe628042f92853e4fdca33"
+        },
+        {
+            "type": "file",
+            "name": "tools/le-chat.html",
+            "size": 7989,
+            "hash": "8e809014680745235f4ebd489234c704c41cb616d75fabe39540ddeefa83aa0a"
         },
         {
             "type": "file",
             "name": "tools/looka.html",
             "size": 6785,
-            "hash": "687efdfb6d4cc94e945b0ac8dd3368552c42b5279f09e4983e3f809f2a6e9214"
-        },
-        {
-            "type": "file",
-            "name": "tools/mem-ai.html",
-            "size": 7529,
-            "hash": "fa9794490e16a75252e29f22b13a5d3461a822b3ebfe6ae799107bb14fa8d43a"
+            "hash": "40346a94c5b68890a1a20deaa43035698f507910c2abfa2fdca3214c6f48fbd8"
         },
         {
             "type": "file",
             "name": "tools/lovable.html",
             "size": 7987,
-            "hash": "8c8a6c6162605841670b47a32ad2b412610841aea3e1125b36d135b7362381dc"
+            "hash": "baf3eb5d8c34b8d266c0ff30b3d4565409e46fe03ac8e8db32721c1145ecf3d2"
+        },
+        {
+            "type": "file",
+            "name": "tools/magic-hour.html",
+            "size": 8243,
+            "hash": "94590c9b0c57f81e0520d28398b016b67b05a9497b4c96211e1e4516fc10f5b7"
+        },
+        {
+            "type": "file",
+            "name": "tools/mem-ai.html",
+            "size": 7529,
+            "hash": "c5d7dd0d7e11090b1d9b20a2ce891e98b76ce386694c05cf88a71db34cc81508"
         },
         {
             "type": "file",
             "name": "tools/meta-ai.html",
             "size": 7977,
-            "hash": "1c7a54fc38cf0e509822db19b0bdd94caf1cf19260d53206b9ea36cb95756406"
+            "hash": "06830022e50d99b37289491d9e4e91384aec6980e341eed4fc3776f2c9031358"
         },
         {
             "type": "file",
             "name": "tools/midjourney.html",
             "size": 8054,
-            "hash": "417aa398f126b7514852d2d7a77232404e79325a722fa8098b9ea01094cc9bbc"
+            "hash": "f356ab07f6dca8f8bd5976387622623db2c0764cbaffffb0d091f66d497c983f"
         },
         {
             "type": "file",
             "name": "tools/mistral.html",
             "size": 7981,
-            "hash": "6118062a724690129821dca0e1505035f17dcfc2116976c2dee024bc97f2cc5f"
+            "hash": "bf6071d46beb2b3f00a57c211e93c53254cad11632011fbea57893bc556610b2"
         },
         {
             "type": "file",
             "name": "tools/motion.html",
             "size": 7519,
-            "hash": "448872e96e2b22992937e432c01d9c7940740705410759243129e16d02a3864e"
+            "hash": "5db3fbb16de123bc90f3eea4b1844daac270992e8e473c9e9ac59a1a4ebc2b60"
         },
         {
             "type": "file",
             "name": "tools/murf-ai.html",
             "size": 7949,
-            "hash": "309cfb2b1105dfd668871870b83cafc9a9e8e2b00cc6292d27c936ef76f23c26"
+            "hash": "259760f77c76f7831b1ebec68995dfdc2b1999de3bdcdbbb3e785fce15f2d302"
         },
         {
             "type": "file",
             "name": "tools/notion-ai.html",
             "size": 7568,
-            "hash": "3801fc73226dcb523b5e7e61c5b9670faaee0944e4eeed799f77780d05b9d4b5"
-        },
-        {
-            "type": "file",
-            "name": "tools/perplexity.html",
-            "size": 7007,
-            "hash": "4e1ac4c18cd65692d53b30ed13340344cf0ef8cdd6adefd3b900a88b7ea2e068"
+            "hash": "28f7b3b6a1a1116e361570223c09baa1ec7d290cb6e16fa8e4b2d5398f53d9f0"
         },
         {
             "type": "file",
             "name": "tools/otter-ai.html",
             "size": 7566,
-            "hash": "d0bc7b9af1b334f57d7f9bb2fdf132a9dd994884d10504b019719dbbeeeca450"
+            "hash": "cdcb7f1cdf3a194ce775fcce27ba5143c3881a9e43291213602376aec9c60062"
         },
         {
             "type": "file",
             "name": "tools/pi-ai.html",
             "size": 7959,
-            "hash": "3b2c2ded369158c4e41339b339dc73bca699b8010a60b04b0df6552a637603e5"
+            "hash": "e62a440d423091eb3aef10b48774a9e2f78ac7500f7a0e961bc122df02dfebac"
         },
         {
             "type": "file",
             "name": "tools/pika.html",
             "size": 7965,
-            "hash": "dfb94623fc3bfd093d16d2cfe3bcc372a193d258c103a9f493af2e1c9dc59175"
+            "hash": "49084217cb5b085d46f133b8e520bf3f3d9799a5061c46054482748d084a68da"
+        },
+        {
+            "type": "file",
+            "name": "tools/perplexity.html",
+            "size": 7007,
+            "hash": "5de05d1352ee6ee62515a690447c8586fb97ff7ed8c99d1290e36bd8691f028d"
         },
         {
             "type": "file",
             "name": "tools/pmb.html",
             "size": 6670,
-            "hash": "26f550d5429a29a907fa0f85ce8ec7162f41ac992037133877c309e5a8ea484d"
-        },
-        {
-            "type": "file",
-            "name": "tools/prompt-guru.html",
-            "size": 7846,
-            "hash": "5a2183b529e9c17fa8cb0e94a1fb79529503c89de94cd96afb4b15c93b406ed5"
+            "hash": "1e44ba66b5e56b2c3dc7bd4239420430e8241ac924693ea90b9a0fd5c72c8c10"
         },
         {
             "type": "file",
             "name": "tools/quillbot.html",
             "size": 8075,
-            "hash": "9c73beabe554f2b86ee89cfc3bcc19da1f8441a7292606f6842152d660f0f74e"
+            "hash": "bc0d974b261def1dcc9d15f16db7547223ea2901087191a56f90e2fe51f98f68"
+        },
+        {
+            "type": "file",
+            "name": "tools/prompt-guru.html",
+            "size": 7846,
+            "hash": "971f7f39e41888075483a53e3cfac449efcd2148e71e69c627a889423821c444"
         },
         {
             "type": "file",
             "name": "tools/reclaim-ai.html",
             "size": 7597,
-            "hash": "f81933c687895c7d1050d0ee09bce4c2643a736928560c18012073903caae02d"
+            "hash": "2db0f4d1525da119ac643904ee71ce6bf459cf381da6f074a086ac61fd346402"
         },
         {
             "type": "file",
             "name": "tools/replicate.html",
             "size": 7244,
-            "hash": "825871d34b3c9002d647f9b4f246ad55ca1ee5bc560b42340466333f949bd2f6"
+            "hash": "8bb59cee2daa81c951af44e2039d880f4f942e0474147e520eb0ba8a856081f9"
         },
         {
             "type": "file",
             "name": "tools/replit-ai.html",
             "size": 7991,
-            "hash": "cf72ace4d37540c439810901b12b1ddd3843e509ad5da1fe81002d1556cb6adf"
+            "hash": "106212632ce5413b78817dae1ab61dab3a73b8768c0a3eaaddd7f4af2a04c37b"
         },
         {
             "type": "file",
             "name": "tools/runway.html",
             "size": 7984,
-            "hash": "fe8f0f61b8c55f33f9a819f993105f1b481c24f21f7e17ce219d114d55f9ac06"
+            "hash": "192b648338a8fe43c62718da96091d92d3352d3f163bfeac2fdf5333780244af"
         },
         {
             "type": "file",
             "name": "tools/sora.html",
             "size": 7911,
-            "hash": "00e1cb0a65386bed210b748f2c52c452f67e07f596f49c9bd0fccd6354c2f274"
+            "hash": "7315bf232125f79f7881002644e02afab810cfe1dffc20f2601ac8a5513db6b1"
         },
         {
             "type": "file",
             "name": "tools/stable-diff.html",
             "size": 8121,
-            "hash": "f9407994930a65e58604578f6275e9b5c011767850058988af4157146888ff37"
+            "hash": "6aa6a3a276dafb1079b57652fd841826367ccb1f151deb13306a9717a0993118"
         },
         {
             "type": "file",
             "name": "tools/stylegen-ai.html",
             "size": 8236,
-            "hash": "888785c24c79b8e48caef1186978d6acb6e61f971e2b8e74cfb318b7086c71bb"
+            "hash": "305c6d5a5ffad0541613bbaef2e86e3ca1c5d19fe93686e23856ac62e8fe76a9"
         },
         {
             "type": "file",
             "name": "tools/suno.html",
             "size": 7936,
-            "hash": "7f9b91ce5a3f8ee62d9c8ad14ce46b470ec54580a270efa64afaf3d877fd0054"
+            "hash": "343b6ec97cf0d23132e84c4db4bbc409766215143dce125f28fab728b063e709"
         },
         {
             "type": "file",
             "name": "tools/surfer-seo.html",
-            "size": 6929,
-            "hash": "279f19c5c8bcaec3801bffcb7897160fc7c192ae9ec8e1ff6db508a039f9a540"
+            "size": 7238,
+            "hash": "ba745444f8f7b90796bc9397cc1e6d6b5cb54d72b2bb153c02fa4a98f19ae79c"
         },
         {
             "type": "file",
             "name": "tools/synthesia.html",
             "size": 8024,
-            "hash": "dc55f0b47cebd5a9b71bffedb6321bd0a58468f68291e828ef3c50838bfd63de"
+            "hash": "c38932e304ea094aa60b6563e8e44cdee2e30cc4a050e0e4ec81579b5b6b0759"
         },
         {
             "type": "file",
             "name": "tools/tabnine.html",
             "size": 7893,
-            "hash": "b3f6984382e3f11a26abd5084f7eb41553e0545286edb17c4938e1593990137f"
+            "hash": "6154cb7b070afadffec04c4efb1503e2418f5d3c234ace4e16564e69442e5622"
         },
         {
             "type": "file",
             "name": "tools/together-ai.html",
             "size": 7262,
-            "hash": "83277d0896b2946d69cf18cef1d80c213f865c7b35bfda9cec8309ef169c4d94"
+            "hash": "79e61a3755c15179395c591e6e3e336b095edd5e32d33100e281f934f46be31b"
         },
         {
             "type": "file",
             "name": "tools/udio.html",
             "size": 7951,
-            "hash": "f6ee09da468e9a5999cbaedeac77377867d479dc31ba1ecff1fa49dfce4c3436"
-        },
-        {
-            "type": "file",
-            "name": "tools/v0.html",
-            "size": 7879,
-            "hash": "ab67a05d00eb5f4209fc7731973a98fc9483f395180df10e366f0bd07d18bf07"
+            "hash": "c198f06419f6a02c3125d23e8a045cc2d07eba074a6303bd982278e8b630f7d5"
         },
         {
             "type": "file",
             "name": "tools/windsurf.html",
             "size": 7908,
-            "hash": "4d69214798692ec54f12787859a72af6077ad149fb6b74afcbfffc6426d785a5"
+            "hash": "2404b2cc929a959a24303e72b4b20235fef3036974a272cb50bbb01be50c258c"
         },
         {
             "type": "file",
             "name": "tools/writesonic.html",
             "size": 8063,
-            "hash": "fa3df2618702f19d3a30138bb462a1a69129c05ecf207d71f5caf93be4637cba"
+            "hash": "9652854f08871b7ed26518f90d282072fb0dbdd90086e7340df2b58a040bbb1a"
+        },
+        {
+            "type": "file",
+            "name": "tools/v0.html",
+            "size": 7879,
+            "hash": "e1078ccf61c2de6a9cd7d214762e8e4dc2c485c5d43281e18456359fec85f940"
         },
         {
             "type": "file",
             "name": "tools/you-com.html",
             "size": 6896,
-            "hash": "648e7f853413607e203873a1dfb0a1dec9b3c981eee5925238e05151bc228d4a"
+            "hash": "c6d73161f1f173a132855ff89233ee4899cab277cf6f7642242587bde2b2cae0"
         }
     ]
 }
