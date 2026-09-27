@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Featured — AllAIDunia</title>
+<meta name="description" content="Get priority placement and a featured badge for your AI tool on AllAIDunia. $19/month, cancel anytime.">
+<link rel="canonical" href="https://www.allaidunia.com/get-featured.html">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
+<style>
+  [data-theme="dark"] {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #18181f;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #f0eff5;
+    --muted: #8b8a96;
+    --card-bg: #111118;
+  }
+  :root {
+    --accent: #7c6cfa;
+    --gold: #c9a668;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 14px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  a { color: var(--accent); }
+
+  .nav {
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px clamp(16px, 4vw, 48px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav a.home { font-family: var(--font-head); font-weight: 800; font-size: 18px; color: var(--accent); text-decoration: none; }
+  .nav a.home span { color: var(--gold); }
+  .nav a.back { font-size: 13px; color: var(--muted); text-decoration: none; }
+
+  .wrap { max-width: 640px; margin: 0 auto; padding: 56px 16px 100px; }
+
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px; font-weight: 500;
+  }
+  h1 {
+    font-family: var(--font-head);
+    font-size: clamp(30px, 5.5vw, 44px);
+    font-weight: 800; line-height: 1.12; margin-bottom: 16px;
+  }
+  .sub { color: var(--muted); font-size: 16px; max-width: 50ch; margin-bottom: 40px; }
+
+  /* ---------- Before/after card comparison ---------- */
+  .compare { display:flex; gap: 14px; margin-bottom: 44px; align-items: stretch; }
+  .compare-card {
+    flex: 1; background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px; position: relative;
+  }
+  .compare-card.featured { border: 1px solid var(--gold); }
+  .compare-tag {
+    font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  .compare-card.featured .compare-tag { color: var(--gold); }
+  .mock-letter {
+    width: 34px; height: 34px; border-radius: 9px; background: var(--accent);
+    color: #fff; display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-head); font-weight: 700; font-size: 14px; margin-bottom: 10px;
+  }
+  .compare-card.featured .mock-letter { background: var(--bg3); border: 1px solid var(--gold); color: var(--gold); }
+  .mock-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .mock-desc { font-size: 12px; color: var(--muted); }
+  .gold-badge {
+    position: absolute; top: 14px; right: 14px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--gold); background: transparent; border: 1px solid var(--gold);
+    padding: 2px 8px; border-radius: 999px;
+  }
+
+  h2 { font-family: var(--font-head); font-size: 19px; margin: 0 0 14px; }
+  .benefits { list-style: none; margin-bottom: 40px; }
+  .benefits li {
+    display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid var(--border);
+    font-size: 14.5px;
+  }
+  .benefits li:last-child { border-bottom: 1px solid var(--border); }
+  .benefits .dot { color: var(--gold); flex-shrink: 0; }
+
+  .price-line {
+    display:flex; align-items:baseline; gap: 8px; margin-bottom: 40px;
+  }
+  .price-line .amount { font-family: var(--font-head); font-size: 30px; font-weight: 800; }
+  .price-line .period { color: var(--muted); font-size: 14px; }
+  .price-line .cancel { color: var(--muted); font-size: 13px; margin-left: 8px; }
+
+  /* ---------- Form ---------- */
+  .form-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 26px;
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block; font-size: 12.5px; color: var(--muted); margin-bottom: 6px;
+  }
+  .form-group input {
+    width: 100%; background: var(--bg2); border: 1px solid var(--border2);
+    border-radius: 10px; color: var(--text); font-family: var(--font-body);
+    font-size: 14.5px; padding: 11px 13px; outline: none;
+  }
+  .form-group input:focus { border-color: var(--accent); }
+  .continue-btn {
+    width: 100%; background: var(--accent); color: #fff; border: none;
+    border-radius: 10px; padding: 13px; font-family: var(--font-body);
+    font-weight: 500; font-size: 14.5px; cursor: pointer; margin-top: 6px;
+  }
+  .continue-btn:hover { opacity: 0.9; }
+  .form-error { color: #fa6c9f; font-size: 13px; margin-top: -6px; margin-bottom: 12px; display: none; }
+  .form-error.show { display: block; }
+
+  #paypalSection { display: none; margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--border); }
+  .paypal-summary { font-size: 13.5px; color: var(--muted); margin-bottom: 16px; }
+  .paypal-summary strong { color: var(--text); }
+  .edit-link { font-size: 12.5px; color: var(--accent); background: none; border: none; cursor: pointer; padding: 0; margin-top: 10px; text-decoration: underline; }
+
+  #confirmSection { display: none; text-align: center; padding: 30px 20px; }
+  #confirmSection .check { font-size: 34px; margin-bottom: 14px; }
+  #confirmSection h2 { margin-bottom: 8px; }
+  #confirmSection p { color: var(--muted); font-size: 14px; }
+
+  .foot { margin-top: 48px; text-align: center; font-size: 12.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="home" href="/">AllAI<span>Dunia</span></a>
+  <a class="back" href="/">← Back to directory</a>
+</nav>
+
+<div class="wrap">
+  <div class="eyebrow">Get Featured</div>
+  <h1>Stand out in the directory.</h1>
+  <p class="sub">A regular listing is a card in the grid. A Featured listing gets priority placement and a gold badge that makes people stop scrolling.</p>
+
+  <div class="compare">
+    <div class="compare-card">
+      <div class="compare-tag">Regular listing</div>
+      <div class="mock-letter">Y</div>
+      <div class="mock-name">Your Tool</div>
+      <div class="mock-desc">Sits in the grid, sorted with everything else.</div>
+    </div>
+    <div class="compare-card featured">
+      <span class="gold-badge">Featured</span>
+      <div class="compare-tag">Featured listing</div>
+      <div class="mock-letter">Y</div>
+      <div class="mock-name">Your Tool</div>
+      <div class="mock-desc">Priority placement, gold badge, first look.</div>
+    </div>
+  </div>
+
+  <h2>What's included</h2>
+  <ul class="benefits">
+    <li><span class="dot">●</span> Priority placement at the top of your category</li>
+    <li><span class="dot">●</span> A gold "Featured" badge on your card, visible in the grid</li>
+    <li><span class="dot">●</span> Your listing gets a fresh review pass, so your description and pricing stay accurate</li>
+  </ul>
+
+  <div class="price-line">
+    <span class="amount">$19</span>
+    <span class="period">/ month</span>
+    <span class="cancel">Cancel anytime</span>
+  </div>
+
+  <div class="form-card">
+    <div id="intakeForm">
+      <div class="form-group">
+        <label for="toolName">Tool name (as listed on AllAIDunia)</label>
+        <input type="text" id="toolName" placeholder="e.g. StyleGen.ai" />
+      </div>
+      <div class="form-group">
+        <label for="email">Your email</label>
+        <input type="email" id="email" placeholder="you@example.com" />
+      </div>
+      <div class="form-error" id="formError">Please fill in both fields with a valid email.</div>
+      <button class="continue-btn" id="continueBtn">Continue to payment</button>
+    </div>
+
+    <div id="paypalSection">
+      <div class="paypal-summary">Activating Featured for <strong id="summaryTool"></strong> — confirmation goes to <strong id="summaryEmail"></strong>.</div>
+      <div id="paypal-button-container-P-2LD91207W5982344NNK4SADA"></div>
+      <button class="edit-link" id="editBtn">Edit details</button>
+    </div>
+
+    <div id="confirmSection">
+      <div class="check">✨</div>
+      <h2>You're on your way to Featured</h2>
+      <p>We've got your subscription — we'll activate your gold badge and priority placement shortly. A confirmation is on its way to your email.</p>
+    </div>
+  </div>
+
+  <div class="foot">Questions first? <a href="/contact.html">Contact us</a> before subscribing.</div>
+</div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAAp7fkPUT1cxWoMWzIksBGc40pKBy8n5_soDFY2QXpZc_SEDWYFEMBr8Qd5nldxWpe8m-_6AmF0PSkPwQ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+(function(){
+  "use strict";
+
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/xlgkbgwo"; // same endpoint as the tool-submission form
+  var toolNameInput = document.getElementById("toolName");
+  var emailInput = document.getElementById("email");
+  var formError = document.getElementById("formError");
+  var intakeForm = document.getElementById("intakeForm");
+  var paypalSection = document.getElementById("paypalSection");
+  var confirmSection = document.getElementById("confirmSection");
+
+  function emailValid(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  document.getElementById("continueBtn").addEventListener("click", function(){
+    var tool = toolNameInput.value.trim();
+    var email = emailInput.value.trim();
+    if(!tool || !emailValid(email)){
+      formError.classList.add("show");
+      return;
+    }
+    formError.classList.remove("show");
+    document.getElementById("summaryTool").textContent = tool;
+    document.getElementById("summaryEmail").textContent = email;
+    intakeForm.style.display = "none";
+    paypalSection.style.display = "block";
+  });
+
+  document.getElementById("editBtn").addEventListener("click", function(){
+    paypalSection.style.display = "none";
+    intakeForm.style.display = "block";
+  });
+
+  if(window.paypal){
+    paypal.Buttons({
+      style: { shape: 'rect', color: 'black', layout: 'vertical', label: 'subscribe' },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({ plan_id: 'P-2LD91207W5982344NNK4SADA' });
+      },
+      onApprove: function(data, actions) {
+        var tool = toolNameInput.value.trim();
+        var email = emailInput.value.trim();
+
+        // Notify via the same Formspree pipeline as tool submissions, tagged distinctly.
+        fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({
+            "Tool Name": tool,
+            "Submitter Email": email,
+            "PayPal Subscription ID": data.subscriptionID,
+            "_subject": "FEATURED UPGRADE PAID — " + tool
+          })
+        }).catch(function(){ /* payment already succeeded; notification failure isn't fatal */ });
+
+        paypalSection.style.display = "none";
+        confirmSection.style.display = "block";
+      }
+    }).render('#paypal-button-container-P-2LD91207W5982344NNK4SADA');
+  }
+})();
+</script>
+</body>
+</html>
