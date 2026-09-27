@@ -35,3 +35,4 @@ jobs:
             !guides/**
             !assets/hero/**
             !assets/brand/**
+            !get-featured.html
