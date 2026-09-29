@@ -2,9 +2,9 @@
   "agent_meta": {
     "agent_name": "outreach_agent",
     "schema_version": "1.0",
-    "run_date": "2026-09-22",
+    "run_date": "2026-09-29",
     "status": "success",
-    "summary": "3 backlink draft(s), 0 sponsorship draft(s) queued for review (live-site check: ok)"
+    "summary": "5 backlink draft(s), 1 sponsorship draft(s) queued for review (live-site check: ok)"
   },
   "action_items": [
     {
@@ -711,6 +711,101 @@
       "approved": null
     },
     {
+      "id": "8012345c1d",
+      "description": "Backlink outreach draft for Magic Hour",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Magic Hour",
+      "tool_domain": "magichour.ai",
+      "tool_url": "https://magichour.ai",
+      "contact_method": "email",
+      "contact_value": "support@magichour.ai",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Magic Hour — you're listed on AllAIDunia",
+        "body": "Hi Magic Hour team,\n\nI hope you're all doing well! I wanted to share some exciting news — Magic Hour is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#magic-hour.\n\nIf you feel comfortable, we would be so grateful for a link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link to any page on your site that you’d prefer, whether it’s your docs, blog, or something else.\n\nNo pressure at all, and thank you for all the great work you do with Magic Hour — it’s truly a wonderful addition to our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "c5da653f00",
+      "description": "Backlink outreach draft for Abodevid",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Abodevid",
+      "tool_domain": "abodevid.com",
+      "tool_url": "https://abodevid.com/",
+      "contact_method": "contact_form",
+      "contact_value": "https://abodevid.com/contact/",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Abodevid — you're listed on AllAIDunia",
+        "body": "Hi Abodevid team,\n\nI hope this message finds you well! I wanted to share some exciting news—Abodevid is now featured on AllAIDunia (https://www.allaidunia.com/), a free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#abodevid.\n\nIf you're comfortable with it, we would be grateful for a link back to us from your site, maybe on a \"featured on\" or resources page. In return, we’d be happy to link to any page of yours that you’d like from our listing.\n\nNo pressure at all, and thank you for creating Abodevid—it’s truly a valuable addition to our directory!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "5601626033",
+      "description": "Backlink outreach draft for Imgfree",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Imgfree",
+      "tool_domain": "imgfree.co",
+      "tool_url": "https://www.imgfree.co/",
+      "contact_method": "contact_form",
+      "contact_value": "https://www.imgfree.co/about",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "Imgfree — you're listed on AllAIDunia",
+        "body": "Hi Imgfree team,\n\nI hope this message finds you well! I wanted to share some exciting news — Imgfree is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#imgfree.\n\nIf you feel inclined, we would love it if you could link back to us from your site, perhaps on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page on your site that you prefer.\n\nNo pressure at all, and thank you for creating Imgfree — it’s truly a fantastic resource in our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "928facfad2",
+      "description": "Backlink outreach draft for HtmlSlides",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "HtmlSlides",
+      "tool_domain": "htmlslides.ai",
+      "tool_url": "https://www.htmlslides.ai",
+      "contact_method": "email",
+      "contact_value": "support@htmlslides.ai",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "HtmlSlides — you're listed on AllAIDunia",
+        "body": "Hi HtmlSlides team,\n\nWe hope you’re doing well! We wanted to share some exciting news — HtmlSlides is now featured on AllAIDunia (https://www.allaidunia.com/), our directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#htmlslides.\n\nIf you’re open to the idea, we’d be so grateful if you could add a link back to us from your site, perhaps on a \"featured on\" or resources page. We’re more than happy to return the favor with a link from our listing to any page on your site that you choose (like your docs or blog).\n\nNo pressure at all, and thank you for creating HtmlSlides — it’s truly a valuable addition to our directory.\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "e19a704a2d",
+      "description": "Sponsorship pitch draft for StyleGen.ai",
+      "priority": "low",
+      "category": "sponsorship_pitch",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "StyleGen.ai",
+      "tool_domain": "stylegen.ai",
+      "tool_url": "https://stylegen.ai/",
+      "contact_method": "help_center",
+      "contact_value": "https://help.stylegen.ai",
+      "contact_confidence": "verified",
+      "proposed_message": {
+        "subject": "StyleGen.ai on AllAIDunia — featured placement option",
+        "body": "Hi StyleGen.ai team,\n\nI hope this message finds you well! I wanted to share that StyleGen.ai is already part of our curated directory at AllAIDunia (https://www.allaidunia.com/#stylegen-ai). It’s a space where people can easily discover and reference AI tools like yours.\n\nWe’re currently offering a few featured placement options for those interested in gaining a bit more spotlight:\n\n- **Featured Listing** — $49/mo: Top placement in your category, a \"Featured\" badge, and priority in AI Tool Matchmaker results.\n- **Homepage Spotlight** — $99/mo: A rotating banner on our homepage, all the benefits of the Featured Listing, and a mention in our monthly roundup.\n- **Category Sponsor** — $149/mo: Exclusive top placement in one category with no competitor overlap, plus all Homepage Spotlight benefits.\n\nWe’re keeping this to a small founding group at these introductory rates before they increase. If you’d like more details or feel this isn’t the right time for you, that’s completely fine too—just let me know!\n\nBest wishes,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
       "id": "014c992f56",
       "description": "Backlink outreach draft for Prompt Guru",
       "priority": "low",
@@ -745,6 +840,25 @@
       "proposed_message": {
         "subject": "PMB — you're listed on AllAIDunia",
         "body": "Hi PMB team,\n\nI hope this message finds you well! I wanted to share some exciting news—PMB is now featured on AllAIDunia (https://www.allaidunia.com/), our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#pmb.\n\nIf it feels right for you, we would love to have a link back to us from your site, maybe on a \"featured on\" or resources page. We’d be more than happy to return the favor with a link from our listing to any page you’d like—whether it’s your docs, blog, or something else.\n\nNo pressure at all, and thank you for creating PMB. It truly adds value to our directory!\n\nWarm regards,  \nAllAIDunia Team"
+      },
+      "approved": null
+    },
+    {
+      "id": "c98d8c8bc2",
+      "description": "Backlink outreach draft for Harku",
+      "priority": "low",
+      "category": "backlink_outreach",
+      "suggested_agent": "manual",
+      "page": null,
+      "tool_name": "Harku",
+      "tool_domain": "harku.io",
+      "tool_url": "https://harku.io/tools/youtube-to-text",
+      "contact_method": "contact_form",
+      "contact_value": "https://harku.io/contact",
+      "contact_confidence": "guessed",
+      "proposed_message": {
+        "subject": "Harku — you're listed on AllAIDunia",
+        "body": "Hi Harku team,\n\nI hope this message finds you well! I wanted to share some exciting news: Harku is now featured on AllAIDunia, our free directory of AI tools. You can check out your listing here: https://www.allaidunia.com/#harku-youtube-to-text.\n\nIf you feel comfortable, we'd be grateful for a link back to us from your site, perhaps on a \"featured on\" or resources page. In return, we’d be more than happy to link to any page of yours that you’d like, whether it’s your docs, blog, or something else.\n\nNo worries if it’s not possible, and thank you for creating Harku — it truly adds value to our directory!\n\nWarm regards,  \nAllAIDunia Team"
       },
       "approved": null
     },

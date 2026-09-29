@@ -1,6 +1,6 @@
 # Outreach Review
 
-_Generated 2026-09-22 — 3 backlink draft(s), 0 sponsorship draft(s) queued for review (live-site check: ok)_
+_Generated 2026-09-29 — 5 backlink draft(s), 1 sponsorship draft(s) queued for review (live-site check: ok)_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 
@@ -43,8 +43,14 @@ To act on any item: edit `outreach_pending.json`, set that item's `"approved"` t
 | ✅ verified | sponsorship_pitch | Surfer SEO | email | marketing@surferseo.com |
 | ✅ verified | backlink_outreach | Lately AI | email | sales@lately.ai |
 | ✅ verified | backlink_outreach | Appaca | contact_form | https://www.appaca.ai/solutions/it-support |
+| ✅ verified | backlink_outreach | Magic Hour | email | support@magichour.ai |
+| ✅ verified | backlink_outreach | Abodevid | contact_form | https://abodevid.com/contact/ |
+| ✅ verified | backlink_outreach | Imgfree | contact_form | https://www.imgfree.co/about |
+| ✅ verified | backlink_outreach | HtmlSlides | email | support@htmlslides.ai |
+| ✅ verified | sponsorship_pitch | StyleGen.ai | help_center | https://help.stylegen.ai |
 | ⚠️ guessed | backlink_outreach | Prompt Guru | contact_form | https://www.allaidunia.com/contact |
 | ⚠️ guessed | backlink_outreach | PMB | contact_form | https://pmbai.dev/contact |
+| ⚠️ guessed | backlink_outreach | Harku | contact_form | https://harku.io/contact |
 | ❓ unknown | backlink_outreach | Leonardo AI | unknown | — |
 | ❓ unknown | backlink_outreach | Lovable | unknown | — |
 | ❓ unknown | sponsorship_pitch | Looka | unknown | — |
