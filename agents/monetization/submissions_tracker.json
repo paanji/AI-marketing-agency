@@ -1,0 +1,21 @@
+{
+  "_comment": "Tracks submissions from approval decision through to going live. Not auto-updated by any script — update manually as each submission moves through the process. 'path' is 'backlink' or 'paid'; a tool only gets added to tools.json once backlink_verified is true OR payment_status is 'paid'.",
+  "submissions": [
+    {
+      "id": "example-tool",
+      "tool_name": "Example Tool",
+      "tool_url": "https://example.com",
+      "submitted_date": "2026-09-26",
+      "submitter_email": "hello@example.com",
+      "decision": "approved",
+      "path": "backlink",
+      "backlink_verified": false,
+      "backlink_check_date": null,
+      "payment_status": null,
+      "payment_date": null,
+      "added_to_tools_json": false,
+      "added_date": null,
+      "notes": "Example entry — delete once real submissions start."
+    }
+  ]
+}
