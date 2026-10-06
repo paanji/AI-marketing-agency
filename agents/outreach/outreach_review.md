@@ -1,6 +1,6 @@
 # Outreach Review
 
-_Generated 2026-09-29 — 5 backlink draft(s), 1 sponsorship draft(s) queued for review (live-site check: ok)_
+_Generated 2026-10-06 — 0 backlink draft(s), 0 sponsorship draft(s) queued for review (live-site check: ok)_
 
 To act on any item: edit `outreach_pending.json`, set that item's `"approved"` to `true` or `false`, and commit. Leave it `null` to keep it queued.
 

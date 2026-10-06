@@ -2,9 +2,9 @@
   "agent_meta": {
     "agent_name": "outreach_agent",
     "schema_version": "1.0",
-    "run_date": "2026-09-29",
+    "run_date": "2026-10-06",
     "status": "success",
-    "summary": "5 backlink draft(s), 1 sponsorship draft(s) queued for review (live-site check: ok)"
+    "summary": "0 backlink draft(s), 0 sponsorship draft(s) queued for review (live-site check: ok)"
   },
   "action_items": [
     {
