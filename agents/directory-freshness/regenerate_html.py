@@ -85,8 +85,11 @@ def build_static_grid_html(tools: list) -> str:
         tier = classify_pricing_tier(t.get("pricing", ""))
         tier_label = TIER_LABELS[tier]
         anchor_id = html_lib.escape(t.get("id", ""), quote=True)
+        # Paid listings (listing_type == "paid") must carry rel="sponsored" per
+        # Google's link-spam guidance. Everything else keeps the normal rel.
+        rel_attr = "sponsored noopener noreferrer" if t.get("listing_type") == "paid" else "noopener noreferrer"
         cards.append(
-            f'<a class="tool-card" id="{anchor_id}" href="{url}" target="_blank" rel="noopener noreferrer" '
+            f'<a class="tool-card" id="{anchor_id}" href="{url}" target="_blank" rel="{rel_attr}" '
             f'data-pricing="{tier}" style="animation-delay:{i * 0.025}s">'
             f'<div class="card-top">'
             f'<div class="tool-icon" style="background:{color}; color:{text_color}">{letter}</div>'
@@ -114,7 +117,7 @@ def build_tools_array(tools: list) -> str:
             lines.append(f"  // {current_cat}")
         lines.append(
             "  { id:\"%s\", name:\"%s\", cat:\"%s\", url:\"%s\", color:\"%s\", text:\"%s\", "
-            "letter:\"%s\", desc:\"%s\", isNew:%s, featured:%s, pricing:\"%s\" },"
+            "letter:\"%s\", desc:\"%s\", isNew:%s, featured:%s, pricing:\"%s\", sponsored:%s },"
             % (
                 js_string(t.get("id", "")),
                 js_string(t["name"]), js_string(t["cat"]), js_string(t["url"]),
@@ -123,6 +126,7 @@ def build_tools_array(tools: list) -> str:
                 "true" if t.get("isNew") else "false",
                 "true" if t.get("featured") else "false",
                 js_string(t.get("pricing", "")),
+                "true" if t.get("listing_type") == "paid" else "false",
             )
         )
     lines.append("];")
