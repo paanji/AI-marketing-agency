@@ -169,6 +169,9 @@ def build_page(tool, all_tools):
     else:
         quickstart_html = ""
 
+    # Paid listings must carry rel="sponsored" (Google link-spam guidance).
+    link_rel = "sponsored noopener" if tool.get("listing_type") == "paid" else "noopener"
+
     return f"""<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -253,7 +256,7 @@ def build_page(tool, all_tools):
   <h2>{esc(name)} pricing</h2>
   <p>{esc(pricing_faq)}</p>
 
-  <p><a class="cta" href="{ext_url}" target="_blank" rel="noopener">Visit {esc(name)} &rarr;</a></p>
+  <p><a class="cta" href="{ext_url}" target="_blank" rel="{link_rel}">Visit {esc(name)} &rarr;</a></p>
 
   <h2>{esc(name)} alternatives</h2>
   <p class="muted">Other {esc(cat.lower())} tools from our directory worth comparing:</p>
