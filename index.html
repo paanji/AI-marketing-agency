@@ -1499,10 +1499,16 @@
         </select>
       </div>
       <div class="form-group" id="backlink-group" style="display:none;">
-        <label style="display:flex; align-items:center; gap:8px; text-transform:none;">
-          <input type="checkbox" id="f-backlink" style="width:auto;" />
-          We'd be happy to link back to AllAIDunia from our site once listed
-        </label>
+        <label>How Would You Like To List? *</label>
+        <select id="f-listing-path">
+          <option value="">Select one</option>
+          <option value="backlink">Add a backlink to AllAIDunia (free)</option>
+          <option value="paid">Pay a one-time $19 listing fee (no backlink needed)</option>
+        </select>
+        <p style="font-size:12px; color:#8b8a96; margin-top:6px; text-transform:none;">
+          This is just your preference for now — nothing is charged yet. If approved,
+          we'll follow up with the next step for whichever option you pick.
+        </p>
       </div>
       <button class="submit-form-btn" onclick="submitTool()">Submit Tool →</button>
     </div>
@@ -1923,6 +1929,7 @@ document.getElementById("modal").addEventListener("click", function(e) {
 function toggleBacklinkField() {
   const isCompany = document.getElementById("f-affiliation").value === "company";
   document.getElementById("backlink-group").style.display = isCompany ? "block" : "none";
+  document.getElementById("f-listing-path").required = isCompany;
 }
 
 async function submitTool() {
@@ -1932,12 +1939,16 @@ async function submitTool() {
   const desc = document.getElementById("f-desc").value.trim();
   const email = document.getElementById("f-email").value.trim();
   const affiliation = document.getElementById("f-affiliation").value;
-  const backlinkOffered = document.getElementById("f-backlink").checked;
+  const listingPath = document.getElementById("f-listing-path").value;
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   if (!name || !url || !cat || !desc || !emailValid || !affiliation) {
     alert("Please fill in all required fields with a valid email!");
+    return;
+  }
+  if (affiliation === "company" && !listingPath) {
+    alert("Please let us know how you'd like to list your tool!");
     return;
   }
   const btn = document.querySelector(".submit-form-btn");
@@ -1954,7 +1965,7 @@ async function submitTool() {
         "Description": desc,
         "Submitter Email": email,
         "Affiliation": affiliation === "company" ? "From the company" : "User recommendation",
-        "Backlink Offered": affiliation === "company" ? (backlinkOffered ? "Yes" : "No") : "N/A",
+        "Preferred Listing Path": affiliation === "company" ? (listingPath === "paid" ? "Paid ($19)" : "Backlink") : "N/A",
         "_subject": "New AI Tool Submission — " + name + (affiliation === "company" ? " (COMPANY SUBMISSION)" : "")
       })
     });
