@@ -1999,7 +1999,7 @@ async function submitTool() {
       document.getElementById("form-area").style.display = "none";
       document.getElementById("success-msg").style.display = "block";
       if (listingPath === "backlink") {
-        window.lastSubmittedToolUrl = url;
+        window.lastSubmittedToolUrl = /^https?:\/\//i.test(url) ? url : "https://" + url;
         window.lastSubmittedToolName = name;
         document.getElementById("backlink-check-area").style.display = "block";
       } else if (listingPath === "paid") {
@@ -2034,6 +2034,14 @@ async function checkBacklinkNow() {
       resultEl.textContent = "✅ Found it! We'll get you listed shortly.";
       resultEl.style.color = "#6ee7a8";
       btn.style.display = "none";
+    } else if (data.error) {
+      // A real problem (e.g. malformed URL) — show it plainly instead of
+      // the generic "not found" text, so this doesn't get mistaken for a
+      // genuine missing-link result.
+      resultEl.textContent = "⚠️ " + data.error;
+      resultEl.style.color = "#fa6c9f";
+      btn.disabled = false;
+      btn.textContent = "I've added the link — check now";
     } else {
       resultEl.textContent = "❌ " + (data.reason || "We couldn't find the link yet — add it and try again.");
       resultEl.style.color = "#fa6c9f";
