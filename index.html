@@ -1491,29 +1491,37 @@
         <input type="email" id="f-email" placeholder="you@example.com" />
       </div>
       <div class="form-group">
-        <label>Are You From This Company? *</label>
-        <select id="f-affiliation" onchange="toggleBacklinkField()">
+        <label>How Would You Like To List? *</label>
+        <select id="f-listing-path" onchange="toggleTermsField()">
           <option value="">Select one</option>
-          <option value="user">No, I'm just a user recommending it</option>
-          <option value="company">Yes, I'm from this company</option>
+          <option value="backlink">Add a backlink to AllAIDunia (free, checked instantly)</option>
+          <option value="paid">Pay a one-time $19 listing fee</option>
+          <option value="user">Just recommending it — no connection to the tool</option>
         </select>
       </div>
-      <div class="form-group" id="backlink-group" style="display:none;">
-        <label>How Would You Like To List? *</label>
-        <select id="f-listing-path">
-          <option value="">Select one</option>
-          <option value="backlink">Add a backlink to AllAIDunia (free)</option>
-          <option value="paid">Pay a one-time $19 listing fee (no backlink needed)</option>
-        </select>
-        <p style="font-size:12px; color:#8b8a96; margin-top:6px; text-transform:none;">
-          This is just your preference for now — nothing is charged yet. If approved,
-          we'll follow up with the next step for whichever option you pick.
-        </p>
+      <div class="form-group" id="terms-group" style="display:none;">
+        <label style="display:flex; align-items:flex-start; gap:8px; text-transform:none; font-size:12.5px; line-height:1.5;">
+          <input type="checkbox" id="f-terms" style="width:auto; margin-top:3px;" />
+          I confirm this tool and its description are accurate. I understand AllAIDunia may delist this tool at any time, without refund, if it's found to violate our guidelines (including but not limited to adult content, fraudulent claims, or a non-functional tool).
+        </label>
       </div>
       <button class="submit-form-btn" onclick="submitTool()">Submit Tool →</button>
     </div>
     <div class="success-msg" id="success-msg">
       🎉 Thank you! We've received your submission and will review it shortly.
+      <div id="backlink-check-area" style="display:none; margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1); text-align:left;">
+        <p style="font-size:13px; opacity:0.85; margin-bottom:10px;">
+          Add a link to <strong>allaidunia.com</strong> on your site now, then click below and we'll check it right away.
+        </p>
+        <button type="button" onclick="checkBacklinkNow()" id="check-backlink-btn" style="background:#7c6cfa; color:#fff; border:none; padding:9px 16px; border-radius:8px; font-size:13px; cursor:pointer;">I've added the link — check now</button>
+        <div id="backlink-check-result" style="font-size:13px; margin-top:10px;"></div>
+      </div>
+      <div id="paid-checkout-area" style="display:none; margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1); text-align:left;">
+        <p style="font-size:13px; opacity:0.85; margin-bottom:10px;">
+          Finish your one-time $19 listing fee now — we'll get you listed once it's received.
+        </p>
+        <a href="https://www.paypal.com/ncp/payment/ZVNY6WQDGZQXN" target="_blank" rel="noopener" style="display:inline-block; background:#7c6cfa; color:#fff; padding:9px 16px; border-radius:8px; font-size:13px; text-decoration:none;">Pay $19 now →</a>
+      </div>
     </div>
   </div>
 </div>
@@ -1926,11 +1934,13 @@ document.getElementById("modal").addEventListener("click", function(e) {
   if (e.target === this) closeModal();
 });
 
-function toggleBacklinkField() {
-  const isCompany = document.getElementById("f-affiliation").value === "company";
-  document.getElementById("backlink-group").style.display = isCompany ? "block" : "none";
-  document.getElementById("f-listing-path").required = isCompany;
+function toggleTermsField() {
+  const path = document.getElementById("f-listing-path").value;
+  const needsTerms = (path === "backlink" || path === "paid");
+  document.getElementById("terms-group").style.display = needsTerms ? "block" : "none";
 }
+
+var SUBMISSION_CHECK_API = "https://submission-check.YOUR-SUBDOMAIN.workers.dev";
 
 async function submitTool() {
   const name = document.getElementById("f-name").value.trim();
@@ -1938,22 +1948,39 @@ async function submitTool() {
   const cat = document.getElementById("f-cat").value;
   const desc = document.getElementById("f-desc").value.trim();
   const email = document.getElementById("f-email").value.trim();
-  const affiliation = document.getElementById("f-affiliation").value;
   const listingPath = document.getElementById("f-listing-path").value;
+  const needsTerms = (listingPath === "backlink" || listingPath === "paid");
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  if (!name || !url || !cat || !desc || !emailValid || !affiliation) {
+  if (!name || !url || !cat || !desc || !emailValid || !listingPath) {
     alert("Please fill in all required fields with a valid email!");
     return;
   }
-  if (affiliation === "company" && !listingPath) {
-    alert("Please let us know how you'd like to list your tool!");
+  if (needsTerms && !document.getElementById("f-terms").checked) {
+    alert("Please confirm the terms checkbox before submitting.");
     return;
   }
   const btn = document.querySelector(".submit-form-btn");
-  btn.textContent = "Sending...";
+  btn.textContent = "Checking site...";
   btn.disabled = true;
+
+  // First-pass content screen — flags for manual review, never blocks
+  // submission. See submission-check-worker.js for what this checks.
+  var contentFlag = "";
+  try {
+    const screenResp = await fetch(SUBMISSION_CHECK_API + "/api/screen-site", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ toolUrl: url })
+    });
+    if (screenResp.ok) {
+      const screenData = await screenResp.json();
+      if (screenData.flagged) contentFlag = " ⚠️ FLAGGED — review content before approving";
+    }
+  } catch(e) { /* screening failing shouldn't block a real submission */ }
+
+  btn.textContent = "Sending...";
   try {
     const response = await fetch("https://formspree.io/f/xlgkbgwo", {
       method: "POST",
@@ -1964,14 +1991,20 @@ async function submitTool() {
         "Category": cat,
         "Description": desc,
         "Submitter Email": email,
-        "Affiliation": affiliation === "company" ? "From the company" : "User recommendation",
-        "Preferred Listing Path": affiliation === "company" ? (listingPath === "paid" ? "Paid ($19)" : "Backlink") : "N/A",
-        "_subject": "New AI Tool Submission — " + name + (affiliation === "company" ? " (COMPANY SUBMISSION)" : "")
+        "Listing Path": listingPath === "paid" ? "Paid ($19)" : listingPath === "backlink" ? "Backlink" : "User recommendation (no affiliation claimed)",
+        "_subject": "New AI Tool Submission — " + name + (needsTerms ? " (OWNER SUBMISSION)" : "") + contentFlag
       })
     });
     if (response.ok) {
       document.getElementById("form-area").style.display = "none";
       document.getElementById("success-msg").style.display = "block";
+      if (listingPath === "backlink") {
+        window.lastSubmittedToolUrl = url;
+        window.lastSubmittedToolName = name;
+        document.getElementById("backlink-check-area").style.display = "block";
+      } else if (listingPath === "paid") {
+        document.getElementById("paid-checkout-area").style.display = "block";
+      }
     } else {
       alert("Something went wrong. Please try again!");
       btn.textContent = "Submit Tool →";
@@ -1981,6 +2014,37 @@ async function submitTool() {
     alert("Network error. Please check your connection and try again!");
     btn.textContent = "Submit Tool →";
     btn.disabled = false;
+  }
+}
+
+async function checkBacklinkNow() {
+  const resultEl = document.getElementById("backlink-check-result");
+  const btn = document.getElementById("check-backlink-btn");
+  btn.disabled = true;
+  btn.textContent = "Checking...";
+  resultEl.textContent = "";
+  try {
+    const resp = await fetch(SUBMISSION_CHECK_API + "/api/check-backlink", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ toolUrl: window.lastSubmittedToolUrl, toolName: window.lastSubmittedToolName })
+    });
+    const data = await resp.json();
+    if (data.verified) {
+      resultEl.textContent = "✅ Found it! We'll get you listed shortly.";
+      resultEl.style.color = "#6ee7a8";
+      btn.style.display = "none";
+    } else {
+      resultEl.textContent = "❌ " + (data.reason || "We couldn't find the link yet — add it and try again.");
+      resultEl.style.color = "#fa6c9f";
+      btn.disabled = false;
+      btn.textContent = "I've added the link — check now";
+    }
+  } catch(e) {
+    resultEl.textContent = "Network error — try again in a moment.";
+    resultEl.style.color = "#fa6c9f";
+    btn.disabled = false;
+    btn.textContent = "I've added the link — check now";
   }
 }
 
