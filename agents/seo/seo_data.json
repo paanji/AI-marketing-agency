@@ -2,36 +2,50 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-10-13",
+    "run_date": "2026-10-20",
     "status": "success",
-    "summary": "42 action items found (9 high priority)"
+    "summary": "44 action items found (9 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-10-13",
+  "generated_date": "2026-10-20",
   "window": {
-    "start": "2026-09-12",
-    "end": "2026-10-10"
+    "start": "2026-09-19",
+    "end": "2026-10-17"
   },
   "overview": {
-    "total_queries": 364,
-    "total_clicks": 1,
-    "total_impressions": 1566,
-    "avg_position": 23.8,
-    "overall_ctr": 0.06
+    "total_queries": 392,
+    "total_clicks": 0,
+    "total_impressions": 1743,
+    "avg_position": 23.1,
+    "overall_ctr": 0.0
   },
   "top_queries": [
     {
       "query": "ideogram",
-      "position": 55.1,
-      "impressions": 97,
+      "position": 45.8,
+      "impressions": 100,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "quillbot",
+      "position": 25.4,
+      "impressions": 80,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "is framer ai free",
-      "position": 6.4,
+      "position": 6.5,
       "impressions": 79,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "udio",
+      "position": 39.5,
+      "impressions": 63,
       "clicks": 0,
       "ctr": 0
     },
@@ -43,58 +57,44 @@
       "ctr": 0
     },
     {
-      "query": "udio",
-      "position": 47.3,
-      "impressions": 53,
+      "query": "framer ai",
+      "position": 18.0,
+      "impressions": 58,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai",
-      "position": 22.6,
-      "impressions": 49,
+      "position": 21.8,
+      "impressions": 51,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram ai",
-      "position": 58.4,
-      "impressions": 48,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "framer ai",
-      "position": 24.2,
-      "impressions": 45,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "quillbot",
-      "position": 24.8,
-      "impressions": 42,
+      "position": 48.2,
+      "impressions": 43,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa ai",
-      "position": 29.7,
-      "impressions": 39,
+      "position": 27.5,
+      "impressions": 42,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "prompt guru",
-      "position": 8.9,
-      "impressions": 34,
-      "clicks": 1,
-      "ctr": 2.9
+      "position": 8.7,
+      "impressions": 37,
+      "clicks": 0,
+      "ctr": 0
     },
     {
       "query": "notion ai",
-      "position": 29.6,
-      "impressions": 34,
+      "position": 33.5,
+      "impressions": 36,
       "clicks": 0,
       "ctr": 0
     },
@@ -107,8 +107,8 @@
     },
     {
       "query": "ai dunia",
-      "position": 5.6,
-      "impressions": 25,
+      "position": 5.7,
+      "impressions": 24,
       "clicks": 0,
       "ctr": 0
     },
@@ -127,13 +127,6 @@
       "ctr": 0
     },
     {
-      "query": "dunia ai",
-      "position": 7.3,
-      "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
       "query": "lovable pricing",
       "position": 14.5,
       "impressions": 19,
@@ -141,23 +134,30 @@
       "ctr": 0
     },
     {
-      "query": "promptguru",
-      "position": 7.9,
-      "impressions": 15,
+      "query": "dunia ai",
+      "position": 6.8,
+      "impressions": 18,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "مواقع ai",
-      "position": 43.7,
-      "impressions": 14,
+      "query": "exa ai pricing",
+      "position": 18.8,
+      "impressions": 18,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "ai image generator",
-      "position": 3.2,
-      "impressions": 13,
+      "query": "exa pricing",
+      "position": 39.7,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai vs perplexity",
+      "position": 41.6,
+      "impressions": 17,
       "clicks": 0,
       "ctr": 0
     }
@@ -165,7 +165,7 @@
   "quick_wins": [
     {
       "query": "is framer ai free",
-      "position": 6.4,
+      "position": 6.5,
       "impressions": 79,
       "clicks": 0,
       "ctr": 0
@@ -179,15 +179,15 @@
     },
     {
       "query": "prompt guru",
-      "position": 8.9,
-      "impressions": 34,
-      "clicks": 1,
-      "ctr": 2.9
+      "position": 8.7,
+      "impressions": 37,
+      "clicks": 0,
+      "ctr": 0
     },
     {
       "query": "ai dunia",
-      "position": 5.6,
-      "impressions": 25,
+      "position": 5.7,
+      "impressions": 24,
       "clicks": 0,
       "ctr": 0
     },
@@ -197,27 +197,34 @@
       "impressions": 23,
       "clicks": 0,
       "ctr": 0
-    },
-    {
-      "query": "dunia ai",
-      "position": 7.3,
-      "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
     }
   ],
   "low_ctr_queries": [
     {
       "query": "ideogram",
-      "position": 55.1,
-      "impressions": 97,
+      "position": 45.8,
+      "impressions": 100,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "quillbot",
+      "position": 25.4,
+      "impressions": 80,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "is framer ai free",
-      "position": 6.4,
+      "position": 6.5,
       "impressions": 79,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "udio",
+      "position": 39.5,
+      "impressions": 63,
       "clicks": 0,
       "ctr": 0
     },
@@ -229,51 +236,44 @@
       "ctr": 0
     },
     {
-      "query": "udio",
-      "position": 47.3,
-      "impressions": 53,
+      "query": "framer ai",
+      "position": 18.0,
+      "impressions": 58,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai",
-      "position": 22.6,
-      "impressions": 49,
+      "position": 21.8,
+      "impressions": 51,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram ai",
-      "position": 58.4,
-      "impressions": 48,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "framer ai",
-      "position": 24.2,
-      "impressions": 45,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "quillbot",
-      "position": 24.8,
-      "impressions": 42,
+      "position": 48.2,
+      "impressions": 43,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa ai",
-      "position": 29.7,
-      "impressions": 39,
+      "position": 27.5,
+      "impressions": 42,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "prompt guru",
+      "position": 8.7,
+      "impressions": 37,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "notion ai",
-      "position": 29.6,
-      "impressions": 34,
+      "position": 33.5,
+      "impressions": 36,
       "clicks": 0,
       "ctr": 0
     },
@@ -286,8 +286,8 @@
     },
     {
       "query": "ai dunia",
-      "position": 5.6,
-      "impressions": 25,
+      "position": 5.7,
+      "impressions": 24,
       "clicks": 0,
       "ctr": 0
     },
@@ -306,13 +306,6 @@
       "ctr": 0
     },
     {
-      "query": "dunia ai",
-      "position": 7.3,
-      "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
       "query": "lovable pricing",
       "position": 14.5,
       "impressions": 19,
@@ -320,8 +313,36 @@
       "ctr": 0
     },
     {
+      "query": "dunia ai",
+      "position": 6.8,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai pricing",
+      "position": 18.8,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa pricing",
+      "position": 39.7,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai vs perplexity",
+      "position": 41.6,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
       "query": "promptguru",
-      "position": 7.9,
+      "position": 8.7,
       "impressions": 15,
       "clicks": 0,
       "ctr": 0
@@ -330,9 +351,9 @@
   "declining_pages": [
     {
       "page": "https://www.allaidunia.com/",
-      "prior_clicks": 5,
+      "prior_clicks": 6,
       "recent_clicks": 2,
-      "drop_pct": 60.0
+      "drop_pct": 66.7
     }
   ],
   "page_audits": [
@@ -348,7 +369,7 @@
       "h1_count": 1,
       "images_total": 4,
       "images_missing_alt": 0,
-      "word_count": 1390,
+      "word_count": 1409,
       "schema_types": [
         "ItemList"
       ],
@@ -359,7 +380,7 @@
       },
       "js_blindspot": {
         "selector": "#tools-grid",
-        "children_found": 68,
+        "children_found": 69,
         "expected_min": 2,
         "likely_invisible_to_crawlers": false
       },
@@ -369,7 +390,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-10-12T08:20:26Z"
+        "last_crawl_time": "2026-10-18T14:00:08Z"
       },
       "noindex": false,
       "canonical": {
@@ -383,10 +404,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.68,
-        "lcp_display": "5.2 s",
-        "cls_display": "0.039",
-        "tbt_display": "140 ms"
+        "performance_score": 0.67,
+        "lcp_display": "5.5 s",
+        "cls_display": "0",
+        "tbt_display": "280 ms"
       }
     },
     {
@@ -417,7 +438,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-23T11:28:08Z"
+        "last_crawl_time": "2026-10-18T17:43:10Z"
       },
       "noindex": false,
       "canonical": {
@@ -431,10 +452,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.92,
-        "lcp_display": "2.6 s",
-        "cls_display": "0.079",
-        "tbt_display": "60 ms"
+        "performance_score": 0.88,
+        "lcp_display": "3.3 s",
+        "cls_display": "0",
+        "tbt_display": "90 ms"
       }
     },
     {
@@ -479,10 +500,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.92,
-        "lcp_display": "2.6 s",
+        "performance_score": 0.88,
+        "lcp_display": "3.2 s",
         "cls_display": "0.065",
-        "tbt_display": "20 ms"
+        "tbt_display": "50 ms"
       }
     },
     {
@@ -513,7 +534,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-26T07:54:54Z"
+        "last_crawl_time": "2026-10-18T17:44:53Z"
       },
       "noindex": false,
       "canonical": {
@@ -576,7 +597,7 @@
       },
       "pagespeed": {
         "performance_score": 1,
-        "lcp_display": "1.7 s",
+        "lcp_display": "1.2 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -605,7 +626,7 @@
       "js_blindspot": null,
       "indexing": {
         "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
+        "coverage_state": "Discovered - currently not indexed",
         "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexing_state": "INDEXING_STATE_UNSPECIFIED",
         "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -652,7 +673,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-30T02:49:05Z"
+        "last_crawl_time": "2026-10-15T14:45:19Z"
       },
       "noindex": false,
       "canonical": {
@@ -695,7 +716,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-11T23:56:50Z"
+        "last_crawl_time": "2026-10-16T00:56:48Z"
       },
       "noindex": false,
       "canonical": {
@@ -738,7 +759,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-08T07:51:42Z"
+        "last_crawl_time": "2026-10-13T07:58:42Z"
       },
       "noindex": false,
       "canonical": {
@@ -825,7 +846,7 @@
       },
       "indexing": {
         "verdict": "NEUTRAL",
-        "coverage_state": "Discovered - currently not indexed",
+        "coverage_state": "URL is unknown to Google",
         "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexing_state": "INDEXING_STATE_UNSPECIFIED",
         "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1001,7 +1022,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T02:03:00Z"
+        "last_crawl_time": "2026-10-19T20:18:44Z"
       },
       "noindex": false,
       "canonical": {
@@ -1302,7 +1323,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-08-13T03:52:33Z"
+        "last_crawl_time": "2026-10-18T14:06:04Z"
       },
       "noindex": false,
       "canonical": {
@@ -1453,8 +1474,8 @@
   },
   "action_items": [
     {
-      "id": "eafee1b690",
-      "description": "Page speed could be better (Lighthouse performance score: 68/100, mobile). LCP: 5.2 s, CLS: 0.039.",
+      "id": "b92fc87777",
+      "description": "Page speed could be better (Lighthouse performance score: 67/100, mobile). LCP: 5.5 s, CLS: 0.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1471,6 +1492,18 @@
       "category": "ai_search_geo",
       "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "b928a0a396",
+      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.3 s, CLS: 0.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
+      "page": "https://www.allaidunia.com/about.html",
       "proposed_fix": null,
       "field_type": null,
       "current_value": null,
@@ -1494,6 +1527,18 @@
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
+      "page": "https://www.allaidunia.com/contact.html",
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "e28de82e97",
+      "description": "Page speed could be better (Lighthouse performance score: 88/100, mobile). LCP: 3.2 s, CLS: 0.065.",
+      "priority": "medium",
+      "category": "technical",
+      "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/contact.html",
       "proposed_fix": null,
       "field_type": null,
@@ -1537,8 +1582,8 @@
       "target_range": null
     },
     {
-      "id": "95b6c740e6",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "id": "3db299b843",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1549,8 +1594,8 @@
       "target_range": null
     },
     {
-      "id": "0e6bb731cb",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "id": "8cf90269f8",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1825,8 +1870,8 @@
       "target_range": null
     },
     {
-      "id": "7c01d934fb",
-      "description": "Query \"ideogram\" gets 97 impressions but only 0% CTR at position 55.1 — likely needs a more compelling title/meta description.",
+      "id": "eed3f8b5dc",
+      "description": "Query \"ideogram\" gets 100 impressions but only 0% CTR at position 45.8 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1837,8 +1882,32 @@
       "target_range": null
     },
     {
-      "id": "e156064b6d",
-      "description": "Query \"is framer ai free\" gets 79 impressions but only 0% CTR at position 6.4 — likely needs a more compelling title/meta description.",
+      "id": "0224732f7c",
+      "description": "Query \"quillbot\" gets 80 impressions but only 0% CTR at position 25.4 — likely needs a more compelling title/meta description.",
+      "priority": "medium",
+      "category": "content_opportunity",
+      "suggested_agent": "content_agent",
+      "page": null,
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "209e2015a6",
+      "description": "Query \"is framer ai free\" gets 79 impressions but only 0% CTR at position 6.5 — likely needs a more compelling title/meta description.",
+      "priority": "medium",
+      "category": "content_opportunity",
+      "suggested_agent": "content_agent",
+      "page": null,
+      "proposed_fix": null,
+      "field_type": null,
+      "current_value": null,
+      "target_range": null
+    },
+    {
+      "id": "353310dfb9",
+      "description": "Query \"udio\" gets 63 impressions but only 0% CTR at position 39.5 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1861,32 +1930,8 @@
       "target_range": null
     },
     {
-      "id": "2bc0e6f14b",
-      "description": "Query \"udio\" gets 53 impressions but only 0% CTR at position 47.3 — likely needs a more compelling title/meta description.",
-      "priority": "medium",
-      "category": "content_opportunity",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "02dd6d8566",
-      "description": "Query \"figma ai\" gets 49 impressions but only 0% CTR at position 22.6 — likely needs a more compelling title/meta description.",
-      "priority": "medium",
-      "category": "content_opportunity",
-      "suggested_agent": "content_agent",
-      "page": null,
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "18f98cedcf",
-      "description": "\"is framer ai free\" ranks position 6.4 with 79 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "e74c1b77d8",
+      "description": "\"is framer ai free\" ranks position 6.5 with 79 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1909,8 +1954,8 @@
       "target_range": null
     },
     {
-      "id": "bd10cf0ce4",
-      "description": "\"prompt guru\" ranks position 8.9 with 34 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "cf35f35a2e",
+      "description": "\"prompt guru\" ranks position 8.7 with 37 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1921,8 +1966,8 @@
       "target_range": null
     },
     {
-      "id": "3a6633db68",
-      "description": "\"ai dunia\" ranks position 5.6 with 25 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "5387173f28",
+      "description": "\"ai dunia\" ranks position 5.7 with 24 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1945,8 +1990,8 @@
       "target_range": null
     },
     {
-      "id": "007e2fb664",
-      "description": "https://www.allaidunia.com/ lost 60.0% of its clicks (5 to 2) — check for recent changes, broken elements, or content going stale.",
+      "id": "8fc2a455b5",
+      "description": "https://www.allaidunia.com/ lost 66.7% of its clicks (6 to 2) — check for recent changes, broken elements, or content going stale.",
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
