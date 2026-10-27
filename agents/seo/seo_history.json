@@ -276,5 +276,19 @@
     "action_items_total": 44,
     "action_items_high": 9,
     "avg_pagespeed_score": 87
+  },
+  {
+    "date": "2026-10-27",
+    "window_start": "2026-09-26",
+    "window_end": "2026-10-24",
+    "total_clicks": 2,
+    "total_impressions": 1908,
+    "avg_position": 24.5,
+    "overall_ctr": 0.1,
+    "pages_checked": 25,
+    "pages_indexed": 22,
+    "action_items_total": 43,
+    "action_items_high": 8,
+    "avg_pagespeed_score": 86
   }
 ]
