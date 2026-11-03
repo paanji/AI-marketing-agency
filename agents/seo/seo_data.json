@@ -2,199 +2,199 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-10-27",
+    "run_date": "2026-11-03",
     "status": "success",
-    "summary": "43 action items found (8 high priority)"
+    "summary": "41 action items found (8 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-10-27",
+  "generated_date": "2026-11-03",
   "window": {
-    "start": "2026-09-26",
-    "end": "2026-10-24"
+    "start": "2026-10-03",
+    "end": "2026-10-31"
   },
   "overview": {
-    "total_queries": 386,
-    "total_clicks": 2,
-    "total_impressions": 1908,
-    "avg_position": 24.5,
-    "overall_ctr": 0.1
+    "total_queries": 330,
+    "total_clicks": 3,
+    "total_impressions": 1833,
+    "avg_position": 28.9,
+    "overall_ctr": 0.16
   },
   "top_queries": [
     {
       "query": "ideogram",
-      "position": 37.5,
-      "impressions": 155,
+      "position": 36.1,
+      "impressions": 214,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "quillbot",
-      "position": 27.1,
-      "impressions": 121,
+      "position": 25.8,
+      "impressions": 199,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "udio",
-      "position": 26.9,
-      "impressions": 120,
+      "position": 22.6,
+      "impressions": 144,
       "clicks": 1,
-      "ctr": 0.8
+      "ctr": 0.7
     },
     {
-      "query": "is framer ai free",
-      "position": 6.5,
-      "impressions": 86,
+      "query": "ideogram ai",
+      "position": 40.8,
+      "impressions": 81,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "framer ai",
-      "position": 17.5,
-      "impressions": 58,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "grammarly pricing",
-      "position": 7.1,
-      "impressions": 55,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ideogram ai",
-      "position": 42.1,
+      "position": 14.4,
       "impressions": 53,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "exa ai",
-      "position": 27.3,
-      "impressions": 46,
+      "query": "is framer ai free",
+      "position": 6.8,
+      "impressions": 49,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "notion ai",
-      "position": 37.8,
-      "impressions": 45,
+      "position": 39.3,
+      "impressions": 49,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "prompt guru",
-      "position": 8.5,
+      "position": 8.2,
       "impressions": 39,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai",
-      "position": 20.7,
-      "impressions": 34,
+      "position": 23.8,
+      "impressions": 30,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "replit ai review",
-      "position": 19.5,
-      "impressions": 31,
+      "query": "exa ai",
+      "position": 29.4,
+      "impressions": 28,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "ai dunia",
-      "position": 5.7,
+      "query": "adobe firefly",
+      "position": 20.1,
       "impressions": 26,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa ai pricing",
-      "position": 15.4,
-      "impressions": 26,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "elevenlabs pricing",
-      "position": 18.7,
-      "impressions": 24,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "revisão do replit ai",
-      "position": 6.8,
-      "impressions": 21,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "abodevid",
-      "position": 6.6,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "dunia ai chat",
-      "position": 6.3,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "exa ai research innovation evaluation",
-      "position": 46.1,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "exa ai vs perplexity",
-      "position": 51.3,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    }
-  ],
-  "quick_wins": [
-    {
-      "query": "is framer ai free",
-      "position": 6.5,
-      "impressions": 86,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "grammarly pricing",
-      "position": 7.1,
-      "impressions": 55,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "prompt guru",
-      "position": 8.5,
-      "impressions": 39,
+      "position": 14.8,
+      "impressions": 23,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ai dunia",
       "position": 5.7,
-      "impressions": 26,
+      "impressions": 22,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "revisão do replit ai",
+      "query": "exa ai research innovation evaluation",
+      "position": 46.1,
+      "impressions": 22,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "appaca",
+      "position": 10.6,
+      "impressions": 19,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "grammarly pricing",
+      "position": 7.6,
+      "impressions": 19,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "dunia ai",
+      "position": 7.5,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa vs perplexity",
+      "position": 68.7,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "dunia ai chat",
+      "position": 6.2,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa",
+      "position": 57.2,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    }
+  ],
+  "quick_wins": [
+    {
+      "query": "framer ai",
+      "position": 14.4,
+      "impressions": 53,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "is framer ai free",
       "position": 6.8,
-      "impressions": 21,
+      "impressions": 49,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "prompt guru",
+      "position": 8.2,
+      "impressions": 39,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai pricing",
+      "position": 14.8,
+      "impressions": 23,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ai dunia",
+      "position": 5.7,
+      "impressions": 22,
       "clicks": 0,
       "ctr": 0
     }
@@ -202,162 +202,183 @@
   "low_ctr_queries": [
     {
       "query": "ideogram",
-      "position": 37.5,
-      "impressions": 155,
+      "position": 36.1,
+      "impressions": 214,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "quillbot",
-      "position": 27.1,
-      "impressions": 121,
+      "position": 25.8,
+      "impressions": 199,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "udio",
-      "position": 26.9,
-      "impressions": 120,
+      "position": 22.6,
+      "impressions": 144,
       "clicks": 1,
-      "ctr": 0.83
+      "ctr": 0.69
     },
     {
-      "query": "is framer ai free",
-      "position": 6.5,
-      "impressions": 86,
+      "query": "ideogram ai",
+      "position": 40.8,
+      "impressions": 81,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "framer ai",
-      "position": 17.5,
-      "impressions": 58,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "grammarly pricing",
-      "position": 7.1,
-      "impressions": 55,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ideogram ai",
-      "position": 42.1,
+      "position": 14.4,
       "impressions": 53,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "exa ai",
-      "position": 27.3,
-      "impressions": 46,
+      "query": "is framer ai free",
+      "position": 6.8,
+      "impressions": 49,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "notion ai",
-      "position": 37.8,
-      "impressions": 45,
+      "position": 39.3,
+      "impressions": 49,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "prompt guru",
-      "position": 8.5,
+      "position": 8.2,
       "impressions": 39,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai",
-      "position": 20.7,
-      "impressions": 34,
+      "position": 23.8,
+      "impressions": 30,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "replit ai review",
-      "position": 19.5,
-      "impressions": 31,
+      "query": "exa ai",
+      "position": 29.4,
+      "impressions": 28,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "ai dunia",
-      "position": 5.7,
+      "query": "adobe firefly",
+      "position": 20.1,
       "impressions": 26,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa ai pricing",
-      "position": 15.4,
-      "impressions": 26,
+      "position": 14.8,
+      "impressions": 23,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "elevenlabs pricing",
-      "position": 18.7,
-      "impressions": 24,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "revisão do replit ai",
-      "position": 6.8,
-      "impressions": 21,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "abodevid",
-      "position": 6.6,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "dunia ai chat",
-      "position": 6.3,
-      "impressions": 18,
+      "query": "ai dunia",
+      "position": 5.7,
+      "impressions": 22,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa ai research innovation evaluation",
       "position": 46.1,
-      "impressions": 18,
+      "impressions": 22,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "exa ai vs perplexity",
-      "position": 51.3,
-      "impressions": 18,
+      "query": "appaca",
+      "position": 10.6,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "exa pricing",
-      "position": 45.8,
-      "impressions": 16,
+      "query": "grammarly pricing",
+      "position": 7.6,
+      "impressions": 19,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "dunia ai",
+      "position": 7.5,
+      "impressions": 18,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa vs perplexity",
-      "position": 63.9,
+      "position": 68.7,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "dunia ai chat",
+      "position": 6.2,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa",
+      "position": 57.2,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai vs perplexity",
+      "position": 64.6,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "new ai websites",
+      "position": 36.5,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "abodevid",
+      "position": 5.8,
       "impressions": 16,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "perplexity vs exa",
-      "position": 66.4,
+      "position": 69.4,
       "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "promptguru",
+      "position": 7.8,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ideogram.",
+      "position": 63.3,
+      "impressions": 15,
       "clicks": 0,
       "ctr": 0
     }
@@ -397,7 +418,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-10-18T14:00:08Z"
+        "last_crawl_time": "2026-10-29T13:57:53Z"
       },
       "noindex": false,
       "canonical": {
@@ -411,10 +432,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.65,
-        "lcp_display": "5.8 s",
-        "cls_display": "0.04",
-        "tbt_display": "280 ms"
+        "performance_score": 0.77,
+        "lcp_display": "5.2 s",
+        "cls_display": "0.042",
+        "tbt_display": "110 ms"
       }
     },
     {
@@ -459,10 +480,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.86,
-        "lcp_display": "3.2 s",
-        "cls_display": "0",
-        "tbt_display": "20 ms"
+        "performance_score": 0.98,
+        "lcp_display": "1.5 s",
+        "cls_display": "0.079",
+        "tbt_display": "10 ms"
       }
     },
     {
@@ -493,7 +514,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-27T05:05:12Z"
+        "last_crawl_time": "2026-10-29T15:51:05Z"
       },
       "noindex": false,
       "canonical": {
@@ -507,10 +528,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.87,
-        "lcp_display": "3.3 s",
-        "cls_display": "0.065",
-        "tbt_display": "120 ms"
+        "performance_score": 1,
+        "lcp_display": "1.5 s",
+        "cls_display": "0",
+        "tbt_display": "40 ms"
       }
     },
     {
@@ -555,8 +576,8 @@
         "has_og_image": false
       },
       "pagespeed": {
-        "performance_score": 0.92,
-        "lcp_display": "2.6 s",
+        "performance_score": 0.99,
+        "lcp_display": "1.6 s",
         "cls_display": "0.067",
         "tbt_display": "0 ms"
       }
@@ -589,7 +610,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-10-01T10:42:41Z"
+        "last_crawl_time": "2026-11-02T18:37:33Z"
       },
       "noindex": false,
       "canonical": {
@@ -604,7 +625,7 @@
       },
       "pagespeed": {
         "performance_score": 1,
-        "lcp_display": "1.4 s",
+        "lcp_display": "1.3 s",
         "cls_display": "0",
         "tbt_display": "0 ms"
       }
@@ -723,7 +744,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-10-16T00:56:48Z"
+        "last_crawl_time": "2026-10-18T00:21:15Z"
       },
       "noindex": false,
       "canonical": {
@@ -809,7 +830,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-10-07T11:54:04Z"
+        "last_crawl_time": "2026-11-01T00:42:07Z"
       },
       "noindex": false,
       "canonical": {
@@ -853,7 +874,7 @@
       },
       "indexing": {
         "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
+        "coverage_state": "Discovered - currently not indexed",
         "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexing_state": "INDEXING_STATE_UNSPECIFIED",
         "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1481,8 +1502,8 @@
   },
   "action_items": [
     {
-      "id": "0c911509db",
-      "description": "Page speed could be better (Lighthouse performance score: 65/100, mobile). LCP: 5.8 s, CLS: 0.04.",
+      "id": "941c80e09e",
+      "description": "Page speed could be better (Lighthouse performance score: 77/100, mobile). LCP: 5.2 s, CLS: 0.042.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1499,18 +1520,6 @@
       "category": "ai_search_geo",
       "suggested_agent": "content_agent",
       "page": "https://www.allaidunia.com/",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "c5a5c2678f",
-      "description": "Page speed could be better (Lighthouse performance score: 86/100, mobile). LCP: 3.2 s, CLS: 0.",
-      "priority": "medium",
-      "category": "technical",
-      "suggested_agent": "manual",
-      "page": "https://www.allaidunia.com/about.html",
       "proposed_fix": null,
       "field_type": null,
       "current_value": null,
@@ -1534,18 +1543,6 @@
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
-      "page": "https://www.allaidunia.com/contact.html",
-      "proposed_fix": null,
-      "field_type": null,
-      "current_value": null,
-      "target_range": null
-    },
-    {
-      "id": "443a97539d",
-      "description": "Page speed could be better (Lighthouse performance score: 87/100, mobile). LCP: 3.3 s, CLS: 0.065.",
-      "priority": "medium",
-      "category": "technical",
-      "suggested_agent": "manual",
       "page": "https://www.allaidunia.com/contact.html",
       "proposed_fix": null,
       "field_type": null,
@@ -1601,8 +1598,8 @@
       "target_range": null
     },
     {
-      "id": "8cf90269f8",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "id": "0e6bb731cb",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1877,8 +1874,8 @@
       "target_range": null
     },
     {
-      "id": "3c54c37097",
-      "description": "Query \"ideogram\" gets 155 impressions but only 0% CTR at position 37.5 — likely needs a more compelling title/meta description.",
+      "id": "089fc2494b",
+      "description": "Query \"ideogram\" gets 214 impressions but only 0% CTR at position 36.1 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1889,8 +1886,8 @@
       "target_range": null
     },
     {
-      "id": "87273b687b",
-      "description": "Query \"quillbot\" gets 121 impressions but only 0% CTR at position 27.1 — likely needs a more compelling title/meta description.",
+      "id": "2909702f94",
+      "description": "Query \"quillbot\" gets 199 impressions but only 0% CTR at position 25.8 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1901,8 +1898,8 @@
       "target_range": null
     },
     {
-      "id": "10d9d51dec",
-      "description": "Query \"udio\" gets 120 impressions but only 0.83% CTR at position 26.9 — likely needs a more compelling title/meta description.",
+      "id": "66c48e53f8",
+      "description": "Query \"udio\" gets 144 impressions but only 0.69% CTR at position 22.6 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1913,8 +1910,8 @@
       "target_range": null
     },
     {
-      "id": "213eea4fc7",
-      "description": "Query \"is framer ai free\" gets 86 impressions but only 0% CTR at position 6.5 — likely needs a more compelling title/meta description.",
+      "id": "5c3a1a2e0f",
+      "description": "Query \"ideogram ai\" gets 81 impressions but only 0% CTR at position 40.8 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1925,8 +1922,8 @@
       "target_range": null
     },
     {
-      "id": "f6a092d609",
-      "description": "Query \"framer ai\" gets 58 impressions but only 0% CTR at position 17.5 — likely needs a more compelling title/meta description.",
+      "id": "15ac342a19",
+      "description": "Query \"framer ai\" gets 53 impressions but only 0% CTR at position 14.4 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1937,8 +1934,8 @@
       "target_range": null
     },
     {
-      "id": "a7324e2850",
-      "description": "\"is framer ai free\" ranks position 6.5 with 86 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "2f8353f191",
+      "description": "\"framer ai\" ranks position 14.4 with 53 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1949,8 +1946,8 @@
       "target_range": null
     },
     {
-      "id": "a94a0f3201",
-      "description": "\"grammarly pricing\" ranks position 7.1 with 55 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "90432464eb",
+      "description": "\"is framer ai free\" ranks position 6.8 with 49 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1961,8 +1958,8 @@
       "target_range": null
     },
     {
-      "id": "03d11b448c",
-      "description": "\"prompt guru\" ranks position 8.5 with 39 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "a49ebbfea2",
+      "description": "\"prompt guru\" ranks position 8.2 with 39 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1973,8 +1970,8 @@
       "target_range": null
     },
     {
-      "id": "898c3bc971",
-      "description": "\"ai dunia\" ranks position 5.7 with 26 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "99f8ffecda",
+      "description": "\"exa ai pricing\" ranks position 14.8 with 23 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1985,8 +1982,8 @@
       "target_range": null
     },
     {
-      "id": "0374a446e4",
-      "description": "\"revisão do replit ai\" ranks position 6.8 with 21 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "ef7c07106d",
+      "description": "\"ai dunia\" ranks position 5.7 with 22 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
