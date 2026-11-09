@@ -1902,5 +1902,39 @@
     "discovery_points": 24,
     "discovered_date": "2026-11-02",
     "approved": null
+  },
+  {
+    "id": "uncracked-city-detective-game-where-you-question-llm-suspec",
+    "name": "Uncracked City, detective game where you question LLM suspec",
+    "cat": "Uncategorized",
+    "url": "https://uncracked.city",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "U",
+    "desc": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
+    "isNew": true,
+    "featured": false,
+    "source": "discovered",
+    "discovery_source": "Show HN",
+    "discovery_points": 127,
+    "discovered_date": "2026-11-09",
+    "approved": null
+  },
+  {
+    "id": "interactive-notes-on-rlhf-attention-lora-and-llm-evals",
+    "name": "Interactive notes on RLHF, attention, LoRA and LLM evals",
+    "cat": "Uncategorized",
+    "url": "https://concepts.laxmena.com/",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "I",
+    "desc": "Show HN: Interactive notes on RLHF, attention, LoRA and LLM evals",
+    "isNew": true,
+    "featured": false,
+    "source": "discovered",
+    "discovery_source": "Show HN",
+    "discovery_points": 41,
+    "discovered_date": "2026-11-09",
+    "approved": null
   }
 ]
