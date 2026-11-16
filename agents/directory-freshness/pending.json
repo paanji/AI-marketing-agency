@@ -1936,5 +1936,39 @@
     "discovery_points": 41,
     "discovered_date": "2026-11-09",
     "approved": null
+  },
+  {
+    "id": "ai-red-lines",
+    "name": "AI Red Lines",
+    "cat": "Uncategorized",
+    "url": "https://yourairedlines.com",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "A",
+    "desc": "Show HN: AI Red Lines – write down what would make you act on AI",
+    "isNew": true,
+    "featured": false,
+    "source": "discovered",
+    "discovery_source": "Show HN",
+    "discovery_points": 39,
+    "discovered_date": "2026-11-16",
+    "approved": null
+  },
+  {
+    "id": "daily-gpu-rental-prices-across-aws-azure-runpod-and-vast-a",
+    "name": "Daily GPU Rental Prices Across AWS, Azure, RunPod and Vast.a",
+    "cat": "Uncategorized",
+    "url": "https://taipeiledger.com/gpu/",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "D",
+    "desc": "Show HN: Daily GPU Rental Prices Across AWS, Azure, RunPod and Vast.ai",
+    "isNew": true,
+    "featured": false,
+    "source": "discovered",
+    "discovery_source": "Show HN",
+    "discovery_points": 15,
+    "discovered_date": "2026-11-16",
+    "approved": null
   }
 ]
