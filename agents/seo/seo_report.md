@@ -1,30 +1,31 @@
 # SEO Report — AllAIDunia
-_2026-11-10_
+_2026-11-17_
 
-Data window: 2026-10-10 to 2026-11-07 (vs. prior 2026-09-12 to 2026-10-09)
+Data window: 2026-10-17 to 2026-11-14 (vs. prior 2026-09-19 to 2026-10-16)
 
 ## Recommended Actions
 Prioritized suggestions combining Search Console data and a live site audit. Items tagged for `content_agent` will be actioned automatically once that agent exists — items tagged `manual` need a person for now.
 
 ### High Priority
-- [technical] Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/guides/video-generation.html)_ — *suggested owner: manual*
+- [technical] Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/guides/video-generation.html)_ — *suggested owner: manual*
 - [technical] Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/video-ai-tools.html)_ — *suggested owner: manual*
 - [technical] Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly. _(page: https://www.allaidunia.com/best-free-ai-video-editing-tools.html)_ — *suggested owner: manual*
-- [content_opportunity] "prompt guru" ranks position 8.5 with 48 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
-- [content_opportunity] "is framer ai free" ranks position 6.7 with 32 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
-- [content_opportunity] "appaca" ranks position 9.7 with 21 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
-- [content_opportunity] "dunia ai" ranks position 7.7 with 20 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
+- [content_opportunity] "looka alternatives" ranks position 9.5 with 51 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
+- [content_opportunity] "prompt guru" ranks position 8.6 with 41 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
+- [content_opportunity] "otter.ai" ranks position 8.3 with 36 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
+- [content_opportunity] "is framer ai free" ranks position 6.8 with 29 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
+- [content_opportunity] "dunia ai" ranks position 8.0 with 25 impressions — a supporting blog post or added internal links could push this onto page 1. — *suggested owner: content_agent*
 
 ### Medium Priority
-- [technical] Page speed could be better (Lighthouse performance score: 80/100, mobile). LCP: 4.8 s, CLS: 0.042. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
+- [technical] Page speed could be better (Lighthouse performance score: 77/100, mobile). LCP: 5.3 s, CLS: 0.042. _(page: https://www.allaidunia.com/)_ — *suggested owner: manual*
 - [content_opportunity] Only ~113 words — more substantive content tends to rank better. _(page: https://www.allaidunia.com/contact.html)_ — *suggested owner: content_agent*
 - [content_opportunity] Only ~66 words — more substantive content tends to rank better. _(page: https://www.allaidunia.com/prompt-guru.html)_ — *suggested owner: content_agent*
 - [technical] No canonical tag — recommended so search engines know the definitive URL for this page, especially relevant given this site previously had a www/non-www duplication issue. _(page: https://www.allaidunia.com/prompt-guru.html)_ — *suggested owner: manual*
-- [content_opportunity] Query "quillbot" gets 336 impressions but only 0% CTR at position 25.8 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
-- [content_opportunity] Query "ideogram" gets 238 impressions but only 0% CTR at position 37.0 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
-- [content_opportunity] Query "udio" gets 183 impressions but only 1.09% CTR at position 16.9 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
-- [content_opportunity] Query "ideogram ai" gets 119 impressions but only 0% CTR at position 43.0 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
-- [content_opportunity] Query "notion ai" gets 50 impressions but only 0% CTR at position 43.7 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
+- [content_opportunity] Query "quillbot" gets 515 impressions but only 0% CTR at position 24.1 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
+- [content_opportunity] Query "ideogram" gets 326 impressions but only 0% CTR at position 34.5 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
+- [content_opportunity] Query "udio" gets 235 impressions but only 0.85% CTR at position 16.5 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
+- [content_opportunity] Query "ideogram ai" gets 162 impressions but only 0% CTR at position 43.2 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
+- [content_opportunity] Query "framer ai" gets 59 impressions but only 0% CTR at position 18.3 — likely needs a more compelling title/meta description. — *suggested owner: content_agent*
 
 ### Low Priority
 - [ai_search_geo] No lists or tables — AI answer engines strongly prefer content structured for easy extraction and citation. _(page: https://www.allaidunia.com/)_ — *suggested owner: content_agent*
@@ -54,25 +55,25 @@ Prioritized suggestions combining Search Console data and a live site audit. Ite
 
 
 ## Historical Trend
-Comparing this run (2026-11-10) to the earliest recorded snapshot (2026-07-07, ~18 week(s) ago):
+Comparing this run (2026-11-17) to the earliest recorded snapshot (2026-07-07, ~19 week(s) ago):
 
 | Metric | Then | Now | Change |
 |---|---|---|---|
-| Total clicks | 0 | 5 | 📈 +5 |
-| Total impressions | 4 | 2128 | 📈 +2124 |
-| Avg. position | 8.8 | 31.6 | 📉 +22.8 |
+| Total clicks | 0 | 6 | 📈 +6 |
+| Total impressions | 4 | 2875 | 📈 +2871 |
+| Avg. position | 8.8 | 29.8 | 📉 +21.0 |
 | Pages indexed | 1/3 | 22/25 | 📈 +21 |
-| High-priority issues | 2 | 7 | 📉 +5 |
+| High-priority issues | 2 | 8 | 📉 +6 |
 
 
 ## Overview
 | Metric | Value |
 |---|---|
-| Total queries seen | 297 |
-| Total clicks | 5 |
-| Total impressions | 2128 |
-| Average position | 31.6 |
-| Overall CTR | 0.23% |
+| Total queries seen | 359 |
+| Total clicks | 6 |
+| Total impressions | 2875 |
+| Average position | 29.8 |
+| Overall CTR | 0.21% |
 
 ## AI Search Readiness (GEO/AEO)
 Whether AI answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) can find, understand, and cite this site.
@@ -116,23 +117,23 @@ Whether AI answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) can
 
 | Query | Position | Impressions | Clicks | CTR |
 |---|---|---|---|---|
-| quillbot | 25.8 | 336 | 0 | 0% |
-| ideogram | 37.0 | 238 | 0 | 0% |
-| udio | 16.9 | 183 | 2 | 1.1% |
-| ideogram ai | 43.0 | 119 | 0 | 0% |
-| notion ai | 43.7 | 50 | 0 | 0% |
-| framer ai | 17.9 | 49 | 0 | 0% |
-| prompt guru | 8.5 | 48 | 1 | 2.1% |
-| adobe firefly | 19.1 | 36 | 0 | 0% |
-| exa ai | 35.4 | 32 | 0 | 0% |
-| is framer ai free | 6.7 | 32 | 0 | 0% |
-| exa | 60.0 | 29 | 0 | 0% |
-| figma ai | 28.4 | 25 | 0 | 0% |
-| idag ai | 17.0 | 23 | 0 | 0% |
-| quillbot ai | 53.9 | 23 | 0 | 0% |
-| exa ai pricing | 19.0 | 22 | 0 | 0% |
-| ai dunia | 4.9 | 21 | 0 | 0% |
-| appaca | 9.7 | 21 | 0 | 0% |
-| dunia ai | 7.7 | 20 | 0 | 0% |
-| abodevid | 5.6 | 19 | 0 | 0% |
-| exa ai research innovation evaluation | 46.4 | 19 | 0 | 0% |
+| quillbot | 24.1 | 515 | 0 | 0% |
+| ideogram | 34.5 | 326 | 0 | 0% |
+| udio | 16.5 | 235 | 2 | 0.9% |
+| ideogram ai | 43.2 | 162 | 0 | 0% |
+| framer ai | 18.3 | 59 | 0 | 0% |
+| notion ai | 41.1 | 57 | 0 | 0% |
+| adobe firefly | 18.8 | 53 | 0 | 0% |
+| looka alternatives | 9.5 | 51 | 0 | 0% |
+| exa | 61.5 | 46 | 0 | 0% |
+| prompt guru | 8.6 | 41 | 1 | 2.4% |
+| otter.ai | 8.3 | 36 | 0 | 0% |
+| exa ai | 47.1 | 35 | 0 | 0% |
+| idag ai | 17.3 | 32 | 0 | 0% |
+| quillbot ai | 51 | 32 | 0 | 0% |
+| is framer ai free | 6.8 | 29 | 0 | 0% |
+| dunia ai | 8.0 | 25 | 0 | 0% |
+| figma ai | 36.5 | 23 | 0 | 0% |
+| quilbot | 18.5 | 23 | 0 | 0% |
+| appaca | 10.2 | 22 | 0 | 0% |
+| appaca alternatives | 5 | 22 | 0 | 0% |
