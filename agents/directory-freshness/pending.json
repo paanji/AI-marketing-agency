@@ -1970,5 +1970,39 @@
     "discovery_points": 15,
     "discovered_date": "2026-11-16",
     "approved": null
+  },
+  {
+    "id": "agentmall",
+    "name": "AgentMall",
+    "cat": "Uncategorized",
+    "url": "https://getagentmall.com",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "A",
+    "desc": "Show HN: AgentMall – Let your AI agent buy groceries",
+    "isNew": true,
+    "featured": false,
+    "source": "discovered",
+    "discovery_source": "Show HN",
+    "discovery_points": 21,
+    "discovered_date": "2026-11-23",
+    "approved": null
+  },
+  {
+    "id": "volcano-a-self-healing-agent-cloud",
+    "name": "Volcano, a self-healing agent cloud",
+    "cat": "Uncategorized",
+    "url": "https://volcano.dev/blog/introducing-volcano-agent-cloud",
+    "color": "#7c6cfa",
+    "text": "#fff",
+    "letter": "V",
+    "desc": "Show HN: Volcano, a self-healing agent cloud",
+    "isNew": true,
+    "featured": false,
+    "source": "discovered",
+    "discovery_source": "Show HN",
+    "discovery_points": 16,
+    "discovered_date": "2026-11-23",
+    "approved": null
   }
 ]
