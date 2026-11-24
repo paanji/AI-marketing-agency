@@ -2,227 +2,227 @@
   "agent_meta": {
     "agent_name": "seo_agent",
     "schema_version": "1.0",
-    "run_date": "2026-11-17",
+    "run_date": "2026-11-24",
     "status": "success",
     "summary": "41 action items found (8 high priority)"
   },
   "business_name": "AllAIDunia",
   "site_url": "https://www.allaidunia.com/",
-  "generated_date": "2026-11-17",
+  "generated_date": "2026-11-24",
   "window": {
-    "start": "2026-10-17",
-    "end": "2026-11-14"
+    "start": "2026-10-24",
+    "end": "2026-11-21"
   },
   "overview": {
-    "total_queries": 359,
-    "total_clicks": 6,
-    "total_impressions": 2875,
-    "avg_position": 29.8,
-    "overall_ctr": 0.21
+    "total_queries": 407,
+    "total_clicks": 10,
+    "total_impressions": 4268,
+    "avg_position": 22.9,
+    "overall_ctr": 0.23
   },
   "top_queries": [
     {
       "query": "quillbot",
-      "position": 24.1,
-      "impressions": 515,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ideogram",
-      "position": 34.5,
-      "impressions": 326,
-      "clicks": 0,
-      "ctr": 0
+      "position": 15.6,
+      "impressions": 1100,
+      "clicks": 3,
+      "ctr": 0.3
     },
     {
       "query": "udio",
-      "position": 16.5,
-      "impressions": 235,
+      "position": 11.8,
+      "impressions": 431,
       "clicks": 2,
-      "ctr": 0.9
+      "ctr": 0.5
+    },
+    {
+      "query": "ideogram",
+      "position": 30.4,
+      "impressions": 384,
+      "clicks": 0,
+      "ctr": 0
     },
     {
       "query": "ideogram ai",
-      "position": 43.2,
-      "impressions": 162,
+      "position": 39.0,
+      "impressions": 218,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "framer ai",
-      "position": 18.3,
-      "impressions": 59,
+      "query": "otter.ai",
+      "position": 7.8,
+      "impressions": 134,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "notion ai",
-      "position": 41.1,
-      "impressions": 57,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "adobe firefly",
-      "position": 18.8,
-      "impressions": 53,
+      "query": "quilbot",
+      "position": 12.0,
+      "impressions": 73,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "looka alternatives",
-      "position": 9.5,
-      "impressions": 51,
+      "position": 9.4,
+      "impressions": 65,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "framer ai",
+      "position": 18.8,
+      "impressions": 62,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "adobe firefly",
+      "position": 19.7,
+      "impressions": 60,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai",
+      "position": 39.9,
+      "impressions": 55,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa",
       "position": 61.5,
-      "impressions": 46,
+      "impressions": 51,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "prompt guru",
-      "position": 8.6,
-      "impressions": 41,
-      "clicks": 1,
-      "ctr": 2.4
-    },
-    {
-      "query": "otter.ai",
-      "position": 8.3,
-      "impressions": 36,
+      "query": "notion ai",
+      "position": 36.6,
+      "impressions": 49,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "exa ai",
-      "position": 47.1,
-      "impressions": 35,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "idag ai",
-      "position": 17.3,
-      "impressions": 32,
+      "query": "grammarly",
+      "position": 25.4,
+      "impressions": 47,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "quillbot ai",
-      "position": 51,
+      "position": 38.7,
+      "impressions": 46,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "abodevid",
+      "position": 4.4,
+      "impressions": 38,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "idag ai",
+      "position": 17.6,
+      "impressions": 38,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "prompt guru",
+      "position": 8.7,
+      "impressions": 36,
+      "clicks": 1,
+      "ctr": 2.8
+    },
+    {
+      "query": "perplexity alternatives",
+      "position": 25.7,
+      "impressions": 33,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "perplexity alternative",
+      "position": 43.0,
       "impressions": 32,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "is framer ai free",
-      "position": 6.8,
-      "impressions": 29,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
       "query": "dunia ai",
-      "position": 8.0,
+      "position": 8.1,
       "impressions": 25,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "figma ai",
-      "position": 36.5,
-      "impressions": 23,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "quilbot",
-      "position": 18.5,
-      "impressions": 23,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "appaca",
-      "position": 10.2,
-      "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "appaca alternatives",
-      "position": 5,
-      "impressions": 22,
       "clicks": 0,
       "ctr": 0
     }
   ],
   "quick_wins": [
     {
+      "query": "udio",
+      "position": 11.8,
+      "impressions": 431,
+      "clicks": 2,
+      "ctr": 0.5
+    },
+    {
+      "query": "otter.ai",
+      "position": 7.8,
+      "impressions": 134,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "quilbot",
+      "position": 12.0,
+      "impressions": 73,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
       "query": "looka alternatives",
-      "position": 9.5,
-      "impressions": 51,
+      "position": 9.4,
+      "impressions": 65,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "prompt guru",
-      "position": 8.6,
-      "impressions": 41,
-      "clicks": 1,
-      "ctr": 2.4
-    },
-    {
-      "query": "otter.ai",
-      "position": 8.3,
+      "position": 8.7,
       "impressions": 36,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "is framer ai free",
-      "position": 6.8,
-      "impressions": 29,
-      "clicks": 0,
-      "ctr": 0
+      "clicks": 1,
+      "ctr": 2.8
     },
     {
       "query": "dunia ai",
-      "position": 8.0,
+      "position": 8.1,
       "impressions": 25,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "appaca",
-      "position": 10.2,
-      "impressions": 22,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "appaca alternatives",
       "position": 5,
-      "impressions": 22,
+      "impressions": 24,
       "clicks": 0,
       "ctr": 0
+    },
+    {
+      "query": "quill bot",
+      "position": 12.1,
+      "impressions": 23,
+      "clicks": 1,
+      "ctr": 4.3
     },
     {
       "query": "hugging face vs junit",
       "position": 6.4,
       "impressions": 22,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "abodevid",
-      "position": 5.2,
-      "impressions": 20,
       "clicks": 0,
       "ctr": 0
     }
@@ -230,133 +230,154 @@
   "low_ctr_queries": [
     {
       "query": "quillbot",
-      "position": 24.1,
-      "impressions": 515,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ideogram",
-      "position": 34.5,
-      "impressions": 326,
-      "clicks": 0,
-      "ctr": 0
+      "position": 15.6,
+      "impressions": 1100,
+      "clicks": 3,
+      "ctr": 0.27
     },
     {
       "query": "udio",
-      "position": 16.5,
-      "impressions": 235,
+      "position": 11.8,
+      "impressions": 431,
       "clicks": 2,
-      "ctr": 0.85
+      "ctr": 0.46
+    },
+    {
+      "query": "ideogram",
+      "position": 30.4,
+      "impressions": 384,
+      "clicks": 0,
+      "ctr": 0
     },
     {
       "query": "ideogram ai",
-      "position": 43.2,
-      "impressions": 162,
+      "position": 39.0,
+      "impressions": 218,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "framer ai",
-      "position": 18.3,
-      "impressions": 59,
+      "query": "otter.ai",
+      "position": 7.8,
+      "impressions": 134,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "notion ai",
-      "position": 41.1,
-      "impressions": 57,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "adobe firefly",
-      "position": 18.8,
-      "impressions": 53,
+      "query": "quilbot",
+      "position": 12.0,
+      "impressions": 73,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "looka alternatives",
-      "position": 9.5,
-      "impressions": 51,
+      "position": 9.4,
+      "impressions": 65,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "framer ai",
+      "position": 18.8,
+      "impressions": 62,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "adobe firefly",
+      "position": 19.7,
+      "impressions": 60,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai",
+      "position": 39.9,
+      "impressions": 55,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "exa",
       "position": 61.5,
-      "impressions": 46,
+      "impressions": 51,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "otter.ai",
-      "position": 8.3,
-      "impressions": 36,
+      "query": "notion ai",
+      "position": 36.6,
+      "impressions": 49,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "exa ai",
-      "position": 47.1,
-      "impressions": 35,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "idag ai",
-      "position": 17.3,
-      "impressions": 32,
+      "query": "grammarly",
+      "position": 25.4,
+      "impressions": 47,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "quillbot ai",
-      "position": 51,
+      "position": 38.7,
+      "impressions": 46,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "abodevid",
+      "position": 4.4,
+      "impressions": 38,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "idag ai",
+      "position": 17.6,
+      "impressions": 38,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "perplexity alternatives",
+      "position": 25.7,
+      "impressions": 33,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "perplexity alternative",
+      "position": 43.0,
       "impressions": 32,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "is framer ai free",
-      "position": 6.8,
-      "impressions": 29,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
       "query": "dunia ai",
-      "position": 8.0,
+      "position": 8.1,
       "impressions": 25,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "figma ai",
-      "position": 36.5,
-      "impressions": 23,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "quilbot",
-      "position": 18.5,
-      "impressions": 23,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "appaca",
-      "position": 10.2,
-      "impressions": 22,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "appaca alternatives",
       "position": 5,
+      "impressions": 24,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "figma ai",
+      "position": 37.1,
+      "impressions": 24,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa pricing",
+      "position": 27.7,
       "impressions": 22,
       "clicks": 0,
       "ctr": 0
@@ -369,86 +390,121 @@
       "ctr": 0
     },
     {
-      "query": "abodevid",
-      "position": 5.2,
+      "query": "ai notion",
+      "position": 29.7,
       "impressions": 20,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "exa ai vs perplexity",
-      "position": 74.2,
-      "impressions": 20,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "grammarly",
-      "position": 53.0,
-      "impressions": 20,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ideogram.",
-      "position": 61.2,
-      "impressions": 18,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "exa vs perplexity",
-      "position": 71.2,
-      "impressions": 17,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "exa vs perplexity comparison",
-      "position": 54.2,
-      "impressions": 17,
+      "query": "appaca",
+      "position": 9.8,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "figma ai pricing",
-      "position": 60.8,
-      "impressions": 17,
-      "clicks": 0,
-      "ctr": 0
-    },
-    {
-      "query": "ideatum.ai",
-      "position": 12.1,
-      "impressions": 17,
+      "position": 57.2,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "ideogram plans",
-      "position": 62.5,
+      "position": 58.6,
+      "impressions": 19,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "perplexity vs exa",
+      "position": 63.6,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa ai vs perplexity",
+      "position": 73.6,
       "impressions": 17,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "ideogram subscription",
-      "position": 72.9,
+      "query": "exa vs perplexity",
+      "position": 61.2,
       "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ideogram.",
+      "position": 50.3,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ai copy",
+      "position": 54.4,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa api pricing",
+      "position": 25.9,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "exa vs perplexity comparison",
+      "position": 51.9,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "is framer ai free",
+      "position": 7.1,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "is ideogram free",
+      "position": 9.7,
+      "impressions": 16,
       "clicks": 0,
       "ctr": 0
     },
     {
       "query": "new ai websites",
-      "position": 32,
-      "impressions": 17,
+      "position": 28.9,
+      "impressions": 16,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "ideograms",
-      "position": 35.8,
+      "query": "quickcopy ai",
+      "position": 16.4,
       "impressions": 16,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ai copy editor",
+      "position": 61.7,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "ideogram subscription",
+      "position": 68.7,
+      "impressions": 15,
       "clicks": 0,
       "ctr": 0
     },
@@ -460,15 +516,22 @@
       "ctr": 0
     },
     {
-      "query": "perplexity vs exa",
-      "position": 76.1,
+      "query": "promptguru",
+      "position": 9.5,
       "impressions": 15,
       "clicks": 0,
       "ctr": 0
     },
     {
-      "query": "quickcopy ai",
-      "position": 17,
+      "query": "quill bot ai",
+      "position": 37.5,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0
+    },
+    {
+      "query": "reclaim.ai",
+      "position": 9,
       "impressions": 15,
       "clicks": 0,
       "ctr": 0
@@ -509,7 +572,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-11-10T23:17:33Z"
+        "last_crawl_time": "2026-11-22T05:27:09Z"
       },
       "noindex": false,
       "canonical": {
@@ -523,10 +586,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.77,
-        "lcp_display": "5.3 s",
+        "performance_score": 0.79,
+        "lcp_display": "4.9 s",
         "cls_display": "0.042",
-        "tbt_display": "100 ms"
+        "tbt_display": "170 ms"
       }
     },
     {
@@ -571,10 +634,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.98,
-        "lcp_display": "1.5 s",
+        "performance_score": 0.91,
+        "lcp_display": "1.6 s",
         "cls_display": "0.079",
-        "tbt_display": "70 ms"
+        "tbt_display": "300 ms"
       }
     },
     {
@@ -619,10 +682,10 @@
         "has_og_image": true
       },
       "pagespeed": {
-        "performance_score": 0.98,
+        "performance_score": 0.97,
         "lcp_display": "1.5 s",
         "cls_display": "0.065",
-        "tbt_display": "110 ms"
+        "tbt_display": "150 ms"
       }
     },
     {
@@ -878,7 +941,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-11-05T07:26:56Z"
+        "last_crawl_time": "2026-11-18T02:12:45Z"
       },
       "noindex": false,
       "canonical": {
@@ -921,7 +984,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-11-01T00:42:07Z"
+        "last_crawl_time": "2026-11-24T05:01:24Z"
       },
       "noindex": false,
       "canonical": {
@@ -1008,7 +1071,7 @@
       "js_blindspot": null,
       "indexing": {
         "verdict": "NEUTRAL",
-        "coverage_state": "URL is unknown to Google",
+        "coverage_state": "Discovered - currently not indexed",
         "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexing_state": "INDEXING_STATE_UNSPECIFIED",
         "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1485,7 +1548,7 @@
         "robots_txt_state": "ALLOWED",
         "indexing_state": "INDEXING_ALLOWED",
         "page_fetch_state": "SUCCESSFUL",
-        "last_crawl_time": "2026-09-23T12:22:53Z"
+        "last_crawl_time": "2026-11-24T04:11:11Z"
       },
       "noindex": false,
       "canonical": {
@@ -1593,8 +1656,8 @@
   },
   "action_items": [
     {
-      "id": "bea72ca07b",
-      "description": "Page speed could be better (Lighthouse performance score: 77/100, mobile). LCP: 5.3 s, CLS: 0.042.",
+      "id": "38699b5c07",
+      "description": "Page speed could be better (Lighthouse performance score: 79/100, mobile). LCP: 4.9 s, CLS: 0.042.",
       "priority": "medium",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1725,8 +1788,8 @@
       "target_range": null
     },
     {
-      "id": "79e3dbdcfa",
-      "description": "Not indexed by Google: verdict is 'NEUTRAL' — URL is unknown to Google. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
+      "id": "a8ca9b6116",
+      "description": "Not indexed by Google: verdict is 'NEUTRAL' — Discovered - currently not indexed. A page that isn't indexed gets zero search traffic no matter how well it's optimized otherwise. Use Search Console's URL Inspection tool to request indexing directly.",
       "priority": "high",
       "category": "technical",
       "suggested_agent": "manual",
@@ -1965,8 +2028,8 @@
       "target_range": null
     },
     {
-      "id": "07bef76631",
-      "description": "Query \"quillbot\" gets 515 impressions but only 0% CTR at position 24.1 — likely needs a more compelling title/meta description.",
+      "id": "13f30fee00",
+      "description": "Query \"quillbot\" gets 1100 impressions but only 0.27% CTR at position 15.6 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1977,8 +2040,8 @@
       "target_range": null
     },
     {
-      "id": "767fdce915",
-      "description": "Query \"ideogram\" gets 326 impressions but only 0% CTR at position 34.5 — likely needs a more compelling title/meta description.",
+      "id": "6b6021b433",
+      "description": "Query \"udio\" gets 431 impressions but only 0.46% CTR at position 11.8 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -1989,8 +2052,8 @@
       "target_range": null
     },
     {
-      "id": "54ae5115d4",
-      "description": "Query \"udio\" gets 235 impressions but only 0.85% CTR at position 16.5 — likely needs a more compelling title/meta description.",
+      "id": "5cb3d10444",
+      "description": "Query \"ideogram\" gets 384 impressions but only 0% CTR at position 30.4 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -2001,8 +2064,8 @@
       "target_range": null
     },
     {
-      "id": "a13bef0855",
-      "description": "Query \"ideogram ai\" gets 162 impressions but only 0% CTR at position 43.2 — likely needs a more compelling title/meta description.",
+      "id": "75c57bd17f",
+      "description": "Query \"ideogram ai\" gets 218 impressions but only 0% CTR at position 39.0 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -2013,8 +2076,8 @@
       "target_range": null
     },
     {
-      "id": "bf27af9781",
-      "description": "Query \"framer ai\" gets 59 impressions but only 0% CTR at position 18.3 — likely needs a more compelling title/meta description.",
+      "id": "f1806c3b66",
+      "description": "Query \"otter.ai\" gets 134 impressions but only 0% CTR at position 7.8 — likely needs a more compelling title/meta description.",
       "priority": "medium",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -2025,8 +2088,8 @@
       "target_range": null
     },
     {
-      "id": "d0ea9f58a8",
-      "description": "\"looka alternatives\" ranks position 9.5 with 51 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "765d019ae3",
+      "description": "\"udio\" ranks position 11.8 with 431 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -2037,8 +2100,8 @@
       "target_range": null
     },
     {
-      "id": "a396559232",
-      "description": "\"prompt guru\" ranks position 8.6 with 41 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "c07de5bb82",
+      "description": "\"otter.ai\" ranks position 7.8 with 134 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -2049,8 +2112,8 @@
       "target_range": null
     },
     {
-      "id": "bca5b6507a",
-      "description": "\"otter.ai\" ranks position 8.3 with 36 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "71dde60819",
+      "description": "\"quilbot\" ranks position 12.0 with 73 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -2061,8 +2124,8 @@
       "target_range": null
     },
     {
-      "id": "2893ca7788",
-      "description": "\"is framer ai free\" ranks position 6.8 with 29 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "4a27aa897d",
+      "description": "\"looka alternatives\" ranks position 9.4 with 65 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
@@ -2073,8 +2136,8 @@
       "target_range": null
     },
     {
-      "id": "fc69f9084f",
-      "description": "\"dunia ai\" ranks position 8.0 with 25 impressions — a supporting blog post or added internal links could push this onto page 1.",
+      "id": "580a53eb79",
+      "description": "\"prompt guru\" ranks position 8.7 with 36 impressions — a supporting blog post or added internal links could push this onto page 1.",
       "priority": "high",
       "category": "content_opportunity",
       "suggested_agent": "content_agent",
